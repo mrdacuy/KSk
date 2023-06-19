@@ -20,49 +20,19 @@ Partial Class frmImportSolieuhoso
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmImportSolieuhoso))
-        Me.Ngay = New DevExpress.XtraEditors.DateEdit()
-        Me.SlCongty = New DevExpress.XtraEditors.SearchLookUpEdit()
-        Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
-        CType(Me.Ngay.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Ngay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SlCongty = New DevExpress.XtraEditors.SearchLookUpEdit()
+        Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.Ngay = New DevExpress.XtraEditors.DateEdit()
         CType(Me.SlCongty.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ngay.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ngay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Ngay
-        '
-        Me.Ngay.EditValue = Nothing
-        Me.Ngay.Location = New System.Drawing.Point(123, 62)
-        Me.Ngay.Name = "Ngay"
-        Me.Ngay.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ngay.Properties.Appearance.Options.UseFont = True
-        Me.Ngay.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.Ngay.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.Ngay.Size = New System.Drawing.Size(292, 26)
-        Me.Ngay.TabIndex = 0
-        '
-        'SlCongty
-        '
-        Me.SlCongty.Location = New System.Drawing.Point(123, 94)
-        Me.SlCongty.Name = "SlCongty"
-        Me.SlCongty.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SlCongty.Properties.Appearance.Options.UseFont = True
-        Me.SlCongty.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SlCongty.Properties.PopupView = Me.SearchLookUpEdit1View
-        Me.SlCongty.Size = New System.Drawing.Size(292, 26)
-        Me.SlCongty.TabIndex = 1
-        '
-        'SearchLookUpEdit1View
-        '
-        Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
-        Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
-        Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
-        Me.SearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
         '
         'SimpleButton1
         '
@@ -111,6 +81,36 @@ Partial Class frmImportSolieuhoso
         Me.LabelControl3.TabIndex = 5
         Me.LabelControl3.Text = "NHẬP DỮ LIỆU"
         '
+        'SlCongty
+        '
+        Me.SlCongty.Location = New System.Drawing.Point(123, 94)
+        Me.SlCongty.Name = "SlCongty"
+        Me.SlCongty.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SlCongty.Properties.Appearance.Options.UseFont = True
+        Me.SlCongty.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SlCongty.Properties.PopupView = Me.SearchLookUpEdit1View
+        Me.SlCongty.Size = New System.Drawing.Size(292, 26)
+        Me.SlCongty.TabIndex = 1
+        '
+        'SearchLookUpEdit1View
+        '
+        Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
+        Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.SearchLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        '
+        'Ngay
+        '
+        Me.Ngay.EditValue = Nothing
+        Me.Ngay.Location = New System.Drawing.Point(123, 62)
+        Me.Ngay.Name = "Ngay"
+        Me.Ngay.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ngay.Properties.Appearance.Options.UseFont = True
+        Me.Ngay.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.Ngay.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.Ngay.Size = New System.Drawing.Size(292, 26)
+        Me.Ngay.TabIndex = 0
+        '
         'frmImportSolieuhoso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -125,10 +125,10 @@ Partial Class frmImportSolieuhoso
         Me.Name = "frmImportSolieuhoso"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmImportSolieuhoso"
-        CType(Me.Ngay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Ngay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SlCongty.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ngay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ngay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

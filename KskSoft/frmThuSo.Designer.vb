@@ -21,13 +21,13 @@ Partial Class frmThuSo
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmThuSo))
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.cbPhatso = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.mTen = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
         Me.mCode = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.cbPhatso = New DevExpress.XtraEditors.ComboBoxEdit()
         CType(Me.cbPhatso.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,17 +41,6 @@ Partial Class frmThuSo
         Me.SimpleButton1.Size = New System.Drawing.Size(104, 39)
         Me.SimpleButton1.TabIndex = 14
         Me.SimpleButton1.Text = "Thu sổ"
-        '
-        'cbPhatso
-        '
-        Me.cbPhatso.Location = New System.Drawing.Point(81, 79)
-        Me.cbPhatso.Name = "cbPhatso"
-        Me.cbPhatso.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbPhatso.Properties.Appearance.Options.UseFont = True
-        Me.cbPhatso.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cbPhatso.Properties.Items.AddRange(New Object() {"Đã thu sổ", "Chưa thu sổ", ""})
-        Me.cbPhatso.Size = New System.Drawing.Size(228, 22)
-        Me.cbPhatso.TabIndex = 13
         '
         'mTen
         '
@@ -112,6 +101,17 @@ Partial Class frmThuSo
         Me.LabelControl1.Size = New System.Drawing.Size(74, 23)
         Me.LabelControl1.TabIndex = 7
         Me.LabelControl1.Text = "THU SỔ"
+        '
+        'cbPhatso
+        '
+        Me.cbPhatso.Location = New System.Drawing.Point(81, 79)
+        Me.cbPhatso.Name = "cbPhatso"
+        Me.cbPhatso.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbPhatso.Properties.Appearance.Options.UseFont = True
+        Me.cbPhatso.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cbPhatso.Properties.Items.AddRange(New Object() {"Đã thu sổ", "Chưa thu sổ", ""})
+        Me.cbPhatso.Size = New System.Drawing.Size(228, 22)
+        Me.cbPhatso.TabIndex = 13
         '
         'frmThuSo
         '

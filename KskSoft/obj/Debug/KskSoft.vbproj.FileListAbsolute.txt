@@ -402,3 +402,4 @@ C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.vbproj.CopyComple
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.exe
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.xml
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.pdb
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmCongTy.resources

@@ -159,6 +159,12 @@
     <Compile Include="FrmChinh.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCongTy.Designer.vb">
+      <DependentUpon>FrmCongTy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCongTy.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmImportSolieuhoso.Designer.vb">
       <DependentUpon>FrmImportSolieuhoso.vb</DependentUpon>
     </Compile>
@@ -274,6 +280,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmChinh.resx">
       <DependentUpon>FrmChinh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCongTy.resx">
+      <DependentUpon>FrmCongTy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmImportSolieuhoso.resx">
       <DependentUpon>FrmImportSolieuhoso.vb</DependentUpon>

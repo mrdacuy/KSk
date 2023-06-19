@@ -221,6 +221,7 @@ Partial Class FrmInKhamSucKhoe
         Me.gvSolieuhoso.GridControl = Me.grSolieuhoso
         Me.gvSolieuhoso.Name = "gvSolieuhoso"
         Me.gvSolieuhoso.OptionsBehavior.Editable = False
+        Me.gvSolieuhoso.OptionsSelection.MultiSelect = True
         Me.gvSolieuhoso.OptionsView.ShowGroupPanel = False
         Me.gvSolieuhoso.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.[False]
         '

@@ -25,6 +25,6 @@ Public Class FrmMain
     End Sub
 
     Private Sub BarButtonItem1_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem1.ItemClick
-        Openform(GetType(FrmInKhamSucKhoe))
+        Openform(GetType(FrmThuNhan))
     End Sub
 End Class
