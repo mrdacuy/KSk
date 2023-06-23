@@ -82,6 +82,7 @@ Partial Class FrmThuNhan
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -105,8 +106,9 @@ Partial Class FrmThuNhan
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.grSolieuhoso)
-        Me.SplitContainer1.Size = New System.Drawing.Size(949, 505)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1107, 623)
         Me.SplitContainer1.SplitterDistance = 70
+        Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 0
         '
         'SimpleButton3
@@ -114,37 +116,41 @@ Partial Class FrmThuNhan
         Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton3.Appearance.Options.UseFont = True
         Me.SimpleButton3.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton3.Location = New System.Drawing.Point(702, 8)
+        Me.SimpleButton3.Location = New System.Drawing.Point(819, 10)
+        Me.SimpleButton3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(102, 26)
+        Me.SimpleButton3.Size = New System.Drawing.Size(119, 32)
         Me.SimpleButton3.TabIndex = 12
         Me.SimpleButton3.Text = "In phiếu"
         '
         'CheckThuSo
         '
-        Me.CheckThuSo.Location = New System.Drawing.Point(836, 39)
+        Me.CheckThuSo.Location = New System.Drawing.Point(975, 48)
+        Me.CheckThuSo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CheckThuSo.Name = "CheckThuSo"
         Me.CheckThuSo.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckThuSo.Properties.Appearance.Options.UseFont = True
         Me.CheckThuSo.Properties.Caption = "Thu sổ"
-        Me.CheckThuSo.Size = New System.Drawing.Size(91, 20)
+        Me.CheckThuSo.Size = New System.Drawing.Size(106, 20)
         Me.CheckThuSo.TabIndex = 11
         '
         'CheckPhatSo
         '
-        Me.CheckPhatSo.Location = New System.Drawing.Point(836, 10)
+        Me.CheckPhatSo.Location = New System.Drawing.Point(975, 12)
+        Me.CheckPhatSo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CheckPhatSo.Name = "CheckPhatSo"
         Me.CheckPhatSo.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckPhatSo.Properties.Appearance.Options.UseFont = True
         Me.CheckPhatSo.Properties.Caption = "Phát sổ"
-        Me.CheckPhatSo.Size = New System.Drawing.Size(91, 20)
+        Me.CheckPhatSo.Size = New System.Drawing.Size(106, 20)
         Me.CheckPhatSo.TabIndex = 10
         '
         'LabelControl4
         '
         Me.LabelControl4.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl4.Appearance.Options.UseFont = True
-        Me.LabelControl4.Location = New System.Drawing.Point(203, 43)
+        Me.LabelControl4.Location = New System.Drawing.Point(237, 53)
+        Me.LabelControl4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New System.Drawing.Size(85, 16)
         Me.LabelControl4.TabIndex = 9
@@ -154,7 +160,8 @@ Partial Class FrmThuNhan
         '
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl3.Appearance.Options.UseFont = True
-        Me.LabelControl3.Location = New System.Drawing.Point(203, 20)
+        Me.LabelControl3.Location = New System.Drawing.Point(237, 25)
+        Me.LabelControl3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(52, 16)
         Me.LabelControl3.TabIndex = 8
@@ -164,7 +171,8 @@ Partial Class FrmThuNhan
         '
         Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl2.Appearance.Options.UseFont = True
-        Me.LabelControl2.Location = New System.Drawing.Point(3, 41)
+        Me.LabelControl2.Location = New System.Drawing.Point(3, 50)
+        Me.LabelControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl2.Name = "LabelControl2"
         Me.LabelControl2.Size = New System.Drawing.Size(63, 16)
         Me.LabelControl2.TabIndex = 7
@@ -174,7 +182,8 @@ Partial Class FrmThuNhan
         '
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl1.Appearance.Options.UseFont = True
-        Me.LabelControl1.Location = New System.Drawing.Point(3, 15)
+        Me.LabelControl1.Location = New System.Drawing.Point(3, 18)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(56, 16)
         Me.LabelControl1.TabIndex = 6
@@ -185,9 +194,10 @@ Partial Class FrmThuNhan
         Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton2.Appearance.Options.UseFont = True
         Me.SimpleButton2.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton2.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton2.Location = New System.Drawing.Point(594, 36)
+        Me.SimpleButton2.Location = New System.Drawing.Point(693, 44)
+        Me.SimpleButton2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(102, 26)
+        Me.SimpleButton2.Size = New System.Drawing.Size(119, 32)
         Me.SimpleButton2.TabIndex = 5
         Me.SimpleButton2.Text = "Tìm kiếm"
         '
@@ -196,34 +206,38 @@ Partial Class FrmThuNhan
         Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton1.Appearance.Options.UseFont = True
         Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton1.Location = New System.Drawing.Point(594, 7)
+        Me.SimpleButton1.Location = New System.Drawing.Point(693, 9)
+        Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(102, 27)
+        Me.SimpleButton1.Size = New System.Drawing.Size(119, 33)
         Me.SimpleButton1.TabIndex = 4
         Me.SimpleButton1.Text = "Import"
         '
         'txtTimkiem
         '
-        Me.txtTimkiem.Location = New System.Drawing.Point(294, 40)
+        Me.txtTimkiem.Location = New System.Drawing.Point(343, 49)
+        Me.txtTimkiem.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTimkiem.Name = "txtTimkiem"
         Me.txtTimkiem.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTimkiem.Properties.Appearance.Options.UseFont = True
-        Me.txtTimkiem.Size = New System.Drawing.Size(288, 22)
+        Me.txtTimkiem.Size = New System.Drawing.Size(336, 22)
         Me.txtTimkiem.TabIndex = 3
         '
         'SlCongty
         '
-        Me.SlCongty.Location = New System.Drawing.Point(294, 13)
+        Me.SlCongty.Location = New System.Drawing.Point(343, 16)
+        Me.SlCongty.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SlCongty.Name = "SlCongty"
         Me.SlCongty.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SlCongty.Properties.Appearance.Options.UseFont = True
         Me.SlCongty.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.SlCongty.Properties.PopupView = Me.SearchLookUpEdit1View
-        Me.SlCongty.Size = New System.Drawing.Size(288, 22)
+        Me.SlCongty.Size = New System.Drawing.Size(336, 22)
         Me.SlCongty.TabIndex = 2
         '
         'SearchLookUpEdit1View
         '
+        Me.SearchLookUpEdit1View.DetailHeight = 431
         Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
         Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
@@ -232,37 +246,40 @@ Partial Class FrmThuNhan
         'DenNgay
         '
         Me.DenNgay.EditValue = Nothing
-        Me.DenNgay.Location = New System.Drawing.Point(69, 39)
+        Me.DenNgay.Location = New System.Drawing.Point(80, 48)
+        Me.DenNgay.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DenNgay.Name = "DenNgay"
         Me.DenNgay.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DenNgay.Properties.Appearance.Options.UseFont = True
         Me.DenNgay.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DenNgay.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DenNgay.Size = New System.Drawing.Size(128, 22)
+        Me.DenNgay.Size = New System.Drawing.Size(149, 22)
         Me.DenNgay.TabIndex = 1
         '
         'TuNgay
         '
         Me.TuNgay.EditValue = Nothing
-        Me.TuNgay.Location = New System.Drawing.Point(69, 13)
+        Me.TuNgay.Location = New System.Drawing.Point(80, 16)
+        Me.TuNgay.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TuNgay.Name = "TuNgay"
         Me.TuNgay.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TuNgay.Properties.Appearance.Options.UseFont = True
         Me.TuNgay.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TuNgay.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TuNgay.Size = New System.Drawing.Size(128, 22)
+        Me.TuNgay.Size = New System.Drawing.Size(149, 22)
         Me.TuNgay.TabIndex = 0
         '
         'grSolieuhoso
         '
-        Me.grSolieuhoso.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grSolieuhoso.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grSolieuhoso.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         GridLevelNode1.RelationName = "Level1"
         Me.grSolieuhoso.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode1})
         Me.grSolieuhoso.Location = New System.Drawing.Point(0, 0)
         Me.grSolieuhoso.MainView = Me.gvSolieuhoso
+        Me.grSolieuhoso.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grSolieuhoso.Name = "grSolieuhoso"
-        Me.grSolieuhoso.Size = New System.Drawing.Size(949, 431)
+        Me.grSolieuhoso.Size = New System.Drawing.Size(1107, 530)
         Me.grSolieuhoso.TabIndex = 0
         Me.grSolieuhoso.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvSolieuhoso})
         '
@@ -273,6 +290,7 @@ Partial Class FrmThuNhan
         Me.gvSolieuhoso.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gvSolieuhoso.Appearance.Row.Options.UseFont = True
         Me.gvSolieuhoso.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.Bophan, Me.NPhatso, Me.NThuso})
+        Me.gvSolieuhoso.DetailHeight = 431
         Me.gvSolieuhoso.GridControl = Me.grSolieuhoso
         Me.gvSolieuhoso.Name = "gvSolieuhoso"
         Me.gvSolieuhoso.OptionsBehavior.Editable = False
@@ -284,65 +302,81 @@ Partial Class FrmThuNhan
         '
         Me.NMacode.Caption = "MÃ ID"
         Me.NMacode.FieldName = "Macode"
+        Me.NMacode.MinWidth = 23
         Me.NMacode.Name = "NMacode"
         Me.NMacode.Visible = True
         Me.NMacode.VisibleIndex = 1
+        Me.NMacode.Width = 87
         '
         'NHoten
         '
         Me.NHoten.Caption = "HỌ VÀ TÊN"
         Me.NHoten.FieldName = "Hoten"
+        Me.NHoten.MinWidth = 23
         Me.NHoten.Name = "NHoten"
         Me.NHoten.Visible = True
         Me.NHoten.VisibleIndex = 0
+        Me.NHoten.Width = 87
         '
         'NNamsinh
         '
         Me.NNamsinh.Caption = "NĂM SINH"
         Me.NNamsinh.FieldName = "Namsinh"
+        Me.NNamsinh.MinWidth = 23
         Me.NNamsinh.Name = "NNamsinh"
         Me.NNamsinh.Visible = True
         Me.NNamsinh.VisibleIndex = 2
+        Me.NNamsinh.Width = 87
         '
         'NGioitinh
         '
         Me.NGioitinh.Caption = "GIỚI TÍNH"
         Me.NGioitinh.FieldName = "Gioitinh"
+        Me.NGioitinh.MinWidth = 23
         Me.NGioitinh.Name = "NGioitinh"
         Me.NGioitinh.Visible = True
         Me.NGioitinh.VisibleIndex = 3
+        Me.NGioitinh.Width = 87
         '
         'NManhanvien
         '
         Me.NManhanvien.Caption = "MÃ NHÂN VIÊN"
         Me.NManhanvien.FieldName = "Manhanvien"
+        Me.NManhanvien.MinWidth = 23
         Me.NManhanvien.Name = "NManhanvien"
         Me.NManhanvien.Visible = True
         Me.NManhanvien.VisibleIndex = 4
+        Me.NManhanvien.Width = 87
         '
         'Bophan
         '
         Me.Bophan.Caption = "BỘ PHẬN"
         Me.Bophan.FieldName = "Bophan"
+        Me.Bophan.MinWidth = 23
         Me.Bophan.Name = "Bophan"
         Me.Bophan.Visible = True
         Me.Bophan.VisibleIndex = 5
+        Me.Bophan.Width = 87
         '
         'NPhatso
         '
         Me.NPhatso.Caption = "PHÁT SỔ"
         Me.NPhatso.FieldName = "Phatso"
+        Me.NPhatso.MinWidth = 23
         Me.NPhatso.Name = "NPhatso"
         Me.NPhatso.Visible = True
         Me.NPhatso.VisibleIndex = 6
+        Me.NPhatso.Width = 87
         '
         'NThuso
         '
         Me.NThuso.Caption = "THU SỔ"
         Me.NThuso.FieldName = "Thuso"
+        Me.NThuso.MinWidth = 23
         Me.NThuso.Name = "NThuso"
         Me.NThuso.Visible = True
         Me.NThuso.VisibleIndex = 7
+        Me.NThuso.Width = 87
         '
         'OpenFileDialog1
         '
@@ -384,15 +418,17 @@ Partial Class FrmThuNhan
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(949, 0)
+        Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1107, 0)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 505)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 623)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(949, 0)
+        Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1107, 0)
         '
         'barDockControlLeft
         '
@@ -400,28 +436,32 @@ Partial Class FrmThuNhan
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 505)
+        Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 623)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(949, 0)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1107, 0)
         Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 505)
+        Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 623)
         '
         'FrmThuNhan
         '
         Me.Appearance.BackColor = System.Drawing.SystemColors.Control
         Me.Appearance.Options.UseBackColor = True
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(949, 505)
+        Me.ClientSize = New System.Drawing.Size(1107, 623)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
+        Me.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FrmThuNhan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmThuNhan"

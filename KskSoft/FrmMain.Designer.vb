@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmMain
-    Inherits DevExpress.XtraEditors.XtraForm
+    Inherits DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,126 +17,149 @@ Partial Class FrmMain
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.DocumentManager1 = New DevExpress.XtraBars.Docking2010.DocumentManager(Me.components)
-        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
-        Me.Bar2 = New DevExpress.XtraBars.Bar()
-        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
-        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-        Me.TabbedView1 = New DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(Me.components)
-        CType(Me.DocumentManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TabbedView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMain))
+        Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.Maincontrainer = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer()
+        Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
+        Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlElement2 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlElement3 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlElement4 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.mUCcONGTY = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.BtnThemCongTy = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.FluentDesignFormControl1 = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl()
+        Me.lbltieude = New DevExpress.XtraBars.BarStaticItem()
+        CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DocumentManager1
+        'RibbonPage2
         '
-        Me.DocumentManager1.MdiParent = Me
-        Me.DocumentManager1.MenuManager = Me.BarManager1
-        Me.DocumentManager1.View = Me.TabbedView1
-        Me.DocumentManager1.ViewCollection.AddRange(New DevExpress.XtraBars.Docking2010.Views.BaseView() {Me.TabbedView1})
+        Me.RibbonPage2.Name = "RibbonPage2"
+        Me.RibbonPage2.Text = "RibbonPage2"
         '
-        'BarManager1
+        'Maincontrainer
         '
-        Me.BarManager1.Bars.AddRange(New DevExpress.XtraBars.Bar() {Me.Bar2})
-        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
-        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
-        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
-        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
-        Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarButtonItem1})
-        Me.BarManager1.MainMenu = Me.Bar2
-        Me.BarManager1.MaxItemId = 1
+        Me.Maincontrainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Maincontrainer.Location = New System.Drawing.Point(258, 30)
+        Me.Maincontrainer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Maincontrainer.Name = "Maincontrainer"
+        Me.Maincontrainer.Size = New System.Drawing.Size(1191, 772)
+        Me.Maincontrainer.TabIndex = 2
         '
-        'Bar2
+        'AccordionControl1
         '
-        Me.Bar2.BarAppearance.Disabled.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bar2.BarAppearance.Disabled.Options.UseFont = True
-        Me.Bar2.BarAppearance.Hovered.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bar2.BarAppearance.Hovered.Options.UseFont = True
-        Me.Bar2.BarAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bar2.BarAppearance.Normal.Options.UseFont = True
-        Me.Bar2.BarAppearance.Pressed.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bar2.BarAppearance.Pressed.Options.UseFont = True
-        Me.Bar2.BarName = "Main menu"
-        Me.Bar2.DockCol = 0
-        Me.Bar2.DockRow = 0
-        Me.Bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
-        Me.Bar2.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarButtonItem1)})
-        Me.Bar2.OptionsBar.MultiLine = True
-        Me.Bar2.OptionsBar.UseWholeRow = True
-        Me.Bar2.Text = "Main menu"
+        Me.AccordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.AccordionControl1.Appearance.AccordionControl.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AccordionControl1.Appearance.AccordionControl.Options.UseBackColor = True
+        Me.AccordionControl1.Appearance.AccordionControl.Options.UseFont = True
+        Me.AccordionControl1.Appearance.Item.Normal.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AccordionControl1.Appearance.Item.Normal.Options.UseFont = True
+        Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement1, Me.mUCcONGTY})
+        Me.AccordionControl1.Location = New System.Drawing.Point(0, 30)
+        Me.AccordionControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AccordionControl1.Name = "AccordionControl1"
+        Me.AccordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch
+        Me.AccordionControl1.Size = New System.Drawing.Size(258, 772)
+        Me.AccordionControl1.TabIndex = 3
+        Me.AccordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu
         '
-        'BarButtonItem1
+        'AccordionControlElement1
         '
-        Me.BarButtonItem1.Caption = "Danh Mục Công Ty"
-        Me.BarButtonItem1.Id = 0
-        Me.BarButtonItem1.Name = "BarButtonItem1"
+        Me.AccordionControlElement1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement2, Me.AccordionControlElement3, Me.AccordionControlElement4})
+        Me.AccordionControlElement1.Expanded = True
+        Me.AccordionControlElement1.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement1.Name = "AccordionControlElement1"
+        Me.AccordionControlElement1.Text = "DANH MỤC TIẾP NHẬN"
         '
-        'barDockControlTop
+        'AccordionControlElement2
         '
-        Me.barDockControlTop.CausesValidation = False
-        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(1234, 25)
+        Me.AccordionControlElement2.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement2.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement2.Name = "AccordionControlElement2"
+        Me.AccordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement2.Text = "THU NHẬN HỒ SƠ"
         '
-        'barDockControlBottom
+        'AccordionControlElement3
         '
-        Me.barDockControlBottom.CausesValidation = False
-        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 635)
-        Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1234, 0)
+        Me.AccordionControlElement3.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement3.Name = "AccordionControlElement3"
+        Me.AccordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement3.Text = "IN GIẤY KSK"
         '
-        'barDockControlLeft
+        'AccordionControlElement4
         '
-        Me.barDockControlLeft.CausesValidation = False
-        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 25)
-        Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 610)
+        Me.AccordionControlElement4.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement4.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement4.Name = "AccordionControlElement4"
+        Me.AccordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement4.Text = "IN BARCODE TEM 3"
         '
-        'barDockControlRight
+        'mUCcONGTY
         '
-        Me.barDockControlRight.CausesValidation = False
-        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1234, 25)
-        Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 610)
+        Me.mUCcONGTY.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.BtnThemCongTy})
+        Me.mUCcONGTY.Expanded = True
+        Me.mUCcONGTY.ImageOptions.SvgImage = CType(resources.GetObject("mUCcONGTY.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.mUCcONGTY.Name = "mUCcONGTY"
+        Me.mUCcONGTY.Text = "DANH MỤC CÔNG TY"
+        '
+        'BtnThemCongTy
+        '
+        Me.BtnThemCongTy.ImageOptions.SvgImage = CType(resources.GetObject("BtnThemCongTy.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BtnThemCongTy.Name = "BtnThemCongTy"
+        Me.BtnThemCongTy.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.BtnThemCongTy.Text = "THÊM CÔNG TY"
+        '
+        'FluentDesignFormControl1
+        '
+        Me.FluentDesignFormControl1.FluentDesignForm = Me
+        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.lbltieude})
+        Me.FluentDesignFormControl1.Location = New System.Drawing.Point(0, 0)
+        Me.FluentDesignFormControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.FluentDesignFormControl1.Name = "FluentDesignFormControl1"
+        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1449, 30)
+        Me.FluentDesignFormControl1.TabIndex = 4
+        Me.FluentDesignFormControl1.TabStop = False
+        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lbltieude)
+        '
+        'lbltieude
+        '
+        Me.lbltieude.Caption = ".."
+        Me.lbltieude.Id = 0
+        Me.lbltieude.Name = "lbltieude"
+        Me.lbltieude.TextAlignment = System.Drawing.StringAlignment.Center
         '
         'FrmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1234, 635)
-        Me.Controls.Add(Me.barDockControlLeft)
-        Me.Controls.Add(Me.barDockControlRight)
-        Me.Controls.Add(Me.barDockControlBottom)
-        Me.Controls.Add(Me.barDockControlTop)
-        Me.IsMdiContainer = True
+        Me.ClientSize = New System.Drawing.Size(1449, 802)
+        Me.ControlContainer = Me.Maincontrainer
+        Me.Controls.Add(Me.Maincontrainer)
+        Me.Controls.Add(Me.AccordionControl1)
+        Me.Controls.Add(Me.FluentDesignFormControl1)
+        Me.FluentDesignFormControl = Me.FluentDesignFormControl1
+        Me.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FrmMain"
-        Me.Text = "FrmMain"
-        CType(Me.DocumentManager1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TabbedView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NavigationControl = Me.AccordionControl1
+        Me.Text = "PHẦN MỀM HỖ TRỢ KSK ĐỊNH KỲ"
+        CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents DocumentManager1 As DevExpress.XtraBars.Docking2010.DocumentManager
-    Friend WithEvents TabbedView1 As DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView
-    Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
-    Friend WithEvents BarManager1 As DevExpress.XtraBars.BarManager
-    Friend WithEvents Bar2 As DevExpress.XtraBars.Bar
-    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
-    Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
-    Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents RibbonPage2 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents Maincontrainer As DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer
+    Friend WithEvents AccordionControl1 As DevExpress.XtraBars.Navigation.AccordionControl
+    Friend WithEvents AccordionControlElement1 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents FluentDesignFormControl1 As DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl
+    Friend WithEvents AccordionControlElement2 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlElement3 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlElement4 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents lbltieude As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents mUCcONGTY As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents BtnThemCongTy As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class

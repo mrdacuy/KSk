@@ -124,6 +124,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -207,10 +208,22 @@
     <Compile Include="frmShowDataXN.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmtest.Designer.vb">
+      <DependentUpon>frmtest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmtest.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="frmThaoTac.Designer.vb">
       <DependentUpon>frmThaoTac.vb</DependentUpon>
     </Compile>
     <Compile Include="frmThaoTac.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemHoSo.Designer.vb">
+      <DependentUpon>FrmThemHoSo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemHoSo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmThuNhan.Designer.vb">
@@ -236,6 +249,12 @@
     </Compile>
     <Compile Include="frmTraSinhHoa.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserKhamSucKhoe.Designer.vb">
+      <DependentUpon>FrmUserKhamSucKhoe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserKhamSucKhoe.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MdKetNoi.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -270,6 +289,12 @@
       <DependentUpon>rpTem.vb</DependentUpon>
     </Compile>
     <Compile Include="rpTem.vb" />
+    <Compile Include="Rptem3.Designer.vb">
+      <DependentUpon>Rptem3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rptem3.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TraPhanTichNuocTieu.Designer.vb">
       <DependentUpon>TraPhanTichNuocTieu.vb</DependentUpon>
     </Compile>
@@ -305,8 +330,14 @@
     <EmbeddedResource Include="frmShowDataXN.resx">
       <DependentUpon>frmShowDataXN.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmtest.resx">
+      <DependentUpon>frmtest.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThaoTac.resx">
       <DependentUpon>frmThaoTac.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemHoSo.resx">
+      <DependentUpon>FrmThemHoSo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThuNhan.resx">
       <DependentUpon>FrmThuNhan.vb</DependentUpon>
@@ -319,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTraSinhHoa.resx">
       <DependentUpon>frmTraSinhHoa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserKhamSucKhoe.resx">
+      <DependentUpon>FrmUserKhamSucKhoe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -335,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="rpTem.resx">
       <DependentUpon>rpTem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rptem3.resx">
+      <DependentUpon>Rptem3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TraPhanTichNuocTieu.resx">
       <DependentUpon>TraPhanTichNuocTieu.vb</DependentUpon>

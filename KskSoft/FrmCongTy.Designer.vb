@@ -55,7 +55,7 @@ Partial Class FrmCongTy
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit1})
-        Me.GridControl1.Size = New System.Drawing.Size(697, 356)
+        Me.GridControl1.Size = New System.Drawing.Size(813, 450)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -66,7 +66,7 @@ Partial Class FrmCongTy
         Me.GridView1.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridView1.Appearance.Row.Options.UseFont = True
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.BtnSua, Me.NFrmCongTy, Me.NfrmCongTyId})
-        Me.GridView1.DetailHeight = 54
+        Me.GridView1.DetailHeight = 66
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsBehavior.Editable = False
@@ -77,11 +77,11 @@ Partial Class FrmCongTy
         '
         Me.BtnSua.Caption = "Sửa"
         Me.BtnSua.ColumnEdit = Me.RepositoryItemButtonEdit1
-        Me.BtnSua.MinWidth = 13
+        Me.BtnSua.MinWidth = 15
         Me.BtnSua.Name = "BtnSua"
         Me.BtnSua.Visible = True
         Me.BtnSua.VisibleIndex = 0
-        Me.BtnSua.Width = 96
+        Me.BtnSua.Width = 112
         '
         'RepositoryItemButtonEdit1
         '
@@ -95,21 +95,21 @@ Partial Class FrmCongTy
         '
         Me.NFrmCongTy.Caption = "CÔNG TY"
         Me.NFrmCongTy.FieldName = "Congty"
-        Me.NFrmCongTy.MinWidth = 11
+        Me.NFrmCongTy.MinWidth = 13
         Me.NFrmCongTy.Name = "NFrmCongTy"
         Me.NFrmCongTy.Visible = True
         Me.NFrmCongTy.VisibleIndex = 2
-        Me.NFrmCongTy.Width = 469
+        Me.NFrmCongTy.Width = 547
         '
         'NfrmCongTyId
         '
         Me.NfrmCongTyId.Caption = "ID"
         Me.NfrmCongTyId.FieldName = "Id"
-        Me.NfrmCongTyId.MinWidth = 11
+        Me.NfrmCongTyId.MinWidth = 13
         Me.NfrmCongTyId.Name = "NfrmCongTyId"
         Me.NfrmCongTyId.Visible = True
         Me.NfrmCongTyId.VisibleIndex = 1
-        Me.NfrmCongTyId.Width = 126
+        Me.NfrmCongTyId.Width = 147
         '
         'SplitContainer1
         '
@@ -117,7 +117,7 @@ Partial Class FrmCongTy
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -131,9 +131,9 @@ Partial Class FrmCongTy
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.GridControl1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(697, 406)
+        Me.SplitContainer1.Size = New System.Drawing.Size(813, 501)
         Me.SplitContainer1.SplitterDistance = 45
-        Me.SplitContainer1.SplitterWidth = 5
+        Me.SplitContainer1.SplitterWidth = 6
         Me.SplitContainer1.TabIndex = 1
         '
         'SimpleButton2
@@ -141,10 +141,10 @@ Partial Class FrmCongTy
         Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton2.Appearance.Options.UseFont = True
         Me.SimpleButton2.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton2.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton2.Location = New System.Drawing.Point(583, 5)
+        Me.SimpleButton2.Location = New System.Drawing.Point(680, 6)
         Me.SimpleButton2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(92, 32)
+        Me.SimpleButton2.Size = New System.Drawing.Size(107, 39)
         Me.SimpleButton2.TabIndex = 3
         Me.SimpleButton2.Text = "Hủy"
         '
@@ -153,10 +153,10 @@ Partial Class FrmCongTy
         Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton1.Appearance.Options.UseFont = True
         Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton1.Location = New System.Drawing.Point(485, 5)
+        Me.SimpleButton1.Location = New System.Drawing.Point(566, 6)
         Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(92, 32)
+        Me.SimpleButton1.Size = New System.Drawing.Size(107, 39)
         Me.SimpleButton1.TabIndex = 2
         Me.SimpleButton1.Text = "Lưu"
         '
@@ -164,7 +164,7 @@ Partial Class FrmCongTy
         '
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl1.Appearance.Options.UseFont = True
-        Me.LabelControl1.Location = New System.Drawing.Point(8, 11)
+        Me.LabelControl1.Location = New System.Drawing.Point(9, 14)
         Me.LabelControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(78, 16)
@@ -173,22 +173,25 @@ Partial Class FrmCongTy
         '
         'TextEdit1
         '
-        Me.TextEdit1.Location = New System.Drawing.Point(92, 9)
+        Me.TextEdit1.Location = New System.Drawing.Point(107, 11)
         Me.TextEdit1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextEdit1.Name = "TextEdit1"
         Me.TextEdit1.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextEdit1.Properties.Appearance.Options.UseFont = True
-        Me.TextEdit1.Size = New System.Drawing.Size(387, 22)
+        Me.TextEdit1.Size = New System.Drawing.Size(451, 22)
         Me.TextEdit1.TabIndex = 0
         '
         'FrmCongTy
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(697, 406)
+        Me.ClientSize = New System.Drawing.Size(813, 501)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FrmCongTy"
-        Me.Text = "FrmCongTy"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Công Ty"
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).EndInit()

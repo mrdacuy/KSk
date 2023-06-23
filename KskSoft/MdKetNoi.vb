@@ -6,7 +6,7 @@ Module MdKetNoi
     Public connectString As String
     Public Sql As String
     Public cnn, Cnn1 As SqlConnection
-
+    Public frmTestInstance As New frmtest()
     Public Tieudedonvi, Diachidonvi, Sodienthoai, Email, Website, Linkanh As String
     Public Sub Ket_noi()
         '  connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\KetQua\DataSieuAm.mdb;Jet OLEDB:Database Password=NDU@"

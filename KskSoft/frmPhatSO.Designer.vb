@@ -26,8 +26,8 @@ Partial Class frmPhatSO
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
         Me.mTen = New DevExpress.XtraEditors.LabelControl()
-        Me.cbPhatso = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.cbPhatso = New DevExpress.XtraEditors.ComboBoxEdit()
         CType(Me.cbPhatso.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,7 +35,8 @@ Partial Class frmPhatSO
         '
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl1.Appearance.Options.UseFont = True
-        Me.LabelControl1.Location = New System.Drawing.Point(181, 24)
+        Me.LabelControl1.Location = New System.Drawing.Point(211, 30)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(85, 23)
         Me.LabelControl1.TabIndex = 0
@@ -45,7 +46,8 @@ Partial Class frmPhatSO
         '
         Me.mCode.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mCode.Appearance.Options.UseFont = True
-        Me.mCode.Location = New System.Drawing.Point(121, 81)
+        Me.mCode.Location = New System.Drawing.Point(111, 100)
+        Me.mCode.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.mCode.Name = "mCode"
         Me.mCode.Size = New System.Drawing.Size(8, 16)
         Me.mCode.TabIndex = 1
@@ -55,7 +57,8 @@ Partial Class frmPhatSO
         '
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl3.Appearance.Options.UseFont = True
-        Me.LabelControl3.Location = New System.Drawing.Point(62, 62)
+        Me.LabelControl3.Location = New System.Drawing.Point(33, 76)
+        Me.LabelControl3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(64, 16)
         Me.LabelControl3.TabIndex = 1
@@ -65,7 +68,8 @@ Partial Class frmPhatSO
         '
         Me.LabelControl4.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl4.Appearance.Options.UseFont = True
-        Me.LabelControl4.Location = New System.Drawing.Point(75, 81)
+        Me.LabelControl4.Location = New System.Drawing.Point(48, 100)
+        Me.LabelControl4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New System.Drawing.Size(48, 16)
         Me.LabelControl4.TabIndex = 2
@@ -75,7 +79,8 @@ Partial Class frmPhatSO
         '
         Me.LabelControl5.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl5.Appearance.Options.UseFont = True
-        Me.LabelControl5.Location = New System.Drawing.Point(83, 103)
+        Me.LabelControl5.Location = New System.Drawing.Point(57, 127)
+        Me.LabelControl5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl5.Name = "LabelControl5"
         Me.LabelControl5.Size = New System.Drawing.Size(37, 16)
         Me.LabelControl5.TabIndex = 3
@@ -85,39 +90,42 @@ Partial Class frmPhatSO
         '
         Me.mTen.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mTen.Appearance.Options.UseFont = True
-        Me.mTen.Location = New System.Drawing.Point(121, 62)
+        Me.mTen.Location = New System.Drawing.Point(111, 76)
+        Me.mTen.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.mTen.Name = "mTen"
         Me.mTen.Size = New System.Drawing.Size(8, 16)
         Me.mTen.TabIndex = 4
         Me.mTen.Text = ".."
-        '
-        'cbPhatso
-        '
-        Me.cbPhatso.Location = New System.Drawing.Point(121, 100)
-        Me.cbPhatso.Name = "cbPhatso"
-        Me.cbPhatso.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbPhatso.Properties.Appearance.Options.UseFont = True
-        Me.cbPhatso.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cbPhatso.Properties.Items.AddRange(New Object() {"Chưa phát sổ", "Đã phát sổ"})
-        Me.cbPhatso.Size = New System.Drawing.Size(228, 22)
-        Me.cbPhatso.TabIndex = 5
         '
         'SimpleButton1
         '
         Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton1.Appearance.Options.UseFont = True
         Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton1.Location = New System.Drawing.Point(161, 143)
+        Me.SimpleButton1.Location = New System.Drawing.Point(164, 176)
+        Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(105, 32)
+        Me.SimpleButton1.Size = New System.Drawing.Size(122, 39)
         Me.SimpleButton1.TabIndex = 6
         Me.SimpleButton1.Text = "PHÁT SỔ"
         '
+        'cbPhatso
+        '
+        Me.cbPhatso.Location = New System.Drawing.Point(107, 123)
+        Me.cbPhatso.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cbPhatso.Name = "cbPhatso"
+        Me.cbPhatso.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbPhatso.Properties.Appearance.Options.UseFont = True
+        Me.cbPhatso.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cbPhatso.Properties.Items.AddRange(New Object() {"Đã phát sổ", "Chưa phát sổ"})
+        Me.cbPhatso.Size = New System.Drawing.Size(300, 22)
+        Me.cbPhatso.TabIndex = 5
+        '
         'frmPhatSO
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(386, 187)
+        Me.ClientSize = New System.Drawing.Size(450, 230)
         Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.cbPhatso)
         Me.Controls.Add(Me.mTen)
@@ -126,9 +134,13 @@ Partial Class frmPhatSO
         Me.Controls.Add(Me.LabelControl3)
         Me.Controls.Add(Me.mCode)
         Me.Controls.Add(Me.LabelControl1)
+        Me.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmPhatSO"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmPhatSO"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Phát sổ"
         CType(Me.cbPhatso.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -39,9 +39,10 @@ Partial Class frmImportSolieuhoso
         Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton1.Appearance.Options.UseFont = True
         Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton1.Location = New System.Drawing.Point(155, 140)
+        Me.SimpleButton1.Location = New System.Drawing.Point(160, 123)
+        Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(175, 33)
+        Me.SimpleButton1.Size = New System.Drawing.Size(151, 41)
         Me.SimpleButton1.TabIndex = 2
         Me.SimpleButton1.Text = "Nhập dữ liệu"
         '
@@ -49,7 +50,8 @@ Partial Class frmImportSolieuhoso
         '
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl1.Appearance.Options.UseFont = True
-        Me.LabelControl1.Location = New System.Drawing.Point(75, 65)
+        Me.LabelControl1.Location = New System.Drawing.Point(43, 59)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(42, 19)
         Me.LabelControl1.TabIndex = 3
@@ -59,7 +61,8 @@ Partial Class frmImportSolieuhoso
         '
         Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl2.Appearance.Options.UseFont = True
-        Me.LabelControl2.Location = New System.Drawing.Point(56, 97)
+        Me.LabelControl2.Location = New System.Drawing.Point(21, 92)
+        Me.LabelControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl2.Name = "LabelControl2"
         Me.LabelControl2.Size = New System.Drawing.Size(61, 19)
         Me.LabelControl2.TabIndex = 4
@@ -75,7 +78,8 @@ Partial Class frmImportSolieuhoso
         Me.LabelControl3.Appearance.ForeColor = System.Drawing.Color.Blue
         Me.LabelControl3.Appearance.Options.UseFont = True
         Me.LabelControl3.Appearance.Options.UseForeColor = True
-        Me.LabelControl3.Location = New System.Drawing.Point(155, 12)
+        Me.LabelControl3.Location = New System.Drawing.Point(169, 13)
+        Me.LabelControl3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(142, 23)
         Me.LabelControl3.TabIndex = 5
@@ -83,17 +87,19 @@ Partial Class frmImportSolieuhoso
         '
         'SlCongty
         '
-        Me.SlCongty.Location = New System.Drawing.Point(123, 94)
+        Me.SlCongty.Location = New System.Drawing.Point(99, 89)
+        Me.SlCongty.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SlCongty.Name = "SlCongty"
         Me.SlCongty.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SlCongty.Properties.Appearance.Options.UseFont = True
         Me.SlCongty.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.SlCongty.Properties.PopupView = Me.SearchLookUpEdit1View
-        Me.SlCongty.Size = New System.Drawing.Size(292, 26)
+        Me.SlCongty.Size = New System.Drawing.Size(341, 26)
         Me.SlCongty.TabIndex = 1
         '
         'SearchLookUpEdit1View
         '
+        Me.SearchLookUpEdit1View.DetailHeight = 431
         Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
         Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
@@ -102,29 +108,32 @@ Partial Class frmImportSolieuhoso
         'Ngay
         '
         Me.Ngay.EditValue = Nothing
-        Me.Ngay.Location = New System.Drawing.Point(123, 62)
+        Me.Ngay.Location = New System.Drawing.Point(99, 55)
+        Me.Ngay.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Ngay.Name = "Ngay"
         Me.Ngay.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Ngay.Properties.Appearance.Options.UseFont = True
         Me.Ngay.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.Ngay.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.Ngay.Size = New System.Drawing.Size(292, 26)
+        Me.Ngay.Size = New System.Drawing.Size(341, 26)
         Me.Ngay.TabIndex = 0
         '
         'frmImportSolieuhoso
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(453, 199)
+        Me.ClientSize = New System.Drawing.Size(457, 177)
         Me.Controls.Add(Me.LabelControl3)
         Me.Controls.Add(Me.LabelControl2)
         Me.Controls.Add(Me.LabelControl1)
         Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.SlCongty)
         Me.Controls.Add(Me.Ngay)
+        Me.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frmImportSolieuhoso"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmImportSolieuhoso"
+        Me.Text = "Import thông tin"
         CType(Me.SlCongty.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ngay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()

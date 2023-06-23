@@ -24,6 +24,7 @@ Partial Public Class rpKSK
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrLabel33 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel47 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel46 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel45 = New DevExpress.XtraReports.UI.XRLabel()
@@ -86,9 +87,7 @@ Partial Public Class rpKSK
         Me.XrBarCode1 = New DevExpress.XtraReports.UI.XRBarCode()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrPictureBox3 = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrPictureBox2 = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrControlStyle1 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.rpHovaten = New DevExpress.XtraReports.Parameters.Parameter()
@@ -100,8 +99,9 @@ Partial Public Class rpKSK
         Me.rpTencongty = New DevExpress.XtraReports.Parameters.Parameter()
         Me.rpNgaykham = New DevExpress.XtraReports.Parameters.Parameter()
         Me.rpID = New DevExpress.XtraReports.Parameters.Parameter()
-        Me.XrLabel33 = New DevExpress.XtraReports.UI.XRLabel()
         Me.rpNghenghiep = New DevExpress.XtraReports.Parameters.Parameter()
+        Me.XrPictureBox3 = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.XrPictureBox2 = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -128,6 +128,22 @@ Partial Public Class rpKSK
         Me.Detail.Name = "Detail"
         Me.Detail.StylePriority.UseBorders = False
         Me.Detail.StylePriority.UseBorderWidth = False
+        '
+        'XrLabel33
+        '
+        Me.XrLabel33.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel33.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?rpNghenghiep")})
+        Me.XrLabel33.Font = New DevExpress.Drawing.DXFont("times New Roman", 13.0!, DevExpress.Drawing.DXFontStyle.Bold)
+        Me.XrLabel33.LocationFloat = New DevExpress.Utils.PointFloat(971.0231!, 84.99998!)
+        Me.XrLabel33.Multiline = True
+        Me.XrLabel33.Name = "XrLabel33"
+        Me.XrLabel33.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel33.SizeF = New System.Drawing.SizeF(304.7966!, 23.0!)
+        Me.XrLabel33.StylePriority.UseBorders = False
+        Me.XrLabel33.StylePriority.UseFont = False
+        Me.XrLabel33.StylePriority.UseTextAlignment = False
+        Me.XrLabel33.Text = "XrLabel33"
+        Me.XrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'XrLabel47
         '
@@ -957,16 +973,6 @@ Partial Public Class rpKSK
         Me.XrLabel3.Text = "GIẤY KHÁM SỨC KHỎE ĐỊNH KỲ"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
-        'XrPictureBox3
-        '
-        Me.XrPictureBox3.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrPictureBox3.ImageSource = New DevExpress.XtraPrinting.Drawing.ImageSource(Global.KskSoft.My.Resources.Resources._302689959_448805050598298_4088234043047513416_n, True)
-        Me.XrPictureBox3.LocationFloat = New DevExpress.Utils.PointFloat(786.2206!, 73.99998!)
-        Me.XrPictureBox3.Name = "XrPictureBox3"
-        Me.XrPictureBox3.SizeF = New System.Drawing.SizeF(130.2697!, 114.543!)
-        Me.XrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
-        Me.XrPictureBox3.StylePriority.UseBorders = False
-        '
         'XrLabel2
         '
         Me.XrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None
@@ -982,18 +988,6 @@ Partial Public Class rpKSK
         Me.XrLabel2.StylePriority.UseTextAlignment = False
         Me.XrLabel2.Text = "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Độc lập - Tự do - Hạnh phúc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "--------------"
         Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrPictureBox2
-        '
-        Me.XrPictureBox2.BackColor = System.Drawing.Color.White
-        Me.XrPictureBox2.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrPictureBox2.ImageSource = New DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("XrPictureBox2.ImageSource"))
-        Me.XrPictureBox2.LocationFloat = New DevExpress.Utils.PointFloat(892.3627!, 123.0734!)
-        Me.XrPictureBox2.Name = "XrPictureBox2"
-        Me.XrPictureBox2.SizeF = New System.Drawing.SizeF(541.9291!, 552.1973!)
-        Me.XrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
-        Me.XrPictureBox2.StylePriority.UseBackColor = False
-        Me.XrPictureBox2.StylePriority.UseBorders = False
         '
         'XrLabel1
         '
@@ -1088,22 +1082,6 @@ Partial Public Class rpKSK
         Me.rpID.Name = "rpID"
         Me.rpID.Visible = False
         '
-        'XrLabel33
-        '
-        Me.XrLabel33.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel33.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?rpNghenghiep")})
-        Me.XrLabel33.Font = New DevExpress.Drawing.DXFont("times New Roman", 13.0!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.XrLabel33.LocationFloat = New DevExpress.Utils.PointFloat(971.0231!, 84.99998!)
-        Me.XrLabel33.Multiline = True
-        Me.XrLabel33.Name = "XrLabel33"
-        Me.XrLabel33.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel33.SizeF = New System.Drawing.SizeF(304.7966!, 23.0!)
-        Me.XrLabel33.StylePriority.UseBorders = False
-        Me.XrLabel33.StylePriority.UseFont = False
-        Me.XrLabel33.StylePriority.UseTextAlignment = False
-        Me.XrLabel33.Text = "XrLabel33"
-        Me.XrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
-        '
         'rpNghenghiep
         '
         Me.rpNghenghiep.AllowNull = True
@@ -1111,6 +1089,28 @@ Partial Public Class rpKSK
         Me.rpNghenghiep.MultiValue = True
         Me.rpNghenghiep.Name = "rpNghenghiep"
         Me.rpNghenghiep.Visible = False
+        '
+        'XrPictureBox3
+        '
+        Me.XrPictureBox3.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrPictureBox3.ImageSource = New DevExpress.XtraPrinting.Drawing.ImageSource(Global.KskSoft.My.Resources.Resources._302689959_448805050598298_4088234043047513416_n, True)
+        Me.XrPictureBox3.LocationFloat = New DevExpress.Utils.PointFloat(786.2206!, 73.99998!)
+        Me.XrPictureBox3.Name = "XrPictureBox3"
+        Me.XrPictureBox3.SizeF = New System.Drawing.SizeF(130.2697!, 114.543!)
+        Me.XrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
+        Me.XrPictureBox3.StylePriority.UseBorders = False
+        '
+        'XrPictureBox2
+        '
+        Me.XrPictureBox2.BackColor = System.Drawing.Color.White
+        Me.XrPictureBox2.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrPictureBox2.ImageSource = New DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("XrPictureBox2.ImageSource"))
+        Me.XrPictureBox2.LocationFloat = New DevExpress.Utils.PointFloat(892.3627!, 123.0734!)
+        Me.XrPictureBox2.Name = "XrPictureBox2"
+        Me.XrPictureBox2.SizeF = New System.Drawing.SizeF(572.4851!, 638.3244!)
+        Me.XrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
+        Me.XrPictureBox2.StylePriority.UseBackColor = False
+        Me.XrPictureBox2.StylePriority.UseBorders = False
         '
         'rpKSK
         '

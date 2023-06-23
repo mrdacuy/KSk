@@ -9,7 +9,7 @@
 
         For j = BatDau To KetThuc
             For i = 1 To lapLai1
-                Dim f As New rpTem
+                Dim f As New Rptem3
                 f.Parameters("Ma1").Value = j.ToString
                 f.Parameters("Ma2").Value = j.ToString
                 f.Parameters("Ma3").Value = j.ToString
@@ -22,7 +22,7 @@
         Dim i As Integer
         Dim lapLai1 As Integer = Laplai.Value
         For i = 1 To lapLai1
-            Dim f As New rpTem
+            Dim f As New Rptem3
             f.Parameters("Ma1").Value = txtNhapMa.EditValue.trim
             f.Parameters("Ma2").Value = txtNhapMa.EditValue.trim
             f.Parameters("Ma3").Value = txtNhapMa.EditValue.trim

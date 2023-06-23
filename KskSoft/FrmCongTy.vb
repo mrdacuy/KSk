@@ -34,6 +34,7 @@ Public Class FrmCongTy
 
     Private Sub FrmCongTy_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Load_CongTy()
+        GridView1.IndicatorWidth = 50
     End Sub
 
     Private Sub GridView1_RowCellClick(sender As Object, e As RowCellClickEventArgs) Handles GridView1.RowCellClick
@@ -41,6 +42,9 @@ Public Class FrmCongTy
             TextEdit1.EditValue = GridView1.GetFocusedRowCellValue("Congty")
             IdSo = GridView1.GetFocusedRowCellValue("Id")
         End If
+    End Sub
+    Private Sub GridView1_CustomDrawRowIndicator(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs) Handles GridView1.CustomDrawRowIndicator
+        If e.RowHandle >= 0 Then e.Info.DisplayText = e.RowHandle.ToString() + 1
     End Sub
     Private Sub Edit_DaTa()
         Ket_noi()

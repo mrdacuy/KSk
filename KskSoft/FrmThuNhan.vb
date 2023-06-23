@@ -11,7 +11,7 @@ Imports DevExpress.XtraBars
 
 Public Class FrmThuNhan
 
-    Dim idcongty As String = 1
+
     Dim Dt As New DataSet
     Dim Da As New DataTable
     Sub LoadDaTa()
@@ -123,7 +123,7 @@ Public Class FrmThuNhan
     Private Sub FrmThuNhan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TuNgay.EditValue = Today
         DenNgay.EditValue = Today
-        LoadDaTa()
+        'LoadDaTa()
         slCongtyThuNhan()
         frmImportSolieuhoso.Load_CongTyImport()
     End Sub

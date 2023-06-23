@@ -65,26 +65,31 @@ Partial Class FrmInKhamSucKhoe
         '
         Me.NHoten.Caption = "HỌ VÀ TÊN"
         Me.NHoten.FieldName = "Hoten"
+        Me.NHoten.MinWidth = 23
         Me.NHoten.Name = "NHoten"
         Me.NHoten.Visible = True
         Me.NHoten.VisibleIndex = 1
+        Me.NHoten.Width = 87
         '
         'NGioitinh
         '
         Me.NGioitinh.Caption = "GIỚI TÍNH"
         Me.NGioitinh.FieldName = "Gioitinh"
+        Me.NGioitinh.MinWidth = 23
         Me.NGioitinh.Name = "NGioitinh"
         Me.NGioitinh.Visible = True
         Me.NGioitinh.VisibleIndex = 3
+        Me.NGioitinh.Width = 87
         '
         'SimpleButton3
         '
         Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton3.Appearance.Options.UseFont = True
         Me.SimpleButton3.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton3.Location = New System.Drawing.Point(720, 9)
+        Me.SimpleButton3.Location = New System.Drawing.Point(840, 11)
+        Me.SimpleButton3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(102, 26)
+        Me.SimpleButton3.Size = New System.Drawing.Size(119, 32)
         Me.SimpleButton3.TabIndex = 12
         Me.SimpleButton3.Text = "In phiếu"
         '
@@ -92,7 +97,8 @@ Partial Class FrmInKhamSucKhoe
         '
         Me.LabelControl4.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl4.Appearance.Options.UseFont = True
-        Me.LabelControl4.Location = New System.Drawing.Point(216, 43)
+        Me.LabelControl4.Location = New System.Drawing.Point(252, 53)
+        Me.LabelControl4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New System.Drawing.Size(85, 16)
         Me.LabelControl4.TabIndex = 9
@@ -102,7 +108,8 @@ Partial Class FrmInKhamSucKhoe
         '
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl3.Appearance.Options.UseFont = True
-        Me.LabelControl3.Location = New System.Drawing.Point(216, 20)
+        Me.LabelControl3.Location = New System.Drawing.Point(252, 25)
+        Me.LabelControl3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(52, 16)
         Me.LabelControl3.TabIndex = 8
@@ -112,7 +119,8 @@ Partial Class FrmInKhamSucKhoe
         '
         Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl2.Appearance.Options.UseFont = True
-        Me.LabelControl2.Location = New System.Drawing.Point(13, 41)
+        Me.LabelControl2.Location = New System.Drawing.Point(15, 50)
+        Me.LabelControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl2.Name = "LabelControl2"
         Me.LabelControl2.Size = New System.Drawing.Size(63, 16)
         Me.LabelControl2.TabIndex = 7
@@ -122,23 +130,28 @@ Partial Class FrmInKhamSucKhoe
         '
         Me.NManhanvien.Caption = "MÃ NHÂN VIÊN"
         Me.NManhanvien.FieldName = "Manhanvien"
+        Me.NManhanvien.MinWidth = 23
         Me.NManhanvien.Name = "NManhanvien"
         Me.NManhanvien.Visible = True
         Me.NManhanvien.VisibleIndex = 4
+        Me.NManhanvien.Width = 87
         '
         'Bophan
         '
         Me.Bophan.Caption = "BỘ PHẬN"
         Me.Bophan.FieldName = "Bophan"
+        Me.Bophan.MinWidth = 23
         Me.Bophan.Name = "Bophan"
         Me.Bophan.Visible = True
         Me.Bophan.VisibleIndex = 5
+        Me.Bophan.Width = 87
         '
         'LabelControl1
         '
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl1.Appearance.Options.UseFont = True
-        Me.LabelControl1.Location = New System.Drawing.Point(13, 15)
+        Me.LabelControl1.Location = New System.Drawing.Point(15, 18)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(56, 16)
         Me.LabelControl1.TabIndex = 6
@@ -149,43 +162,50 @@ Partial Class FrmInKhamSucKhoe
         Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton2.Appearance.Options.UseFont = True
         Me.SimpleButton2.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton2.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton2.Location = New System.Drawing.Point(612, 37)
+        Me.SimpleButton2.Location = New System.Drawing.Point(714, 46)
+        Me.SimpleButton2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(102, 26)
+        Me.SimpleButton2.Size = New System.Drawing.Size(119, 32)
         Me.SimpleButton2.TabIndex = 5
         Me.SimpleButton2.Text = "Tìm kiếm"
         '
         'txtTimkiem
         '
-        Me.txtTimkiem.Location = New System.Drawing.Point(303, 40)
+        Me.txtTimkiem.Location = New System.Drawing.Point(353, 49)
+        Me.txtTimkiem.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTimkiem.Name = "txtTimkiem"
         Me.txtTimkiem.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTimkiem.Properties.Appearance.Options.UseFont = True
-        Me.txtTimkiem.Size = New System.Drawing.Size(288, 22)
+        Me.txtTimkiem.Size = New System.Drawing.Size(336, 22)
         Me.txtTimkiem.TabIndex = 3
         '
         'NNamsinh
         '
         Me.NNamsinh.Caption = "NĂM SINH"
         Me.NNamsinh.FieldName = "Namsinh"
+        Me.NNamsinh.MinWidth = 23
         Me.NNamsinh.Name = "NNamsinh"
         Me.NNamsinh.Visible = True
         Me.NNamsinh.VisibleIndex = 2
+        Me.NNamsinh.Width = 87
         '
         'NPhatso
         '
         Me.NPhatso.Caption = "PHÁT SỔ"
         Me.NPhatso.FieldName = "Phatso"
+        Me.NPhatso.MinWidth = 23
         Me.NPhatso.Name = "NPhatso"
+        Me.NPhatso.Width = 87
         '
         'SimpleButton1
         '
         Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton1.Appearance.Options.UseFont = True
         Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton1.Location = New System.Drawing.Point(612, 8)
+        Me.SimpleButton1.Location = New System.Drawing.Point(714, 10)
+        Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(102, 27)
+        Me.SimpleButton1.Size = New System.Drawing.Size(119, 33)
         Me.SimpleButton1.TabIndex = 4
         Me.SimpleButton1.Text = "Import"
         '
@@ -195,17 +215,19 @@ Partial Class FrmInKhamSucKhoe
         '
         'SlCongty
         '
-        Me.SlCongty.Location = New System.Drawing.Point(303, 13)
+        Me.SlCongty.Location = New System.Drawing.Point(353, 16)
+        Me.SlCongty.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SlCongty.Name = "SlCongty"
         Me.SlCongty.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SlCongty.Properties.Appearance.Options.UseFont = True
         Me.SlCongty.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.SlCongty.Properties.PopupView = Me.SearchLookUpEdit1View
-        Me.SlCongty.Size = New System.Drawing.Size(288, 22)
+        Me.SlCongty.Size = New System.Drawing.Size(336, 22)
         Me.SlCongty.TabIndex = 2
         '
         'SearchLookUpEdit1View
         '
+        Me.SearchLookUpEdit1View.DetailHeight = 431
         Me.SearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.SearchLookUpEdit1View.Name = "SearchLookUpEdit1View"
         Me.SearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
@@ -218,6 +240,7 @@ Partial Class FrmInKhamSucKhoe
         Me.gvSolieuhoso.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gvSolieuhoso.Appearance.Row.Options.UseFont = True
         Me.gvSolieuhoso.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.Bophan, Me.NPhatso, Me.NThuso, Me.NNghenghiep})
+        Me.gvSolieuhoso.DetailHeight = 431
         Me.gvSolieuhoso.GridControl = Me.grSolieuhoso
         Me.gvSolieuhoso.Name = "gvSolieuhoso"
         Me.gvSolieuhoso.OptionsBehavior.Editable = False
@@ -229,59 +252,68 @@ Partial Class FrmInKhamSucKhoe
         '
         Me.NMacode.Caption = "MÃ ID"
         Me.NMacode.FieldName = "Macode"
+        Me.NMacode.MinWidth = 23
         Me.NMacode.Name = "NMacode"
         Me.NMacode.Visible = True
         Me.NMacode.VisibleIndex = 0
+        Me.NMacode.Width = 87
         '
         'NThuso
         '
         Me.NThuso.Caption = "THU SỔ"
         Me.NThuso.FieldName = "Thuso"
+        Me.NThuso.MinWidth = 23
         Me.NThuso.Name = "NThuso"
+        Me.NThuso.Width = 87
         '
         'NNghenghiep
         '
         Me.NNghenghiep.Caption = "NGHỀ NGHIỆP"
         Me.NNghenghiep.FieldName = "Nghenghiep"
+        Me.NNghenghiep.MinWidth = 23
         Me.NNghenghiep.Name = "NNghenghiep"
         Me.NNghenghiep.Visible = True
         Me.NNghenghiep.VisibleIndex = 6
+        Me.NNghenghiep.Width = 87
         '
         'grSolieuhoso
         '
-        Me.grSolieuhoso.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grSolieuhoso.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grSolieuhoso.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         GridLevelNode1.RelationName = "Level1"
         Me.grSolieuhoso.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode1})
         Me.grSolieuhoso.Location = New System.Drawing.Point(0, 0)
         Me.grSolieuhoso.MainView = Me.gvSolieuhoso
+        Me.grSolieuhoso.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grSolieuhoso.Name = "grSolieuhoso"
-        Me.grSolieuhoso.Size = New System.Drawing.Size(1019, 468)
+        Me.grSolieuhoso.Size = New System.Drawing.Size(1189, 576)
         Me.grSolieuhoso.TabIndex = 0
         Me.grSolieuhoso.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvSolieuhoso})
         '
         'DenNgay
         '
         Me.DenNgay.EditValue = Nothing
-        Me.DenNgay.Location = New System.Drawing.Point(76, 39)
+        Me.DenNgay.Location = New System.Drawing.Point(89, 48)
+        Me.DenNgay.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DenNgay.Name = "DenNgay"
         Me.DenNgay.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DenNgay.Properties.Appearance.Options.UseFont = True
         Me.DenNgay.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DenNgay.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DenNgay.Size = New System.Drawing.Size(128, 22)
+        Me.DenNgay.Size = New System.Drawing.Size(149, 22)
         Me.DenNgay.TabIndex = 1
         '
         'TuNgay
         '
         Me.TuNgay.EditValue = Nothing
-        Me.TuNgay.Location = New System.Drawing.Point(76, 13)
+        Me.TuNgay.Location = New System.Drawing.Point(89, 16)
+        Me.TuNgay.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TuNgay.Name = "TuNgay"
         Me.TuNgay.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TuNgay.Properties.Appearance.Options.UseFont = True
         Me.TuNgay.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TuNgay.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TuNgay.Size = New System.Drawing.Size(128, 22)
+        Me.TuNgay.Size = New System.Drawing.Size(149, 22)
         Me.TuNgay.TabIndex = 0
         '
         'SplitContainer1
@@ -291,6 +323,7 @@ Partial Class FrmInKhamSucKhoe
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -312,16 +345,18 @@ Partial Class FrmInKhamSucKhoe
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.grSolieuhoso)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1019, 542)
-        Me.SplitContainer1.SplitterDistance = 70
+        Me.SplitContainer1.Size = New System.Drawing.Size(1189, 667)
+        Me.SplitContainer1.SplitterDistance = 86
+        Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 1
         '
         'FrmInKhamSucKhoe
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1019, 542)
+        Me.ClientSize = New System.Drawing.Size(1189, 667)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FrmInKhamSucKhoe"
         Me.Text = "FrmInKhamSucKhoe"
         CType(Me.txtTimkiem.Properties, System.ComponentModel.ISupportInitialize).EndInit()
