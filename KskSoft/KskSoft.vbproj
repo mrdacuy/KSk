@@ -208,6 +208,12 @@
     <Compile Include="frmShowDataXN.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmTem4.Designer.vb">
+      <DependentUpon>FrmTem4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTem4.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmtest.Designer.vb">
       <DependentUpon>frmtest.vb</DependentUpon>
     </Compile>
@@ -295,6 +301,12 @@
     <Compile Include="Rptem3.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RpTem4.Designer.vb">
+      <DependentUpon>RpTem4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RpTem4.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TraPhanTichNuocTieu.Designer.vb">
       <DependentUpon>TraPhanTichNuocTieu.vb</DependentUpon>
     </Compile>
@@ -329,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowDataXN.resx">
       <DependentUpon>frmShowDataXN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTem4.resx">
+      <DependentUpon>FrmTem4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtest.resx">
       <DependentUpon>frmtest.vb</DependentUpon>
@@ -372,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rptem3.resx">
       <DependentUpon>Rptem3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RpTem4.resx">
+      <DependentUpon>RpTem4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TraPhanTichNuocTieu.resx">
       <DependentUpon>TraPhanTichNuocTieu.vb</DependentUpon>

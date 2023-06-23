@@ -32,6 +32,7 @@ Partial Class FrmMain
         Me.BtnThemCongTy = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.FluentDesignFormControl1 = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl()
         Me.lbltieude = New DevExpress.XtraBars.BarStaticItem()
+        Me.AccordionControlElement5 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -70,7 +71,7 @@ Partial Class FrmMain
         '
         'AccordionControlElement1
         '
-        Me.AccordionControlElement1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement2, Me.AccordionControlElement3, Me.AccordionControlElement4})
+        Me.AccordionControlElement1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement2, Me.AccordionControlElement3, Me.AccordionControlElement4, Me.AccordionControlElement5})
         Me.AccordionControlElement1.Expanded = True
         Me.AccordionControlElement1.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.AccordionControlElement1.Name = "AccordionControlElement1"
@@ -131,6 +132,13 @@ Partial Class FrmMain
         Me.lbltieude.Name = "lbltieude"
         Me.lbltieude.TextAlignment = System.Drawing.StringAlignment.Center
         '
+        'AccordionControlElement5
+        '
+        Me.AccordionControlElement5.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement5.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement5.Name = "AccordionControlElement5"
+        Me.AccordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement5.Text = "IN BARCODE TEM 4"
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -141,7 +149,6 @@ Partial Class FrmMain
         Me.Controls.Add(Me.AccordionControl1)
         Me.Controls.Add(Me.FluentDesignFormControl1)
         Me.FluentDesignFormControl = Me.FluentDesignFormControl1
-        Me.Font = New System.Drawing.Font("Tahoma", 9.75!)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FrmMain"
         Me.NavigationControl = Me.AccordionControl1
@@ -162,4 +169,5 @@ Partial Class FrmMain
     Friend WithEvents lbltieude As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents mUCcONGTY As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents BtnThemCongTy As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlElement5 As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class

@@ -34,4 +34,8 @@
     Private Sub BtnThemCongTy_Click(sender As Object, e As EventArgs) Handles BtnThemCongTy.Click
         FrmCongTy.ShowDialog()
     End Sub
+
+    Private Sub AccordionControlElement5_Click(sender As Object, e As EventArgs) Handles AccordionControlElement5.Click
+        FrmTem4.ShowDialog()
+    End Sub
 End Class
