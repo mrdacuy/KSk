@@ -43,6 +43,9 @@ Partial Class frmtest
         Me.NHoten = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.NMacode = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.gvSolieuhoso = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.Nnghenghiep = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Nchucvu = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NNgay = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.grSolieuhoso = New DevExpress.XtraGrid.GridControl()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
@@ -155,7 +158,7 @@ Partial Class frmtest
         Me.NThuso.MinWidth = 23
         Me.NThuso.Name = "NThuso"
         Me.NThuso.Visible = True
-        Me.NThuso.VisibleIndex = 7
+        Me.NThuso.VisibleIndex = 9
         Me.NThuso.Width = 140
         '
         'NPhatso
@@ -165,7 +168,7 @@ Partial Class frmtest
         Me.NPhatso.MinWidth = 23
         Me.NPhatso.Name = "NPhatso"
         Me.NPhatso.Visible = True
-        Me.NPhatso.VisibleIndex = 6
+        Me.NPhatso.VisibleIndex = 8
         Me.NPhatso.Width = 134
         '
         'Bophan
@@ -175,7 +178,7 @@ Partial Class frmtest
         Me.Bophan.MinWidth = 23
         Me.Bophan.Name = "Bophan"
         Me.Bophan.Visible = True
-        Me.Bophan.VisibleIndex = 5
+        Me.Bophan.VisibleIndex = 7
         Me.Bophan.Width = 134
         '
         'NManhanvien
@@ -239,7 +242,7 @@ Partial Class frmtest
         Me.gvSolieuhoso.Appearance.HeaderPanel.Options.UseFont = True
         Me.gvSolieuhoso.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gvSolieuhoso.Appearance.Row.Options.UseFont = True
-        Me.gvSolieuhoso.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.Bophan, Me.NPhatso, Me.NThuso})
+        Me.gvSolieuhoso.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.Nnghenghiep, Me.Nchucvu, Me.Bophan, Me.NPhatso, Me.NThuso, Me.NNgay})
         Me.gvSolieuhoso.DetailHeight = 431
         Me.gvSolieuhoso.GridControl = Me.grSolieuhoso
         Me.gvSolieuhoso.Name = "gvSolieuhoso"
@@ -248,6 +251,32 @@ Partial Class frmtest
         Me.gvSolieuhoso.OptionsView.ShowFooter = True
         Me.gvSolieuhoso.OptionsView.ShowGroupPanel = False
         Me.gvSolieuhoso.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.[False]
+        '
+        'Nnghenghiep
+        '
+        Me.Nnghenghiep.Caption = "Nghề nghiệp"
+        Me.Nnghenghiep.FieldName = "Nghenghiep"
+        Me.Nnghenghiep.Name = "Nnghenghiep"
+        Me.Nnghenghiep.Visible = True
+        Me.Nnghenghiep.VisibleIndex = 5
+        '
+        'Nchucvu
+        '
+        Me.Nchucvu.Caption = "Chức vụ"
+        Me.Nchucvu.FieldName = "Chucvu"
+        Me.Nchucvu.Name = "Nchucvu"
+        Me.Nchucvu.Visible = True
+        Me.Nchucvu.VisibleIndex = 6
+        '
+        'NNgay
+        '
+        Me.NNgay.Caption = "Ngày khám"
+        Me.NNgay.DisplayFormat.FormatString = "dd/MM/yyyy"
+        Me.NNgay.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.NNgay.FieldName = "Ngay"
+        Me.NNgay.Name = "NNgay"
+        Me.NNgay.Visible = True
+        Me.NNgay.VisibleIndex = 10
         '
         'grSolieuhoso
         '
@@ -526,4 +555,7 @@ Partial Class frmtest
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Nnghenghiep As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Nchucvu As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NNgay As DevExpress.XtraGrid.Columns.GridColumn
 End Class

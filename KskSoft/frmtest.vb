@@ -16,21 +16,32 @@ Public Class frmtest
     Dim tongPhatso, tongThuso As String
     Sub LoadDaTa()
 
+        'Dim TuNgayValue As String = CType(TuNgay.EditValue, DateTime).ToString("yyyyMMdd")
+        'Dim DenngayValue As String = CType(DenNgay.EditValue, DateTime).ToString("yyyyMMdd")
+        'Dt.Clear()
+
+        'Ket_noi()
+        'Dim strg As String = "SELECT Macode,Hoten,Namsinh,Manhanvien,Bophan,Chucvu,Nghenghiep,dbo.SO_CNG(Ngay) As Ngay,Phatso,Thuso FROM Solieuhoso WHERE Ngay >= '" & Strings.Format(TuNgay.EditValue, "yyyyMMdd") & "' AND Ngay <= '" & Strings.Format(DenNgay.EditValue, "yyyyMMdd") & "' AND Congty = " & idCongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
+        '' Dim strg As String = "SELECT convert(nvarchar(10), Ngay, 103) as 'Ngay' FROM Solieuhoso WHERE Ngay >= '" & Strings.Format(TuNgay.EditValue, "yyyyMMdd") & "' AND Ngay <= '" & Strings.Format(DenNgay.EditValue, "yyyyMMdd") & "' AND Congty = " & idCongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
+
+
+        '' Dim Strg As String = "Select * from Solieuhoso"
+        'Dim Cmd As New SqlDataAdapter(strg, cnn)
+
+        'Cmd.Fill(Dt)
+        'grSolieuhoso.DataSource = Dt.Tables(0)
+        'Dong_Ket_noi()
         Dim TuNgayValue As String = CType(TuNgay.EditValue, DateTime).ToString("yyyyMMdd")
         Dim DenngayValue As String = CType(DenNgay.EditValue, DateTime).ToString("yyyyMMdd")
         Dt.Clear()
 
         Ket_noi()
-        Dim strg As String = "SELECT * FROM Solieuhoso WHERE Ngay >= '" & Strings.Format(TuNgay.EditValue, "yyyyMMdd") & "' AND Ngay <= '" & Strings.Format(DenNgay.EditValue, "yyyyMMdd") & "' AND Congty = " & idcongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
+        Dim strg As String = "SELECT Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep, CONVERT(DATETIME, Ngay, 103) As Ngay,Phatso,Thuso FROM Solieuhoso WHERE Ngay >= CONVERT(DATETIME, '" & TuNgayValue & "', 112) AND Ngay <= CONVERT(DATETIME, '" & DenngayValue & "', 112) AND Congty = " & idCongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
 
-
-        ' Dim Strg As String = "Select * from Solieuhoso"
         Dim Cmd As New SqlDataAdapter(strg, cnn)
-
         Cmd.Fill(Dt)
         grSolieuhoso.DataSource = Dt.Tables(0)
         Dong_Ket_noi()
-
 
 
     End Sub

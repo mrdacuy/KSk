@@ -56,7 +56,7 @@ Partial Public Class RpTem4
         '
         Me.XrBarCode1.AutoModule = True
         Me.XrBarCode1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?Ma1")})
-        Me.XrBarCode1.Font = New DevExpress.Drawing.DXFont("Arial", 6.0!)
+        Me.XrBarCode1.Font = New DevExpress.Drawing.DXFont("Arial", 8.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.XrBarCode1.LocationFloat = New DevExpress.Utils.PointFloat(14.0!, 0!)
         Me.XrBarCode1.Name = "XrBarCode1"
         Me.XrBarCode1.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 96.0!)
@@ -72,7 +72,7 @@ Partial Public Class RpTem4
         '
         Me.XrBarCode2.AutoModule = True
         Me.XrBarCode2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?Ma2")})
-        Me.XrBarCode2.Font = New DevExpress.Drawing.DXFont("Arial", 6.0!)
+        Me.XrBarCode2.Font = New DevExpress.Drawing.DXFont("Arial", 8.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.XrBarCode2.LocationFloat = New DevExpress.Utils.PointFloat(112.75!, 0!)
         Me.XrBarCode2.Name = "XrBarCode2"
         Me.XrBarCode2.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100.0!)
@@ -88,7 +88,7 @@ Partial Public Class RpTem4
         '
         Me.XrBarCode3.AutoModule = True
         Me.XrBarCode3.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?Ma3")})
-        Me.XrBarCode3.Font = New DevExpress.Drawing.DXFont("Arial", 6.0!)
+        Me.XrBarCode3.Font = New DevExpress.Drawing.DXFont("Arial", 8.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.XrBarCode3.LocationFloat = New DevExpress.Utils.PointFloat(211.4999!, 0!)
         Me.XrBarCode3.Name = "XrBarCode3"
         Me.XrBarCode3.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100.0!)
@@ -104,7 +104,7 @@ Partial Public Class RpTem4
         '
         Me.XrBarCode4.AutoModule = True
         Me.XrBarCode4.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?Ma4")})
-        Me.XrBarCode4.Font = New DevExpress.Drawing.DXFont("Arial", 6.0!)
+        Me.XrBarCode4.Font = New DevExpress.Drawing.DXFont("Arial", 8.0!)
         Me.XrBarCode4.LocationFloat = New DevExpress.Utils.PointFloat(310.25!, 0!)
         Me.XrBarCode4.Name = "XrBarCode4"
         Me.XrBarCode4.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100.0!)

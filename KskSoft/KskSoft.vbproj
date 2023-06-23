@@ -291,6 +291,12 @@
     <Compile Include="rpKSK.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RpNhan.Designer.vb">
+      <DependentUpon>RpNhan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RpNhan.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rpTem.Designer.vb">
       <DependentUpon>rpTem.vb</DependentUpon>
     </Compile>
@@ -381,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="rpKSK.resx">
       <DependentUpon>rpKSK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RpNhan.resx">
+      <DependentUpon>RpNhan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rpTem.resx">
       <DependentUpon>rpTem.vb</DependentUpon>

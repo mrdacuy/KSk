@@ -10,14 +10,15 @@ Public Class FrmUserKhamSucKhoe
 
 
     Sub LoadData()
+
         Dim TuNgayValue As String = CType(TuNgay.EditValue, DateTime).ToString("yyyyMMdd")
         Dim DenngayValue As String = CType(DenNgay.EditValue, DateTime).ToString("yyyyMMdd")
         Dt.Clear()
 
         Ket_noi()
-        Dim strg As String = "SELECT * FROM Solieuhoso WHERE Ngay >= '" & TuNgayValue & "' AND Ngay <= '" & DenngayValue & "' AND Congty = " & idCongty & " AND (Macode LIKE '%" & txtTimkiem.Text & "%' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien LIKE N'%" & txtTimkiem.Text.Trim & "%') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
-        Dim Cmd As New SqlDataAdapter(strg, cnn)
+        Dim strg As String = "SELECT Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep, CONVERT(DATETIME, Ngay, 103) As Ngay,Phatso,Thuso FROM Solieuhoso WHERE Ngay >= CONVERT(DATETIME, '" & TuNgayValue & "', 112) AND Ngay <= CONVERT(DATETIME, '" & DenngayValue & "', 112) AND Congty = " & idCongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
 
+        Dim Cmd As New SqlDataAdapter(strg, cnn)
         Cmd.Fill(Dt)
         grSolieuhoso.DataSource = Dt.Tables(0)
         Dong_Ket_noi()
@@ -77,7 +78,7 @@ Public Class FrmUserKhamSucKhoe
             idCongty = SlCongty.Properties.View.GetFocusedRowCellValue("Id")
         End If
     End Sub
-    Private Sub gvSolieuhoso_CustomDrawRowIndicator(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs) Handles gvSolieuhoso.CustomDrawRowIndicator
+    Private Sub gvSolieuhoso_CustomDrawRowIndicator(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs)
         If e.RowHandle >= 0 Then e.Info.DisplayText = e.RowHandle.ToString() + 1
     End Sub
 
@@ -109,13 +110,14 @@ Public Class FrmUserKhamSucKhoe
         For Each rowHandle As Integer In selectedRowHandles
             Dim dataRow As DataRow = gvSolieuhoso.GetDataRow(rowHandle)
             Dim rPort As New rpKSK
-            rPort.Parameters("rpHovaten").Value = dataRow("Hoten")
+            rPort.Parameters("rpHovaten").Value = UCase(dataRow("Hoten"))
             rPort.Parameters("rpID").Value = dataRow("Macode")
             rPort.Parameters("rpGioitinh").Value = dataRow("Gioitinh")
             rPort.Parameters("rpNamsinh").Value = dataRow("Namsinh")
             rPort.Parameters("rpManhanvien").Value = dataRow("Manhanvien")
             rPort.Parameters("rpChucvu").Value = dataRow("Manhanvien")
             rPort.Parameters("rpBophan").Value = dataRow("Bophan")
+            rPort.Parameters("rpNgaykham").Value = CType(dataRow("Ngay"), DateTime).ToString("dd/MM/yyyy")
             rPort.Parameters("rpNghenghiep").Value = dataRow("Nghenghiep")
             rPort.Parameters("rpTencongty").Value = SlCongty.EditValue.ToString
             rPort.ShowPrintStatusDialog = False
@@ -146,5 +148,31 @@ Public Class FrmUserKhamSucKhoe
         grSolieuhoso.ExportToXlsx(path)
     End Sub
 
+    Private Sub SimpleButton5_Click(sender As Object, e As EventArgs) Handles SimpleButton5.Click
+        If gvSolieuhoso.RowCount = 0 Then
+            MessageBox.Show("Thông báo", "Không tìm thấy dữ liệu vui lòng kiểm tra lại", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+        Dim i As Integer = 0
 
+        Dim selectedRowHandles As Integer() = gvSolieuhoso.GetSelectedRows()
+        Dim totalRows As Integer = selectedRowHandles.Length
+
+        For Each rowHandle As Integer In selectedRowHandles
+            Dim dataRow As DataRow = gvSolieuhoso.GetDataRow(rowHandle)
+            Dim rPort As New RpNhan
+            rPort.Parameters("Hoten").Value = UCase(dataRow("Hoten"))
+            rPort.Parameters("Id").Value = dataRow("Macode")
+            rPort.Parameters("Gioitinh").Value = dataRow("Gioitinh")
+            rPort.Parameters("Namsinh").Value = dataRow("Namsinh")
+            rPort.Parameters("Manhanvien").Value = dataRow("Manhanvien")
+            rPort.Parameters("Chucvu").Value = dataRow("Manhanvien")
+            rPort.Parameters("Bophan").Value = dataRow("Bophan")
+            rPort.Parameters("Ngaykham").Value = CType(dataRow("Ngay"), DateTime).ToString("dd/MM/yyyy")
+            rPort.Parameters("Nghenghiep").Value = dataRow("Nghenghiep")
+            rPort.Parameters("Congty").Value = SlCongty.EditValue.ToString
+            rPort.ShowPrintStatusDialog = False
+            rPort.Print()
+        Next
+    End Sub
 End Class

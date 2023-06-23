@@ -128,4 +128,12 @@ Public Class FrmInKhamSucKhoe
         Next
 
     End Sub
+
+    Private Sub grSolieuhoso_Click(sender As Object, e As EventArgs) Handles grSolieuhoso.Click
+
+    End Sub
+
+    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
+
+    End Sub
 End Class

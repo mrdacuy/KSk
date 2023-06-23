@@ -35,7 +35,7 @@ Partial Public Class Rptem3
         '
         'TopMargin
         '
-        Me.TopMargin.HeightF = 16.66667!
+        Me.TopMargin.HeightF = 22.91667!
         Me.TopMargin.Name = "TopMargin"
         '
         'BottomMargin
@@ -46,7 +46,7 @@ Partial Public Class Rptem3
         'Detail
         '
         Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrBarCode3, Me.XrBarCode2, Me.XrBarCode1})
-        Me.Detail.HeightF = 83.33334!
+        Me.Detail.HeightF = 88.54166!
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(20, 20, 0, 0, 100.0!)
         Me.Detail.StylePriority.UsePadding = False
@@ -56,7 +56,7 @@ Partial Public Class Rptem3
         Me.XrBarCode1.AutoModule = True
         Me.XrBarCode1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?Ma1")})
         Me.XrBarCode1.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.XrBarCode1.LocationFloat = New DevExpress.Utils.PointFloat(0!, 10.00001!)
+        Me.XrBarCode1.LocationFloat = New DevExpress.Utils.PointFloat(8.0!, 10.00001!)
         Me.XrBarCode1.Name = "XrBarCode1"
         Me.XrBarCode1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrBarCode1.SizeF = New System.Drawing.SizeF(116.8333!, 69.58332!)
@@ -73,7 +73,7 @@ Partial Public Class Rptem3
         Me.XrBarCode2.AutoModule = True
         Me.XrBarCode2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?Ma2")})
         Me.XrBarCode2.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.XrBarCode2.LocationFloat = New DevExpress.Utils.PointFloat(132.1667!, 10.00001!)
+        Me.XrBarCode2.LocationFloat = New DevExpress.Utils.PointFloat(145.3334!, 10.00001!)
         Me.XrBarCode2.Name = "XrBarCode2"
         Me.XrBarCode2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrBarCode2.SizeF = New System.Drawing.SizeF(116.8334!, 69.58332!)
@@ -90,7 +90,7 @@ Partial Public Class Rptem3
         Me.XrBarCode3.AutoModule = True
         Me.XrBarCode3.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?Ma3")})
         Me.XrBarCode3.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.XrBarCode3.LocationFloat = New DevExpress.Utils.PointFloat(270.1667!, 10.00001!)
+        Me.XrBarCode3.LocationFloat = New DevExpress.Utils.PointFloat(285.1667!, 8.95834!)
         Me.XrBarCode3.Name = "XrBarCode3"
         Me.XrBarCode3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrBarCode3.SizeF = New System.Drawing.SizeF(116.8333!, 69.58332!)
@@ -128,10 +128,10 @@ Partial Public Class Rptem3
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.TopMargin, Me.BottomMargin, Me.Detail})
         Me.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!)
-        Me.Margins = New DevExpress.Drawing.DXMargins(5.0!, 8.0!, 16.66667!, 5.208333!)
+        Me.Margins = New DevExpress.Drawing.DXMargins(5.0!, 8.0!, 22.91667!, 5.208333!)
         Me.Padding = New DevExpress.XtraPrinting.PaddingInfo(20, 20, 0, 0, 100.0!)
         Me.PageHeight = 100
-        Me.PageWidth = 400
+        Me.PageWidth = 415
         Me.PaperKind = System.Drawing.Printing.PaperKind.Custom
         Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.Ma1, Me.Ma2, Me.Ma3})
         Me.Version = "22.2"

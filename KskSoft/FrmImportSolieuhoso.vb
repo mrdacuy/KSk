@@ -52,17 +52,17 @@ Public Class frmImportSolieuhoso
                             Dim cellValue As String = worksheet.Cells(i, j).Value?.ToString()
                             values.Add(cellValue)
                         Next
-                        Dim sql As String = "INSERT INTO Solieuhoso (Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Nghenghiep,Phatso,Thuso,Ngay,Congty) VALUES (@val1, @val2, @val3,@val4, @val5, @val6,@val7,@val8,@val9,@val10,@val11)"
+                        Dim sql As String = "INSERT INTO Solieuhoso (Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep,Phatso,Thuso,Ngay,Congty) VALUES (@val1, @val2, @val3,@val4, @val5, @val6,@val7,@val8,@val9,@val10,@val11,@val12)"
                         Using command As New SqlCommand(sql, cnn)
-                            Dim parameterCount As Integer = Math.Min(values.Count, 7)
+                            Dim parameterCount As Integer = Math.Min(values.Count, 8)
                             For a As Integer = 0 To parameterCount - 1
                                 Dim value As String = If(String.IsNullOrEmpty(values(a)), "", values(a))
                                 command.Parameters.AddWithValue($"@val{a + 1}", value)
                             Next
-                            command.Parameters.AddWithValue("@val8", "Chưa phát sổ")
-                            command.Parameters.AddWithValue("@val9", "Chưa thu sổ")
-                            command.Parameters.AddWithValue("@val10", ngayValue)
-                            command.Parameters.AddWithValue("@val11", idCongty)
+                            command.Parameters.AddWithValue("@val9", "Chưa phát sổ")
+                            command.Parameters.AddWithValue("@val10", "Chưa thu sổ")
+                            command.Parameters.AddWithValue("@val11", ngayValue)
+                            command.Parameters.AddWithValue("@val12", idCongty)
                             command.ExecuteNonQuery()
                         End Using
                     Next
