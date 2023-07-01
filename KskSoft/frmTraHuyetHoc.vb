@@ -46,6 +46,130 @@ Public Class frmTraHuyetHoc
         Dong_Ket_noi()
     End Function
     Dim Rwbc, Rrbc, Rplt As String
+
+
+    Private Sub Add_Data()
+        Using cnn As New SqlConnection(connectString)
+            cnn.Open()
+
+            Dim selectedRowHandles As Integer() = GridView1.GetSelectedRows()
+            Dim dataTable As DataTable = CreateDataTable(selectedRowHandles)
+
+            ' Tạo đối tượng SqlCommand và thiết lập thuộc tính
+            Dim cmd As New SqlCommand("UpdateHuyetHOc", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            ' Tạo SqlParameter cho tham số kiểu bảng
+            Dim tableParam As SqlParameter = cmd.Parameters.AddWithValue("@data1", dataTable)
+            tableParam.SqlDbType = SqlDbType.Structured
+            tableParam.TypeName = "CustomTableType1"
+            ' Thực hiện cập nhật hàng loạt
+            cmd.ExecuteNonQuery()
+
+            cnn.Close()
+        End Using
+
+        MsgBox("Xong")
+        GridControl1.DataSource = Nothing
+        GridControl1.DataSource = GetDataSet("SELECT * FROM tbHuyetHoc").Tables("tbHuyetHoc")
+    End Sub
+    Private Function RandomNumber(ByVal minValue As Double, ByVal maxValue As Double, ByVal randomGenerator As Random) As Double
+        Return randomGenerator.NextDouble() * (maxValue - minValue) + minValue
+    End Function
+    Private Function GenerateRwbc(ByVal randomGenerator As Random) As Double
+        Return RandomNumber(4, 9, randomGenerator)
+    End Function
+    Private Function GenerateRrbc(ByVal randomGenerator As Random) As Double
+        Return RandomNumber(3.5, 5.8, randomGenerator)
+    End Function
+
+    Private Function CreateDataTable(ByVal rowHandles As Integer()) As DataTable
+        Dim randomGenerator As New Random()
+
+
+
+
+        Dim dataTable As New DataTable()
+        dataTable.Columns.Add("IdSolieuhoso", GetType(Integer))
+        dataTable.Columns.Add("WBC", GetType(String))
+        dataTable.Columns.Add("Gran1", GetType(String))
+        dataTable.Columns.Add("Gran2", GetType(String))
+        dataTable.Columns.Add("Lymph1", GetType(String))
+        dataTable.Columns.Add("Lymph2", GetType(String))
+        dataTable.Columns.Add("Mon", GetType(String))
+        dataTable.Columns.Add("Mon2", GetType(String))
+        dataTable.Columns.Add("EOS1", GetType(String))
+        dataTable.Columns.Add("EOS2", GetType(String))
+        dataTable.Columns.Add("Baso1", GetType(String))
+        dataTable.Columns.Add("Baso2", GetType(String))
+        dataTable.Columns.Add("RBC", GetType(String))
+        dataTable.Columns.Add("HGB", GetType(String))
+        dataTable.Columns.Add("HCT", GetType(String))
+        dataTable.Columns.Add("MCV", GetType(String))
+        dataTable.Columns.Add("MCH", GetType(String))
+        dataTable.Columns.Add("MCHC", GetType(String))
+        dataTable.Columns.Add("RDWCV", GetType(String))
+        dataTable.Columns.Add("MPV", GetType(String))
+        dataTable.Columns.Add("PCT", GetType(String))
+        dataTable.Columns.Add("PDW", GetType(String))
+        dataTable.Columns.Add("PLT", GetType(String))
+
+
+        For Each rowHandle As Integer In rowHandles
+            Dim dataRow As DataRow = GridView1.GetDataRow(rowHandle)
+            Dim id As Integer = CInt(dataRow("IdSolieuhoso"))
+            Rwbc = Math.Round(GenerateRwbc(randomGenerator), 2)
+            Rrbc = Math.Round(GenerateRrbc(randomGenerator), 2)
+            Rplt = randomGenerator.Next(140, 400)
+            Dim Rmon As String = Math.Round((Rrbc / 5.8) - 0.4, 3)
+            Dim REOS As String = Math.Round((Rrbc / 99.1), 3)
+            Dim rHCT As String = Rrbc + 36.2
+            Dim rHgb As String = Math.Round(((rHCT - 28.5) + 0.7), 2)
+            Dim rMcv As String = Math.Round(((rHCT - 28.5) + 0.7), 2)
+            Dim rMch As String = Math.Round((rMcv / 3), 2)
+            Dim RrDVCV As String = Math.Round((rHgb / 1.2) - 2.54, 2)
+            Dim rMPV As String = Math.Round(RrDVCV - 1.35, 2)
+            Dim rPCt As String = (rMPV / 1000) + 0.03
+            Dim newRow As DataRow = dataTable.NewRow()
+            newRow("IdSolieuhoso") = id
+            newRow("WBC") = Rwbc
+            newRow("Gran1") = Math.Round((Rwbc / 2.1), 2)
+            newRow("Gran2") = Math.Round((Rrbc * 12.14), 2)
+            newRow("Lymph1") = Math.Round((Rwbc * 0.5) * 1.9, 2)
+            newRow("Lymph2") = Math.Round((Rwbc + 25), 2)
+            newRow("Mon") = Rmon
+            newRow("Mon2") = Math.Round((Rmon * 19.11) - 1.5, 2)
+            newRow("EOS1") = REOS
+            newRow("EOS2") = Math.Round((REOS * 55) + 0.2, 2)
+            newRow("Baso1") = REOS - 0.012
+            newRow("Baso2") = Math.Round((Rrbc / 9.5), 4)
+            newRow("RBC") = Rrbc
+            newRow("HGB") = rHgb
+            newRow("HCT") = rHCT
+            newRow("MCV") = rMch
+            newRow("MCH") = Math.Round((rMch + 4.54), 2)
+            newRow("MCHC") = RrDVCV
+            newRow("RDWCV") = rMPV
+            newRow("MPV") = rMPV
+            newRow("PCT") = rPCt
+            newRow("PDW") = Math.Round((rPCt * 2.5) + 0.01, 4)
+            newRow("PLT") = Rplt
+            dataTable.Rows.Add(newRow)
+        Next
+
+        Return dataTable
+    End Function
+
+
+
+
+
+
+
+
+
+
+
     Sub RandomHuyethoc()
 
         Ket_noi()
@@ -112,7 +236,7 @@ Public Class frmTraHuyetHoc
     End Sub
 
     Private Sub BarButtonItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
-        RandomHuyethoc()
+        Add_Data()
         'GridView1.CloseEditor()
         'Ket_noi()
         'For rowIndex As Integer = 0 To GridView1.RowCount - 1
