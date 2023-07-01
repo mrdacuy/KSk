@@ -410,3 +410,6 @@ C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.Rptem3.resources
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.RpTem4.resources
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmTem4.resources
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.RpNhan.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.frmGetthongtin.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.frmThongtinphanmem.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\bin\Debug\ArtisanCode.SimpleAesEncryption.dll

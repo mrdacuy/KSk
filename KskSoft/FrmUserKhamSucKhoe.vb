@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 Imports NPOI.SS.UserModel
 Imports NPOI.XSSF.UserModel
 Imports DevExpress.XtraGrid.Views.Grid
+Imports DevExpress.XtraEditors
 
 Public Class FrmUserKhamSucKhoe
 
@@ -16,7 +17,7 @@ Public Class FrmUserKhamSucKhoe
         Dt.Clear()
 
         Ket_noi()
-        Dim strg As String = "SELECT Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep, CONVERT(DATETIME, Ngay, 103) As Ngay,Phatso,Thuso FROM Solieuhoso WHERE Ngay >= CONVERT(DATETIME, '" & TuNgayValue & "', 112) AND Ngay <= CONVERT(DATETIME, '" & DenngayValue & "', 112) AND Congty = " & idCongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
+        Dim strg As String = "SELECT Id,Macode,Hoten, Namsinh ,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep, CONVERT(DATETIME, Ngay, 103) As Ngay,Phatso,Thuso FROM Solieuhoso WHERE Ngay >= CONVERT(DATETIME, '" & TuNgayValue & "', 112) AND Ngay <= CONVERT(DATETIME, '" & DenngayValue & "', 112) AND Congty = " & idCongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
 
         Dim Cmd As New SqlDataAdapter(strg, cnn)
         Cmd.Fill(Dt)
@@ -106,7 +107,10 @@ Public Class FrmUserKhamSucKhoe
 
         Dim selectedRowHandles As Integer() = gvSolieuhoso.GetSelectedRows()
         Dim totalRows As Integer = selectedRowHandles.Length
-
+        If totalRows = 0 Then
+            XtraMessageBox.Show("Vui lòng chọn dòng cần in", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
         For Each rowHandle As Integer In selectedRowHandles
             Dim dataRow As DataRow = gvSolieuhoso.GetDataRow(rowHandle)
             Dim rPort As New rpKSK
@@ -130,10 +134,26 @@ Public Class FrmUserKhamSucKhoe
         Dim firstDayOfMonth As New DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)
         TuNgay.EditValue = firstDayOfMonth
         DenNgay.EditValue = Today
-        'LoadData()
-        slCongtyThuNhan()
-        frmImportSolieuhoso.Load_CongTyImport()
+
         gvSolieuhoso.IndicatorWidth = 80
+    End Sub
+    Private Sub SlCongty_QueryPopUp(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SlCongty.QueryPopUp
+        SlCongty.Properties.DataSource = Nothing
+        SlCongty.Properties.NullText = ""
+        SlCongty.Properties.NullValuePrompt = ""
+        SlCongty.Properties.View.ClearColumnsFilter()
+        SlCongty.Properties.View.Columns.Clear()
+        Dong_Ket_noi()
+        Ket_noi()
+        Dim cmd As New SqlDataAdapter("Select Id, Congty As Côngty from SoLieuCongTy ", cnn)
+        Dim da As New DataTable
+        cmd.Fill(da)
+        SlCongty.Properties.DataSource = da
+        SlCongty.Properties.DisplayMember = "Côngty"
+        SlCongty.Properties.ValueMember = "Côngty"
+        SlCongty.Properties.View.Columns("Côngty").Visible = True
+        SlCongty.Properties.View.Columns("Id").Visible = False
+        Dong_Ket_noi()
     End Sub
 
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
@@ -157,7 +177,10 @@ Public Class FrmUserKhamSucKhoe
 
         Dim selectedRowHandles As Integer() = gvSolieuhoso.GetSelectedRows()
         Dim totalRows As Integer = selectedRowHandles.Length
-
+        If totalRows = 0 Then
+            XtraMessageBox.Show("Vui lòng chọn dòng cần in", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
         For Each rowHandle As Integer In selectedRowHandles
             Dim dataRow As DataRow = gvSolieuhoso.GetDataRow(rowHandle)
             Dim rPort As New RpNhan
@@ -174,5 +197,40 @@ Public Class FrmUserKhamSucKhoe
             rPort.ShowPrintStatusDialog = False
             rPort.Print()
         Next
+    End Sub
+
+    Private Sub SimpleButton6_Click(sender As Object, e As EventArgs) Handles SimpleButton6.Click
+        Ket_noi()
+        Dim selectedRowHandles As Integer() = gvSolieuhoso.GetSelectedRows()
+
+        Dim totalRows As Integer = selectedRowHandles.Length
+        If totalRows = 0 Then
+            XtraMessageBox.Show("Vui lòng chọn dòng cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+        If XtraMessageBox.Show("Bạn chắc chắn muốn phát sổ ca ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Exit Sub
+
+        Else
+
+            For Each rowHandle As Integer In selectedRowHandles
+                Dim dataRow As DataRow = gvSolieuhoso.GetDataRow(rowHandle)
+
+                Dim Cmd As New SqlCommand("Delete from solieuhoso where Id= " & dataRow("Id") & "", cnn)
+                Dim Cmd1 As New SqlCommand("Delete from tbPhanTichNuocTieu where Idsolieuhoso= " & dataRow("Id") & "", cnn)
+                Dim Cmd2 As New SqlCommand("Delete from tbSinhHoa where Idsolieuhoso= " & dataRow("Id") & "", cnn)
+                Dim Cmd3 As New SqlCommand("Delete from tbHuyetHoc where Idsolieuhoso= " & dataRow("Id") & "", cnn)
+                Dim Cmd4 As New SqlCommand("Delete from tbTraHuyetHoc where Idsolieuhoso= " & dataRow("Id") & "", cnn)
+                Dim Cmd5 As New SqlCommand("Delete from tbTraPhanTichNuocTieu where Idsolieuhoso= " & dataRow("Id") & "", cnn)
+
+                Cmd.ExecuteNonQuery()
+            Next
+        End If
+        Dong_Ket_noi()
+        LoadData()
+    End Sub
+
+    Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
+
     End Sub
 End Class

@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
+Imports DevExpress.XtraEditors
 Imports DevExpress.XtraGrid.Views.Grid
 
 Public Class FrmCongTy
@@ -60,5 +61,30 @@ Public Class FrmCongTy
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
         TextEdit1.EditValue = ""
         IdSo = ""
+    End Sub
+
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+        Ket_noi()
+        Dim selectedRowHandles As Integer() = GridView1.GetSelectedRows()
+
+        Dim totalRows As Integer = selectedRowHandles.Length
+        If totalRows = 0 Then
+            XtraMessageBox.Show("Vui lòng chọn dòng cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+        If XtraMessageBox.Show("Bạn chắc chắn muốn phát sổ ca ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Exit Sub
+
+        Else
+
+            For Each rowHandle As Integer In selectedRowHandles
+                Dim dataRow As DataRow = GridView1.GetDataRow(rowHandle)
+
+                Dim Cmd As New SqlCommand("Delete from Solieucongty where Id= " & dataRow("Id") & "", cnn)
+                Cmd.ExecuteNonQuery()
+            Next
+        End If
+        Dong_Ket_noi()
+        Load_CongTy()
     End Sub
 End Class

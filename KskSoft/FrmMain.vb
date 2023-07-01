@@ -24,6 +24,12 @@
     End Sub
 
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Dim expireDate As Date
+        'Dim cpu As String
+        'Dim motherboardSerial As String
+        'LoadEncryptedDataFromFile(Application.StartupPath & "\Key.license", expireDate, cpu, motherboardSerial)
+        'Thread.CurrentThread.CurrentCulture = New Globalization.CultureInfo("vi")
+        'Thread.CurrentThread.CurrentUICulture = New Globalization.CultureInfo("vi")
 
     End Sub
 
@@ -37,5 +43,9 @@
 
     Private Sub AccordionControlElement5_Click(sender As Object, e As EventArgs) Handles AccordionControlElement5.Click
         FrmTem4.ShowDialog()
+    End Sub
+
+    Private Sub FluentDesignFormControl1_Click(sender As Object, e As EventArgs) Handles FluentDesignFormControl1.Click
+
     End Sub
 End Class

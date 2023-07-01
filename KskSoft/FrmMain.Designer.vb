@@ -28,11 +28,11 @@ Partial Class FrmMain
         Me.AccordionControlElement2 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlElement3 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlElement4 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlElement5 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.mUCcONGTY = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.BtnThemCongTy = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.FluentDesignFormControl1 = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl()
         Me.lbltieude = New DevExpress.XtraBars.BarStaticItem()
-        Me.AccordionControlElement5 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -98,6 +98,13 @@ Partial Class FrmMain
         Me.AccordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement4.Text = "IN BARCODE TEM 3"
         '
+        'AccordionControlElement5
+        '
+        Me.AccordionControlElement5.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement5.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement5.Name = "AccordionControlElement5"
+        Me.AccordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement5.Text = "IN BARCODE TEM 4"
+        '
         'mUCcONGTY
         '
         Me.mUCcONGTY.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.BtnThemCongTy})
@@ -131,13 +138,6 @@ Partial Class FrmMain
         Me.lbltieude.Id = 0
         Me.lbltieude.Name = "lbltieude"
         Me.lbltieude.TextAlignment = System.Drawing.StringAlignment.Center
-        '
-        'AccordionControlElement5
-        '
-        Me.AccordionControlElement5.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement5.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.AccordionControlElement5.Name = "AccordionControlElement5"
-        Me.AccordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AccordionControlElement5.Text = "IN BARCODE TEM 4"
         '
         'FrmMain
         '

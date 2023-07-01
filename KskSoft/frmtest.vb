@@ -36,7 +36,7 @@ Public Class frmtest
         Dt.Clear()
 
         Ket_noi()
-        Dim strg As String = "SELECT Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep, CONVERT(DATETIME, Ngay, 103) As Ngay,Phatso,Thuso FROM Solieuhoso WHERE Ngay >= CONVERT(DATETIME, '" & TuNgayValue & "', 112) AND Ngay <= CONVERT(DATETIME, '" & DenngayValue & "', 112) AND Congty = " & idCongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
+        Dim strg As String = "SELECT Id,Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep, CONVERT(DATETIME, Ngay, 103) As Ngay,Phatso,Thuso FROM Solieuhoso WHERE Ngay >= CONVERT(DATETIME, '" & TuNgayValue & "', 112) AND Ngay <= CONVERT(DATETIME, '" & DenngayValue & "', 112) AND Congty = " & idCongty & " AND (Macode = '" & txtTimkiem.Text & "' OR Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR Manhanvien = '" & txtTimkiem.Text.Trim & "') ORDER BY CASE WHEN ISNUMERIC(Macode) = 1 THEN CAST(Macode AS INT) ELSE 999999 END, Macode"
 
         Dim Cmd As New SqlDataAdapter(strg, cnn)
         Cmd.Fill(Dt)
@@ -89,22 +89,7 @@ Public Class frmtest
         End Try
     End Function
 
-    Private Sub slCongtyThuNhan()
 
-        SlCongty.Properties.NullText = ""
-        SlCongty.Properties.NullValuePrompt = ""
-
-        Dong_Ket_noi()
-        Ket_noi()
-        Dim cmd As New SqlDataAdapter("Select Id, Congty As Côngty from SoLieuCongTy ", cnn)
-        Dim da As New DataTable
-        cmd.Fill(da)
-        SlCongty.Properties.DataSource = da
-        SlCongty.Properties.DisplayMember = "Côngty"
-        SlCongty.Properties.ValueMember = "Côngty"
-        SlCongty.Properties.View.Columns.AddField("Côngty").Visible = True
-
-    End Sub
 
 
     Private Sub gvSolieuhoso_DoubleClick(sender As Object, e As EventArgs) Handles gvSolieuhoso.DoubleClick
@@ -204,22 +189,33 @@ Public Class frmtest
         Dim firstDayOfMonth As New DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)
         TuNgay.EditValue = firstDayOfMonth
         DenNgay.EditValue = Today
-        '  LoadDaTa()
-        slCongtyThuNhan()
-        frmImportSolieuhoso.Load_CongTyImport()
         gvSolieuhoso.IndicatorWidth = 80
     End Sub
 
-
+    Private Sub SlCongty_QueryPopUp(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SlCongty.QueryPopUp
+        SlCongty.Properties.DataSource = Nothing
+        SlCongty.Properties.NullText = ""
+        SlCongty.Properties.NullValuePrompt = ""
+        SlCongty.Properties.View.ClearColumnsFilter()
+        SlCongty.Properties.View.Columns.Clear()
+        Dong_Ket_noi()
+        Ket_noi()
+        Dim cmd As New SqlDataAdapter("Select Id, Congty As Côngty from SoLieuCongTy ", cnn)
+        Dim da As New DataTable
+        cmd.Fill(da)
+        SlCongty.Properties.DataSource = da
+        SlCongty.Properties.DisplayMember = "Côngty"
+        SlCongty.Properties.ValueMember = "Côngty"
+        SlCongty.Properties.View.Columns("Côngty").Visible = True
+        SlCongty.Properties.View.Columns("Id").Visible = False
+        Dong_Ket_noi()
+    End Sub
 
 
     Private Sub gvSolieuhoso_CustomDrawRowIndicator(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs) Handles gvSolieuhoso.CustomDrawRowIndicator
         If e.RowHandle >= 0 Then e.Info.DisplayText = e.RowHandle.ToString() + 1
     End Sub
 
-    Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
-
-    End Sub
 
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
         If grSolieuhoso.DataSource Is Nothing OrElse gvSolieuhoso.RowCount = 0 Then
@@ -237,6 +233,33 @@ Public Class frmtest
 
         FrmThemHoSo.ShowDialog()
     End Sub
+
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+        Ket_noi()
+        Dim selectedRowHandles As Integer() = gvSolieuhoso.GetSelectedRows()
+
+        Dim totalRows As Integer = selectedRowHandles.Length
+        If totalRows = 0 Then
+            XtraMessageBox.Show("Vui lòng chọn dòng cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+        If XtraMessageBox.Show("Bạn chắc chắn muốn xóa ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Exit Sub
+
+        Else
+
+            For Each rowHandle As Integer In selectedRowHandles
+                Dim dataRow As DataRow = gvSolieuhoso.GetDataRow(rowHandle)
+
+                Dim Cmd As New SqlCommand("Delete from solieuhoso where Id= " & dataRow("Id") & "", cnn)
+                Cmd.ExecuteNonQuery()
+            Next
+        End If
+        Dong_Ket_noi()
+        LoadDaTa()
+    End Sub
+
+
 
     Private Sub grSolieuhoso_KeyDown(sender As Object, e As KeyEventArgs) Handles grSolieuhoso.KeyDown
         If CheckThuSo.EditValue = False And CheckPhatSo.EditValue = False Then

@@ -46,6 +46,7 @@ Partial Class TraPhanTichNuocTieu
         Me.ChonGrid = New DevExpress.XtraBars.BarButtonItem()
         Me.BoChonGrid = New DevExpress.XtraBars.BarButtonItem()
         Me.PopupMenu1 = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemCheckEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,17 +56,20 @@ Partial Class TraPhanTichNuocTieu
         '
         'GridControl2
         '
-        Me.GridControl2.Location = New System.Drawing.Point(0, 22)
+        Me.GridControl2.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GridControl2.Location = New System.Drawing.Point(0, 27)
         Me.GridControl2.MainView = Me.GridView2
+        Me.GridControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GridControl2.Name = "GridControl2"
         Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit2})
-        Me.GridControl2.Size = New System.Drawing.Size(1298, 459)
+        Me.GridControl2.Size = New System.Drawing.Size(1514, 565)
         Me.GridControl2.TabIndex = 7
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
         'GridView2
         '
         Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NIdSolieuhoso, Me.NBIL, Me.NBLOOD, Me.NGLU, Me.NKET, Me.NLEU, Me.NNIT, Me.NPH, Me.NPRO, Me.NSG, Me.NURO})
+        Me.GridView2.DetailHeight = 431
         Me.GridView2.GridControl = Me.GridControl2
         Me.GridView2.Name = "GridView2"
         Me.GridView2.OptionsBehavior.Editable = False
@@ -77,89 +81,111 @@ Partial Class TraPhanTichNuocTieu
         '
         Me.NIdSolieuhoso.Caption = "Id"
         Me.NIdSolieuhoso.FieldName = "IdSolieuhoso"
+        Me.NIdSolieuhoso.MinWidth = 23
         Me.NIdSolieuhoso.Name = "NIdSolieuhoso"
         Me.NIdSolieuhoso.Visible = True
         Me.NIdSolieuhoso.VisibleIndex = 0
+        Me.NIdSolieuhoso.Width = 87
         '
         'NBIL
         '
         Me.NBIL.Caption = "BIL "
         Me.NBIL.FieldName = "BIL"
+        Me.NBIL.MinWidth = 23
         Me.NBIL.Name = "NBIL"
         Me.NBIL.Visible = True
         Me.NBIL.VisibleIndex = 1
+        Me.NBIL.Width = 87
         '
         'NBLOOD
         '
         Me.NBLOOD.Caption = " BLOOD"
         Me.NBLOOD.FieldName = "BLOOD"
+        Me.NBLOOD.MinWidth = 23
         Me.NBLOOD.Name = "NBLOOD"
         Me.NBLOOD.Visible = True
         Me.NBLOOD.VisibleIndex = 2
+        Me.NBLOOD.Width = 87
         '
         'NGLU
         '
         Me.NGLU.Caption = "GLU "
         Me.NGLU.FieldName = "GLU"
+        Me.NGLU.MinWidth = 23
         Me.NGLU.Name = "NGLU"
         Me.NGLU.Visible = True
         Me.NGLU.VisibleIndex = 3
+        Me.NGLU.Width = 87
         '
         'NKET
         '
         Me.NKET.Caption = "KET "
         Me.NKET.FieldName = "KET"
+        Me.NKET.MinWidth = 23
         Me.NKET.Name = "NKET"
         Me.NKET.Visible = True
         Me.NKET.VisibleIndex = 4
+        Me.NKET.Width = 87
         '
         'NLEU
         '
         Me.NLEU.Caption = "LEU "
         Me.NLEU.FieldName = "LEU"
+        Me.NLEU.MinWidth = 23
         Me.NLEU.Name = "NLEU"
         Me.NLEU.Visible = True
         Me.NLEU.VisibleIndex = 5
+        Me.NLEU.Width = 87
         '
         'NNIT
         '
         Me.NNIT.Caption = "NIT "
         Me.NNIT.FieldName = "NIT"
+        Me.NNIT.MinWidth = 23
         Me.NNIT.Name = "NNIT"
         Me.NNIT.Visible = True
         Me.NNIT.VisibleIndex = 6
+        Me.NNIT.Width = 87
         '
         'NPH
         '
         Me.NPH.Caption = "PH "
         Me.NPH.FieldName = "PH"
+        Me.NPH.MinWidth = 23
         Me.NPH.Name = "NPH"
         Me.NPH.Visible = True
         Me.NPH.VisibleIndex = 7
+        Me.NPH.Width = 87
         '
         'NPRO
         '
         Me.NPRO.Caption = "PRO "
         Me.NPRO.FieldName = "PRO"
+        Me.NPRO.MinWidth = 23
         Me.NPRO.Name = "NPRO"
         Me.NPRO.Visible = True
         Me.NPRO.VisibleIndex = 8
+        Me.NPRO.Width = 87
         '
         'NSG
         '
         Me.NSG.Caption = "SG "
         Me.NSG.FieldName = "SG"
+        Me.NSG.MinWidth = 23
         Me.NSG.Name = "NSG"
         Me.NSG.Visible = True
         Me.NSG.VisibleIndex = 9
+        Me.NSG.Width = 87
         '
         'NURO
         '
         Me.NURO.Caption = "URO "
         Me.NURO.FieldName = "URO"
+        Me.NURO.MinWidth = 23
         Me.NURO.Name = "NURO"
         Me.NURO.Visible = True
         Me.NURO.VisibleIndex = 10
+        Me.NURO.Width = 87
         '
         'RepositoryItemCheckEdit2
         '
@@ -214,31 +240,35 @@ Partial Class TraPhanTichNuocTieu
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(1298, 22)
+        Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1514, 25)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 481)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 597)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1298, 21)
+        Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1514, 21)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 22)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 25)
         Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 459)
+        Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 572)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1298, 22)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1514, 25)
         Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 459)
+        Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 572)
         '
         'ChonGrid
         '
@@ -260,16 +290,25 @@ Partial Class TraPhanTichNuocTieu
         Me.PopupMenu1.Manager = Me.BarManager1
         Me.PopupMenu1.Name = "PopupMenu1"
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(414, -3)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(497, 23)
+        Me.ProgressBar1.TabIndex = 12
+        '
         'TraPhanTichNuocTieu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1298, 502)
+        Me.ClientSize = New System.Drawing.Size(1514, 618)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.GridControl2)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "TraPhanTichNuocTieu"
         Me.Text = "TraPhanTichNuocTieu"
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -307,4 +346,5 @@ Partial Class TraPhanTichNuocTieu
     Friend WithEvents PopupMenu1 As DevExpress.XtraBars.PopupMenu
     Friend WithEvents ChonGrid As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BoChonGrid As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class

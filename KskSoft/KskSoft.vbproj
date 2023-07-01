@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ArtisanCode.SimpleAesEncryption, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Simple.AES.2.0.2.0\lib\net40\ArtisanCode.SimpleAesEncryption.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.BonusSkins.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -121,6 +124,7 @@
     <Reference Include="System.IO.Packaging, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Packaging.4.5.0\lib\net46\System.IO.Packaging.dll</HintPath>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Threading.Tasks" />
@@ -147,6 +151,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entyty.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +169,12 @@
       <DependentUpon>FrmCongTy.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmCongTy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetthongtin.designer.vb">
+      <DependentUpon>frmGetthongtin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetthongtin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmImportSolieuhoso.Designer.vb">
@@ -230,6 +241,12 @@
       <DependentUpon>FrmThemHoSo.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmThemHoSo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongtinphanmem.designer.vb">
+      <DependentUpon>frmThongtinphanmem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongtinphanmem.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmThuNhan.Designer.vb">
@@ -327,6 +344,9 @@
     <EmbeddedResource Include="FrmCongTy.resx">
       <DependentUpon>FrmCongTy.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGetthongtin.resx">
+      <DependentUpon>frmGetthongtin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmImportSolieuhoso.resx">
       <DependentUpon>FrmImportSolieuhoso.vb</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThemHoSo.resx">
       <DependentUpon>FrmThemHoSo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongtinphanmem.resx">
+      <DependentUpon>frmThongtinphanmem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThuNhan.resx">
       <DependentUpon>FrmThuNhan.vb</DependentUpon>

@@ -25,6 +25,7 @@ Partial Class FrmUserKhamSucKhoe
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUserKhamSucKhoe))
         Dim GridLevelNode1 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
@@ -52,6 +53,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.NPhatso = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.NThuso = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.NNgay = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NId = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -81,6 +83,7 @@ Partial Class FrmUserKhamSucKhoe
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton6)
         Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton5)
         Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton4)
         Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton3)
@@ -103,15 +106,27 @@ Partial Class FrmUserKhamSucKhoe
         Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 2
         '
+        'SimpleButton6
+        '
+        Me.SimpleButton6.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton6.Appearance.Options.UseFont = True
+        Me.SimpleButton6.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton6.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.SimpleButton6.Location = New System.Drawing.Point(936, 46)
+        Me.SimpleButton6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.SimpleButton6.Name = "SimpleButton6"
+        Me.SimpleButton6.Size = New System.Drawing.Size(115, 32)
+        Me.SimpleButton6.TabIndex = 15
+        Me.SimpleButton6.Text = "Xóa"
+        '
         'SimpleButton5
         '
         Me.SimpleButton5.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton5.Appearance.Options.UseFont = True
         Me.SimpleButton5.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton5.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton5.Location = New System.Drawing.Point(840, 46)
+        Me.SimpleButton5.Location = New System.Drawing.Point(825, 46)
         Me.SimpleButton5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton5.Name = "SimpleButton5"
-        Me.SimpleButton5.Size = New System.Drawing.Size(125, 32)
+        Me.SimpleButton5.Size = New System.Drawing.Size(105, 32)
         Me.SimpleButton5.TabIndex = 14
         Me.SimpleButton5.Text = "In Nhãn"
         '
@@ -120,10 +135,10 @@ Partial Class FrmUserKhamSucKhoe
         Me.SimpleButton4.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton4.Appearance.Options.UseFont = True
         Me.SimpleButton4.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton4.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton4.Location = New System.Drawing.Point(971, 11)
+        Me.SimpleButton4.Location = New System.Drawing.Point(936, 11)
         Me.SimpleButton4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(149, 32)
+        Me.SimpleButton4.Size = New System.Drawing.Size(115, 32)
         Me.SimpleButton4.TabIndex = 13
         Me.SimpleButton4.Text = "Xuất Excel"
         '
@@ -132,10 +147,10 @@ Partial Class FrmUserKhamSucKhoe
         Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton3.Appearance.Options.UseFont = True
         Me.SimpleButton3.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton3.Location = New System.Drawing.Point(840, 11)
+        Me.SimpleButton3.Location = New System.Drawing.Point(825, 11)
         Me.SimpleButton3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(125, 32)
+        Me.SimpleButton3.Size = New System.Drawing.Size(105, 32)
         Me.SimpleButton3.TabIndex = 12
         Me.SimpleButton3.Text = "In phiếu"
         '
@@ -191,7 +206,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.SimpleButton2.Location = New System.Drawing.Point(714, 46)
         Me.SimpleButton2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(119, 32)
+        Me.SimpleButton2.Size = New System.Drawing.Size(105, 32)
         Me.SimpleButton2.TabIndex = 5
         Me.SimpleButton2.Text = "Tìm kiếm"
         '
@@ -203,7 +218,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.SimpleButton1.Location = New System.Drawing.Point(714, 10)
         Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(119, 33)
+        Me.SimpleButton1.Size = New System.Drawing.Size(105, 33)
         Me.SimpleButton1.TabIndex = 4
         Me.SimpleButton1.Text = "Import"
         '
@@ -289,12 +304,13 @@ Partial Class FrmUserKhamSucKhoe
         Me.gvSolieuhoso.Appearance.HeaderPanel.Options.UseFont = True
         Me.gvSolieuhoso.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gvSolieuhoso.Appearance.Row.Options.UseFont = True
-        Me.gvSolieuhoso.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.Nnghenghiep, Me.Nchucvu, Me.Bophan, Me.NPhatso, Me.NThuso, Me.NNgay})
+        Me.gvSolieuhoso.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.Nnghenghiep, Me.Nchucvu, Me.Bophan, Me.NPhatso, Me.NThuso, Me.NNgay, Me.NId})
         Me.gvSolieuhoso.DetailHeight = 431
         Me.gvSolieuhoso.GridControl = Me.grSolieuhoso
         Me.gvSolieuhoso.Name = "gvSolieuhoso"
         Me.gvSolieuhoso.OptionsBehavior.Editable = False
         Me.gvSolieuhoso.OptionsSelection.MultiSelect = True
+        Me.gvSolieuhoso.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect
         Me.gvSolieuhoso.OptionsView.ShowFooter = True
         Me.gvSolieuhoso.OptionsView.ShowGroupPanel = False
         Me.gvSolieuhoso.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.[False]
@@ -306,7 +322,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.NMacode.MinWidth = 23
         Me.NMacode.Name = "NMacode"
         Me.NMacode.Visible = True
-        Me.NMacode.VisibleIndex = 0
+        Me.NMacode.VisibleIndex = 1
         Me.NMacode.Width = 87
         '
         'NHoten
@@ -316,17 +332,19 @@ Partial Class FrmUserKhamSucKhoe
         Me.NHoten.MinWidth = 23
         Me.NHoten.Name = "NHoten"
         Me.NHoten.Visible = True
-        Me.NHoten.VisibleIndex = 1
+        Me.NHoten.VisibleIndex = 2
         Me.NHoten.Width = 228
         '
         'NNamsinh
         '
         Me.NNamsinh.Caption = "NĂM SINH"
+        Me.NNamsinh.DisplayFormat.FormatString = "d"
+        Me.NNamsinh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.NNamsinh.FieldName = "Namsinh"
         Me.NNamsinh.MinWidth = 23
         Me.NNamsinh.Name = "NNamsinh"
         Me.NNamsinh.Visible = True
-        Me.NNamsinh.VisibleIndex = 2
+        Me.NNamsinh.VisibleIndex = 3
         Me.NNamsinh.Width = 110
         '
         'NGioitinh
@@ -336,7 +354,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.NGioitinh.MinWidth = 23
         Me.NGioitinh.Name = "NGioitinh"
         Me.NGioitinh.Visible = True
-        Me.NGioitinh.VisibleIndex = 3
+        Me.NGioitinh.VisibleIndex = 4
         Me.NGioitinh.Width = 85
         '
         'NManhanvien
@@ -346,7 +364,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.NManhanvien.MinWidth = 23
         Me.NManhanvien.Name = "NManhanvien"
         Me.NManhanvien.Visible = True
-        Me.NManhanvien.VisibleIndex = 4
+        Me.NManhanvien.VisibleIndex = 5
         Me.NManhanvien.Width = 123
         '
         'Nnghenghiep
@@ -355,7 +373,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.Nnghenghiep.FieldName = "Nghenghiep"
         Me.Nnghenghiep.Name = "Nnghenghiep"
         Me.Nnghenghiep.Visible = True
-        Me.Nnghenghiep.VisibleIndex = 5
+        Me.Nnghenghiep.VisibleIndex = 6
         Me.Nnghenghiep.Width = 92
         '
         'Nchucvu
@@ -364,7 +382,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.Nchucvu.FieldName = "Chucvu"
         Me.Nchucvu.Name = "Nchucvu"
         Me.Nchucvu.Visible = True
-        Me.Nchucvu.VisibleIndex = 6
+        Me.Nchucvu.VisibleIndex = 7
         Me.Nchucvu.Width = 89
         '
         'Bophan
@@ -374,7 +392,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.Bophan.MinWidth = 23
         Me.Bophan.Name = "Bophan"
         Me.Bophan.Visible = True
-        Me.Bophan.VisibleIndex = 7
+        Me.Bophan.VisibleIndex = 8
         Me.Bophan.Width = 99
         '
         'NPhatso
@@ -384,7 +402,7 @@ Partial Class FrmUserKhamSucKhoe
         Me.NPhatso.MinWidth = 23
         Me.NPhatso.Name = "NPhatso"
         Me.NPhatso.Visible = True
-        Me.NPhatso.VisibleIndex = 8
+        Me.NPhatso.VisibleIndex = 9
         Me.NPhatso.Width = 108
         '
         'NThuso
@@ -394,17 +412,25 @@ Partial Class FrmUserKhamSucKhoe
         Me.NThuso.MinWidth = 23
         Me.NThuso.Name = "NThuso"
         Me.NThuso.Visible = True
-        Me.NThuso.VisibleIndex = 9
+        Me.NThuso.VisibleIndex = 10
         Me.NThuso.Width = 113
         '
         'NNgay
         '
         Me.NNgay.Caption = "Ngày khám"
+        Me.NNgay.DisplayFormat.FormatString = "d"
+        Me.NNgay.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom
         Me.NNgay.FieldName = "Ngay"
         Me.NNgay.Name = "NNgay"
         Me.NNgay.Visible = True
-        Me.NNgay.VisibleIndex = 10
+        Me.NNgay.VisibleIndex = 11
         Me.NNgay.Width = 109
+        '
+        'NId
+        '
+        Me.NId.Caption = "Id"
+        Me.NId.FieldName = "Id"
+        Me.NId.Name = "NId"
         '
         'OpenFileDialog1
         '
@@ -465,4 +491,6 @@ Partial Class FrmUserKhamSucKhoe
     Friend WithEvents NPhatso As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents NThuso As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents NNgay As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SimpleButton6 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents NId As DevExpress.XtraGrid.Columns.GridColumn
 End Class

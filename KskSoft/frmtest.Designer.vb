@@ -48,6 +48,7 @@ Partial Class frmtest
         Me.NNgay = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.grSolieuhoso = New DevExpress.XtraGrid.GridControl()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.CheckThuSo = New DevExpress.XtraEditors.CheckEdit()
@@ -62,6 +63,7 @@ Partial Class frmtest
         Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.DenNgay = New DevExpress.XtraEditors.DateEdit()
         Me.TuNgay = New DevExpress.XtraEditors.DateEdit()
+        Me.NId = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gvSolieuhoso, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,7 +244,7 @@ Partial Class frmtest
         Me.gvSolieuhoso.Appearance.HeaderPanel.Options.UseFont = True
         Me.gvSolieuhoso.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gvSolieuhoso.Appearance.Row.Options.UseFont = True
-        Me.gvSolieuhoso.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.Nnghenghiep, Me.Nchucvu, Me.Bophan, Me.NPhatso, Me.NThuso, Me.NNgay})
+        Me.gvSolieuhoso.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.Nnghenghiep, Me.Nchucvu, Me.Bophan, Me.NPhatso, Me.NThuso, Me.NNgay, Me.NId})
         Me.gvSolieuhoso.DetailHeight = 431
         Me.gvSolieuhoso.GridControl = Me.grSolieuhoso
         Me.gvSolieuhoso.Name = "gvSolieuhoso"
@@ -306,6 +308,7 @@ Partial Class frmtest
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton3)
         Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton4)
         Me.SplitContainer1.Panel1.Controls.Add(Me.CheckThuSo)
@@ -328,6 +331,18 @@ Partial Class frmtest
         Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 4
         '
+        'SimpleButton3
+        '
+        Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton3.Appearance.Options.UseFont = True
+        Me.SimpleButton3.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.SimpleButton3.Location = New System.Drawing.Point(812, 43)
+        Me.SimpleButton3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.SimpleButton3.Name = "SimpleButton3"
+        Me.SimpleButton3.Size = New System.Drawing.Size(128, 33)
+        Me.SimpleButton3.TabIndex = 15
+        Me.SimpleButton3.Text = "Xóa"
+        '
         'SimpleButton1
         '
         Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -345,10 +360,10 @@ Partial Class frmtest
         Me.SimpleButton4.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton4.Appearance.Options.UseFont = True
         Me.SimpleButton4.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton4.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton4.Location = New System.Drawing.Point(812, 45)
+        Me.SimpleButton4.Location = New System.Drawing.Point(812, 8)
         Me.SimpleButton4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(128, 31)
+        Me.SimpleButton4.Size = New System.Drawing.Size(128, 33)
         Me.SimpleButton4.TabIndex = 13
         Me.SimpleButton4.Text = "Xuất Excel"
         '
@@ -486,6 +501,12 @@ Partial Class frmtest
         Me.TuNgay.Size = New System.Drawing.Size(149, 22)
         Me.TuNgay.TabIndex = 0
         '
+        'NId
+        '
+        Me.NId.Caption = "Id"
+        Me.NId.FieldName = "Id"
+        Me.NId.Name = "NId"
+        '
         'frmtest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -558,4 +579,6 @@ Partial Class frmtest
     Friend WithEvents Nnghenghiep As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents Nchucvu As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents NNgay As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents NId As DevExpress.XtraGrid.Columns.GridColumn
 End Class
