@@ -47,9 +47,74 @@ Public Class TraPhanTichNuocTieu
     End Function
 
     Private Sub BarButtonItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
-        Da.Update(Dt.Tables("tbPhanTichNuocTieu"))
-        MsgBox("Xong")
+        'Da.Update(Dt.Tables("tbPhanTichNuocTieu"))
+        'MsgBox("Xong")
+        Add_Data()
     End Sub
+
+
+    Private Sub Add_Data()
+        Using cnn As New SqlConnection(connectString)
+            cnn.Open()
+
+            Dim selectedRowHandles As Integer() = GridView2.GetSelectedRows()
+            Dim dataTable As DataTable = CreateDataTable(selectedRowHandles)
+
+            ' Tạo đối tượng SqlCommand và thiết lập thuộc tính
+            Dim cmd As New SqlCommand("UpdatePhanTichNuocTieu", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            ' Tạo SqlParameter cho tham số kiểu bảng
+            Dim tableParam As SqlParameter = cmd.Parameters.AddWithValue("@data", dataTable)
+            tableParam.SqlDbType = SqlDbType.Structured
+            tableParam.TypeName = "CustomTableType"
+            ' Thực hiện cập nhật hàng loạt
+            cmd.ExecuteNonQuery()
+
+            cnn.Close()
+        End Using
+
+        MsgBox("Xong")
+        GridControl2.DataSource = Nothing
+        GridControl2.DataSource = GetDataSet("SELECT * FROM tbPhanTichNuocTieu").Tables("tbPhanTichNuocTieu")
+    End Sub
+
+    Private Function CreateDataTable(ByVal rowHandles As Integer()) As DataTable
+        Dim randomGenerator As New Random()
+        Dim dataTable As New DataTable()
+        dataTable.Columns.Add("IdSolieuhoso", GetType(Integer))
+        dataTable.Columns.Add("BIL", GetType(String))
+        dataTable.Columns.Add("BLOOD", GetType(String))
+        dataTable.Columns.Add("GLU", GetType(String))
+        dataTable.Columns.Add("KET", GetType(String))
+        dataTable.Columns.Add("LEU", GetType(String))
+        dataTable.Columns.Add("PH", GetType(String))
+        dataTable.Columns.Add("SG", GetType(String))
+        dataTable.Columns.Add("PRO", GetType(String))
+        dataTable.Columns.Add("NIT", GetType(String))
+        dataTable.Columns.Add("URO", GetType(String))
+
+        For Each rowHandle As Integer In rowHandles
+            Dim dataRow As DataRow = GridView2.GetDataRow(rowHandle)
+            Dim id As Integer = CInt(dataRow("IdSolieuhoso"))
+
+            Dim newRow As DataRow = dataTable.NewRow()
+            newRow("IdSolieuhoso") = id
+            newRow("BIL") = "Âm tính"
+            newRow("BLOOD") = "Âm tính"
+            newRow("GLU") = "Âm tính"
+            newRow("KET") = "Âm tính"
+            newRow("LEU") = "Âm tính"
+            newRow("PH") = RandomPH(randomGenerator)
+            newRow("SG") = RandomSG(randomGenerator)
+            newRow("PRO") = "Âm tính"
+            newRow("NIT") = "Âm tính"
+            newRow("URO") = "Âm tính"
+            dataTable.Rows.Add(newRow)
+        Next
+
+        Return dataTable
+    End Function
 
 
     'Private Sub Da_RowUpdated(sender As Object, e As SqlRowUpdatedEventArgs)
@@ -128,115 +193,7 @@ Public Class TraPhanTichNuocTieu
 
     End Sub
 
-    Private Sub Add_Data()
-        Ket_noi()
 
-        Dim selectedRowHandles As Integer() = GridView2.GetSelectedRows()
-        Dim totalRows As Integer = selectedRowHandles.Length
-        For Each rowHandle As Integer In selectedRowHandles
-            Dim dataRow As DataRow = GridView2.GetDataRow(rowHandle)
-            Dim id As Integer = dataRow("IdSolieuhoso")
-            Dim cmd1 As New SqlCommand("UPDATE tbPhanTichNuocTieu SET BIL=@BIL,BLOOD=@BLOOD,GLU=@GLU,KET=@KET,LEU=@LEU,NIT=@NIT,PH=@PH,PRO=@PRO,SG=@SG,URO=@URO WHERE IdSolieuhoso=" & id & "", cnn)
-            Dim columnValues As Dictionary(Of String, String) = New Dictionary(Of String, String)()
-            'Dim randomNumbe1 As Double = RandomPH()
-            'Dim randomNumbersg As Double = RandomSG()
-            columnValues.Add("@BIL", "Âm tính")
-            columnValues.Add("@BLOOD", "Âm tính")
-            columnValues.Add("@GLU", "Âm tính")
-            columnValues.Add("@KET", "Âm tính")
-            columnValues.Add("@LEU", "Âm tính")
-            columnValues.Add("@NIT", "Âm tính")
-            'columnValues.Add("@PH", randomNumbe1.ToString())
-            'columnValues.Add("@PRO", "Âm tính")
-            'columnValues.Add("@SG", randomNumbersg.ToString)
-            columnValues.Add("@URO", "Âm tính")
-            For Each kvp As KeyValuePair(Of String, String) In columnValues
-                cmd1.Parameters.AddWithValue(kvp.Key, kvp.Value)
-            Next
-            cmd1.ExecuteNonQuery()
-        Next
-        Dong_Ket_noi()
-
-        MsgBox("xONG")
-        GridControl2.DataSource = Nothing
-        GridControl2.DataSource = GetDataSet("Select * from tbPhanTichNuocTieu").Tables("tbPhanTichNuocTieu")
-        'Ket_noi()
-
-        'Dim selectedRowHandles As Integer() = GridView2.GetSelectedRows()
-        'Dim totalRows As Integer = selectedRowHandles.Length
-
-        '' Tạo một câu lệnh SQL duy nhất để cập nhật dữ liệu
-        'Dim updateQuery As String = "UPDATE tbTraPhanTichNuocTieu SET " &
-        '    "BIL = CASE IdSolieuhoso "
-
-        'Dim parameters As New List(Of SqlParameter)()
-
-        'For Each rowHandle As Integer In selectedRowHandles
-        '    Dim dataRow As DataRow = GridView2.GetDataRow(rowHandle)
-        '    Dim CheckBIL As Boolean = dataRow("BIL")
-        '    Dim CheckBLOOD As Boolean = dataRow("BLOOD")
-        '    Dim CheckGLU As Boolean = dataRow("GLU")
-        '    Dim CheckKET As Boolean = dataRow("KET")
-        '    Dim CheckLEU As Boolean = dataRow("LEU")
-        '    Dim CheckNIT As Boolean = dataRow("NIT")
-        '    Dim CheckPH As Boolean = dataRow("PH")
-        '    Dim CheckPRO As Boolean = dataRow("PRO")
-        '    Dim CheckSG As Boolean = dataRow("SG")
-        '    Dim CheckURO As Boolean = dataRow("URO")
-        '    Dim id As Integer = dataRow("IdSolieuhoso")
-
-        '    ' Thêm tham số vào danh sách tham số
-        '    parameters.Add(New SqlParameter("@BIL_" & id, CheckBIL))
-        '    parameters.Add(New SqlParameter("@BLOOD_" & id, CheckBLOOD))
-        '    parameters.Add(New SqlParameter("@GLU_" & id, CheckGLU))
-        '    parameters.Add(New SqlParameter("@KET_" & id, CheckKET))
-        '    parameters.Add(New SqlParameter("@LEU_" & id, CheckLEU))
-        '    parameters.Add(New SqlParameter("@NIT_" & id, CheckNIT))
-        '    parameters.Add(New SqlParameter("@PH_" & id, CheckPH))
-        '    parameters.Add(New SqlParameter("@PRO_" & id, CheckPRO))
-        '    parameters.Add(New SqlParameter("@SG_" & id, CheckSG))
-        '    parameters.Add(New SqlParameter("@URO_" & id, CheckURO))
-
-        '    ' Thêm câu lệnh CASE cho cột BIL
-        '    updateQuery &= "WHEN " & id & " THEN @BIL_" & id & " "
-
-        '    ' Cập nhật các cột khác tương tự
-        '    updateQuery &= "BLOOD = CASE IdSolieuhoso WHEN " & id & " THEN @BLOOD_" & id & " "
-        '    updateQuery &= "GLU = CASE IdSolieuhoso WHEN " & id & " THEN @GLU_" & id & " "
-        '    updateQuery &= "KET = CASE IdSolieuhoso WHEN " & id & " THEN @KET_" & id & " "
-        '    updateQuery &= "LEU = CASE IdSolieuhoso WHEN " & id & " THEN @LEU_" & id & " "
-        '    updateQuery &= "NIT = CASE IdSolieuhoso WHEN " & id & " THEN @NIT_" & id & " "
-        '    updateQuery &= "PH = CASE IdSolieuhoso WHEN " & id & " THEN @PH_" & id & " END, "
-        '    updateQuery &= "PRO = CASE IdSolieuhoso WHEN " & id & " THEN @PRO_" & id & " END, "
-        '    updateQuery &= "SG = CASE IdSolieuhoso WHEN " & id & " THEN @SG_" & id & " END, "
-        '    updateQuery &= "URO = CASE IdSolieuhoso WHEN " & id & " THEN @URO_" & id & " END, "
-
-        'Next
-
-        '' Loại bỏ dấu phẩy cuối cùng và kết thúc câu lệnh SQL
-        'updateQuery = updateQuery.TrimEnd(", ") & " WHERE IdSolieuhoso IN ("
-
-        '' Thêm tham số cho IdSolieuhoso vào câu lệnh SQL
-        'For i As Integer = 0 To totalRows - 1
-        '    Dim id As Integer = GridView2.GetDataRow(selectedRowHandles(i))("IdSolieuhoso")
-        '    updateQuery &= "@IdSolieuhoso_" & i
-        '    parameters.Add(New SqlParameter("@IdSolieuhoso_" & i, id))
-        '    If i < totalRows - 1 Then
-        '        updateQuery &= ", "
-        '    End If
-        'Next
-
-        'updateQuery &= ")"
-
-        '' Tạo đối tượng SqlCommand và gán câu lệnh SQL và tham số
-        'Dim Cmd As New SqlCommand(updateQuery, cnn)
-        'Cmd.Parameters.AddRange(parameters.ToArray())
-
-        '' Thực thi câu lệnh SQL
-        'Cmd.ExecuteNonQuery()
-
-        'Dong_Ket_noi()
-    End Sub
 
 
 

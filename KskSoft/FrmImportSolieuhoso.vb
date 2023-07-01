@@ -3,6 +3,7 @@ Imports System.Globalization
 Imports System.IO
 Imports OfficeOpenXml
 Imports OfficeOpenXml.Style
+
 Public Class frmImportSolieuhoso
     Dim idCongty As String
     Private Sub frmImportSolieuhoso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -85,86 +86,86 @@ Public Class frmImportSolieuhoso
 
 
     Private Sub ImportData()
-        Dim ngayValue As String = CType(Ngay.EditValue, DateTime).ToString("yyyyMMdd")
-        Dim strFilename As String
-        ExcelPackage.LicenseContext = LicenseContext.Commercial
-        Ket_noi()
-        OpenFileDialog1.FileName = ""
-        OpenFileDialog1.Filter = "Excel Office| *.xlsx"
-        OpenFileDialog1.Title = "Vui lòng chọn file"
-        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
-            With OpenFileDialog1
-                strFilename = .FileName
-            End With
-            Using package As New OfficeOpenXml.ExcelPackage(New IO.FileInfo(strFilename))
-                Dim workbook As ExcelWorkbook = package.Workbook
-                Dim worksheet As ExcelWorksheet = workbook.Worksheets(0)
+        'Dim ngayValue As String = CType(Ngay.EditValue, DateTime).ToString("yyyyMMdd")
+        'Dim strFilename As String
+        'ExcelPackage.LicenseContext = LicenseContext.Commercial
+        'Ket_noi()
+        'OpenFileDialog1.FileName = ""
+        'OpenFileDialog1.Filter = "Excel Office| *.xlsx"
+        'OpenFileDialog1.Title = "Vui lòng chọn file"
+        'If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+        '    With OpenFileDialog1
+        '        strFilename = .FileName
+        '    End With
+        '    Using package As New OfficeOpenXml.ExcelPackage(New IO.FileInfo(strFilename))
+        '        Dim workbook As ExcelWorkbook = package.Workbook
+        '        Dim worksheet As ExcelWorksheet = workbook.Worksheets(0)
 
-                If worksheet IsNot Nothing Then
-                    Dim rowStart As Integer = worksheet.Dimension.Start.Row
-                    Dim rowEnd As Integer = worksheet.Dimension.End.Row
-                    Dim colStart As Integer = worksheet.Dimension.Start.Column
-                    Dim colEnd As Integer = worksheet.Dimension.End.Column
-                    Dim namSinhColumnIndex As Integer = 3 ' Vị trí cột năm sinh (đếm từ 1)
+        '        If worksheet IsNot Nothing Then
+        '            Dim rowStart As Integer = worksheet.Dimension.Start.Row
+        '            Dim rowEnd As Integer = worksheet.Dimension.End.Row
+        '            Dim colStart As Integer = worksheet.Dimension.Start.Column
+        '            Dim colEnd As Integer = worksheet.Dimension.End.Column
+        '            Dim namSinhColumnIndex As Integer = 3 ' Vị trí cột năm sinh (đếm từ 1)
 
-                    For i As Integer = rowStart + 1 To rowEnd
-                        Dim values As New List(Of String)()
+        '            For i As Integer = rowStart + 1 To rowEnd
+        '                Dim values As New List(Of String)()
 
-                        For j As Integer = colStart To colEnd
-                            Dim cellValue As String = worksheet.Cells(i, j).Value?.ToString()
-                            values.Add(cellValue)
-                        Next
+        '                For j As Integer = colStart To colEnd
+        '                    Dim cellValue As String = worksheet.Cells(i, j).Value?.ToString()
+        '                    values.Add(cellValue)
+        '                Next
 
-                        Dim namsinhValue As String = ""
-                        If values.Count >= namSinhColumnIndex Then
-                            Dim cellValue As String = values(namSinhColumnIndex - 1)
-                            Dim dateTimeValue As DateTime
-                            If cellValue.Length = 4 Then
-                                ' Định dạng năm sinh là yyyy
-                                namsinhValue = cellValue
-                            ElseIf DateTime.TryParseExact(cellValue, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, dateTimeValue) Then
-                                ' Định dạng năm sinh là dd/MM/yyyy
-                                namsinhValue = dateTimeValue.Date.ToString("dd/MM/yyyy")
-                            End If
-                        End If
+        '                Dim namsinhValue As String = ""
+        '                If values.Count >= namSinhColumnIndex Then
+        '                    Dim cellValue As String = values(namSinhColumnIndex - 1)
+        '                    Dim dateTimeValue As DateTime
+        '                    If cellValue.Length = 4 Then
+        '                        ' Định dạng năm sinh là yyyy
+        '                        namsinhValue = cellValue
+        '                    ElseIf DateTime.TryParseExact(cellValue, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, dateTimeValue) Then
+        '                        ' Định dạng năm sinh là dd/MM/yyyy
+        '                        namsinhValue = dateTimeValue.Date.ToString("dd/MM/yyyy")
+        '                    End If
+        '                End If
 
-                        '  Dim sql As String = "INSERT INTO Solieuhoso (Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep,Phatso,Thuso,Ngay,Congty) VALUES (@val1, @val2, @val3,@val4, @val5, @val6,@val7,@val8,@val9,@val10,@val11,@val12)"
-                        Dim sql As String = "INSERT INTO Solieuhoso (Macode, Hoten, Namsinh, Gioitinh, Manhanvien, Bophan, Chucvu, Nghenghiep, Phatso, Thuso, Ngay, Congty)
-        VALUES (@val1, @val2, @val3, @val4, @val5, @val6, @val7, @val8, @val9, @val10, @val11, @val12)
+        '                '  Dim sql As String = "INSERT INTO Solieuhoso (Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep,Phatso,Thuso,Ngay,Congty) VALUES (@val1, @val2, @val3,@val4, @val5, @val6,@val7,@val8,@val9,@val10,@val11,@val12)"
+        '                Dim sql As String = "INSERT INTO Solieuhoso (Macode, Hoten, Namsinh, Gioitinh, Manhanvien, Bophan, Chucvu, Nghenghiep, Phatso, Thuso, Ngay, Congty)
+        'VALUES (@val1, @val2, @val3, @val4, @val5, @val6, @val7, @val8, @val9, @val10, @val11, @val12)
 
-        DECLARE @Idsolieuhoso INT
-        SET @Idsolieuhoso = SCOPE_IDENTITY()
+        'DECLARE @Idsolieuhoso INT
+        'SET @Idsolieuhoso = SCOPE_IDENTITY()
 
-        INSERT INTO tbHuyethoc (Idsolieuhoso)
-        VALUES (@Idsolieuhoso)
+        'INSERT INTO tbHuyethoc (Idsolieuhoso)
+        'VALUES (@Idsolieuhoso)
 
-        SELECT @Idsolieuhoso AS Idsolieuhoso"
-
-
+        'SELECT @Idsolieuhoso AS Idsolieuhoso"
 
 
-                        Using command As New SqlCommand(sql, cnn)
-                            Dim parameterCount As Integer = Math.Min(values.Count, 8)
-                            For a As Integer = 0 To parameterCount - 1
-                                Dim value As String = If(String.IsNullOrEmpty(values(a)), "", values(a))
-                                command.Parameters.AddWithValue($"@val{a + 1}", value)
-                            Next
-                            command.Parameters.AddWithValue("@val9", "Chưa phát sổ")
-                            command.Parameters.AddWithValue("@val10", "Chưa thu sổ")
-                            command.Parameters.AddWithValue("@val11", ngayValue)
-                            command.Parameters.AddWithValue("@val12", idCongty)
-                            command.ExecuteNonQuery()
-                        End Using
-                    Next
-                Else
 
-                End If
-            End Using
 
-            Me.Dispose()
-        Else
-            Exit Sub
-        End If
+        '                Using command As New SqlCommand(sql, cnn)
+        '                    Dim parameterCount As Integer = Math.Min(values.Count, 8)
+        '                    For a As Integer = 0 To parameterCount - 1
+        '                        Dim value As String = If(String.IsNullOrEmpty(values(a)), "", values(a))
+        '                        command.Parameters.AddWithValue($"@val{a + 1}", value)
+        '                    Next
+        '                    command.Parameters.AddWithValue("@val9", "Chưa phát sổ")
+        '                    command.Parameters.AddWithValue("@val10", "Chưa thu sổ")
+        '                    command.Parameters.AddWithValue("@val11", ngayValue)
+        '                    command.Parameters.AddWithValue("@val12", idCongty)
+        '                    command.ExecuteNonQuery()
+        '                End Using
+        '            Next
+        '        Else
+
+        '        End If
+        '    End Using
+
+        '    Me.Dispose()
+        'Else
+        '    Exit Sub
+        'End If
 
 
 
@@ -263,10 +264,129 @@ Public Class frmImportSolieuhoso
         '            Exit Sub
         '        End If
 
+        Dim ngayValue As String = CType(Ngay.EditValue, DateTime).ToString("yyyyMMdd")
+        Dim strFilename As String
+        ExcelPackage.LicenseContext = LicenseContext.Commercial
+        Ket_noi()
+        OpenFileDialog1.FileName = ""
+        OpenFileDialog1.Filter = "Excel Office| *.xlsx"
+        OpenFileDialog1.Title = "Vui lòng chọn file"
 
+        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+            With OpenFileDialog1
+                strFilename = .FileName
+            End With
 
+            Using package As New OfficeOpenXml.ExcelPackage(New IO.FileInfo(strFilename))
+                Dim workbook As ExcelWorkbook = package.Workbook
+                Dim worksheet As ExcelWorksheet = workbook.Worksheets(0)
+
+                If worksheet IsNot Nothing Then
+                    Dim rowStart As Integer = worksheet.Dimension.Start.Row
+                    Dim rowEnd As Integer = worksheet.Dimension.End.Row
+                    Dim colStart As Integer = worksheet.Dimension.Start.Column
+                    Dim colEnd As Integer = worksheet.Dimension.End.Column
+
+                    ' Validate namSinhColumnIndex
+                    Dim namSinhColumnIndex As Integer = 3 ' Vị trí cột năm sinh (đếm từ 1)
+                    If namSinhColumnIndex >= colStart AndAlso namSinhColumnIndex <= colEnd Then
+                        ' Create DataTable to hold the data
+                        Dim dataTable As New DataTable()
+                        dataTable.Columns.Add("Macode")
+                        dataTable.Columns.Add("Hoten")
+                        dataTable.Columns.Add("Namsinh")
+                        dataTable.Columns.Add("Gioitinh")
+                        dataTable.Columns.Add("Manhanvien")
+                        dataTable.Columns.Add("Bophan")
+                        dataTable.Columns.Add("Chucvu")
+                        dataTable.Columns.Add("Nghenghiep")
+                        dataTable.Columns.Add("Phatso")
+                        dataTable.Columns.Add("Thuso")
+                        dataTable.Columns.Add("Ngay")
+                        dataTable.Columns.Add("Congty")
+
+                        For i As Integer = rowStart + 1 To rowEnd
+                            Dim values As New List(Of String)()
+
+                            For j As Integer = colStart To colEnd
+                                Dim cellValue As String = worksheet.Cells(i, j).Value?.ToString()
+                                values.Add(cellValue)
+                            Next
+                            Dim namsinhValue As String = ""
+                            If values.Count >= namSinhColumnIndex Then
+                                Dim cellValue As String = values(namSinhColumnIndex - 1)
+
+                                Dim dateTimeValue As DateTime
+
+                                If cellValue.Length > 4 Then
+                                    ' Check if the cellValue represents a complete date with time (dd/MM/yyyy HH:mm:ss)
+                                    If DateTime.TryParseExact(cellValue, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, dateTimeValue) Then
+                                        namsinhValue = dateTimeValue.ToString("dd/MM/yyyy")
+                                    Else
+                                        ' Check if the cellValue represents a date-only format (dd/MM/yyyy)
+                                        If DateTime.TryParse(cellValue, dateTimeValue) Then
+                                            namsinhValue = dateTimeValue.ToString("dd/MM/yyyy")
+                                        Else
+                                            ' Handle invalid date format
+                                        End If
+                                    End If
+                                Else
+                                    namsinhValue = cellValue
+                                End If
+                            End If
+
+                                dataTable.Rows.Add(values(0), values(1), namsinhValue, values(3), values(4), values(5), values(6), values(7), "Chưa phát sổ", "Chưa thu sổ", ngayValue, idCongty)
+                        Next
+
+                        ' Bulk insert the data into the database
+                        Using bulkCopy As New SqlBulkCopy(cnn)
+                            bulkCopy.DestinationTableName = "Solieuhoso"
+                            For Each column As DataColumn In dataTable.Columns
+                                bulkCopy.ColumnMappings.Add(column.ColumnName, column.ColumnName)
+                            Next
+                            bulkCopy.WriteToServer(dataTable)
+                        End Using
+                        Me.Dispose()
+                    Else
+                        ' Handle the case when namSinhColumnIndex is out of range
+                    End If
+                Else
+                    ' Handle the case when worksheet is null
+                End If
+            End Using
+        Else
+            Exit Sub
+        End If
 
     End Sub
+
+
+    Public Function ToDataTable(worksheet As ExcelWorksheet) As DataTable
+        Dim dataTable As New DataTable()
+
+        Dim rowStart As Integer = worksheet.Dimension.Start.Row
+        Dim rowEnd As Integer = worksheet.Dimension.End.Row
+        Dim colStart As Integer = worksheet.Dimension.Start.Column
+        Dim colEnd As Integer = worksheet.Dimension.End.Column
+
+        ' Create columns in DataTable based on the worksheet columns
+        For col As Integer = colStart To colEnd
+            dataTable.Columns.Add(worksheet.Cells(rowStart, col).Value.ToString())
+        Next
+
+        ' Populate the DataTable with data from the worksheet
+        For row As Integer = rowStart + 1 To rowEnd
+            Dim dataRow As DataRow = dataTable.NewRow()
+
+            For col As Integer = colStart To colEnd
+                dataRow(col - colStart) = If(worksheet.Cells(row, col).Value IsNot Nothing, worksheet.Cells(row, col).Value.ToString(), "")
+            Next
+
+            dataTable.Rows.Add(dataRow)
+        Next
+
+        Return dataTable
+    End Function
 
 
 
