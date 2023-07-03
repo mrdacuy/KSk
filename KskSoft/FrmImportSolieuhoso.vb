@@ -86,185 +86,13 @@ Public Class frmImportSolieuhoso
 
 
     Private Sub ImportData()
-        'Dim ngayValue As String = CType(Ngay.EditValue, DateTime).ToString("yyyyMMdd")
-        'Dim strFilename As String
-        'ExcelPackage.LicenseContext = LicenseContext.Commercial
-        'Ket_noi()
-        'OpenFileDialog1.FileName = ""
-        'OpenFileDialog1.Filter = "Excel Office| *.xlsx"
-        'OpenFileDialog1.Title = "Vui lòng chọn file"
-        'If OpenFileDialog1.ShowDialog = DialogResult.OK Then
-        '    With OpenFileDialog1
-        '        strFilename = .FileName
-        '    End With
-        '    Using package As New OfficeOpenXml.ExcelPackage(New IO.FileInfo(strFilename))
-        '        Dim workbook As ExcelWorkbook = package.Workbook
-        '        Dim worksheet As ExcelWorksheet = workbook.Worksheets(0)
 
-        '        If worksheet IsNot Nothing Then
-        '            Dim rowStart As Integer = worksheet.Dimension.Start.Row
-        '            Dim rowEnd As Integer = worksheet.Dimension.End.Row
-        '            Dim colStart As Integer = worksheet.Dimension.Start.Column
-        '            Dim colEnd As Integer = worksheet.Dimension.End.Column
-        '            Dim namSinhColumnIndex As Integer = 3 ' Vị trí cột năm sinh (đếm từ 1)
-
-        '            For i As Integer = rowStart + 1 To rowEnd
-        '                Dim values As New List(Of String)()
-
-        '                For j As Integer = colStart To colEnd
-        '                    Dim cellValue As String = worksheet.Cells(i, j).Value?.ToString()
-        '                    values.Add(cellValue)
-        '                Next
-
-        '                Dim namsinhValue As String = ""
-        '                If values.Count >= namSinhColumnIndex Then
-        '                    Dim cellValue As String = values(namSinhColumnIndex - 1)
-        '                    Dim dateTimeValue As DateTime
-        '                    If cellValue.Length = 4 Then
-        '                        ' Định dạng năm sinh là yyyy
-        '                        namsinhValue = cellValue
-        '                    ElseIf DateTime.TryParseExact(cellValue, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, dateTimeValue) Then
-        '                        ' Định dạng năm sinh là dd/MM/yyyy
-        '                        namsinhValue = dateTimeValue.Date.ToString("dd/MM/yyyy")
-        '                    End If
-        '                End If
-
-        '                '  Dim sql As String = "INSERT INTO Solieuhoso (Macode,Hoten,Namsinh,Gioitinh,Manhanvien,Bophan,Chucvu,Nghenghiep,Phatso,Thuso,Ngay,Congty) VALUES (@val1, @val2, @val3,@val4, @val5, @val6,@val7,@val8,@val9,@val10,@val11,@val12)"
-        '                Dim sql As String = "INSERT INTO Solieuhoso (Macode, Hoten, Namsinh, Gioitinh, Manhanvien, Bophan, Chucvu, Nghenghiep, Phatso, Thuso, Ngay, Congty)
-        'VALUES (@val1, @val2, @val3, @val4, @val5, @val6, @val7, @val8, @val9, @val10, @val11, @val12)
-
-        'DECLARE @Idsolieuhoso INT
-        'SET @Idsolieuhoso = SCOPE_IDENTITY()
-
-        'INSERT INTO tbHuyethoc (Idsolieuhoso)
-        'VALUES (@Idsolieuhoso)
-
-        'SELECT @Idsolieuhoso AS Idsolieuhoso"
-
-
-
-
-        '                Using command As New SqlCommand(sql, cnn)
-        '                    Dim parameterCount As Integer = Math.Min(values.Count, 8)
-        '                    For a As Integer = 0 To parameterCount - 1
-        '                        Dim value As String = If(String.IsNullOrEmpty(values(a)), "", values(a))
-        '                        command.Parameters.AddWithValue($"@val{a + 1}", value)
-        '                    Next
-        '                    command.Parameters.AddWithValue("@val9", "Chưa phát sổ")
-        '                    command.Parameters.AddWithValue("@val10", "Chưa thu sổ")
-        '                    command.Parameters.AddWithValue("@val11", ngayValue)
-        '                    command.Parameters.AddWithValue("@val12", idCongty)
-        '                    command.ExecuteNonQuery()
-        '                End Using
-        '            Next
-        '        Else
-
-        '        End If
-        '    End Using
-
-        '    Me.Dispose()
-        'Else
-        '    Exit Sub
-        'End If
-
-
-
-        '       Dim ngayValue As String = CType(Ngay.EditValue, DateTime).ToString("yyyyMMdd")
-        'Dim strFilename As String
-        'ExcelPackage.LicenseContext = LicenseContext.Commercial
-        'Ket_noi()
-        'OpenFileDialog1.FileName = ""
-        'OpenFileDialog1.Filter = "Excel Office| *.xlsx"
-        'OpenFileDialog1.Title = "Vui lòng chọn file"
-        'If OpenFileDialog1.ShowDialog = DialogResult.OK Then
-        '    With OpenFileDialog1
-        '        strFilename = .FileName
-        '    End With
-        '    Using package As New OfficeOpenXml.ExcelPackage(New IO.FileInfo(strFilename))
-        '        Dim workbook As ExcelWorkbook = package.Workbook
-        '        Dim worksheet As ExcelWorksheet = workbook.Worksheets(0)
-
-        '        If worksheet IsNot Nothing Then
-        '            Dim rowStart As Integer = worksheet.Dimension.Start.Row
-        '            Dim rowEnd As Integer = worksheet.Dimension.End.Row
-        '            Dim colStart As Integer = worksheet.Dimension.Start.Column
-        '            Dim colEnd As Integer = worksheet.Dimension.End.Column
-        '            Dim namSinhColumnIndex As Integer = 3 ' Vị trí cột năm sinh (đếm từ 1)
-        '            Dim gioiTinhColumnIndex As Integer = 4 ' Vị trí cột giới tính (đếm từ 1)
-
-        '            For i As Integer = rowStart + 1 To rowEnd
-        '                Dim values As New List(Of String)()
-
-        '                For j As Integer = colStart To colEnd
-        '                    Dim cellValue As String = worksheet.Cells(i, j).Value?.ToString()
-        '                    values.Add(cellValue)
-        '                Next
-
-        '                        Dim namsinhValue As String = ""
-
-
-        '                        If values.Count >= namSinhColumnIndex Then
-        '                            Dim cellValue As String = values(namSinhColumnIndex - 1)
-        '                            Dim dateTimeValue As DateTime
-
-        '                            If cellValue.Length = 4 Then
-        '                                ' Định dạng năm sinh là yyyy
-        '                                namsinhValue = cellValue
-        '                            Else
-        '                                ' Kiểm tra xem cellValue có định dạng ngày tháng hợp lệ hay không
-        '                                If DateTime.TryParse(cellValue, dateTimeValue) Then
-        '                                    ' Định dạng năm sinh là dd/MM/yyyy
-        '                                    namsinhValue = dateTimeValue.ToString("dd/MM/yyyy")
-        '                                End If
-        '                            End If
-        '                        End If
-
-
-        '                        Dim idsolieuhoso As Integer
-        '                Using command As New SqlCommand("InsertSolieuhosoAndHuyethoc", cnn)
-        '                            command.CommandType = CommandType.StoredProcedure
-        '                            command.Parameters.AddWithValue("@Macode", If(values.Count >= 1, values(0), ""))
-        '                            command.Parameters.AddWithValue("@Hoten", If(values.Count >= 2, values(1), ""))
-        '                            command.Parameters.AddWithValue("@Namsinh", namsinhValue)
-        '                            command.Parameters.AddWithValue("@Gioitinh", If(values.Count >= 4, values(3), ""))
-        '                            command.Parameters.AddWithValue("@Manhanvien", If(values.Count >= 5, values(4), ""))
-        '                            command.Parameters.AddWithValue("@Bophan", If(values.Count >= 6, values(5), ""))
-        '                            command.Parameters.AddWithValue("@Chucvu", "")
-        '                            command.Parameters.AddWithValue("@Nghenghiep", "")
-        '                            command.Parameters.AddWithValue("@Phatso", "Chưa phát sổ")
-        '                            command.Parameters.AddWithValue("@Thuso", "Chưa thu sổ")
-        '                            command.Parameters.AddWithValue("@Ngay", ngayValue)
-        '                            command.Parameters.AddWithValue("@Congty", idCongty)
-
-        '                            ' Thêm các tham số khác của Solieuhoso
-
-        '                            Dim idSolieuhosoParam As New SqlParameter("@Idsolieuhoso", SqlDbType.Int)
-        '                            idSolieuhosoParam.Direction = ParameterDirection.Output
-        '                            command.Parameters.Add(idSolieuhosoParam)
-
-        '                            ' Thêm các tham số khác của tbHuyethoc
-
-        '                            command.ExecuteNonQuery()
-
-        '                            ' Lấy giá trị Idsolieuhoso được trả về từ Stored Procedure
-        '                            'Dim idSolieuhoso As Integer = Convert.ToInt32(idSolieuhosoParam.Value)
-
-        '                            '' Thực hiện các thao tác khác với Idsolieuhoso
-        '                            ' ...
-
-        '                        End Using
-        '                    Next
-        '                Else
-
-        '                End If
-        '            End Using
-
-        '            Me.Dispose()
-        '        Else
-        '            Exit Sub
-        '        End If
 
         Dim ngayValue As String = CType(Ngay.EditValue, DateTime).ToString("yyyyMMdd")
+        Dim Now As DateTime = DateTime.Now
+        Dim Idtudongtangduynhat As Integer
+        Dim ngayThangNamGioPhutGiay As String = Now.ToString("yyyyMMddHHmmss")
+
         Dim strFilename As String
         ExcelPackage.LicenseContext = LicenseContext.Commercial
         Ket_noi()
@@ -304,8 +132,9 @@ Public Class frmImportSolieuhoso
                         dataTable.Columns.Add("Thuso")
                         dataTable.Columns.Add("Ngay")
                         dataTable.Columns.Add("Congty")
-
+                        dataTable.Columns.Add("Idnew")
                         For i As Integer = rowStart + 1 To rowEnd
+                            Idtudongtangduynhat += 1
                             Dim values As New List(Of String)()
 
                             For j As Integer = colStart To colEnd
@@ -335,16 +164,80 @@ Public Class frmImportSolieuhoso
                                 End If
                             End If
 
-                                dataTable.Rows.Add(values(0), values(1), namsinhValue, values(3), values(4), values(5), values(6), values(7), "Chưa phát sổ", "Chưa thu sổ", ngayValue, idCongty)
+                            dataTable.Rows.Add(values(0), values(1), namsinhValue, values(3), values(4), values(5), values(6), values(7), "Chưa phát sổ", "Chưa thu sổ", ngayValue, idCongty, ngayThangNamGioPhutGiay)
                         Next
 
                         ' Bulk insert the data into the database
+                        ''''''Using bulkCopy As New SqlBulkCopy(cnn)
+                        ''''''    bulkCopy.DestinationTableName = "Solieuhoso"
+                        ''''''    For Each column As DataColumn In dataTable.Columns
+                        ''''''        bulkCopy.ColumnMappings.Add(column.ColumnName, column.ColumnName)
+                        ''''''    Next
+                        ''''''    bulkCopy.WriteToServer(dataTable)
+                        ''''''End Using
+
                         Using bulkCopy As New SqlBulkCopy(cnn)
                             bulkCopy.DestinationTableName = "Solieuhoso"
                             For Each column As DataColumn In dataTable.Columns
                                 bulkCopy.ColumnMappings.Add(column.ColumnName, column.ColumnName)
                             Next
                             bulkCopy.WriteToServer(dataTable)
+                        End Using
+
+                        ' Lấy danh sách các giá trị Id mới với cột 'IsNew' bằng 1
+                        Dim insertedIds As New List(Of Integer)()
+
+                        Using connection As New SqlConnection(connectString)
+                            connection.Open()
+
+                            Using command As New SqlCommand("SELECT Id FROM Solieuhoso WHERE Idnew = " & ngayThangNamGioPhutGiay & "", connection)
+                                ' Thực thi câu lệnh SQL và lấy kết quả trả về
+                                Dim reader As SqlDataReader = command.ExecuteReader()
+
+                                While reader.Read()
+                                    ' Lấy giá trị Id từ kết quả trả về và thêm vào danh sách
+                                    Dim insertedId As Integer = reader.GetInt32(0)
+                                    insertedIds.Add(insertedId)
+                                End While
+
+                                reader.Close()
+                            End Using
+                        End Using
+
+                        ' Sử dụng danh sách giá trị Id mới
+                        Dim insertedIdsTable As New DataTable()
+                        insertedIdsTable.Columns.Add("IdSolieuhoso", GetType(Integer))
+
+                        ' Thêm dữ liệu vào insertedIdsTable từ danh sách insertedIds
+                        For Each insertedId As Integer In insertedIds
+                            insertedIdsTable.Rows.Add(insertedId)
+                        Next
+
+                        ' Kết nối tới cơ sở dữ liệu
+                        Using connection As New SqlConnection(connectString)
+                            connection.Open()
+
+                            ' Sử dụng SqlBulkCopy để chèn dữ liệu từ insertedIdsTable vào bảng tbHuyethoc
+                            Using bulkCopy As New SqlBulkCopy(cnn)
+                                bulkCopy.DestinationTableName = "tbHuyethoc"
+                                bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+                                bulkCopy.WriteToServer(insertedIdsTable)
+                            End Using
+                            Using bulkCopy As New SqlBulkCopy(cnn)
+                                bulkCopy.DestinationTableName = "tbTongQuat"
+                                bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+                                bulkCopy.WriteToServer(insertedIdsTable)
+                            End Using
+                            Using bulkCopy As New SqlBulkCopy(cnn)
+                                bulkCopy.DestinationTableName = "tbSinhHoa"
+                                bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+                                bulkCopy.WriteToServer(insertedIdsTable)
+                            End Using
+                            Using bulkCopy As New SqlBulkCopy(cnn)
+                                bulkCopy.DestinationTableName = "tbPhanTichNuocTieu"
+                                bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+                                bulkCopy.WriteToServer(insertedIdsTable)
+                            End Using
                         End Using
                         Me.Dispose()
                     Else
@@ -357,7 +250,6 @@ Public Class frmImportSolieuhoso
         Else
             Exit Sub
         End If
-
     End Sub
 
 

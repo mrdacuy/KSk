@@ -27,5 +27,210 @@ KskSoft
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:KskSoft.KskDbDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.SoLieuCongTyDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.SolieuhosoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbHuyetHocDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbPhanTichNuocTieuDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbSinhHoaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraHuyetHocDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraPhanTichNuocTieuDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraSinhHoaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.SoLieuCongTyRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.SolieuhosoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbHuyetHocRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbPhanTichNuocTieuRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbSinhHoaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraHuyetHocRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraPhanTichNuocTieuRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraSinhHoaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.SoLieuCongTyRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.SolieuhosoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbHuyetHocRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbPhanTichNuocTieuRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbSinhHoaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraHuyetHocRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraPhanTichNuocTieuRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbTraSinhHoaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.SoLieuCongTyTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.SolieuhosoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.tbHuyetHocTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.tbPhanTichNuocTieuTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.tbSinhHoaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.tbTraHuyetHocTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.tbTraPhanTichNuocTieuTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.tbTraSinhHoaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:KskSoft.KskDbDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(KskSoft.KskDbDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:KskSoft.KskDbDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(KskSoft.KskDbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:KskSoft.KskDbDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(KskSoft.KskDbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:KskSoft.KskDbDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:KskSoft.KskDbDataSetTableAdapters.TableAdapterManager.UpdateAll(KskSoft.KskDbDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

@@ -62,6 +62,7 @@
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.2.Drawing, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.PivotGrid.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -261,6 +262,12 @@
     <Compile Include="frmThuSo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmTongQuat.Designer.vb">
+      <DependentUpon>FrmTongQuat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTongQuat.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTraHuyetHoc.Designer.vb">
       <DependentUpon>frmTraHuyetHoc.vb</DependentUpon>
     </Compile>
@@ -279,6 +286,17 @@
     <Compile Include="FrmUserKhamSucKhoe.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="FrXemtruoc.Designer.vb">
+      <DependentUpon>FrXemtruoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrXemtruoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KskDbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KskDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MdKetNoi.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -296,6 +314,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RpHuyetHoc.Designer.vb">
+      <DependentUpon>RpHuyetHoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RpHuyetHoc.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="rpIntem.Designer.vb">
       <DependentUpon>rpIntem.vb</DependentUpon>
@@ -390,6 +414,9 @@
     <EmbeddedResource Include="frmThuSo.resx">
       <DependentUpon>frmThuSo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTongQuat.resx">
+      <DependentUpon>FrmTongQuat.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTraHuyetHoc.resx">
       <DependentUpon>frmTraHuyetHoc.vb</DependentUpon>
     </EmbeddedResource>
@@ -399,12 +426,18 @@
     <EmbeddedResource Include="FrmUserKhamSucKhoe.resx">
       <DependentUpon>FrmUserKhamSucKhoe.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrXemtruoc.resx">
+      <DependentUpon>FrXemtruoc.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RpHuyetHoc.resx">
+      <DependentUpon>RpHuyetHoc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rpIntem.resx">
       <DependentUpon>rpIntem.vb</DependentUpon>
@@ -429,6 +462,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="KskDbDataSet.xsc">
+      <DependentUpon>KskDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KskDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KskDbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KskDbDataSet.xss">
+      <DependentUpon>KskDbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

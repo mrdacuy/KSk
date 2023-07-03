@@ -106,7 +106,7 @@ Public Class FrmInKhamSucKhoe
             MessageBox.Show("Thông báo", "Không tìm thấy dữ liệu vui lòng kiểm tra lại", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
-        Dim i As Integer = 0
+
 
         Dim selectedRowHandles As Integer() = gvSolieuhoso.GetSelectedRows()
         Dim totalRows As Integer = selectedRowHandles.Length

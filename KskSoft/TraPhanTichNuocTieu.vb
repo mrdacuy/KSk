@@ -1,41 +1,47 @@
 ﻿Imports System.Data.SqlClient
 Imports DevExpress.XtraBars
+Imports DevExpress.XtraEditors
 Imports DevExpress.XtraGrid.Columns
 Imports DevExpress.XtraGrid.Views.Base
 Imports DevExpress.XtraGrid.Views.Grid
 
 Public Class TraPhanTichNuocTieu
-    'Dim Dt As New DataSet
-    'Dim Da As New DataTable
-    'Dim Cmd As New SqlDataAdapter
-    'Private Sub TraPhanTichNuocTieu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    '    GridControl2.DataSource = GetDataSet("Select * from tbPhanTichNuocTieu").Tables("tbPhanTichNuocTieu")
-    'End Sub
-    'Private Function GetDataSet(ByVal query As String) As DataSet
-    '    Ket_noi()
-    '    Cmd = New SqlDataAdapter(query, cnn)
-    '    Dim commandBuilder As SqlCommandBuilder = New SqlCommandBuilder(Cmd)
-    '    Dt = New DataSet()
-    '    Cmd.Fill(Dt, "tbPhanTichNuocTieu")
-    '    Return Dt
-    '    Dong_Ket_noi()
-    'End Function
+    Dim Dt1 As New DataSet
+    Dim Da1 As New DataTable
+    Dim Cmd1 As New SqlDataAdapter
 
-    'Private Sub BarButtonItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
-
-    '    'Dim randomNumbe1 As Double = RandomPH() ' Gọi phương thức RandomPH và lưu giá trị trả về vào biến randomNumbe1
-    '    'MsgBox(randomNumbe1.ToString())
-    '    Cmd.Update(Dt.Tables("tbPhanTichNuocTieu"))
-    '    Dt.AcceptChanges()
-    '    MsgBox("Xong")
-    'End Sub
     Dim Dt As New DataSet()
     Dim Da As SqlDataAdapter
     Private Sub TraPhanTichNuocTieu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GridControl2.DataSource = GetDataSet("Select * from tbPhanTichNuocTieu").Tables("tbPhanTichNuocTieu")
+        Dim firstDayOfMonth As New DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)
+        TuNgay.EditValue = firstDayOfMonth
+        DenNgay.EditValue = Today
+
         GridView2.IndicatorWidth = 50
     End Sub
-
+    Private Sub SlCongty_QueryPopUp(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SlCongty.QueryPopUp
+        SlCongty.Properties.DataSource = Nothing
+        SlCongty.Properties.NullText = ""
+        SlCongty.Properties.NullValuePrompt = ""
+        SlCongty.Properties.View.ClearColumnsFilter()
+        SlCongty.Properties.View.Columns.Clear()
+        Dong_Ket_noi()
+        Ket_noi()
+        Dim cmd As New SqlDataAdapter("Select Id, Congty As Côngty from SoLieuCongTy ", cnn)
+        Dim da As New DataTable
+        cmd.Fill(da)
+        SlCongty.Properties.DataSource = da
+        SlCongty.Properties.DisplayMember = "Côngty"
+        SlCongty.Properties.ValueMember = "Côngty"
+        SlCongty.Properties.View.Columns("Côngty").Visible = True
+        SlCongty.Properties.View.Columns("Id").Visible = False
+        Dong_Ket_noi()
+    End Sub
+    Private Sub SlCongty_EditValueChanged(sender As Object, e As EventArgs) Handles SlCongty.EditValueChanged
+        If SlCongty.Properties.View.FocusedRowHandle >= 0 Then
+            idCongty = SlCongty.Properties.View.GetFocusedRowCellValue("Id")
+        End If
+    End Sub
     Private Function GetDataSet(ByVal query As String) As DataSet
         Ket_noi()
         Da = New SqlDataAdapter(query, cnn)
@@ -51,7 +57,39 @@ Public Class TraPhanTichNuocTieu
         'MsgBox("Xong")
         Add_Data()
     End Sub
+    Private Sub LoadData()
+        If SlCongty.EditValue = "" Then
+            XtraMessageBox.Show("Vui lòng chọn Công ty", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+        Dim joinedDataSet As DataSet = GetJoinedDataSet()
+        GridControl2.DataSource = joinedDataSet.Tables(0)
+        Dt1 = joinedDataSet
+    End Sub
 
+    Private Function GetJoinedDataSet() As DataSet
+        Dim TuNgayValue As String = CType(TuNgay.EditValue, DateTime).ToString("yyyyMMdd")
+        Dim DenngayValue As String = CType(DenNgay.EditValue, DateTime).ToString("yyyyMMdd")
+        Ket_noi()
+        Dim query As String = "SELECT solieuhoso.Macode, solieuhoso.Congty, CONVERT(DATETIME, solieuhoso.Ngay, 103) As Ngay, solieuhoso.Hoten, solieuhoso.Namsinh, solieuhoso.Gioitinh, solieuhoso.Manhanvien, solieuhoso.Bophan, " &
+                      "TbPhantichnuoctieu.IdSolieuhoso, TbPhantichnuoctieu.BIL, TbPhantichnuoctieu.BLOOD, TbPhantichnuoctieu.GLU, TbPhantichnuoctieu.KET, TbPhantichnuoctieu.LEU, " &
+                      "TbPhantichnuoctieu.NIT, TbPhantichnuoctieu.PH, TbPhantichnuoctieu.PRO, TbPhantichnuoctieu.SG, TbPhantichnuoctieu.URO " &
+                      "FROM solieuhoso " &
+                      "JOIN TbPhantichnuoctieu ON solieuhoso.Id = TbPhantichnuoctieu.IdSolieuhoso " &
+                      "WHERE solieuhoso.Ngay >= CONVERT(DATETIME, '" & TuNgayValue & "', 112) " &
+                      "AND solieuhoso.Ngay <= CONVERT(DATETIME, '" & DenngayValue & "', 112) " &
+                      "AND solieuhoso.Congty = " & idCongty & " " &
+                      "AND (solieuhoso.Macode = '" & txtTimkiem.Text & "' OR solieuhoso.Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR solieuhoso.Manhanvien = '" & txtTimkiem.Text.Trim & "')and solieuhoso.Thuso=N'Đã thu sổ' " &
+                      "ORDER BY CASE WHEN ISNUMERIC(solieuhoso.Macode) = 1 THEN CAST(solieuhoso.Macode AS INT) ELSE 999999 END, solieuhoso.Macode"
+
+
+        Dim Cmd1 As New SqlDataAdapter(query, cnn)
+        Dim commandBuilder As SqlCommandBuilder = New SqlCommandBuilder(Cmd1)
+        Dim Dt1 As New DataSet()
+        Cmd1.Fill(Dt1, "JoinedData")
+        Dong_Ket_noi()
+        Return Dt1
+    End Function
 
     Private Sub Add_Data()
         Using cnn As New SqlConnection(connectString)
@@ -74,9 +112,6 @@ Public Class TraPhanTichNuocTieu
             cnn.Close()
         End Using
 
-        MsgBox("Xong")
-        GridControl2.DataSource = Nothing
-        GridControl2.DataSource = GetDataSet("SELECT * FROM tbPhanTichNuocTieu").Tables("tbPhanTichNuocTieu")
     End Sub
 
     Private Function CreateDataTable(ByVal rowHandles As Integer()) As DataTable
@@ -100,16 +135,18 @@ Public Class TraPhanTichNuocTieu
 
             Dim newRow As DataRow = dataTable.NewRow()
             newRow("IdSolieuhoso") = id
-            newRow("BIL") = "Âm tính"
-            newRow("BLOOD") = "Âm tính"
-            newRow("GLU") = "Âm tính"
-            newRow("KET") = "Âm tính"
-            newRow("LEU") = "Âm tính"
-            newRow("PH") = RandomPH(randomGenerator)
-            newRow("SG") = RandomSG(randomGenerator)
-            newRow("PRO") = "Âm tính"
-            newRow("NIT") = "Âm tính"
-            newRow("URO") = "Âm tính"
+            newRow("BIL") = GridView2.GetRowCellDisplayText(rowHandle, "BIL")
+            newRow("BLOOD") = GridView2.GetRowCellDisplayText(rowHandle, "BLOOD")
+            newRow("GLU") = GridView2.GetRowCellDisplayText(rowHandle, "GLU")
+            newRow("KET") = GridView2.GetRowCellDisplayText(rowHandle, "KET")
+            newRow("LEU") = GridView2.GetRowCellDisplayText(rowHandle, "LEU")
+            newRow("PH") = GridView2.GetRowCellDisplayText(rowHandle, "PH")
+            newRow("SG") = GridView2.GetRowCellDisplayText(rowHandle, "SG")
+            newRow("PRO") = GridView2.GetRowCellDisplayText(rowHandle, "PRO")
+            newRow("NIT") = GridView2.GetRowCellDisplayText(rowHandle, "NIT")
+            newRow("URO") = GridView2.GetRowCellDisplayText(rowHandle, "URO")
+
+
             dataTable.Rows.Add(newRow)
         Next
 
@@ -117,25 +154,9 @@ Public Class TraPhanTichNuocTieu
     End Function
 
 
-    'Private Sub Da_RowUpdated(sender As Object, e As SqlRowUpdatedEventArgs)
-    '    ' Kiểm tra trạng thái của hàng được cập nhật
-    '    If e.Status = UpdateStatus.Continue AndAlso e.Row.RowState <> DataRowState.Unchanged Then
-    '        ' Tính toán tiến trình và cập nhật ProgressBar
-    '        Dim progress As Integer = (e.Row.Table.Rows.IndexOf(e.Row) + 1) * 100 \ e.Row.Table.Rows.Count
-    '        ProgressBar1.Value = progress
-    '        ProgressBar1.Refresh()
-    '    End If
-
-    '    ' Kiểm tra xem tất cả các hàng đã được cập nhật chưa
-    '    If e.StatementType = StatementType.Insert AndAlso e.Status = UpdateStatus.Continue AndAlso e.Row.RowState = DataRowState.Added Then
-    '        If e.Row.Table.Rows.IndexOf(e.Row) = e.Row.Table.Rows.Count - 1 Then
-    '            ' Khi tất cả các hàng đã được cập nhật, ẩn ProgressBar và hiển thị thông báo
-    '            ProgressBar1.Visible = False
-    '            BarButtonItem1.Enabled = True
-    '            MsgBox("Xong")
-    '        End If
-    '    End If
-    'End Sub
+    Private Sub GridView2_CellValueChanged(sender As Object, e As CellValueChangedEventArgs) Handles GridView2.CellValueChanged
+        Add_Data()
+    End Sub
 
     Private Sub GridView2_PopupMenuShowing(sender As Object, e As DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs) Handles GridView2.PopupMenuShowing
         If e.HitInfo.InRow Then
@@ -150,22 +171,11 @@ Public Class TraPhanTichNuocTieu
     End Sub
 
     Private Sub ChonGrid_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ChonGrid.ItemClick
-        'For Each selectedCell As GridCell In GridView2.GetSelectedCells()
-        '    Dim rowHandle As Integer = selectedCell.RowHandle
-        '    Dim column As GridColumn = selectedCell.Column
-        '    Dim row As DataRow = GridView2.GetDataRow(rowHandle)
-        '    ' Lấy giá trị cột Bit và đặt nó thành True
-        '    row(column.FieldName) = True
-        'Next
-
-        '' Cập nhật lại hiển thị của GridControl
-        'GridView2.RefreshData()
-        'Add_Data()
 
 
         Dim selectedCells As GridCell() = GridView2.GetSelectedCells()
 
-        ' Tạo một đối tượng Random duy nhất
+
         Dim randomGenerator As New Random()
 
         For Each cell As GridCell In selectedCells
@@ -181,8 +191,7 @@ Public Class TraPhanTichNuocTieu
             End If
         Next
 
-        GridControl2.RefreshDataSource()
-
+        Add_Data()
 
     End Sub
 
@@ -227,18 +236,15 @@ Public Class TraPhanTichNuocTieu
         Dim randomValue As Double = Math.Round(rnd.Next(1000 * x, 1000 * y) / 1000, 4)
         Return randomValue
     End Function
-    Private Sub BoChonGrid_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BoChonGrid.ItemClick
-        'For Each selectedCell As GridCell In GridView2.GetSelectedCells()
-        '    Dim rowHandle As Integer = selectedCell.RowHandle
-        '    Dim column As GridColumn = selectedCell.Column
-        '    Dim row As DataRow = GridView2.GetDataRow(rowHandle)
-        '    ' Lấy giá trị cột Bit và đặt nó thành True
-        '    row(column.FieldName) = False
-        'Next
 
-        '' Cập nhật lại hiển thị của GridControl
-        'GridView2.RefreshData()
-        'Add_Data()
+    Private Sub txtTimkiem_KeyDown(sender As Object, e As KeyEventArgs) Handles txtTimkiem.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            LoadData()
+
+        End If
+
+    End Sub
+    Private Sub BoChonGrid_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BoChonGrid.ItemClick
 
 
 
@@ -259,83 +265,23 @@ Public Class TraPhanTichNuocTieu
             dataRow("SG") = ""
             dataRow("URO") = ""
         Next
-
-
-        MsgBox("xONG")
-        GridControl2.RefreshDataSource() '
-
-
-
-
-
-
-
+        Add_Data()
 
     End Sub
 
+    Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
+        LoadData()
+    End Sub
 
-
+    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
+        If GridControl2.DataSource Is Nothing OrElse GridView2.RowCount = 0 Then
+            MessageBox.Show("Không có dữ liệu!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+        ' Thiết lập tên file mặc định
+        Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+        Dim fileName As String = thepath & "\Nuoctieu" & SlCongty.EditValue + "_" + DateTime.Now.ToString("dd-MM-yyyy-hh-mm-ss") + ".xlsx"
+        Dim path As String = fileName
+        GridControl2.ExportToXlsx(path)
+    End Sub
 End Class
-'Ket_noi()
-
-'Dim selectedRowHandles As Integer() = GridView2.GetSelectedRows()
-'Dim totalRows As Integer = selectedRowHandles.Length
-'For Each rowHandle As Integer In selectedRowHandles
-'Dim dataRow As DataRow = GridView2.GetDataRow(rowHandle)
-'Dim CheckBIL As Boolean = dataRow("BIL")
-'Dim CheckBLOOD As Boolean = dataRow("BLOOD")
-'Dim CheckGLU As Boolean = dataRow("GLU")
-'Dim CheckKET As Boolean = dataRow("KET")
-'Dim CheckLEU As Boolean = dataRow("LEU")
-'Dim CheckNIT As Boolean = dataRow("NIT")
-'Dim CheckPH As Boolean = dataRow("PH")
-'Dim CheckPRO As Boolean = dataRow("PRO")
-'Dim CheckSG As Boolean = dataRow("SG")
-'Dim CheckURO As Boolean = dataRow("URO")
-
-'Dim id As Integer = dataRow("IdSolieuhoso")
-
-'Dim cmd As New SqlCommand("UPDATE tbTraPhanTichNuocTieu SET BIL=@BIL,BLOOD=@BLOOD,GLU=@GLU,KET=@KET,LEU=@LEU,NIT=@NIT,PH=@PH,PRO=@PRO,SG=@SG,URO=@URO WHERE IdSolieuhoso=" & id & "", cnn)
-'Dim cmd1 As New SqlCommand("UPDATE tbPhanTichNuocTieu SET BIL=@BIL,BLOOD=@BLOOD,GLU=@GLU,KET=@KET,LEU=@LEU,NIT=@NIT,PH=@PH,PRO=@PRO,SG=@SG,URO=@URO WHERE IdSolieuhoso=" & id & "", cnn)
-'cmd.Parameters.Clear()
-
-'cmd.Parameters.AddWithValue("@BIL", CheckBIL)
-'cmd.Parameters.AddWithValue("@BLOOD", CheckBLOOD)
-'cmd.Parameters.AddWithValue("@GLU", CheckGLU)
-'cmd.Parameters.AddWithValue("@KET", CheckKET)
-'cmd.Parameters.AddWithValue("@LEU", CheckLEU)
-'cmd.Parameters.AddWithValue("@NIT", CheckNIT)
-'cmd.Parameters.AddWithValue("@PH", CheckPH)
-'cmd.Parameters.AddWithValue("@PRO", CheckPRO)
-'cmd.Parameters.AddWithValue("@SG", CheckSG)
-'cmd.Parameters.AddWithValue("@URO", CheckURO)
-'cmd.Parameters.AddWithValue("@IdSolieuhoso", id)
-
-'Dim columnValues As Dictionary(Of String, String) = New Dictionary(Of String, String)()
-'Dim randomNumbe1 As Double = RandomPH() ' Gọi phương thức RandomPH và lưu giá trị trả về vào biến randomNumbe1
-'Dim randomNumbersg As Double = RandomSG()
-'columnValues.Add("@BIL", If(CheckBIL, "Âm tính", ""))
-'columnValues.Add("@BLOOD", If(CheckBLOOD, "Âm tính", ""))
-'columnValues.Add("@GLU", If(CheckGLU, "Âm tính", ""))
-'columnValues.Add("@KET", If(CheckKET, "Âm tính", ""))
-'columnValues.Add("@LEU", If(CheckLEU, "Âm tính", ""))
-'columnValues.Add("@NIT", If(CheckNIT, "Âm tính", ""))
-'columnValues.Add("@PH", If(CheckPH, randomNumbe1.ToString(), ""))
-'columnValues.Add("@PRO", If(CheckPRO, "Âm tính", ""))
-'columnValues.Add("@SG", If(CheckSG, randomNumbersg, ""))
-'columnValues.Add("@URO", If(CheckURO, "Âm tính", ""))
-'For Each kvp As KeyValuePair(Of String, String) In columnValues
-'cmd1.Parameters.AddWithValue(kvp.Key, kvp.Value)
-'Next
-
-
-'cmd.ExecuteNonQuery()
-
-''cmd1.ExecuteNonQuery()
-
-
-
-'Next
-'Dong_Ket_noi()
-
-'MsgBox("xONG")
