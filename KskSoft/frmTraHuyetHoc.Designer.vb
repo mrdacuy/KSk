@@ -80,6 +80,7 @@ Partial Class frmTraHuyetHoc
         Me.DenNgay = New DevExpress.XtraEditors.DateEdit()
         Me.TuNgay = New DevExpress.XtraEditors.DateEdit()
         Me.PopupMenu1 = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -470,6 +471,7 @@ Partial Class frmTraHuyetHoc
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton4)
         Me.SplitContainer1.Panel1.Controls.Add(Me.SimpleButton3)
         Me.SplitContainer1.Panel1.Controls.Add(Me.LabelControl4)
@@ -631,6 +633,18 @@ Partial Class frmTraHuyetHoc
         Me.PopupMenu1.Manager = Me.BarManager1
         Me.PopupMenu1.Name = "PopupMenu1"
         '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton1.Appearance.Options.UseFont = True
+        Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.SimpleButton1.Location = New System.Drawing.Point(819, 50)
+        Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(115, 32)
+        Me.SimpleButton1.TabIndex = 28
+        Me.SimpleButton1.Text = "Tìm kiếm"
+        '
         'frmTraHuyetHoc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -725,4 +739,5 @@ Partial Class frmTraHuyetHoc
     Friend WithEvents BntXoadulieu As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents PopupMenu1 As DevExpress.XtraBars.PopupMenu
     Friend WithEvents NNgay As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
 End Class

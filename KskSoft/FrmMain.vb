@@ -45,7 +45,31 @@
         FrmTem4.ShowDialog()
     End Sub
 
-    Private Sub FluentDesignFormControl1_Click(sender As Object, e As EventArgs) Handles FluentDesignFormControl1.Click
+    Private Sub AccordionControlElement7_Click(sender As Object, e As EventArgs) Handles AccordionControlElement7.Click
+        frmTraHuyetHoc.ShowDialog()
+    End Sub
 
+    Private Sub AccordionControlElement8_Click(sender As Object, e As EventArgs) Handles AccordionControlElement8.Click
+        TraPhanTichNuocTieu.ShowDialog()
+    End Sub
+
+    Private Sub AccordionControlElement9_Click(sender As Object, e As EventArgs) Handles AccordionControlElement9.Click
+        FrmMienDich.ShowDialog()
+    End Sub
+
+    Private Sub AccordionControlElement10_Click(sender As Object, e As EventArgs) Handles AccordionControlElement10.Click
+        frmTraSinhHoa.ShowDialog()
+    End Sub
+
+    Private Sub AccordionControlElement11_Click(sender As Object, e As EventArgs) Handles AccordionControlElement11.Click
+        FrmTestnhanh.ShowDialog()
+    End Sub
+
+    Private Sub AccordionControlElement12_Click(sender As Object, e As EventArgs) Handles AccordionControlElement12.Click
+        FrmSoiphan.ShowDialog()
+    End Sub
+
+    Private Sub AccordionControlElement13_Click(sender As Object, e As EventArgs) Handles AccordionControlElement13.Click
+        FrmSoidichamdao.ShowDialog()
     End Sub
 End Class

@@ -103,7 +103,7 @@ Public Class FrmUserKhamSucKhoe
             MessageBox.Show("Thông báo", "Không tìm thấy dữ liệu vui lòng kiểm tra lại", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
-        Dim i As Integer = 0
+
 
         Dim selectedRowHandles As Integer() = gvSolieuhoso.GetSelectedRows()
         Dim totalRows As Integer = selectedRowHandles.Length
@@ -256,12 +256,17 @@ Public Class FrmUserKhamSucKhoe
 
             Dim deleteCmd3 As New SqlCommand("DELETE FROM tbHuyetHoc WHERE Idsolieuhoso IN (" & ids & ")", cnn)
             deleteCmd3.ExecuteNonQuery()
-
-            Dim deleteCmd4 As New SqlCommand("DELETE FROM tbTraHuyetHoc WHERE Idsolieuhoso IN (" & ids & ")", cnn)
+            Dim deleteCmd4 As New SqlCommand("DELETE FROM tbTongquat WHERE Idsolieuhoso IN (" & ids & ")", cnn)
             deleteCmd4.ExecuteNonQuery()
+            Dim deleteCmd6 As New SqlCommand("DELETE FROM tbMiendich WHERE Idsolieuhoso IN (" & ids & ")", cnn)
+            deleteCmd6.ExecuteNonQuery()
+            Dim deleteCmd7 As New SqlCommand("DELETE FROM tbTestnhanh WHERE Idsolieuhoso IN (" & ids & ")", cnn)
+            deleteCmd7.ExecuteNonQuery()
+            Dim deleteCmd8 As New SqlCommand("DELETE FROM tbSoiphan WHERE Idsolieuhoso IN (" & ids & ")", cnn)
+            deleteCmd8.ExecuteNonQuery()
+            Dim deleteCmd9 As New SqlCommand("DELETE FROM tbSoiamdao WHERE Idsolieuhoso IN (" & ids & ")", cnn)
+            deleteCmd9.ExecuteNonQuery()
 
-            Dim deleteCmd5 As New SqlCommand("DELETE FROM tbTraPhanTichNuocTieu WHERE Idsolieuhoso IN (" & ids & ")", cnn)
-            deleteCmd5.ExecuteNonQuery()
         End If
 
         Dong_Ket_noi()

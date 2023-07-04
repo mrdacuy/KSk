@@ -35,11 +35,15 @@ Partial Public Class KskDbDataSet
     
     Private tabletbSinhHoa As tbSinhHoaDataTable
     
-    Private tabletbTraHuyetHoc As tbTraHuyetHocDataTable
+    Private tableTbmiendich As TbmiendichDataTable
     
-    Private tabletbTraPhanTichNuocTieu As tbTraPhanTichNuocTieuDataTable
+    Private tableTbSoiamdao As TbSoiamdaoDataTable
     
-    Private tabletbTraSinhHoa As tbTraSinhHoaDataTable
+    Private tableTbSoiphan As TbSoiphanDataTable
+    
+    Private tableTbTestnhanh As TbTestnhanhDataTable
+    
+    Private tabletbTongQuat As tbTongQuatDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -85,14 +89,20 @@ Partial Public Class KskDbDataSet
             If (Not (ds.Tables("tbSinhHoa")) Is Nothing) Then
                 MyBase.Tables.Add(New tbSinhHoaDataTable(ds.Tables("tbSinhHoa")))
             End If
-            If (Not (ds.Tables("tbTraHuyetHoc")) Is Nothing) Then
-                MyBase.Tables.Add(New tbTraHuyetHocDataTable(ds.Tables("tbTraHuyetHoc")))
+            If (Not (ds.Tables("Tbmiendich")) Is Nothing) Then
+                MyBase.Tables.Add(New TbmiendichDataTable(ds.Tables("Tbmiendich")))
             End If
-            If (Not (ds.Tables("tbTraPhanTichNuocTieu")) Is Nothing) Then
-                MyBase.Tables.Add(New tbTraPhanTichNuocTieuDataTable(ds.Tables("tbTraPhanTichNuocTieu")))
+            If (Not (ds.Tables("TbSoiamdao")) Is Nothing) Then
+                MyBase.Tables.Add(New TbSoiamdaoDataTable(ds.Tables("TbSoiamdao")))
             End If
-            If (Not (ds.Tables("tbTraSinhHoa")) Is Nothing) Then
-                MyBase.Tables.Add(New tbTraSinhHoaDataTable(ds.Tables("tbTraSinhHoa")))
+            If (Not (ds.Tables("TbSoiphan")) Is Nothing) Then
+                MyBase.Tables.Add(New TbSoiphanDataTable(ds.Tables("TbSoiphan")))
+            End If
+            If (Not (ds.Tables("TbTestnhanh")) Is Nothing) Then
+                MyBase.Tables.Add(New TbTestnhanhDataTable(ds.Tables("TbTestnhanh")))
+            End If
+            If (Not (ds.Tables("tbTongQuat")) Is Nothing) Then
+                MyBase.Tables.Add(New tbTongQuatDataTable(ds.Tables("tbTongQuat")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -165,9 +175,9 @@ Partial Public Class KskDbDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property tbTraHuyetHoc() As tbTraHuyetHocDataTable
+    Public ReadOnly Property Tbmiendich() As TbmiendichDataTable
         Get
-            Return Me.tabletbTraHuyetHoc
+            Return Me.tableTbmiendich
         End Get
     End Property
     
@@ -175,9 +185,9 @@ Partial Public Class KskDbDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property tbTraPhanTichNuocTieu() As tbTraPhanTichNuocTieuDataTable
+    Public ReadOnly Property TbSoiamdao() As TbSoiamdaoDataTable
         Get
-            Return Me.tabletbTraPhanTichNuocTieu
+            Return Me.tableTbSoiamdao
         End Get
     End Property
     
@@ -185,9 +195,29 @@ Partial Public Class KskDbDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property tbTraSinhHoa() As tbTraSinhHoaDataTable
+    Public ReadOnly Property TbSoiphan() As TbSoiphanDataTable
         Get
-            Return Me.tabletbTraSinhHoa
+            Return Me.tableTbSoiphan
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property TbTestnhanh() As TbTestnhanhDataTable
+        Get
+            Return Me.tableTbTestnhanh
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbTongQuat() As tbTongQuatDataTable
+        Get
+            Return Me.tabletbTongQuat
         End Get
     End Property
     
@@ -273,14 +303,20 @@ Partial Public Class KskDbDataSet
             If (Not (ds.Tables("tbSinhHoa")) Is Nothing) Then
                 MyBase.Tables.Add(New tbSinhHoaDataTable(ds.Tables("tbSinhHoa")))
             End If
-            If (Not (ds.Tables("tbTraHuyetHoc")) Is Nothing) Then
-                MyBase.Tables.Add(New tbTraHuyetHocDataTable(ds.Tables("tbTraHuyetHoc")))
+            If (Not (ds.Tables("Tbmiendich")) Is Nothing) Then
+                MyBase.Tables.Add(New TbmiendichDataTable(ds.Tables("Tbmiendich")))
             End If
-            If (Not (ds.Tables("tbTraPhanTichNuocTieu")) Is Nothing) Then
-                MyBase.Tables.Add(New tbTraPhanTichNuocTieuDataTable(ds.Tables("tbTraPhanTichNuocTieu")))
+            If (Not (ds.Tables("TbSoiamdao")) Is Nothing) Then
+                MyBase.Tables.Add(New TbSoiamdaoDataTable(ds.Tables("TbSoiamdao")))
             End If
-            If (Not (ds.Tables("tbTraSinhHoa")) Is Nothing) Then
-                MyBase.Tables.Add(New tbTraSinhHoaDataTable(ds.Tables("tbTraSinhHoa")))
+            If (Not (ds.Tables("TbSoiphan")) Is Nothing) Then
+                MyBase.Tables.Add(New TbSoiphanDataTable(ds.Tables("TbSoiphan")))
+            End If
+            If (Not (ds.Tables("TbTestnhanh")) Is Nothing) Then
+                MyBase.Tables.Add(New TbTestnhanhDataTable(ds.Tables("TbTestnhanh")))
+            End If
+            If (Not (ds.Tables("tbTongQuat")) Is Nothing) Then
+                MyBase.Tables.Add(New tbTongQuatDataTable(ds.Tables("tbTongQuat")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -344,22 +380,34 @@ Partial Public Class KskDbDataSet
                 Me.tabletbSinhHoa.InitVars
             End If
         End If
-        Me.tabletbTraHuyetHoc = CType(MyBase.Tables("tbTraHuyetHoc"),tbTraHuyetHocDataTable)
+        Me.tableTbmiendich = CType(MyBase.Tables("Tbmiendich"),TbmiendichDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabletbTraHuyetHoc) Is Nothing) Then
-                Me.tabletbTraHuyetHoc.InitVars
+            If (Not (Me.tableTbmiendich) Is Nothing) Then
+                Me.tableTbmiendich.InitVars
             End If
         End If
-        Me.tabletbTraPhanTichNuocTieu = CType(MyBase.Tables("tbTraPhanTichNuocTieu"),tbTraPhanTichNuocTieuDataTable)
+        Me.tableTbSoiamdao = CType(MyBase.Tables("TbSoiamdao"),TbSoiamdaoDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabletbTraPhanTichNuocTieu) Is Nothing) Then
-                Me.tabletbTraPhanTichNuocTieu.InitVars
+            If (Not (Me.tableTbSoiamdao) Is Nothing) Then
+                Me.tableTbSoiamdao.InitVars
             End If
         End If
-        Me.tabletbTraSinhHoa = CType(MyBase.Tables("tbTraSinhHoa"),tbTraSinhHoaDataTable)
+        Me.tableTbSoiphan = CType(MyBase.Tables("TbSoiphan"),TbSoiphanDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabletbTraSinhHoa) Is Nothing) Then
-                Me.tabletbTraSinhHoa.InitVars
+            If (Not (Me.tableTbSoiphan) Is Nothing) Then
+                Me.tableTbSoiphan.InitVars
+            End If
+        End If
+        Me.tableTbTestnhanh = CType(MyBase.Tables("TbTestnhanh"),TbTestnhanhDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableTbTestnhanh) Is Nothing) Then
+                Me.tableTbTestnhanh.InitVars
+            End If
+        End If
+        Me.tabletbTongQuat = CType(MyBase.Tables("tbTongQuat"),tbTongQuatDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbTongQuat) Is Nothing) Then
+                Me.tabletbTongQuat.InitVars
             End If
         End If
     End Sub
@@ -382,12 +430,16 @@ Partial Public Class KskDbDataSet
         MyBase.Tables.Add(Me.tabletbPhanTichNuocTieu)
         Me.tabletbSinhHoa = New tbSinhHoaDataTable()
         MyBase.Tables.Add(Me.tabletbSinhHoa)
-        Me.tabletbTraHuyetHoc = New tbTraHuyetHocDataTable()
-        MyBase.Tables.Add(Me.tabletbTraHuyetHoc)
-        Me.tabletbTraPhanTichNuocTieu = New tbTraPhanTichNuocTieuDataTable()
-        MyBase.Tables.Add(Me.tabletbTraPhanTichNuocTieu)
-        Me.tabletbTraSinhHoa = New tbTraSinhHoaDataTable()
-        MyBase.Tables.Add(Me.tabletbTraSinhHoa)
+        Me.tableTbmiendich = New TbmiendichDataTable()
+        MyBase.Tables.Add(Me.tableTbmiendich)
+        Me.tableTbSoiamdao = New TbSoiamdaoDataTable()
+        MyBase.Tables.Add(Me.tableTbSoiamdao)
+        Me.tableTbSoiphan = New TbSoiphanDataTable()
+        MyBase.Tables.Add(Me.tableTbSoiphan)
+        Me.tableTbTestnhanh = New TbTestnhanhDataTable()
+        MyBase.Tables.Add(Me.tableTbTestnhanh)
+        Me.tabletbTongQuat = New tbTongQuatDataTable()
+        MyBase.Tables.Add(Me.tabletbTongQuat)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -422,19 +474,31 @@ Partial Public Class KskDbDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializetbTraHuyetHoc() As Boolean
+    Private Function ShouldSerializeTbmiendich() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializetbTraPhanTichNuocTieu() As Boolean
+    Private Function ShouldSerializeTbSoiamdao() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializetbTraSinhHoa() As Boolean
+    Private Function ShouldSerializeTbSoiphan() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Private Function ShouldSerializeTbTestnhanh() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Private Function ShouldSerializetbTongQuat() As Boolean
         Return false
     End Function
     
@@ -512,13 +576,19 @@ Partial Public Class KskDbDataSet
     Public Delegate Sub tbSinhHoaRowChangeEventHandler(ByVal sender As Object, ByVal e As tbSinhHoaRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub tbTraHuyetHocRowChangeEventHandler(ByVal sender As Object, ByVal e As tbTraHuyetHocRowChangeEvent)
+    Public Delegate Sub TbmiendichRowChangeEventHandler(ByVal sender As Object, ByVal e As TbmiendichRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub tbTraPhanTichNuocTieuRowChangeEventHandler(ByVal sender As Object, ByVal e As tbTraPhanTichNuocTieuRowChangeEvent)
+    Public Delegate Sub TbSoiamdaoRowChangeEventHandler(ByVal sender As Object, ByVal e As TbSoiamdaoRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub tbTraSinhHoaRowChangeEventHandler(ByVal sender As Object, ByVal e As tbTraSinhHoaRowChangeEvent)
+    Public Delegate Sub TbSoiphanRowChangeEventHandler(ByVal sender As Object, ByVal e As TbSoiphanRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Delegate Sub TbTestnhanhRowChangeEventHandler(ByVal sender As Object, ByVal e As TbTestnhanhRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Delegate Sub tbTongQuatRowChangeEventHandler(ByVal sender As Object, ByVal e As tbTongQuatRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -2678,60 +2748,48 @@ Partial Public Class KskDbDataSet
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class tbTraHuyetHocDataTable
-        Inherits Global.System.Data.TypedTableBase(Of tbTraHuyetHocRow)
+    Partial Public Class TbmiendichDataTable
+        Inherits Global.System.Data.TypedTableBase(Of TbmiendichRow)
         
         Private columnIdSolieuhoso As Global.System.Data.DataColumn
         
-        Private columnWBC As Global.System.Data.DataColumn
+        Private columnTsh As Global.System.Data.DataColumn
         
-        Private columnGran1 As Global.System.Data.DataColumn
+        Private columnFt3 As Global.System.Data.DataColumn
         
-        Private columnGran2 As Global.System.Data.DataColumn
+        Private columnFt4 As Global.System.Data.DataColumn
         
-        Private columnLymph1 As Global.System.Data.DataColumn
+        Private columnCea As Global.System.Data.DataColumn
         
-        Private columnLymph2 As Global.System.Data.DataColumn
+        Private columnCa153 As Global.System.Data.DataColumn
         
-        Private columnMon As Global.System.Data.DataColumn
+        Private columnCa125 As Global.System.Data.DataColumn
         
-        Private columnMon2 As Global.System.Data.DataColumn
+        Private columnCa724 As Global.System.Data.DataColumn
         
-        Private columnEOS1 As Global.System.Data.DataColumn
+        Private columnPsa As Global.System.Data.DataColumn
         
-        Private columnEOS2 As Global.System.Data.DataColumn
+        Private columnAfp As Global.System.Data.DataColumn
         
-        Private columnBaso1 As Global.System.Data.DataColumn
+        Private columnHbsab As Global.System.Data.DataColumn
         
-        Private columnBaso2 As Global.System.Data.DataColumn
+        Private columnHbeag As Global.System.Data.DataColumn
         
-        Private columnRBC As Global.System.Data.DataColumn
+        Private columnHBsAg As Global.System.Data.DataColumn
         
-        Private columnHGB As Global.System.Data.DataColumn
+        Private columnCa199 As Global.System.Data.DataColumn
         
-        Private columnHCT As Global.System.Data.DataColumn
+        Private columnCYFFRA As Global.System.Data.DataColumn
         
-        Private columnMCV As Global.System.Data.DataColumn
+        Private columnKetluanmiendich As Global.System.Data.DataColumn
         
-        Private columnMCH As Global.System.Data.DataColumn
-        
-        Private columnMCHC As Global.System.Data.DataColumn
-        
-        Private columnRDWCV As Global.System.Data.DataColumn
-        
-        Private columnMPV As Global.System.Data.DataColumn
-        
-        Private columnPCT As Global.System.Data.DataColumn
-        
-        Private columnPDW As Global.System.Data.DataColumn
-        
-        Private columnPLT As Global.System.Data.DataColumn
+        Private columnThamvanmiendich As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "tbTraHuyetHoc"
+            Me.TableName = "Tbmiendich"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -2772,177 +2830,129 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property WBCColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property TshColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnWBC
+                Return Me.columnTsh
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Gran1Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ft3Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnGran1
+                Return Me.columnFt3
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Gran2Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ft4Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnGran2
+                Return Me.columnFt4
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Lymph1Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property CeaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLymph1
+                Return Me.columnCea
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Lymph2Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ca153Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLymph2
+                Return Me.columnCa153
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property MonColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ca125Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMon
+                Return Me.columnCa125
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Mon2Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ca724Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMon2
+                Return Me.columnCa724
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property EOS1Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property PsaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnEOS1
+                Return Me.columnPsa
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property EOS2Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property AfpColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnEOS2
+                Return Me.columnAfp
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Baso1Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property HbsabColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBaso1
+                Return Me.columnHbsab
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Baso2Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property HbeagColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBaso2
+                Return Me.columnHbeag
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property RBCColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property HBsAgColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnRBC
+                Return Me.columnHBsAg
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property HGBColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ca199Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnHGB
+                Return Me.columnCa199
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property HCTColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CYFFRAColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnHCT
+                Return Me.columnCYFFRA
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property MCVColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property KetluanmiendichColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMCV
+                Return Me.columnKetluanmiendich
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property MCHColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property ThamvanmiendichColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMCH
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property MCHCColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnMCHC
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property RDWCVColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnRDWCV
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property MPVColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnMPV
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PCTColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPCT
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PDWColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPDW
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PLTColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPLT
+                Return Me.columnThamvanmiendich
             End Get
         End Property
         
@@ -2957,73 +2967,67 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As tbTraHuyetHocRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As TbmiendichRow
             Get
-                Return CType(Me.Rows(index),tbTraHuyetHocRow)
+                Return CType(Me.Rows(index),TbmiendichRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraHuyetHocRowChanging As tbTraHuyetHocRowChangeEventHandler
+        Public Event TbmiendichRowChanging As TbmiendichRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraHuyetHocRowChanged As tbTraHuyetHocRowChangeEventHandler
+        Public Event TbmiendichRowChanged As TbmiendichRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraHuyetHocRowDeleting As tbTraHuyetHocRowChangeEventHandler
+        Public Event TbmiendichRowDeleting As TbmiendichRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraHuyetHocRowDeleted As tbTraHuyetHocRowChangeEventHandler
+        Public Event TbmiendichRowDeleted As TbmiendichRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub AddtbTraHuyetHocRow(ByVal row As tbTraHuyetHocRow)
+        Public Overloads Sub AddTbmiendichRow(ByVal row As TbmiendichRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddtbTraHuyetHocRow( _
+        Public Overloads Function AddTbmiendichRow( _
                     ByVal IdSolieuhoso As Integer,  _
-                    ByVal WBC As Boolean,  _
-                    ByVal Gran1 As Boolean,  _
-                    ByVal Gran2 As Boolean,  _
-                    ByVal Lymph1 As Boolean,  _
-                    ByVal Lymph2 As Boolean,  _
-                    ByVal Mon As Boolean,  _
-                    ByVal Mon2 As Boolean,  _
-                    ByVal EOS1 As Boolean,  _
-                    ByVal EOS2 As Boolean,  _
-                    ByVal Baso1 As Boolean,  _
-                    ByVal Baso2 As Boolean,  _
-                    ByVal RBC As Boolean,  _
-                    ByVal HGB As Boolean,  _
-                    ByVal HCT As Boolean,  _
-                    ByVal MCV As Boolean,  _
-                    ByVal MCH As Boolean,  _
-                    ByVal MCHC As Boolean,  _
-                    ByVal RDWCV As Boolean,  _
-                    ByVal MPV As Boolean,  _
-                    ByVal PCT As Boolean,  _
-                    ByVal PDW As Boolean,  _
-                    ByVal PLT As Boolean) As tbTraHuyetHocRow
-            Dim rowtbTraHuyetHocRow As tbTraHuyetHocRow = CType(Me.NewRow,tbTraHuyetHocRow)
-            Dim columnValuesArray() As Object = New Object() {IdSolieuhoso, WBC, Gran1, Gran2, Lymph1, Lymph2, Mon, Mon2, EOS1, EOS2, Baso1, Baso2, RBC, HGB, HCT, MCV, MCH, MCHC, RDWCV, MPV, PCT, PDW, PLT}
-            rowtbTraHuyetHocRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowtbTraHuyetHocRow)
-            Return rowtbTraHuyetHocRow
+                    ByVal Tsh As String,  _
+                    ByVal Ft3 As String,  _
+                    ByVal Ft4 As String,  _
+                    ByVal Cea As String,  _
+                    ByVal Ca153 As String,  _
+                    ByVal Ca125 As String,  _
+                    ByVal Ca724 As String,  _
+                    ByVal Psa As String,  _
+                    ByVal Afp As String,  _
+                    ByVal Hbsab As String,  _
+                    ByVal Hbeag As String,  _
+                    ByVal HBsAg As String,  _
+                    ByVal Ca199 As String,  _
+                    ByVal CYFFRA As String,  _
+                    ByVal Ketluanmiendich As String,  _
+                    ByVal Thamvanmiendich As String) As TbmiendichRow
+            Dim rowTbmiendichRow As TbmiendichRow = CType(Me.NewRow,TbmiendichRow)
+            Dim columnValuesArray() As Object = New Object() {IdSolieuhoso, Tsh, Ft3, Ft4, Cea, Ca153, Ca125, Ca724, Psa, Afp, Hbsab, Hbeag, HBsAg, Ca199, CYFFRA, Ketluanmiendich, Thamvanmiendich}
+            rowTbmiendichRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowTbmiendichRow)
+            Return rowTbmiendichRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByIdSolieuhoso(ByVal IdSolieuhoso As Integer) As tbTraHuyetHocRow
-            Return CType(Me.Rows.Find(New Object() {IdSolieuhoso}),tbTraHuyetHocRow)
+        Public Function FindByIdSolieuhoso(ByVal IdSolieuhoso As Integer) As TbmiendichRow
+            Return CType(Me.Rows.Find(New Object() {IdSolieuhoso}),TbmiendichRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As tbTraHuyetHocDataTable = CType(MyBase.Clone,tbTraHuyetHocDataTable)
+            Dim cln As TbmiendichDataTable = CType(MyBase.Clone,TbmiendichDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -3031,35 +3035,29 @@ Partial Public Class KskDbDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New tbTraHuyetHocDataTable()
+            Return New TbmiendichDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnIdSolieuhoso = MyBase.Columns("IdSolieuhoso")
-            Me.columnWBC = MyBase.Columns("WBC")
-            Me.columnGran1 = MyBase.Columns("Gran1")
-            Me.columnGran2 = MyBase.Columns("Gran2")
-            Me.columnLymph1 = MyBase.Columns("Lymph1")
-            Me.columnLymph2 = MyBase.Columns("Lymph2")
-            Me.columnMon = MyBase.Columns("Mon")
-            Me.columnMon2 = MyBase.Columns("Mon2")
-            Me.columnEOS1 = MyBase.Columns("EOS1")
-            Me.columnEOS2 = MyBase.Columns("EOS2")
-            Me.columnBaso1 = MyBase.Columns("Baso1")
-            Me.columnBaso2 = MyBase.Columns("Baso2")
-            Me.columnRBC = MyBase.Columns("RBC")
-            Me.columnHGB = MyBase.Columns("HGB")
-            Me.columnHCT = MyBase.Columns("HCT")
-            Me.columnMCV = MyBase.Columns("MCV")
-            Me.columnMCH = MyBase.Columns("MCH")
-            Me.columnMCHC = MyBase.Columns("MCHC")
-            Me.columnRDWCV = MyBase.Columns("RDWCV")
-            Me.columnMPV = MyBase.Columns("MPV")
-            Me.columnPCT = MyBase.Columns("PCT")
-            Me.columnPDW = MyBase.Columns("PDW")
-            Me.columnPLT = MyBase.Columns("PLT")
+            Me.columnTsh = MyBase.Columns("Tsh")
+            Me.columnFt3 = MyBase.Columns("Ft3")
+            Me.columnFt4 = MyBase.Columns("Ft4")
+            Me.columnCea = MyBase.Columns("Cea")
+            Me.columnCa153 = MyBase.Columns("Ca153")
+            Me.columnCa125 = MyBase.Columns("Ca125")
+            Me.columnCa724 = MyBase.Columns("Ca724")
+            Me.columnPsa = MyBase.Columns("Psa")
+            Me.columnAfp = MyBase.Columns("Afp")
+            Me.columnHbsab = MyBase.Columns("Hbsab")
+            Me.columnHbeag = MyBase.Columns("Hbeag")
+            Me.columnHBsAg = MyBase.Columns("HBsAg")
+            Me.columnCa199 = MyBase.Columns("Ca199")
+            Me.columnCYFFRA = MyBase.Columns("CYFFRA")
+            Me.columnKetluanmiendich = MyBase.Columns("Ketluanmiendich")
+            Me.columnThamvanmiendich = MyBase.Columns("Thamvanmiendich")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3067,79 +3065,83 @@ Partial Public Class KskDbDataSet
         Private Sub InitClass()
             Me.columnIdSolieuhoso = New Global.System.Data.DataColumn("IdSolieuhoso", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnIdSolieuhoso)
-            Me.columnWBC = New Global.System.Data.DataColumn("WBC", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnWBC)
-            Me.columnGran1 = New Global.System.Data.DataColumn("Gran1", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnGran1)
-            Me.columnGran2 = New Global.System.Data.DataColumn("Gran2", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnGran2)
-            Me.columnLymph1 = New Global.System.Data.DataColumn("Lymph1", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLymph1)
-            Me.columnLymph2 = New Global.System.Data.DataColumn("Lymph2", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLymph2)
-            Me.columnMon = New Global.System.Data.DataColumn("Mon", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMon)
-            Me.columnMon2 = New Global.System.Data.DataColumn("Mon2", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMon2)
-            Me.columnEOS1 = New Global.System.Data.DataColumn("EOS1", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnEOS1)
-            Me.columnEOS2 = New Global.System.Data.DataColumn("EOS2", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnEOS2)
-            Me.columnBaso1 = New Global.System.Data.DataColumn("Baso1", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBaso1)
-            Me.columnBaso2 = New Global.System.Data.DataColumn("Baso2", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBaso2)
-            Me.columnRBC = New Global.System.Data.DataColumn("RBC", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnRBC)
-            Me.columnHGB = New Global.System.Data.DataColumn("HGB", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnHGB)
-            Me.columnHCT = New Global.System.Data.DataColumn("HCT", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnHCT)
-            Me.columnMCV = New Global.System.Data.DataColumn("MCV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMCV)
-            Me.columnMCH = New Global.System.Data.DataColumn("MCH", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMCH)
-            Me.columnMCHC = New Global.System.Data.DataColumn("MCHC", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMCHC)
-            Me.columnRDWCV = New Global.System.Data.DataColumn("RDWCV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnRDWCV)
-            Me.columnMPV = New Global.System.Data.DataColumn("MPV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMPV)
-            Me.columnPCT = New Global.System.Data.DataColumn("PCT", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPCT)
-            Me.columnPDW = New Global.System.Data.DataColumn("PDW", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPDW)
-            Me.columnPLT = New Global.System.Data.DataColumn("PLT", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPLT)
+            Me.columnTsh = New Global.System.Data.DataColumn("Tsh", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTsh)
+            Me.columnFt3 = New Global.System.Data.DataColumn("Ft3", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFt3)
+            Me.columnFt4 = New Global.System.Data.DataColumn("Ft4", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFt4)
+            Me.columnCea = New Global.System.Data.DataColumn("Cea", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCea)
+            Me.columnCa153 = New Global.System.Data.DataColumn("Ca153", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCa153)
+            Me.columnCa125 = New Global.System.Data.DataColumn("Ca125", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCa125)
+            Me.columnCa724 = New Global.System.Data.DataColumn("Ca724", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCa724)
+            Me.columnPsa = New Global.System.Data.DataColumn("Psa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPsa)
+            Me.columnAfp = New Global.System.Data.DataColumn("Afp", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAfp)
+            Me.columnHbsab = New Global.System.Data.DataColumn("Hbsab", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHbsab)
+            Me.columnHbeag = New Global.System.Data.DataColumn("Hbeag", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHbeag)
+            Me.columnHBsAg = New Global.System.Data.DataColumn("HBsAg", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHBsAg)
+            Me.columnCa199 = New Global.System.Data.DataColumn("Ca199", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCa199)
+            Me.columnCYFFRA = New Global.System.Data.DataColumn("CYFFRA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCYFFRA)
+            Me.columnKetluanmiendich = New Global.System.Data.DataColumn("Ketluanmiendich", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKetluanmiendich)
+            Me.columnThamvanmiendich = New Global.System.Data.DataColumn("Thamvanmiendich", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnThamvanmiendich)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdSolieuhoso}, true))
             Me.columnIdSolieuhoso.AllowDBNull = false
             Me.columnIdSolieuhoso.Unique = true
+            Me.columnTsh.MaxLength = 50
+            Me.columnFt3.MaxLength = 50
+            Me.columnFt4.MaxLength = 50
+            Me.columnCea.MaxLength = 50
+            Me.columnCa153.MaxLength = 50
+            Me.columnCa125.MaxLength = 50
+            Me.columnCa724.MaxLength = 50
+            Me.columnPsa.MaxLength = 50
+            Me.columnAfp.MaxLength = 50
+            Me.columnHbsab.MaxLength = 50
+            Me.columnHbeag.MaxLength = 50
+            Me.columnHBsAg.MaxLength = 50
+            Me.columnCa199.MaxLength = 50
+            Me.columnCYFFRA.MaxLength = 50
+            Me.columnKetluanmiendich.MaxLength = 2147483647
+            Me.columnThamvanmiendich.MaxLength = 2147483647
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function NewtbTraHuyetHocRow() As tbTraHuyetHocRow
-            Return CType(Me.NewRow,tbTraHuyetHocRow)
+        Public Function NewTbmiendichRow() As TbmiendichRow
+            Return CType(Me.NewRow,TbmiendichRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New tbTraHuyetHocRow(builder)
+            Return New TbmiendichRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(tbTraHuyetHocRow)
+            Return GetType(TbmiendichRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.tbTraHuyetHocRowChangedEvent) Is Nothing) Then
-                RaiseEvent tbTraHuyetHocRowChanged(Me, New tbTraHuyetHocRowChangeEvent(CType(e.Row,tbTraHuyetHocRow), e.Action))
+            If (Not (Me.TbmiendichRowChangedEvent) Is Nothing) Then
+                RaiseEvent TbmiendichRowChanged(Me, New TbmiendichRowChangeEvent(CType(e.Row,TbmiendichRow), e.Action))
             End If
         End Sub
         
@@ -3147,8 +3149,8 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.tbTraHuyetHocRowChangingEvent) Is Nothing) Then
-                RaiseEvent tbTraHuyetHocRowChanging(Me, New tbTraHuyetHocRowChangeEvent(CType(e.Row,tbTraHuyetHocRow), e.Action))
+            If (Not (Me.TbmiendichRowChangingEvent) Is Nothing) Then
+                RaiseEvent TbmiendichRowChanging(Me, New TbmiendichRowChangeEvent(CType(e.Row,TbmiendichRow), e.Action))
             End If
         End Sub
         
@@ -3156,8 +3158,8 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.tbTraHuyetHocRowDeletedEvent) Is Nothing) Then
-                RaiseEvent tbTraHuyetHocRowDeleted(Me, New tbTraHuyetHocRowChangeEvent(CType(e.Row,tbTraHuyetHocRow), e.Action))
+            If (Not (Me.TbmiendichRowDeletedEvent) Is Nothing) Then
+                RaiseEvent TbmiendichRowDeleted(Me, New TbmiendichRowChangeEvent(CType(e.Row,TbmiendichRow), e.Action))
             End If
         End Sub
         
@@ -3165,14 +3167,14 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.tbTraHuyetHocRowDeletingEvent) Is Nothing) Then
-                RaiseEvent tbTraHuyetHocRowDeleting(Me, New tbTraHuyetHocRowChangeEvent(CType(e.Row,tbTraHuyetHocRow), e.Action))
+            If (Not (Me.TbmiendichRowDeletingEvent) Is Nothing) Then
+                RaiseEvent TbmiendichRowDeleting(Me, New TbmiendichRowChangeEvent(CType(e.Row,TbmiendichRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub RemovetbTraHuyetHocRow(ByVal row As tbTraHuyetHocRow)
+        Public Sub RemoveTbmiendichRow(ByVal row As TbmiendichRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -3199,7 +3201,7 @@ Partial Public Class KskDbDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "tbTraHuyetHocDataTable"
+            attribute2.FixedValue = "TbmiendichDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -3248,36 +3250,34 @@ Partial Public Class KskDbDataSet
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class tbTraPhanTichNuocTieuDataTable
-        Inherits Global.System.Data.TypedTableBase(Of tbTraPhanTichNuocTieuRow)
+    Partial Public Class TbSoiamdaoDataTable
+        Inherits Global.System.Data.TypedTableBase(Of TbSoiamdaoRow)
         
         Private columnIdSolieuhoso As Global.System.Data.DataColumn
         
-        Private columnBIL As Global.System.Data.DataColumn
+        Private columnTebaobieumo As Global.System.Data.DataColumn
         
-        Private columnBLOOD As Global.System.Data.DataColumn
+        Private columnSoituoiamdaobachcau As Global.System.Data.DataColumn
         
-        Private columnGLU As Global.System.Data.DataColumn
+        Private columnSoituoiamdaohongcau As Global.System.Data.DataColumn
         
-        Private columnKET As Global.System.Data.DataColumn
+        Private columnNam As Global.System.Data.DataColumn
         
-        Private columnLEU As Global.System.Data.DataColumn
+        Private columnSoitonamgia As Global.System.Data.DataColumn
         
-        Private columnNIT As Global.System.Data.DataColumn
+        Private columnTrichomonasvaginalis As Global.System.Data.DataColumn
         
-        Private columnPH As Global.System.Data.DataColumn
+        Private columnTapkhuan As Global.System.Data.DataColumn
         
-        Private columnPRO As Global.System.Data.DataColumn
+        Private columnKetluansoiamdao As Global.System.Data.DataColumn
         
-        Private columnSG As Global.System.Data.DataColumn
-        
-        Private columnURO As Global.System.Data.DataColumn
+        Private columnThamvansoiamdao As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "tbTraPhanTichNuocTieu"
+            Me.TableName = "TbSoiamdao"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -3318,81 +3318,73 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property BILColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property TebaobieumoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBIL
+                Return Me.columnTebaobieumo
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property BLOODColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SoituoiamdaobachcauColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBLOOD
+                Return Me.columnSoituoiamdaobachcau
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property GLUColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SoituoiamdaohongcauColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnGLU
+                Return Me.columnSoituoiamdaohongcau
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property KETColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property NamColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnKET
+                Return Me.columnNam
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LEUColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SoitonamgiaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLEU
+                Return Me.columnSoitonamgia
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property NITColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property TrichomonasvaginalisColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnNIT
+                Return Me.columnTrichomonasvaginalis
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PHColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property TapkhuanColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnPH
+                Return Me.columnTapkhuan
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PROColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property KetluansoiamdaoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnPRO
+                Return Me.columnKetluansoiamdao
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SGColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property ThamvansoiamdaoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSG
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property UROColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnURO
+                Return Me.columnThamvansoiamdao
             End Get
         End Property
         
@@ -3407,44 +3399,50 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As tbTraPhanTichNuocTieuRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As TbSoiamdaoRow
             Get
-                Return CType(Me.Rows(index),tbTraPhanTichNuocTieuRow)
+                Return CType(Me.Rows(index),TbSoiamdaoRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraPhanTichNuocTieuRowChanging As tbTraPhanTichNuocTieuRowChangeEventHandler
+        Public Event TbSoiamdaoRowChanging As TbSoiamdaoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraPhanTichNuocTieuRowChanged As tbTraPhanTichNuocTieuRowChangeEventHandler
+        Public Event TbSoiamdaoRowChanged As TbSoiamdaoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraPhanTichNuocTieuRowDeleting As tbTraPhanTichNuocTieuRowChangeEventHandler
+        Public Event TbSoiamdaoRowDeleting As TbSoiamdaoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraPhanTichNuocTieuRowDeleted As tbTraPhanTichNuocTieuRowChangeEventHandler
+        Public Event TbSoiamdaoRowDeleted As TbSoiamdaoRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub AddtbTraPhanTichNuocTieuRow(ByVal row As tbTraPhanTichNuocTieuRow)
+        Public Overloads Sub AddTbSoiamdaoRow(ByVal row As TbSoiamdaoRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddtbTraPhanTichNuocTieuRow(ByVal IdSolieuhoso As Integer, ByVal BIL As Boolean, ByVal BLOOD As Boolean, ByVal GLU As Boolean, ByVal KET As Boolean, ByVal LEU As Boolean, ByVal NIT As Boolean, ByVal PH As Boolean, ByVal PRO As Boolean, ByVal SG As Boolean, ByVal URO As Boolean) As tbTraPhanTichNuocTieuRow
-            Dim rowtbTraPhanTichNuocTieuRow As tbTraPhanTichNuocTieuRow = CType(Me.NewRow,tbTraPhanTichNuocTieuRow)
-            Dim columnValuesArray() As Object = New Object() {IdSolieuhoso, BIL, BLOOD, GLU, KET, LEU, NIT, PH, PRO, SG, URO}
-            rowtbTraPhanTichNuocTieuRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowtbTraPhanTichNuocTieuRow)
-            Return rowtbTraPhanTichNuocTieuRow
+        Public Overloads Function AddTbSoiamdaoRow(ByVal IdSolieuhoso As Integer, ByVal Tebaobieumo As String, ByVal Soituoiamdaobachcau As String, ByVal Soituoiamdaohongcau As String, ByVal Nam As String, ByVal Soitonamgia As String, ByVal Trichomonasvaginalis As String, ByVal Tapkhuan As String, ByVal Ketluansoiamdao As String, ByVal Thamvansoiamdao As String) As TbSoiamdaoRow
+            Dim rowTbSoiamdaoRow As TbSoiamdaoRow = CType(Me.NewRow,TbSoiamdaoRow)
+            Dim columnValuesArray() As Object = New Object() {IdSolieuhoso, Tebaobieumo, Soituoiamdaobachcau, Soituoiamdaohongcau, Nam, Soitonamgia, Trichomonasvaginalis, Tapkhuan, Ketluansoiamdao, Thamvansoiamdao}
+            rowTbSoiamdaoRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowTbSoiamdaoRow)
+            Return rowTbSoiamdaoRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function FindByIdSolieuhoso(ByVal IdSolieuhoso As Integer) As TbSoiamdaoRow
+            Return CType(Me.Rows.Find(New Object() {IdSolieuhoso}),TbSoiamdaoRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As tbTraPhanTichNuocTieuDataTable = CType(MyBase.Clone,tbTraPhanTichNuocTieuDataTable)
+            Dim cln As TbSoiamdaoDataTable = CType(MyBase.Clone,TbSoiamdaoDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -3452,23 +3450,22 @@ Partial Public Class KskDbDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New tbTraPhanTichNuocTieuDataTable()
+            Return New TbSoiamdaoDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnIdSolieuhoso = MyBase.Columns("IdSolieuhoso")
-            Me.columnBIL = MyBase.Columns("BIL")
-            Me.columnBLOOD = MyBase.Columns("BLOOD")
-            Me.columnGLU = MyBase.Columns("GLU")
-            Me.columnKET = MyBase.Columns("KET")
-            Me.columnLEU = MyBase.Columns("LEU")
-            Me.columnNIT = MyBase.Columns("NIT")
-            Me.columnPH = MyBase.Columns("PH")
-            Me.columnPRO = MyBase.Columns("PRO")
-            Me.columnSG = MyBase.Columns("SG")
-            Me.columnURO = MyBase.Columns("URO")
+            Me.columnTebaobieumo = MyBase.Columns("Tebaobieumo")
+            Me.columnSoituoiamdaobachcau = MyBase.Columns("Soituoiamdaobachcau")
+            Me.columnSoituoiamdaohongcau = MyBase.Columns("Soituoiamdaohongcau")
+            Me.columnNam = MyBase.Columns("Nam")
+            Me.columnSoitonamgia = MyBase.Columns("Soitonamgia")
+            Me.columnTrichomonasvaginalis = MyBase.Columns("Trichomonasvaginalis")
+            Me.columnTapkhuan = MyBase.Columns("Tapkhuan")
+            Me.columnKetluansoiamdao = MyBase.Columns("Ketluansoiamdao")
+            Me.columnThamvansoiamdao = MyBase.Columns("Thamvansoiamdao")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3476,52 +3473,62 @@ Partial Public Class KskDbDataSet
         Private Sub InitClass()
             Me.columnIdSolieuhoso = New Global.System.Data.DataColumn("IdSolieuhoso", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnIdSolieuhoso)
-            Me.columnBIL = New Global.System.Data.DataColumn("BIL", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBIL)
-            Me.columnBLOOD = New Global.System.Data.DataColumn("BLOOD", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBLOOD)
-            Me.columnGLU = New Global.System.Data.DataColumn("GLU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnGLU)
-            Me.columnKET = New Global.System.Data.DataColumn("KET", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnKET)
-            Me.columnLEU = New Global.System.Data.DataColumn("LEU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLEU)
-            Me.columnNIT = New Global.System.Data.DataColumn("NIT", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnNIT)
-            Me.columnPH = New Global.System.Data.DataColumn("PH", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPH)
-            Me.columnPRO = New Global.System.Data.DataColumn("PRO", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPRO)
-            Me.columnSG = New Global.System.Data.DataColumn("SG", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSG)
-            Me.columnURO = New Global.System.Data.DataColumn("URO", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnURO)
+            Me.columnTebaobieumo = New Global.System.Data.DataColumn("Tebaobieumo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTebaobieumo)
+            Me.columnSoituoiamdaobachcau = New Global.System.Data.DataColumn("Soituoiamdaobachcau", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSoituoiamdaobachcau)
+            Me.columnSoituoiamdaohongcau = New Global.System.Data.DataColumn("Soituoiamdaohongcau", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSoituoiamdaohongcau)
+            Me.columnNam = New Global.System.Data.DataColumn("Nam", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNam)
+            Me.columnSoitonamgia = New Global.System.Data.DataColumn("Soitonamgia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSoitonamgia)
+            Me.columnTrichomonasvaginalis = New Global.System.Data.DataColumn("Trichomonasvaginalis", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTrichomonasvaginalis)
+            Me.columnTapkhuan = New Global.System.Data.DataColumn("Tapkhuan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTapkhuan)
+            Me.columnKetluansoiamdao = New Global.System.Data.DataColumn("Ketluansoiamdao", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKetluansoiamdao)
+            Me.columnThamvansoiamdao = New Global.System.Data.DataColumn("Thamvansoiamdao", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnThamvansoiamdao)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdSolieuhoso}, true))
+            Me.columnIdSolieuhoso.AllowDBNull = false
+            Me.columnIdSolieuhoso.Unique = true
+            Me.columnTebaobieumo.MaxLength = 50
+            Me.columnSoituoiamdaobachcau.MaxLength = 50
+            Me.columnSoituoiamdaohongcau.MaxLength = 50
+            Me.columnNam.MaxLength = 50
+            Me.columnSoitonamgia.MaxLength = 50
+            Me.columnTrichomonasvaginalis.MaxLength = 50
+            Me.columnTapkhuan.MaxLength = 50
+            Me.columnKetluansoiamdao.MaxLength = 2147483647
+            Me.columnThamvansoiamdao.MaxLength = 2147483647
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function NewtbTraPhanTichNuocTieuRow() As tbTraPhanTichNuocTieuRow
-            Return CType(Me.NewRow,tbTraPhanTichNuocTieuRow)
+        Public Function NewTbSoiamdaoRow() As TbSoiamdaoRow
+            Return CType(Me.NewRow,TbSoiamdaoRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New tbTraPhanTichNuocTieuRow(builder)
+            Return New TbSoiamdaoRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(tbTraPhanTichNuocTieuRow)
+            Return GetType(TbSoiamdaoRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.tbTraPhanTichNuocTieuRowChangedEvent) Is Nothing) Then
-                RaiseEvent tbTraPhanTichNuocTieuRowChanged(Me, New tbTraPhanTichNuocTieuRowChangeEvent(CType(e.Row,tbTraPhanTichNuocTieuRow), e.Action))
+            If (Not (Me.TbSoiamdaoRowChangedEvent) Is Nothing) Then
+                RaiseEvent TbSoiamdaoRowChanged(Me, New TbSoiamdaoRowChangeEvent(CType(e.Row,TbSoiamdaoRow), e.Action))
             End If
         End Sub
         
@@ -3529,8 +3536,8 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.tbTraPhanTichNuocTieuRowChangingEvent) Is Nothing) Then
-                RaiseEvent tbTraPhanTichNuocTieuRowChanging(Me, New tbTraPhanTichNuocTieuRowChangeEvent(CType(e.Row,tbTraPhanTichNuocTieuRow), e.Action))
+            If (Not (Me.TbSoiamdaoRowChangingEvent) Is Nothing) Then
+                RaiseEvent TbSoiamdaoRowChanging(Me, New TbSoiamdaoRowChangeEvent(CType(e.Row,TbSoiamdaoRow), e.Action))
             End If
         End Sub
         
@@ -3538,8 +3545,8 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.tbTraPhanTichNuocTieuRowDeletedEvent) Is Nothing) Then
-                RaiseEvent tbTraPhanTichNuocTieuRowDeleted(Me, New tbTraPhanTichNuocTieuRowChangeEvent(CType(e.Row,tbTraPhanTichNuocTieuRow), e.Action))
+            If (Not (Me.TbSoiamdaoRowDeletedEvent) Is Nothing) Then
+                RaiseEvent TbSoiamdaoRowDeleted(Me, New TbSoiamdaoRowChangeEvent(CType(e.Row,TbSoiamdaoRow), e.Action))
             End If
         End Sub
         
@@ -3547,14 +3554,14 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.tbTraPhanTichNuocTieuRowDeletingEvent) Is Nothing) Then
-                RaiseEvent tbTraPhanTichNuocTieuRowDeleting(Me, New tbTraPhanTichNuocTieuRowChangeEvent(CType(e.Row,tbTraPhanTichNuocTieuRow), e.Action))
+            If (Not (Me.TbSoiamdaoRowDeletingEvent) Is Nothing) Then
+                RaiseEvent TbSoiamdaoRowDeleting(Me, New TbSoiamdaoRowChangeEvent(CType(e.Row,TbSoiamdaoRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub RemovetbTraPhanTichNuocTieuRow(ByVal row As tbTraPhanTichNuocTieuRow)
+        Public Sub RemoveTbSoiamdaoRow(ByVal row As TbSoiamdaoRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -3581,7 +3588,7 @@ Partial Public Class KskDbDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "tbTraPhanTichNuocTieuDataTable"
+            attribute2.FixedValue = "TbSoiamdaoDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -3630,40 +3637,26 @@ Partial Public Class KskDbDataSet
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class tbTraSinhHoaDataTable
-        Inherits Global.System.Data.TypedTableBase(Of tbTraSinhHoaRow)
+    Partial Public Class TbSoiphanDataTable
+        Inherits Global.System.Data.TypedTableBase(Of TbSoiphanRow)
         
-        Private columnIdsolieuhoso As Global.System.Data.DataColumn
+        Private columnIdSolieuhoso As Global.System.Data.DataColumn
         
-        Private columnAST As Global.System.Data.DataColumn
+        Private columnKstduongruot As Global.System.Data.DataColumn
         
-        Private columnALT As Global.System.Data.DataColumn
+        Private columnSoituoiphanbachcau As Global.System.Data.DataColumn
         
-        Private columnGGT As Global.System.Data.DataColumn
+        Private columnSoituoiphanhongcau As Global.System.Data.DataColumn
         
-        Private columnGlucose As Global.System.Data.DataColumn
+        Private columnKetquasoiphan As Global.System.Data.DataColumn
         
-        Private columnCreatine As Global.System.Data.DataColumn
-        
-        Private columnUre As Global.System.Data.DataColumn
-        
-        Private columnCholesterol As Global.System.Data.DataColumn
-        
-        Private columnTriglyceride As Global.System.Data.DataColumn
-        
-        Private columnHDL As Global.System.Data.DataColumn
-        
-        Private columnLDL As Global.System.Data.DataColumn
-        
-        Private columnUric As Global.System.Data.DataColumn
-        
-        Private columnProtein As Global.System.Data.DataColumn
+        Private columnThamvansoiphan As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "tbTraSinhHoa"
+            Me.TableName = "TbSoiphan"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -3696,105 +3689,49 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property IdsolieuhosoColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property IdSolieuhosoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnIdsolieuhoso
+                Return Me.columnIdSolieuhoso
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ASTColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property KstduongruotColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAST
+                Return Me.columnKstduongruot
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ALTColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SoituoiphanbachcauColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnALT
+                Return Me.columnSoituoiphanbachcau
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property GGTColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SoituoiphanhongcauColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnGGT
+                Return Me.columnSoituoiphanhongcau
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property GlucoseColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property KetquasoiphanColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnGlucose
+                Return Me.columnKetquasoiphan
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CreatineColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property ThamvansoiphanColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCreatine
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property UreColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnUre
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CholesterolColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnCholesterol
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TriglycerideColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTriglyceride
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property HDLColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnHDL
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LDLColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLDL
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property UricColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnUric
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ProteinColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnProtein
+                Return Me.columnThamvansoiphan
             End Get
         End Property
         
@@ -3809,50 +3746,50 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As tbTraSinhHoaRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As TbSoiphanRow
             Get
-                Return CType(Me.Rows(index),tbTraSinhHoaRow)
+                Return CType(Me.Rows(index),TbSoiphanRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraSinhHoaRowChanging As tbTraSinhHoaRowChangeEventHandler
+        Public Event TbSoiphanRowChanging As TbSoiphanRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraSinhHoaRowChanged As tbTraSinhHoaRowChangeEventHandler
+        Public Event TbSoiphanRowChanged As TbSoiphanRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraSinhHoaRowDeleting As tbTraSinhHoaRowChangeEventHandler
+        Public Event TbSoiphanRowDeleting As TbSoiphanRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbTraSinhHoaRowDeleted As tbTraSinhHoaRowChangeEventHandler
+        Public Event TbSoiphanRowDeleted As TbSoiphanRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub AddtbTraSinhHoaRow(ByVal row As tbTraSinhHoaRow)
+        Public Overloads Sub AddTbSoiphanRow(ByVal row As TbSoiphanRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddtbTraSinhHoaRow(ByVal Idsolieuhoso As Integer, ByVal AST As Boolean, ByVal ALT As Boolean, ByVal GGT As Boolean, ByVal Glucose As Boolean, ByVal Creatine As Boolean, ByVal Ure As Boolean, ByVal Cholesterol As Boolean, ByVal Triglyceride As Boolean, ByVal HDL As Boolean, ByVal LDL As Boolean, ByVal Uric As Boolean, ByVal Protein As Boolean) As tbTraSinhHoaRow
-            Dim rowtbTraSinhHoaRow As tbTraSinhHoaRow = CType(Me.NewRow,tbTraSinhHoaRow)
-            Dim columnValuesArray() As Object = New Object() {Idsolieuhoso, AST, ALT, GGT, Glucose, Creatine, Ure, Cholesterol, Triglyceride, HDL, LDL, Uric, Protein}
-            rowtbTraSinhHoaRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowtbTraSinhHoaRow)
-            Return rowtbTraSinhHoaRow
+        Public Overloads Function AddTbSoiphanRow(ByVal IdSolieuhoso As Integer, ByVal Kstduongruot As String, ByVal Soituoiphanbachcau As String, ByVal Soituoiphanhongcau As String, ByVal Ketquasoiphan As String, ByVal Thamvansoiphan As String) As TbSoiphanRow
+            Dim rowTbSoiphanRow As TbSoiphanRow = CType(Me.NewRow,TbSoiphanRow)
+            Dim columnValuesArray() As Object = New Object() {IdSolieuhoso, Kstduongruot, Soituoiphanbachcau, Soituoiphanhongcau, Ketquasoiphan, Thamvansoiphan}
+            rowTbSoiphanRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowTbSoiphanRow)
+            Return rowTbSoiphanRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByIdsolieuhoso(ByVal Idsolieuhoso As Integer) As tbTraSinhHoaRow
-            Return CType(Me.Rows.Find(New Object() {Idsolieuhoso}),tbTraSinhHoaRow)
+        Public Function FindByIdSolieuhoso(ByVal IdSolieuhoso As Integer) As TbSoiphanRow
+            Return CType(Me.Rows.Find(New Object() {IdSolieuhoso}),TbSoiphanRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As tbTraSinhHoaDataTable = CType(MyBase.Clone,tbTraSinhHoaDataTable)
+            Dim cln As TbSoiphanDataTable = CType(MyBase.Clone,TbSoiphanDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -3860,85 +3797,69 @@ Partial Public Class KskDbDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New tbTraSinhHoaDataTable()
+            Return New TbSoiphanDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnIdsolieuhoso = MyBase.Columns("Idsolieuhoso")
-            Me.columnAST = MyBase.Columns("AST")
-            Me.columnALT = MyBase.Columns("ALT")
-            Me.columnGGT = MyBase.Columns("GGT")
-            Me.columnGlucose = MyBase.Columns("Glucose")
-            Me.columnCreatine = MyBase.Columns("Creatine")
-            Me.columnUre = MyBase.Columns("Ure")
-            Me.columnCholesterol = MyBase.Columns("Cholesterol")
-            Me.columnTriglyceride = MyBase.Columns("Triglyceride")
-            Me.columnHDL = MyBase.Columns("HDL")
-            Me.columnLDL = MyBase.Columns("LDL")
-            Me.columnUric = MyBase.Columns("Uric")
-            Me.columnProtein = MyBase.Columns("Protein")
+            Me.columnIdSolieuhoso = MyBase.Columns("IdSolieuhoso")
+            Me.columnKstduongruot = MyBase.Columns("Kstduongruot")
+            Me.columnSoituoiphanbachcau = MyBase.Columns("Soituoiphanbachcau")
+            Me.columnSoituoiphanhongcau = MyBase.Columns("Soituoiphanhongcau")
+            Me.columnKetquasoiphan = MyBase.Columns("Ketquasoiphan")
+            Me.columnThamvansoiphan = MyBase.Columns("Thamvansoiphan")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnIdsolieuhoso = New Global.System.Data.DataColumn("Idsolieuhoso", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnIdsolieuhoso)
-            Me.columnAST = New Global.System.Data.DataColumn("AST", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAST)
-            Me.columnALT = New Global.System.Data.DataColumn("ALT", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnALT)
-            Me.columnGGT = New Global.System.Data.DataColumn("GGT", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnGGT)
-            Me.columnGlucose = New Global.System.Data.DataColumn("Glucose", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnGlucose)
-            Me.columnCreatine = New Global.System.Data.DataColumn("Creatine", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCreatine)
-            Me.columnUre = New Global.System.Data.DataColumn("Ure", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUre)
-            Me.columnCholesterol = New Global.System.Data.DataColumn("Cholesterol", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCholesterol)
-            Me.columnTriglyceride = New Global.System.Data.DataColumn("Triglyceride", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTriglyceride)
-            Me.columnHDL = New Global.System.Data.DataColumn("HDL", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnHDL)
-            Me.columnLDL = New Global.System.Data.DataColumn("LDL", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLDL)
-            Me.columnUric = New Global.System.Data.DataColumn("Uric", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUric)
-            Me.columnProtein = New Global.System.Data.DataColumn("Protein", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnProtein)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdsolieuhoso}, true))
-            Me.columnIdsolieuhoso.AllowDBNull = false
-            Me.columnIdsolieuhoso.Unique = true
+            Me.columnIdSolieuhoso = New Global.System.Data.DataColumn("IdSolieuhoso", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdSolieuhoso)
+            Me.columnKstduongruot = New Global.System.Data.DataColumn("Kstduongruot", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKstduongruot)
+            Me.columnSoituoiphanbachcau = New Global.System.Data.DataColumn("Soituoiphanbachcau", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSoituoiphanbachcau)
+            Me.columnSoituoiphanhongcau = New Global.System.Data.DataColumn("Soituoiphanhongcau", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSoituoiphanhongcau)
+            Me.columnKetquasoiphan = New Global.System.Data.DataColumn("Ketquasoiphan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKetquasoiphan)
+            Me.columnThamvansoiphan = New Global.System.Data.DataColumn("Thamvansoiphan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnThamvansoiphan)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdSolieuhoso}, true))
+            Me.columnIdSolieuhoso.AllowDBNull = false
+            Me.columnIdSolieuhoso.Unique = true
+            Me.columnKstduongruot.MaxLength = 50
+            Me.columnSoituoiphanbachcau.MaxLength = 50
+            Me.columnSoituoiphanhongcau.MaxLength = 50
+            Me.columnKetquasoiphan.MaxLength = 2147483647
+            Me.columnThamvansoiphan.MaxLength = 2147483647
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function NewtbTraSinhHoaRow() As tbTraSinhHoaRow
-            Return CType(Me.NewRow,tbTraSinhHoaRow)
+        Public Function NewTbSoiphanRow() As TbSoiphanRow
+            Return CType(Me.NewRow,TbSoiphanRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New tbTraSinhHoaRow(builder)
+            Return New TbSoiphanRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(tbTraSinhHoaRow)
+            Return GetType(TbSoiphanRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.tbTraSinhHoaRowChangedEvent) Is Nothing) Then
-                RaiseEvent tbTraSinhHoaRowChanged(Me, New tbTraSinhHoaRowChangeEvent(CType(e.Row,tbTraSinhHoaRow), e.Action))
+            If (Not (Me.TbSoiphanRowChangedEvent) Is Nothing) Then
+                RaiseEvent TbSoiphanRowChanged(Me, New TbSoiphanRowChangeEvent(CType(e.Row,TbSoiphanRow), e.Action))
             End If
         End Sub
         
@@ -3946,8 +3867,8 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.tbTraSinhHoaRowChangingEvent) Is Nothing) Then
-                RaiseEvent tbTraSinhHoaRowChanging(Me, New tbTraSinhHoaRowChangeEvent(CType(e.Row,tbTraSinhHoaRow), e.Action))
+            If (Not (Me.TbSoiphanRowChangingEvent) Is Nothing) Then
+                RaiseEvent TbSoiphanRowChanging(Me, New TbSoiphanRowChangeEvent(CType(e.Row,TbSoiphanRow), e.Action))
             End If
         End Sub
         
@@ -3955,8 +3876,8 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.tbTraSinhHoaRowDeletedEvent) Is Nothing) Then
-                RaiseEvent tbTraSinhHoaRowDeleted(Me, New tbTraSinhHoaRowChangeEvent(CType(e.Row,tbTraSinhHoaRow), e.Action))
+            If (Not (Me.TbSoiphanRowDeletedEvent) Is Nothing) Then
+                RaiseEvent TbSoiphanRowDeleted(Me, New TbSoiphanRowChangeEvent(CType(e.Row,TbSoiphanRow), e.Action))
             End If
         End Sub
         
@@ -3964,14 +3885,14 @@ Partial Public Class KskDbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.tbTraSinhHoaRowDeletingEvent) Is Nothing) Then
-                RaiseEvent tbTraSinhHoaRowDeleting(Me, New tbTraSinhHoaRowChangeEvent(CType(e.Row,tbTraSinhHoaRow), e.Action))
+            If (Not (Me.TbSoiphanRowDeletingEvent) Is Nothing) Then
+                RaiseEvent TbSoiphanRowDeleting(Me, New TbSoiphanRowChangeEvent(CType(e.Row,TbSoiphanRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub RemovetbTraSinhHoaRow(ByVal row As tbTraSinhHoaRow)
+        Public Sub RemoveTbSoiphanRow(ByVal row As TbSoiphanRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -3998,7 +3919,1192 @@ Partial Public Class KskDbDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "tbTraSinhHoaDataTable"
+            attribute2.FixedValue = "TbSoiphanDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class TbTestnhanhDataTable
+        Inherits Global.System.Data.TypedTableBase(Of TbTestnhanhRow)
+        
+        Private columnIdSolieuhoso As Global.System.Data.DataColumn
+        
+        Private columnHBsAg As Global.System.Data.DataColumn
+        
+        Private columnHBsAb As Global.System.Data.DataColumn
+        
+        Private columnAntiHCV As Global.System.Data.DataColumn
+        
+        Private columnHAVIGM As Global.System.Data.DataColumn
+        
+        Private columnHEVIGM As Global.System.Data.DataColumn
+        
+        Private columnHpylorAb As Global.System.Data.DataColumn
+        
+        Private columnSyphyllis As Global.System.Data.DataColumn
+        
+        Private columnHIV As Global.System.Data.DataColumn
+        
+        Private columnHbeAg As Global.System.Data.DataColumn
+        
+        Private columnAbophienda As Global.System.Data.DataColumn
+        
+        Private columnRhphienda As Global.System.Data.DataColumn
+        
+        Private columnKetluantestnhanh As Global.System.Data.DataColumn
+        
+        Private columnThamvantestnhanh As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "TbTestnhanh"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property IdSolieuhosoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIdSolieuhoso
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HBsAgColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHBsAg
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HBsAbColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHBsAb
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property AntiHCVColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAntiHCV
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HAVIGMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHAVIGM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HEVIGMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHEVIGM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HpylorAbColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHpylorAb
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SyphyllisColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSyphyllis
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HIVColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHIV
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HbeAgColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHbeAg
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property AbophiendaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAbophienda
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property RhphiendaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRhphienda
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property KetluantestnhanhColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnKetluantestnhanh
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ThamvantestnhanhColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnThamvantestnhanh
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As TbTestnhanhRow
+            Get
+                Return CType(Me.Rows(index),TbTestnhanhRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event TbTestnhanhRowChanging As TbTestnhanhRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event TbTestnhanhRowChanged As TbTestnhanhRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event TbTestnhanhRowDeleting As TbTestnhanhRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event TbTestnhanhRowDeleted As TbTestnhanhRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Sub AddTbTestnhanhRow(ByVal row As TbTestnhanhRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Function AddTbTestnhanhRow(ByVal IdSolieuhoso As Integer, ByVal HBsAg As String, ByVal HBsAb As String, ByVal AntiHCV As String, ByVal HAVIGM As String, ByVal HEVIGM As String, ByVal HpylorAb As String, ByVal Syphyllis As String, ByVal HIV As String, ByVal HbeAg As String, ByVal Abophienda As String, ByVal Rhphienda As String, ByVal Ketluantestnhanh As String, ByVal Thamvantestnhanh As String) As TbTestnhanhRow
+            Dim rowTbTestnhanhRow As TbTestnhanhRow = CType(Me.NewRow,TbTestnhanhRow)
+            Dim columnValuesArray() As Object = New Object() {IdSolieuhoso, HBsAg, HBsAb, AntiHCV, HAVIGM, HEVIGM, HpylorAb, Syphyllis, HIV, HbeAg, Abophienda, Rhphienda, Ketluantestnhanh, Thamvantestnhanh}
+            rowTbTestnhanhRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowTbTestnhanhRow)
+            Return rowTbTestnhanhRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function FindByIdSolieuhoso(ByVal IdSolieuhoso As Integer) As TbTestnhanhRow
+            Return CType(Me.Rows.Find(New Object() {IdSolieuhoso}),TbTestnhanhRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As TbTestnhanhDataTable = CType(MyBase.Clone,TbTestnhanhDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New TbTestnhanhDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnIdSolieuhoso = MyBase.Columns("IdSolieuhoso")
+            Me.columnHBsAg = MyBase.Columns("HBsAg")
+            Me.columnHBsAb = MyBase.Columns("HBsAb")
+            Me.columnAntiHCV = MyBase.Columns("AntiHCV")
+            Me.columnHAVIGM = MyBase.Columns("HAVIGM")
+            Me.columnHEVIGM = MyBase.Columns("HEVIGM")
+            Me.columnHpylorAb = MyBase.Columns("HpylorAb")
+            Me.columnSyphyllis = MyBase.Columns("Syphyllis")
+            Me.columnHIV = MyBase.Columns("HIV")
+            Me.columnHbeAg = MyBase.Columns("HbeAg")
+            Me.columnAbophienda = MyBase.Columns("Abophienda")
+            Me.columnRhphienda = MyBase.Columns("Rhphienda")
+            Me.columnKetluantestnhanh = MyBase.Columns("Ketluantestnhanh")
+            Me.columnThamvantestnhanh = MyBase.Columns("Thamvantestnhanh")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnIdSolieuhoso = New Global.System.Data.DataColumn("IdSolieuhoso", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdSolieuhoso)
+            Me.columnHBsAg = New Global.System.Data.DataColumn("HBsAg", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHBsAg)
+            Me.columnHBsAb = New Global.System.Data.DataColumn("HBsAb", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHBsAb)
+            Me.columnAntiHCV = New Global.System.Data.DataColumn("AntiHCV", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAntiHCV)
+            Me.columnHAVIGM = New Global.System.Data.DataColumn("HAVIGM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHAVIGM)
+            Me.columnHEVIGM = New Global.System.Data.DataColumn("HEVIGM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHEVIGM)
+            Me.columnHpylorAb = New Global.System.Data.DataColumn("HpylorAb", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHpylorAb)
+            Me.columnSyphyllis = New Global.System.Data.DataColumn("Syphyllis", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSyphyllis)
+            Me.columnHIV = New Global.System.Data.DataColumn("HIV", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHIV)
+            Me.columnHbeAg = New Global.System.Data.DataColumn("HbeAg", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHbeAg)
+            Me.columnAbophienda = New Global.System.Data.DataColumn("Abophienda", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAbophienda)
+            Me.columnRhphienda = New Global.System.Data.DataColumn("Rhphienda", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRhphienda)
+            Me.columnKetluantestnhanh = New Global.System.Data.DataColumn("Ketluantestnhanh", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKetluantestnhanh)
+            Me.columnThamvantestnhanh = New Global.System.Data.DataColumn("Thamvantestnhanh", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnThamvantestnhanh)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdSolieuhoso}, true))
+            Me.columnIdSolieuhoso.AllowDBNull = false
+            Me.columnIdSolieuhoso.Unique = true
+            Me.columnHBsAg.MaxLength = 255
+            Me.columnHBsAb.MaxLength = 255
+            Me.columnAntiHCV.MaxLength = 255
+            Me.columnHAVIGM.MaxLength = 255
+            Me.columnHEVIGM.MaxLength = 255
+            Me.columnHpylorAb.MaxLength = 255
+            Me.columnSyphyllis.MaxLength = 255
+            Me.columnHIV.MaxLength = 255
+            Me.columnHbeAg.MaxLength = 255
+            Me.columnAbophienda.MaxLength = 255
+            Me.columnRhphienda.MaxLength = 255
+            Me.columnKetluantestnhanh.MaxLength = 255
+            Me.columnThamvantestnhanh.MaxLength = 255
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function NewTbTestnhanhRow() As TbTestnhanhRow
+            Return CType(Me.NewRow,TbTestnhanhRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New TbTestnhanhRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(TbTestnhanhRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.TbTestnhanhRowChangedEvent) Is Nothing) Then
+                RaiseEvent TbTestnhanhRowChanged(Me, New TbTestnhanhRowChangeEvent(CType(e.Row,TbTestnhanhRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.TbTestnhanhRowChangingEvent) Is Nothing) Then
+                RaiseEvent TbTestnhanhRowChanging(Me, New TbTestnhanhRowChangeEvent(CType(e.Row,TbTestnhanhRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.TbTestnhanhRowDeletedEvent) Is Nothing) Then
+                RaiseEvent TbTestnhanhRowDeleted(Me, New TbTestnhanhRowChangeEvent(CType(e.Row,TbTestnhanhRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.TbTestnhanhRowDeletingEvent) Is Nothing) Then
+                RaiseEvent TbTestnhanhRowDeleting(Me, New TbTestnhanhRowChangeEvent(CType(e.Row,TbTestnhanhRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub RemoveTbTestnhanhRow(ByVal row As TbTestnhanhRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As KskDbDataSet = New KskDbDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "TbTestnhanhDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbTongQuatDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbTongQuatRow)
+        
+        Private columnIdSolieuhoso As Global.System.Data.DataColumn
+        
+        Private columnChieucao As Global.System.Data.DataColumn
+        
+        Private columnCannang As Global.System.Data.DataColumn
+        
+        Private columnBMI As Global.System.Data.DataColumn
+        
+        Private columnHuyetap As Global.System.Data.DataColumn
+        
+        Private columnTheluc As Global.System.Data.DataColumn
+        
+        Private columnTuanhoan As Global.System.Data.DataColumn
+        
+        Private columnHohap As Global.System.Data.DataColumn
+        
+        Private columnTieuhoa As Global.System.Data.DataColumn
+        
+        Private columnThantietnieu As Global.System.Data.DataColumn
+        
+        Private columnNoitiet As Global.System.Data.DataColumn
+        
+        Private columnCoxuongkhop As Global.System.Data.DataColumn
+        
+        Private columnThankinh As Global.System.Data.DataColumn
+        
+        Private columnTamthan As Global.System.Data.DataColumn
+        
+        Private columnNgoaikhoa As Global.System.Data.DataColumn
+        
+        Private columnMat As Global.System.Data.DataColumn
+        
+        Private columnTaimuihong As Global.System.Data.DataColumn
+        
+        Private columnRanghammat As Global.System.Data.DataColumn
+        
+        Private columnDalieu As Global.System.Data.DataColumn
+        
+        Private columnSanphukhoa As Global.System.Data.DataColumn
+        
+        Private columnSieuambung As Global.System.Data.DataColumn
+        
+        Private columnSieuamtuyengiap As Global.System.Data.DataColumn
+        
+        Private columnSieuamtuyenvu As Global.System.Data.DataColumn
+        
+        Private columnSieuammachcanh As Global.System.Data.DataColumn
+        
+        Private columnSoicotucung As Global.System.Data.DataColumn
+        
+        Private columnSieuamtim As Global.System.Data.DataColumn
+        
+        Private columnXquangphoi As Global.System.Data.DataColumn
+        
+        Private columnXquangCstl As Global.System.Data.DataColumn
+        
+        Private columnDientim As Global.System.Data.DataColumn
+        
+        Private columnDoloangxuong As Global.System.Data.DataColumn
+        
+        Private columnKetluantongquat As Global.System.Data.DataColumn
+        
+        Private columnThamvantongquat As Global.System.Data.DataColumn
+        
+        Private columnKetluanrang As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbTongQuat"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property IdSolieuhosoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIdSolieuhoso
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ChieucaoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnChieucao
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CannangColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCannang
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property BMIColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBMI
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HuyetapColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHuyetap
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ThelucColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTheluc
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TuanhoanColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTuanhoan
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property HohapColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHohap
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TieuhoaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTieuhoa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ThantietnieuColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnThantietnieu
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property NoitietColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNoitiet
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CoxuongkhopColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCoxuongkhop
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ThankinhColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnThankinh
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TamthanColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTamthan
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property NgoaikhoaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNgoaikhoa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property MatColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMat
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TaimuihongColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTaimuihong
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property RanghammatColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRanghammat
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property DalieuColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDalieu
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SanphukhoaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSanphukhoa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SieuambungColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSieuambung
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SieuamtuyengiapColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSieuamtuyengiap
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SieuamtuyenvuColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSieuamtuyenvu
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SieuammachcanhColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSieuammachcanh
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SoicotucungColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSoicotucung
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SieuamtimColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSieuamtim
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property XquangphoiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnXquangphoi
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property XquangCstlColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnXquangCstl
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property DientimColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDientim
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property DoloangxuongColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDoloangxuong
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property KetluantongquatColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnKetluantongquat
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ThamvantongquatColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnThamvantongquat
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property KetluanrangColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnKetluanrang
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbTongQuatRow
+            Get
+                Return CType(Me.Rows(index),tbTongQuatRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event tbTongQuatRowChanging As tbTongQuatRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event tbTongQuatRowChanged As tbTongQuatRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event tbTongQuatRowDeleting As tbTongQuatRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event tbTongQuatRowDeleted As tbTongQuatRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Sub AddtbTongQuatRow(ByVal row As tbTongQuatRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Function AddtbTongQuatRow( _
+                    ByVal IdSolieuhoso As Integer,  _
+                    ByVal Chieucao As String,  _
+                    ByVal Cannang As String,  _
+                    ByVal BMI As String,  _
+                    ByVal Huyetap As String,  _
+                    ByVal Theluc As String,  _
+                    ByVal Tuanhoan As String,  _
+                    ByVal Hohap As String,  _
+                    ByVal Tieuhoa As String,  _
+                    ByVal Thantietnieu As String,  _
+                    ByVal Noitiet As String,  _
+                    ByVal Coxuongkhop As String,  _
+                    ByVal Thankinh As String,  _
+                    ByVal Tamthan As String,  _
+                    ByVal Ngoaikhoa As String,  _
+                    ByVal Mat As String,  _
+                    ByVal Taimuihong As String,  _
+                    ByVal Ranghammat As String,  _
+                    ByVal Dalieu As String,  _
+                    ByVal Sanphukhoa As String,  _
+                    ByVal Sieuambung As String,  _
+                    ByVal Sieuamtuyengiap As String,  _
+                    ByVal Sieuamtuyenvu As String,  _
+                    ByVal Sieuammachcanh As String,  _
+                    ByVal Soicotucung As String,  _
+                    ByVal Sieuamtim As String,  _
+                    ByVal Xquangphoi As String,  _
+                    ByVal XquangCstl As String,  _
+                    ByVal Dientim As String,  _
+                    ByVal Doloangxuong As String,  _
+                    ByVal Ketluantongquat As String,  _
+                    ByVal Thamvantongquat As String,  _
+                    ByVal Ketluanrang As String) As tbTongQuatRow
+            Dim rowtbTongQuatRow As tbTongQuatRow = CType(Me.NewRow,tbTongQuatRow)
+            Dim columnValuesArray() As Object = New Object() {IdSolieuhoso, Chieucao, Cannang, BMI, Huyetap, Theluc, Tuanhoan, Hohap, Tieuhoa, Thantietnieu, Noitiet, Coxuongkhop, Thankinh, Tamthan, Ngoaikhoa, Mat, Taimuihong, Ranghammat, Dalieu, Sanphukhoa, Sieuambung, Sieuamtuyengiap, Sieuamtuyenvu, Sieuammachcanh, Soicotucung, Sieuamtim, Xquangphoi, XquangCstl, Dientim, Doloangxuong, Ketluantongquat, Thamvantongquat, Ketluanrang}
+            rowtbTongQuatRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbTongQuatRow)
+            Return rowtbTongQuatRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function FindByIdSolieuhoso(ByVal IdSolieuhoso As Integer) As tbTongQuatRow
+            Return CType(Me.Rows.Find(New Object() {IdSolieuhoso}),tbTongQuatRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbTongQuatDataTable = CType(MyBase.Clone,tbTongQuatDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbTongQuatDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnIdSolieuhoso = MyBase.Columns("IdSolieuhoso")
+            Me.columnChieucao = MyBase.Columns("Chieucao")
+            Me.columnCannang = MyBase.Columns("Cannang")
+            Me.columnBMI = MyBase.Columns("BMI")
+            Me.columnHuyetap = MyBase.Columns("Huyetap")
+            Me.columnTheluc = MyBase.Columns("Theluc")
+            Me.columnTuanhoan = MyBase.Columns("Tuanhoan")
+            Me.columnHohap = MyBase.Columns("Hohap")
+            Me.columnTieuhoa = MyBase.Columns("Tieuhoa")
+            Me.columnThantietnieu = MyBase.Columns("Thantietnieu")
+            Me.columnNoitiet = MyBase.Columns("Noitiet")
+            Me.columnCoxuongkhop = MyBase.Columns("Coxuongkhop")
+            Me.columnThankinh = MyBase.Columns("Thankinh")
+            Me.columnTamthan = MyBase.Columns("Tamthan")
+            Me.columnNgoaikhoa = MyBase.Columns("Ngoaikhoa")
+            Me.columnMat = MyBase.Columns("Mat")
+            Me.columnTaimuihong = MyBase.Columns("Taimuihong")
+            Me.columnRanghammat = MyBase.Columns("Ranghammat")
+            Me.columnDalieu = MyBase.Columns("Dalieu")
+            Me.columnSanphukhoa = MyBase.Columns("Sanphukhoa")
+            Me.columnSieuambung = MyBase.Columns("Sieuambung")
+            Me.columnSieuamtuyengiap = MyBase.Columns("Sieuamtuyengiap")
+            Me.columnSieuamtuyenvu = MyBase.Columns("Sieuamtuyenvu")
+            Me.columnSieuammachcanh = MyBase.Columns("Sieuammachcanh")
+            Me.columnSoicotucung = MyBase.Columns("Soicotucung")
+            Me.columnSieuamtim = MyBase.Columns("Sieuamtim")
+            Me.columnXquangphoi = MyBase.Columns("Xquangphoi")
+            Me.columnXquangCstl = MyBase.Columns("XquangCstl")
+            Me.columnDientim = MyBase.Columns("Dientim")
+            Me.columnDoloangxuong = MyBase.Columns("Doloangxuong")
+            Me.columnKetluantongquat = MyBase.Columns("Ketluantongquat")
+            Me.columnThamvantongquat = MyBase.Columns("Thamvantongquat")
+            Me.columnKetluanrang = MyBase.Columns("Ketluanrang")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnIdSolieuhoso = New Global.System.Data.DataColumn("IdSolieuhoso", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdSolieuhoso)
+            Me.columnChieucao = New Global.System.Data.DataColumn("Chieucao", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnChieucao)
+            Me.columnCannang = New Global.System.Data.DataColumn("Cannang", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCannang)
+            Me.columnBMI = New Global.System.Data.DataColumn("BMI", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBMI)
+            Me.columnHuyetap = New Global.System.Data.DataColumn("Huyetap", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHuyetap)
+            Me.columnTheluc = New Global.System.Data.DataColumn("Theluc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTheluc)
+            Me.columnTuanhoan = New Global.System.Data.DataColumn("Tuanhoan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTuanhoan)
+            Me.columnHohap = New Global.System.Data.DataColumn("Hohap", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHohap)
+            Me.columnTieuhoa = New Global.System.Data.DataColumn("Tieuhoa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTieuhoa)
+            Me.columnThantietnieu = New Global.System.Data.DataColumn("Thantietnieu", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnThantietnieu)
+            Me.columnNoitiet = New Global.System.Data.DataColumn("Noitiet", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNoitiet)
+            Me.columnCoxuongkhop = New Global.System.Data.DataColumn("Coxuongkhop", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCoxuongkhop)
+            Me.columnThankinh = New Global.System.Data.DataColumn("Thankinh", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnThankinh)
+            Me.columnTamthan = New Global.System.Data.DataColumn("Tamthan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTamthan)
+            Me.columnNgoaikhoa = New Global.System.Data.DataColumn("Ngoaikhoa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNgoaikhoa)
+            Me.columnMat = New Global.System.Data.DataColumn("Mat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMat)
+            Me.columnTaimuihong = New Global.System.Data.DataColumn("Taimuihong", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTaimuihong)
+            Me.columnRanghammat = New Global.System.Data.DataColumn("Ranghammat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRanghammat)
+            Me.columnDalieu = New Global.System.Data.DataColumn("Dalieu", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDalieu)
+            Me.columnSanphukhoa = New Global.System.Data.DataColumn("Sanphukhoa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSanphukhoa)
+            Me.columnSieuambung = New Global.System.Data.DataColumn("Sieuambung", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSieuambung)
+            Me.columnSieuamtuyengiap = New Global.System.Data.DataColumn("Sieuamtuyengiap", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSieuamtuyengiap)
+            Me.columnSieuamtuyenvu = New Global.System.Data.DataColumn("Sieuamtuyenvu", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSieuamtuyenvu)
+            Me.columnSieuammachcanh = New Global.System.Data.DataColumn("Sieuammachcanh", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSieuammachcanh)
+            Me.columnSoicotucung = New Global.System.Data.DataColumn("Soicotucung", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSoicotucung)
+            Me.columnSieuamtim = New Global.System.Data.DataColumn("Sieuamtim", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSieuamtim)
+            Me.columnXquangphoi = New Global.System.Data.DataColumn("Xquangphoi", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnXquangphoi)
+            Me.columnXquangCstl = New Global.System.Data.DataColumn("XquangCstl", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnXquangCstl)
+            Me.columnDientim = New Global.System.Data.DataColumn("Dientim", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDientim)
+            Me.columnDoloangxuong = New Global.System.Data.DataColumn("Doloangxuong", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDoloangxuong)
+            Me.columnKetluantongquat = New Global.System.Data.DataColumn("Ketluantongquat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKetluantongquat)
+            Me.columnThamvantongquat = New Global.System.Data.DataColumn("Thamvantongquat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnThamvantongquat)
+            Me.columnKetluanrang = New Global.System.Data.DataColumn("Ketluanrang", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKetluanrang)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdSolieuhoso}, true))
+            Me.columnIdSolieuhoso.AllowDBNull = false
+            Me.columnIdSolieuhoso.Unique = true
+            Me.columnChieucao.MaxLength = 255
+            Me.columnCannang.MaxLength = 255
+            Me.columnBMI.MaxLength = 255
+            Me.columnHuyetap.MaxLength = 255
+            Me.columnTheluc.MaxLength = 255
+            Me.columnTuanhoan.MaxLength = 255
+            Me.columnHohap.MaxLength = 255
+            Me.columnTieuhoa.MaxLength = 255
+            Me.columnThantietnieu.MaxLength = 255
+            Me.columnNoitiet.MaxLength = 255
+            Me.columnCoxuongkhop.MaxLength = 255
+            Me.columnThankinh.MaxLength = 255
+            Me.columnTamthan.MaxLength = 255
+            Me.columnNgoaikhoa.MaxLength = 255
+            Me.columnMat.MaxLength = 255
+            Me.columnTaimuihong.MaxLength = 255
+            Me.columnRanghammat.MaxLength = 255
+            Me.columnDalieu.MaxLength = 255
+            Me.columnSanphukhoa.MaxLength = 255
+            Me.columnSieuambung.MaxLength = 255
+            Me.columnSieuamtuyengiap.MaxLength = 255
+            Me.columnSieuamtuyenvu.MaxLength = 255
+            Me.columnSieuammachcanh.MaxLength = 255
+            Me.columnSoicotucung.MaxLength = 255
+            Me.columnSieuamtim.MaxLength = 255
+            Me.columnXquangphoi.MaxLength = 255
+            Me.columnXquangCstl.MaxLength = 255
+            Me.columnDientim.MaxLength = 255
+            Me.columnDoloangxuong.MaxLength = 255
+            Me.columnKetluantongquat.MaxLength = 2147483647
+            Me.columnThamvantongquat.MaxLength = 255
+            Me.columnKetluanrang.MaxLength = 255
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function NewtbTongQuatRow() As tbTongQuatRow
+            Return CType(Me.NewRow,tbTongQuatRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbTongQuatRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbTongQuatRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbTongQuatRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbTongQuatRowChanged(Me, New tbTongQuatRowChangeEvent(CType(e.Row,tbTongQuatRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbTongQuatRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbTongQuatRowChanging(Me, New tbTongQuatRowChangeEvent(CType(e.Row,tbTongQuatRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbTongQuatRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbTongQuatRowDeleted(Me, New tbTongQuatRowChangeEvent(CType(e.Row,tbTongQuatRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbTongQuatRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbTongQuatRowDeleting(Me, New tbTongQuatRowChangeEvent(CType(e.Row,tbTongQuatRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub RemovetbTongQuatRow(ByVal row As tbTongQuatRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As KskDbDataSet = New KskDbDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbTongQuatDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -5784,1285 +6890,2160 @@ Partial Public Class KskDbDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class tbTraHuyetHocRow
+    Partial Public Class TbmiendichRow
         Inherits Global.System.Data.DataRow
         
-        Private tabletbTraHuyetHoc As tbTraHuyetHocDataTable
+        Private tableTbmiendich As TbmiendichDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabletbTraHuyetHoc = CType(Me.Table,tbTraHuyetHocDataTable)
+            Me.tableTbmiendich = CType(Me.Table,TbmiendichDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property IdSolieuhoso() As Integer
             Get
-                Return CType(Me(Me.tabletbTraHuyetHoc.IdSolieuhosoColumn),Integer)
+                Return CType(Me(Me.tableTbmiendich.IdSolieuhosoColumn),Integer)
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.IdSolieuhosoColumn) = value
+                Me(Me.tableTbmiendich.IdSolieuhosoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property WBC() As Boolean
+        Public Property Tsh() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.WBCColumn),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.TshColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'WBC' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tsh' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.WBCColumn) = value
+                Me(Me.tableTbmiendich.TshColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Gran1() As Boolean
+        Public Property Ft3() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.Gran1Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.Ft3Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Gran1' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ft3' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.Gran1Column) = value
+                Me(Me.tableTbmiendich.Ft3Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Gran2() As Boolean
+        Public Property Ft4() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.Gran2Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.Ft4Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Gran2' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ft4' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.Gran2Column) = value
+                Me(Me.tableTbmiendich.Ft4Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Lymph1() As Boolean
+        Public Property Cea() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.Lymph1Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.CeaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Lymph1' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Cea' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.Lymph1Column) = value
+                Me(Me.tableTbmiendich.CeaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Lymph2() As Boolean
+        Public Property Ca153() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.Lymph2Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.Ca153Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Lymph2' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ca153' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.Lymph2Column) = value
+                Me(Me.tableTbmiendich.Ca153Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Mon() As Boolean
+        Public Property Ca125() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.MonColumn),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.Ca125Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Mon' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ca125' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.MonColumn) = value
+                Me(Me.tableTbmiendich.Ca125Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Mon2() As Boolean
+        Public Property Ca724() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.Mon2Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.Ca724Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Mon2' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ca724' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.Mon2Column) = value
+                Me(Me.tableTbmiendich.Ca724Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property EOS1() As Boolean
+        Public Property Psa() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.EOS1Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.PsaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'EOS1' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Psa' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.EOS1Column) = value
+                Me(Me.tableTbmiendich.PsaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property EOS2() As Boolean
+        Public Property Afp() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.EOS2Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.AfpColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'EOS2' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Afp' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.EOS2Column) = value
+                Me(Me.tableTbmiendich.AfpColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Baso1() As Boolean
+        Public Property Hbsab() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.Baso1Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.HbsabColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Baso1' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Hbsab' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.Baso1Column) = value
+                Me(Me.tableTbmiendich.HbsabColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Baso2() As Boolean
+        Public Property Hbeag() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.Baso2Column),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.HbeagColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Baso2' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Hbeag' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.Baso2Column) = value
+                Me(Me.tableTbmiendich.HbeagColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property RBC() As Boolean
+        Public Property HBsAg() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.RBCColumn),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.HBsAgColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'RBC' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HBsAg' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.RBCColumn) = value
+                Me(Me.tableTbmiendich.HBsAgColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property HGB() As Boolean
+        Public Property Ca199() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.HGBColumn),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.Ca199Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'HGB' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ca199' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.HGBColumn) = value
+                Me(Me.tableTbmiendich.Ca199Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property HCT() As Boolean
+        Public Property CYFFRA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.HCTColumn),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.CYFFRAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'HCT' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CYFFRA' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.HCTColumn) = value
+                Me(Me.tableTbmiendich.CYFFRAColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property MCV() As Boolean
+        Public Property Ketluanmiendich() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.MCVColumn),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.KetluanmiendichColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'MCV' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ketluanmiendich' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.MCVColumn) = value
+                Me(Me.tableTbmiendich.KetluanmiendichColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property MCH() As Boolean
+        Public Property Thamvanmiendich() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.MCHColumn),Boolean)
+                    Return CType(Me(Me.tableTbmiendich.ThamvanmiendichColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'MCH' in table 'tbTraHuyetHoc' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Thamvanmiendich' in table 'Tbmiendich' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraHuyetHoc.MCHColumn) = value
+                Me(Me.tableTbmiendich.ThamvanmiendichColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property MCHC() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.MCHCColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'MCHC' in table 'tbTraHuyetHoc' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraHuyetHoc.MCHCColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property RDWCV() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.RDWCVColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'RDWCV' in table 'tbTraHuyetHoc' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraHuyetHoc.RDWCVColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property MPV() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.MPVColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'MPV' in table 'tbTraHuyetHoc' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraHuyetHoc.MPVColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PCT() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.PCTColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PCT' in table 'tbTraHuyetHoc' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraHuyetHoc.PCTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PDW() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.PDWColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PDW' in table 'tbTraHuyetHoc' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraHuyetHoc.PDWColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PLT() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraHuyetHoc.PLTColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PLT' in table 'tbTraHuyetHoc' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraHuyetHoc.PLTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsWBCNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.WBCColumn)
+        Public Function IsTshNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.TshColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetWBCNull()
-            Me(Me.tabletbTraHuyetHoc.WBCColumn) = Global.System.Convert.DBNull
+        Public Sub SetTshNull()
+            Me(Me.tableTbmiendich.TshColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsGran1Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.Gran1Column)
+        Public Function IsFt3Null() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.Ft3Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetGran1Null()
-            Me(Me.tabletbTraHuyetHoc.Gran1Column) = Global.System.Convert.DBNull
+        Public Sub SetFt3Null()
+            Me(Me.tableTbmiendich.Ft3Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsGran2Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.Gran2Column)
+        Public Function IsFt4Null() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.Ft4Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetGran2Null()
-            Me(Me.tabletbTraHuyetHoc.Gran2Column) = Global.System.Convert.DBNull
+        Public Sub SetFt4Null()
+            Me(Me.tableTbmiendich.Ft4Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLymph1Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.Lymph1Column)
+        Public Function IsCeaNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.CeaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLymph1Null()
-            Me(Me.tabletbTraHuyetHoc.Lymph1Column) = Global.System.Convert.DBNull
+        Public Sub SetCeaNull()
+            Me(Me.tableTbmiendich.CeaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLymph2Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.Lymph2Column)
+        Public Function IsCa153Null() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.Ca153Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLymph2Null()
-            Me(Me.tabletbTraHuyetHoc.Lymph2Column) = Global.System.Convert.DBNull
+        Public Sub SetCa153Null()
+            Me(Me.tableTbmiendich.Ca153Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsMonNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.MonColumn)
+        Public Function IsCa125Null() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.Ca125Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetMonNull()
-            Me(Me.tabletbTraHuyetHoc.MonColumn) = Global.System.Convert.DBNull
+        Public Sub SetCa125Null()
+            Me(Me.tableTbmiendich.Ca125Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsMon2Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.Mon2Column)
+        Public Function IsCa724Null() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.Ca724Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetMon2Null()
-            Me(Me.tabletbTraHuyetHoc.Mon2Column) = Global.System.Convert.DBNull
+        Public Sub SetCa724Null()
+            Me(Me.tableTbmiendich.Ca724Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsEOS1Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.EOS1Column)
+        Public Function IsPsaNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.PsaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetEOS1Null()
-            Me(Me.tabletbTraHuyetHoc.EOS1Column) = Global.System.Convert.DBNull
+        Public Sub SetPsaNull()
+            Me(Me.tableTbmiendich.PsaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsEOS2Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.EOS2Column)
+        Public Function IsAfpNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.AfpColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetEOS2Null()
-            Me(Me.tabletbTraHuyetHoc.EOS2Column) = Global.System.Convert.DBNull
+        Public Sub SetAfpNull()
+            Me(Me.tableTbmiendich.AfpColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsBaso1Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.Baso1Column)
+        Public Function IsHbsabNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.HbsabColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetBaso1Null()
-            Me(Me.tabletbTraHuyetHoc.Baso1Column) = Global.System.Convert.DBNull
+        Public Sub SetHbsabNull()
+            Me(Me.tableTbmiendich.HbsabColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsBaso2Null() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.Baso2Column)
+        Public Function IsHbeagNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.HbeagColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetBaso2Null()
-            Me(Me.tabletbTraHuyetHoc.Baso2Column) = Global.System.Convert.DBNull
+        Public Sub SetHbeagNull()
+            Me(Me.tableTbmiendich.HbeagColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsRBCNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.RBCColumn)
+        Public Function IsHBsAgNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.HBsAgColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetRBCNull()
-            Me(Me.tabletbTraHuyetHoc.RBCColumn) = Global.System.Convert.DBNull
+        Public Sub SetHBsAgNull()
+            Me(Me.tableTbmiendich.HBsAgColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsHGBNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.HGBColumn)
+        Public Function IsCa199Null() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.Ca199Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetHGBNull()
-            Me(Me.tabletbTraHuyetHoc.HGBColumn) = Global.System.Convert.DBNull
+        Public Sub SetCa199Null()
+            Me(Me.tableTbmiendich.Ca199Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsHCTNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.HCTColumn)
+        Public Function IsCYFFRANull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.CYFFRAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetHCTNull()
-            Me(Me.tabletbTraHuyetHoc.HCTColumn) = Global.System.Convert.DBNull
+        Public Sub SetCYFFRANull()
+            Me(Me.tableTbmiendich.CYFFRAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsMCVNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.MCVColumn)
+        Public Function IsKetluanmiendichNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.KetluanmiendichColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetMCVNull()
-            Me(Me.tabletbTraHuyetHoc.MCVColumn) = Global.System.Convert.DBNull
+        Public Sub SetKetluanmiendichNull()
+            Me(Me.tableTbmiendich.KetluanmiendichColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsMCHNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.MCHColumn)
+        Public Function IsThamvanmiendichNull() As Boolean
+            Return Me.IsNull(Me.tableTbmiendich.ThamvanmiendichColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetMCHNull()
-            Me(Me.tabletbTraHuyetHoc.MCHColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsMCHCNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.MCHCColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetMCHCNull()
-            Me(Me.tabletbTraHuyetHoc.MCHCColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsRDWCVNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.RDWCVColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetRDWCVNull()
-            Me(Me.tabletbTraHuyetHoc.RDWCVColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsMPVNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.MPVColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetMPVNull()
-            Me(Me.tabletbTraHuyetHoc.MPVColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPCTNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.PCTColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPCTNull()
-            Me(Me.tabletbTraHuyetHoc.PCTColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPDWNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.PDWColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPDWNull()
-            Me(Me.tabletbTraHuyetHoc.PDWColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPLTNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraHuyetHoc.PLTColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPLTNull()
-            Me(Me.tabletbTraHuyetHoc.PLTColumn) = Global.System.Convert.DBNull
+        Public Sub SetThamvanmiendichNull()
+            Me(Me.tableTbmiendich.ThamvanmiendichColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class tbTraPhanTichNuocTieuRow
+    Partial Public Class TbSoiamdaoRow
         Inherits Global.System.Data.DataRow
         
-        Private tabletbTraPhanTichNuocTieu As tbTraPhanTichNuocTieuDataTable
+        Private tableTbSoiamdao As TbSoiamdaoDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabletbTraPhanTichNuocTieu = CType(Me.Table,tbTraPhanTichNuocTieuDataTable)
+            Me.tableTbSoiamdao = CType(Me.Table,TbSoiamdaoDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property IdSolieuhoso() As Integer
             Get
-                Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.IdSolieuhosoColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'IdSolieuhoso' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableTbSoiamdao.IdSolieuhosoColumn),Integer)
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.IdSolieuhosoColumn) = value
+                Me(Me.tableTbSoiamdao.IdSolieuhosoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property BIL() As Boolean
+        Public Property Tebaobieumo() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.BILColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.TebaobieumoColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'BIL' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tebaobieumo' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.BILColumn) = value
+                Me(Me.tableTbSoiamdao.TebaobieumoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property BLOOD() As Boolean
+        Public Property Soituoiamdaobachcau() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.BLOODColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.SoituoiamdaobachcauColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'BLOOD' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Soituoiamdaobachcau' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.BLOODColumn) = value
+                Me(Me.tableTbSoiamdao.SoituoiamdaobachcauColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property GLU() As Boolean
+        Public Property Soituoiamdaohongcau() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.GLUColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.SoituoiamdaohongcauColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'GLU' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Soituoiamdaohongcau' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.GLUColumn) = value
+                Me(Me.tableTbSoiamdao.SoituoiamdaohongcauColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property KET() As Boolean
+        Public Property Nam() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.KETColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.NamColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'KET' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Nam' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.KETColumn) = value
+                Me(Me.tableTbSoiamdao.NamColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LEU() As Boolean
+        Public Property Soitonamgia() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.LEUColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.SoitonamgiaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LEU' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Soitonamgia' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.LEUColumn) = value
+                Me(Me.tableTbSoiamdao.SoitonamgiaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property NIT() As Boolean
+        Public Property Trichomonasvaginalis() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.NITColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.TrichomonasvaginalisColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'NIT' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Trichomonasvaginalis' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.NITColumn) = value
+                Me(Me.tableTbSoiamdao.TrichomonasvaginalisColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PH() As Boolean
+        Public Property Tapkhuan() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.PHColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.TapkhuanColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PH' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tapkhuan' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.PHColumn) = value
+                Me(Me.tableTbSoiamdao.TapkhuanColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PRO() As Boolean
+        Public Property Ketluansoiamdao() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.PROColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.KetluansoiamdaoColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PRO' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ketluansoiamdao' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.PROColumn) = value
+                Me(Me.tableTbSoiamdao.KetluansoiamdaoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SG() As Boolean
+        Public Property Thamvansoiamdao() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.SGColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiamdao.ThamvansoiamdaoColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SG' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Thamvansoiamdao' in table 'TbSoiamdao' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraPhanTichNuocTieu.SGColumn) = value
+                Me(Me.tableTbSoiamdao.ThamvansoiamdaoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property URO() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraPhanTichNuocTieu.UROColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'URO' in table 'tbTraPhanTichNuocTieu' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraPhanTichNuocTieu.UROColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsIdSolieuhosoNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.IdSolieuhosoColumn)
+        Public Function IsTebaobieumoNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.TebaobieumoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetIdSolieuhosoNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.IdSolieuhosoColumn) = Global.System.Convert.DBNull
+        Public Sub SetTebaobieumoNull()
+            Me(Me.tableTbSoiamdao.TebaobieumoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsBILNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.BILColumn)
+        Public Function IsSoituoiamdaobachcauNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.SoituoiamdaobachcauColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetBILNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.BILColumn) = Global.System.Convert.DBNull
+        Public Sub SetSoituoiamdaobachcauNull()
+            Me(Me.tableTbSoiamdao.SoituoiamdaobachcauColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsBLOODNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.BLOODColumn)
+        Public Function IsSoituoiamdaohongcauNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.SoituoiamdaohongcauColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetBLOODNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.BLOODColumn) = Global.System.Convert.DBNull
+        Public Sub SetSoituoiamdaohongcauNull()
+            Me(Me.tableTbSoiamdao.SoituoiamdaohongcauColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsGLUNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.GLUColumn)
+        Public Function IsNamNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.NamColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetGLUNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.GLUColumn) = Global.System.Convert.DBNull
+        Public Sub SetNamNull()
+            Me(Me.tableTbSoiamdao.NamColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsKETNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.KETColumn)
+        Public Function IsSoitonamgiaNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.SoitonamgiaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetKETNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.KETColumn) = Global.System.Convert.DBNull
+        Public Sub SetSoitonamgiaNull()
+            Me(Me.tableTbSoiamdao.SoitonamgiaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLEUNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.LEUColumn)
+        Public Function IsTrichomonasvaginalisNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.TrichomonasvaginalisColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLEUNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.LEUColumn) = Global.System.Convert.DBNull
+        Public Sub SetTrichomonasvaginalisNull()
+            Me(Me.tableTbSoiamdao.TrichomonasvaginalisColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsNITNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.NITColumn)
+        Public Function IsTapkhuanNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.TapkhuanColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetNITNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.NITColumn) = Global.System.Convert.DBNull
+        Public Sub SetTapkhuanNull()
+            Me(Me.tableTbSoiamdao.TapkhuanColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPHNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.PHColumn)
+        Public Function IsKetluansoiamdaoNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.KetluansoiamdaoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPHNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.PHColumn) = Global.System.Convert.DBNull
+        Public Sub SetKetluansoiamdaoNull()
+            Me(Me.tableTbSoiamdao.KetluansoiamdaoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPRONull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.PROColumn)
+        Public Function IsThamvansoiamdaoNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiamdao.ThamvansoiamdaoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPRONull()
-            Me(Me.tabletbTraPhanTichNuocTieu.PROColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSGNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.SGColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSGNull()
-            Me(Me.tabletbTraPhanTichNuocTieu.SGColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsURONull() As Boolean
-            Return Me.IsNull(Me.tabletbTraPhanTichNuocTieu.UROColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetURONull()
-            Me(Me.tabletbTraPhanTichNuocTieu.UROColumn) = Global.System.Convert.DBNull
+        Public Sub SetThamvansoiamdaoNull()
+            Me(Me.tableTbSoiamdao.ThamvansoiamdaoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class tbTraSinhHoaRow
+    Partial Public Class TbSoiphanRow
         Inherits Global.System.Data.DataRow
         
-        Private tabletbTraSinhHoa As tbTraSinhHoaDataTable
+        Private tableTbSoiphan As TbSoiphanDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabletbTraSinhHoa = CType(Me.Table,tbTraSinhHoaDataTable)
+            Me.tableTbSoiphan = CType(Me.Table,TbSoiphanDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Idsolieuhoso() As Integer
+        Public Property IdSolieuhoso() As Integer
             Get
-                Return CType(Me(Me.tabletbTraSinhHoa.IdsolieuhosoColumn),Integer)
+                Return CType(Me(Me.tableTbSoiphan.IdSolieuhosoColumn),Integer)
             End Get
             Set
-                Me(Me.tabletbTraSinhHoa.IdsolieuhosoColumn) = value
+                Me(Me.tableTbSoiphan.IdSolieuhosoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property AST() As Boolean
+        Public Property Kstduongruot() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.ASTColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiphan.KstduongruotColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'AST' in table 'tbTraSinhHoa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Kstduongruot' in table 'TbSoiphan' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraSinhHoa.ASTColumn) = value
+                Me(Me.tableTbSoiphan.KstduongruotColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ALT() As Boolean
+        Public Property Soituoiphanbachcau() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.ALTColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiphan.SoituoiphanbachcauColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ALT' in table 'tbTraSinhHoa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Soituoiphanbachcau' in table 'TbSoiphan' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraSinhHoa.ALTColumn) = value
+                Me(Me.tableTbSoiphan.SoituoiphanbachcauColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property GGT() As Boolean
+        Public Property Soituoiphanhongcau() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.GGTColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiphan.SoituoiphanhongcauColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'GGT' in table 'tbTraSinhHoa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Soituoiphanhongcau' in table 'TbSoiphan' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraSinhHoa.GGTColumn) = value
+                Me(Me.tableTbSoiphan.SoituoiphanhongcauColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Glucose() As Boolean
+        Public Property Ketquasoiphan() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.GlucoseColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiphan.KetquasoiphanColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Glucose' in table 'tbTraSinhHoa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ketquasoiphan' in table 'TbSoiphan' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraSinhHoa.GlucoseColumn) = value
+                Me(Me.tableTbSoiphan.KetquasoiphanColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Creatine() As Boolean
+        Public Property Thamvansoiphan() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.CreatineColumn),Boolean)
+                    Return CType(Me(Me.tableTbSoiphan.ThamvansoiphanColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Creatine' in table 'tbTraSinhHoa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Thamvansoiphan' in table 'TbSoiphan' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbTraSinhHoa.CreatineColumn) = value
+                Me(Me.tableTbSoiphan.ThamvansoiphanColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Ure() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.UreColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ure' in table 'tbTraSinhHoa' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraSinhHoa.UreColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Cholesterol() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.CholesterolColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Cholesterol' in table 'tbTraSinhHoa' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraSinhHoa.CholesterolColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Triglyceride() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.TriglycerideColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Triglyceride' in table 'tbTraSinhHoa' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraSinhHoa.TriglycerideColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property HDL() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.HDLColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'HDL' in table 'tbTraSinhHoa' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraSinhHoa.HDLColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LDL() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.LDLColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LDL' in table 'tbTraSinhHoa' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraSinhHoa.LDLColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Uric() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.UricColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Uric' in table 'tbTraSinhHoa' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraSinhHoa.UricColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Protein() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbTraSinhHoa.ProteinColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Protein' in table 'tbTraSinhHoa' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbTraSinhHoa.ProteinColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsASTNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.ASTColumn)
+        Public Function IsKstduongruotNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiphan.KstduongruotColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetASTNull()
-            Me(Me.tabletbTraSinhHoa.ASTColumn) = Global.System.Convert.DBNull
+        Public Sub SetKstduongruotNull()
+            Me(Me.tableTbSoiphan.KstduongruotColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsALTNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.ALTColumn)
+        Public Function IsSoituoiphanbachcauNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiphan.SoituoiphanbachcauColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetALTNull()
-            Me(Me.tabletbTraSinhHoa.ALTColumn) = Global.System.Convert.DBNull
+        Public Sub SetSoituoiphanbachcauNull()
+            Me(Me.tableTbSoiphan.SoituoiphanbachcauColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsGGTNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.GGTColumn)
+        Public Function IsSoituoiphanhongcauNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiphan.SoituoiphanhongcauColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetGGTNull()
-            Me(Me.tabletbTraSinhHoa.GGTColumn) = Global.System.Convert.DBNull
+        Public Sub SetSoituoiphanhongcauNull()
+            Me(Me.tableTbSoiphan.SoituoiphanhongcauColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsGlucoseNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.GlucoseColumn)
+        Public Function IsKetquasoiphanNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiphan.KetquasoiphanColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetGlucoseNull()
-            Me(Me.tabletbTraSinhHoa.GlucoseColumn) = Global.System.Convert.DBNull
+        Public Sub SetKetquasoiphanNull()
+            Me(Me.tableTbSoiphan.KetquasoiphanColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCreatineNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.CreatineColumn)
+        Public Function IsThamvansoiphanNull() As Boolean
+            Return Me.IsNull(Me.tableTbSoiphan.ThamvansoiphanColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCreatineNull()
-            Me(Me.tabletbTraSinhHoa.CreatineColumn) = Global.System.Convert.DBNull
+        Public Sub SetThamvansoiphanNull()
+            Me(Me.tableTbSoiphan.ThamvansoiphanColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class TbTestnhanhRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableTbTestnhanh As TbTestnhanhDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableTbTestnhanh = CType(Me.Table,TbTestnhanhDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsUreNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.UreColumn)
+        Public Property IdSolieuhoso() As Integer
+            Get
+                Return CType(Me(Me.tableTbTestnhanh.IdSolieuhosoColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.IdSolieuhosoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property HBsAg() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.HBsAgColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HBsAg' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.HBsAgColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property HBsAb() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.HBsAbColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HBsAb' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.HBsAbColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property AntiHCV() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.AntiHCVColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'AntiHCV' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.AntiHCVColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property HAVIGM() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.HAVIGMColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HAVIGM' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.HAVIGMColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property HEVIGM() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.HEVIGMColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HEVIGM' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.HEVIGMColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property HpylorAb() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.HpylorAbColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HpylorAb' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.HpylorAbColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Syphyllis() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.SyphyllisColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Syphyllis' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.SyphyllisColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property HIV() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.HIVColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HIV' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.HIVColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property HbeAg() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.HbeAgColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HbeAg' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.HbeAgColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Abophienda() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.AbophiendaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Abophienda' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.AbophiendaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Rhphienda() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.RhphiendaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Rhphienda' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.RhphiendaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Ketluantestnhanh() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.KetluantestnhanhColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ketluantestnhanh' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.KetluantestnhanhColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Thamvantestnhanh() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTbTestnhanh.ThamvantestnhanhColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Thamvantestnhanh' in table 'TbTestnhanh' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTbTestnhanh.ThamvantestnhanhColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsHBsAgNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.HBsAgColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetUreNull()
-            Me(Me.tabletbTraSinhHoa.UreColumn) = Global.System.Convert.DBNull
+        Public Sub SetHBsAgNull()
+            Me(Me.tableTbTestnhanh.HBsAgColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCholesterolNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.CholesterolColumn)
+        Public Function IsHBsAbNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.HBsAbColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCholesterolNull()
-            Me(Me.tabletbTraSinhHoa.CholesterolColumn) = Global.System.Convert.DBNull
+        Public Sub SetHBsAbNull()
+            Me(Me.tableTbTestnhanh.HBsAbColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTriglycerideNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.TriglycerideColumn)
+        Public Function IsAntiHCVNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.AntiHCVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTriglycerideNull()
-            Me(Me.tabletbTraSinhHoa.TriglycerideColumn) = Global.System.Convert.DBNull
+        Public Sub SetAntiHCVNull()
+            Me(Me.tableTbTestnhanh.AntiHCVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsHDLNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.HDLColumn)
+        Public Function IsHAVIGMNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.HAVIGMColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetHDLNull()
-            Me(Me.tabletbTraSinhHoa.HDLColumn) = Global.System.Convert.DBNull
+        Public Sub SetHAVIGMNull()
+            Me(Me.tableTbTestnhanh.HAVIGMColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLDLNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.LDLColumn)
+        Public Function IsHEVIGMNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.HEVIGMColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLDLNull()
-            Me(Me.tabletbTraSinhHoa.LDLColumn) = Global.System.Convert.DBNull
+        Public Sub SetHEVIGMNull()
+            Me(Me.tableTbTestnhanh.HEVIGMColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsUricNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.UricColumn)
+        Public Function IsHpylorAbNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.HpylorAbColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetUricNull()
-            Me(Me.tabletbTraSinhHoa.UricColumn) = Global.System.Convert.DBNull
+        Public Sub SetHpylorAbNull()
+            Me(Me.tableTbTestnhanh.HpylorAbColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsProteinNull() As Boolean
-            Return Me.IsNull(Me.tabletbTraSinhHoa.ProteinColumn)
+        Public Function IsSyphyllisNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.SyphyllisColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetProteinNull()
-            Me(Me.tabletbTraSinhHoa.ProteinColumn) = Global.System.Convert.DBNull
+        Public Sub SetSyphyllisNull()
+            Me(Me.tableTbTestnhanh.SyphyllisColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsHIVNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.HIVColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetHIVNull()
+            Me(Me.tableTbTestnhanh.HIVColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsHbeAgNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.HbeAgColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetHbeAgNull()
+            Me(Me.tableTbTestnhanh.HbeAgColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsAbophiendaNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.AbophiendaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetAbophiendaNull()
+            Me(Me.tableTbTestnhanh.AbophiendaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsRhphiendaNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.RhphiendaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetRhphiendaNull()
+            Me(Me.tableTbTestnhanh.RhphiendaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsKetluantestnhanhNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.KetluantestnhanhColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetKetluantestnhanhNull()
+            Me(Me.tableTbTestnhanh.KetluantestnhanhColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsThamvantestnhanhNull() As Boolean
+            Return Me.IsNull(Me.tableTbTestnhanh.ThamvantestnhanhColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetThamvantestnhanhNull()
+            Me(Me.tableTbTestnhanh.ThamvantestnhanhColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbTongQuatRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbTongQuat As tbTongQuatDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbTongQuat = CType(Me.Table,tbTongQuatDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property IdSolieuhoso() As Integer
+            Get
+                Return CType(Me(Me.tabletbTongQuat.IdSolieuhosoColumn),Integer)
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.IdSolieuhosoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Chieucao() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.ChieucaoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Chieucao' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.ChieucaoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Cannang() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.CannangColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Cannang' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.CannangColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property BMI() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.BMIColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BMI' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.BMIColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Huyetap() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.HuyetapColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Huyetap' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.HuyetapColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Theluc() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.ThelucColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Theluc' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.ThelucColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Tuanhoan() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.TuanhoanColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tuanhoan' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.TuanhoanColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Hohap() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.HohapColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Hohap' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.HohapColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Tieuhoa() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.TieuhoaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tieuhoa' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.TieuhoaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Thantietnieu() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.ThantietnieuColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Thantietnieu' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.ThantietnieuColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Noitiet() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.NoitietColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Noitiet' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.NoitietColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Coxuongkhop() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.CoxuongkhopColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Coxuongkhop' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.CoxuongkhopColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Thankinh() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.ThankinhColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Thankinh' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.ThankinhColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Tamthan() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.TamthanColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tamthan' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.TamthanColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Ngoaikhoa() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.NgoaikhoaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ngoaikhoa' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.NgoaikhoaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Mat() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.MatColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Mat' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.MatColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Taimuihong() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.TaimuihongColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Taimuihong' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.TaimuihongColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Ranghammat() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.RanghammatColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ranghammat' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.RanghammatColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Dalieu() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.DalieuColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Dalieu' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.DalieuColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Sanphukhoa() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.SanphukhoaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Sanphukhoa' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.SanphukhoaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Sieuambung() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.SieuambungColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Sieuambung' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.SieuambungColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Sieuamtuyengiap() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.SieuamtuyengiapColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Sieuamtuyengiap' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.SieuamtuyengiapColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Sieuamtuyenvu() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.SieuamtuyenvuColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Sieuamtuyenvu' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.SieuamtuyenvuColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Sieuammachcanh() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.SieuammachcanhColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Sieuammachcanh' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.SieuammachcanhColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Soicotucung() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.SoicotucungColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Soicotucung' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.SoicotucungColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Sieuamtim() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.SieuamtimColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Sieuamtim' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.SieuamtimColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Xquangphoi() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.XquangphoiColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Xquangphoi' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.XquangphoiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property XquangCstl() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.XquangCstlColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'XquangCstl' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.XquangCstlColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Dientim() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.DientimColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Dientim' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.DientimColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Doloangxuong() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.DoloangxuongColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Doloangxuong' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.DoloangxuongColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Ketluantongquat() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.KetluantongquatColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ketluantongquat' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.KetluantongquatColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Thamvantongquat() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.ThamvantongquatColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Thamvantongquat' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.ThamvantongquatColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Ketluanrang() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbTongQuat.KetluanrangColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ketluanrang' in table 'tbTongQuat' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbTongQuat.KetluanrangColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsChieucaoNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.ChieucaoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetChieucaoNull()
+            Me(Me.tabletbTongQuat.ChieucaoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCannangNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.CannangColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCannangNull()
+            Me(Me.tabletbTongQuat.CannangColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsBMINull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.BMIColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetBMINull()
+            Me(Me.tabletbTongQuat.BMIColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsHuyetapNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.HuyetapColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetHuyetapNull()
+            Me(Me.tabletbTongQuat.HuyetapColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsThelucNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.ThelucColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetThelucNull()
+            Me(Me.tabletbTongQuat.ThelucColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTuanhoanNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.TuanhoanColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTuanhoanNull()
+            Me(Me.tabletbTongQuat.TuanhoanColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsHohapNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.HohapColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetHohapNull()
+            Me(Me.tabletbTongQuat.HohapColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTieuhoaNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.TieuhoaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTieuhoaNull()
+            Me(Me.tabletbTongQuat.TieuhoaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsThantietnieuNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.ThantietnieuColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetThantietnieuNull()
+            Me(Me.tabletbTongQuat.ThantietnieuColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsNoitietNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.NoitietColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetNoitietNull()
+            Me(Me.tabletbTongQuat.NoitietColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCoxuongkhopNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.CoxuongkhopColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCoxuongkhopNull()
+            Me(Me.tabletbTongQuat.CoxuongkhopColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsThankinhNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.ThankinhColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetThankinhNull()
+            Me(Me.tabletbTongQuat.ThankinhColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTamthanNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.TamthanColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTamthanNull()
+            Me(Me.tabletbTongQuat.TamthanColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsNgoaikhoaNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.NgoaikhoaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetNgoaikhoaNull()
+            Me(Me.tabletbTongQuat.NgoaikhoaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsMatNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.MatColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetMatNull()
+            Me(Me.tabletbTongQuat.MatColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTaimuihongNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.TaimuihongColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTaimuihongNull()
+            Me(Me.tabletbTongQuat.TaimuihongColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsRanghammatNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.RanghammatColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetRanghammatNull()
+            Me(Me.tabletbTongQuat.RanghammatColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsDalieuNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.DalieuColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetDalieuNull()
+            Me(Me.tabletbTongQuat.DalieuColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSanphukhoaNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.SanphukhoaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSanphukhoaNull()
+            Me(Me.tabletbTongQuat.SanphukhoaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSieuambungNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.SieuambungColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSieuambungNull()
+            Me(Me.tabletbTongQuat.SieuambungColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSieuamtuyengiapNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.SieuamtuyengiapColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSieuamtuyengiapNull()
+            Me(Me.tabletbTongQuat.SieuamtuyengiapColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSieuamtuyenvuNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.SieuamtuyenvuColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSieuamtuyenvuNull()
+            Me(Me.tabletbTongQuat.SieuamtuyenvuColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSieuammachcanhNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.SieuammachcanhColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSieuammachcanhNull()
+            Me(Me.tabletbTongQuat.SieuammachcanhColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSoicotucungNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.SoicotucungColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSoicotucungNull()
+            Me(Me.tabletbTongQuat.SoicotucungColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSieuamtimNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.SieuamtimColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSieuamtimNull()
+            Me(Me.tabletbTongQuat.SieuamtimColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsXquangphoiNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.XquangphoiColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetXquangphoiNull()
+            Me(Me.tabletbTongQuat.XquangphoiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsXquangCstlNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.XquangCstlColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetXquangCstlNull()
+            Me(Me.tabletbTongQuat.XquangCstlColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsDientimNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.DientimColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetDientimNull()
+            Me(Me.tabletbTongQuat.DientimColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsDoloangxuongNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.DoloangxuongColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetDoloangxuongNull()
+            Me(Me.tabletbTongQuat.DoloangxuongColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsKetluantongquatNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.KetluantongquatColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetKetluantongquatNull()
+            Me(Me.tabletbTongQuat.KetluantongquatColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsThamvantongquatNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.ThamvantongquatColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetThamvantongquatNull()
+            Me(Me.tabletbTongQuat.ThamvantongquatColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsKetluanrangNull() As Boolean
+            Return Me.IsNull(Me.tabletbTongQuat.KetluanrangColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetKetluanrangNull()
+            Me(Me.tabletbTongQuat.KetluanrangColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -7250,16 +9231,16 @@ Partial Public Class KskDbDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class tbTraHuyetHocRowChangeEvent
+    Public Class TbmiendichRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As tbTraHuyetHocRow
+        Private eventRow As TbmiendichRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As tbTraHuyetHocRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As TbmiendichRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -7267,7 +9248,7 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As tbTraHuyetHocRow
+        Public ReadOnly Property Row() As TbmiendichRow
             Get
                 Return Me.eventRow
             End Get
@@ -7286,16 +9267,16 @@ Partial Public Class KskDbDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class tbTraPhanTichNuocTieuRowChangeEvent
+    Public Class TbSoiamdaoRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As tbTraPhanTichNuocTieuRow
+        Private eventRow As TbSoiamdaoRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As tbTraPhanTichNuocTieuRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As TbSoiamdaoRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -7303,7 +9284,7 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As tbTraPhanTichNuocTieuRow
+        Public ReadOnly Property Row() As TbSoiamdaoRow
             Get
                 Return Me.eventRow
             End Get
@@ -7322,16 +9303,16 @@ Partial Public Class KskDbDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class tbTraSinhHoaRowChangeEvent
+    Public Class TbSoiphanRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As tbTraSinhHoaRow
+        Private eventRow As TbSoiphanRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As tbTraSinhHoaRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As TbSoiphanRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -7339,7 +9320,79 @@ Partial Public Class KskDbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As tbTraSinhHoaRow
+        Public ReadOnly Property Row() As TbSoiphanRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Class TbTestnhanhRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As TbTestnhanhRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New(ByVal row As TbTestnhanhRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Row() As TbTestnhanhRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Class tbTongQuatRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbTongQuatRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New(ByVal row As tbTongQuatRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Row() As tbTongQuatRow
             Get
                 Return Me.eventRow
             End Get
@@ -9764,7 +11817,7 @@ Namespace KskDbDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class tbTraHuyetHocTableAdapter
+    Partial Public Class TbmiendichTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -9881,234 +11934,168 @@ Namespace KskDbDataSetTableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "tbTraHuyetHoc"
+            tableMapping.DataSetTable = "Tbmiendich"
             tableMapping.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
-            tableMapping.ColumnMappings.Add("WBC", "WBC")
-            tableMapping.ColumnMappings.Add("Gran1", "Gran1")
-            tableMapping.ColumnMappings.Add("Gran2", "Gran2")
-            tableMapping.ColumnMappings.Add("Lymph1", "Lymph1")
-            tableMapping.ColumnMappings.Add("Lymph2", "Lymph2")
-            tableMapping.ColumnMappings.Add("Mon", "Mon")
-            tableMapping.ColumnMappings.Add("Mon2", "Mon2")
-            tableMapping.ColumnMappings.Add("EOS1", "EOS1")
-            tableMapping.ColumnMappings.Add("EOS2", "EOS2")
-            tableMapping.ColumnMappings.Add("Baso1", "Baso1")
-            tableMapping.ColumnMappings.Add("Baso2", "Baso2")
-            tableMapping.ColumnMappings.Add("RBC", "RBC")
-            tableMapping.ColumnMappings.Add("HGB", "HGB")
-            tableMapping.ColumnMappings.Add("HCT", "HCT")
-            tableMapping.ColumnMappings.Add("MCV", "MCV")
-            tableMapping.ColumnMappings.Add("MCH", "MCH")
-            tableMapping.ColumnMappings.Add("MCHC", "MCHC")
-            tableMapping.ColumnMappings.Add("RDWCV", "RDWCV")
-            tableMapping.ColumnMappings.Add("MPV", "MPV")
-            tableMapping.ColumnMappings.Add("PCT", "PCT")
-            tableMapping.ColumnMappings.Add("PDW", "PDW")
-            tableMapping.ColumnMappings.Add("PLT", "PLT")
+            tableMapping.ColumnMappings.Add("Tsh", "Tsh")
+            tableMapping.ColumnMappings.Add("Ft3", "Ft3")
+            tableMapping.ColumnMappings.Add("Ft4", "Ft4")
+            tableMapping.ColumnMappings.Add("Cea", "Cea")
+            tableMapping.ColumnMappings.Add("Ca153", "Ca153")
+            tableMapping.ColumnMappings.Add("Ca125", "Ca125")
+            tableMapping.ColumnMappings.Add("Ca724", "Ca724")
+            tableMapping.ColumnMappings.Add("Psa", "Psa")
+            tableMapping.ColumnMappings.Add("Afp", "Afp")
+            tableMapping.ColumnMappings.Add("Hbsab", "Hbsab")
+            tableMapping.ColumnMappings.Add("Hbeag", "Hbeag")
+            tableMapping.ColumnMappings.Add("HBsAg", "HBsAg")
+            tableMapping.ColumnMappings.Add("Ca199", "Ca199")
+            tableMapping.ColumnMappings.Add("CYFFRA", "CYFFRA")
+            tableMapping.ColumnMappings.Add("Ketluanmiendich", "Ketluanmiendich")
+            tableMapping.ColumnMappings.Add("Thamvanmiendich", "Thamvanmiendich")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbTraHuyetHoc] WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso"& _ 
-                ") AND ((@IsNull_WBC = 1 AND [WBC] IS NULL) OR ([WBC] = @Original_WBC)) AND ((@Is"& _ 
-                "Null_Gran1 = 1 AND [Gran1] IS NULL) OR ([Gran1] = @Original_Gran1)) AND ((@IsNul"& _ 
-                "l_Gran2 = 1 AND [Gran2] IS NULL) OR ([Gran2] = @Original_Gran2)) AND ((@IsNull_L"& _ 
-                "ymph1 = 1 AND [Lymph1] IS NULL) OR ([Lymph1] = @Original_Lymph1)) AND ((@IsNull_"& _ 
-                "Lymph2 = 1 AND [Lymph2] IS NULL) OR ([Lymph2] = @Original_Lymph2)) AND ((@IsNull"& _ 
-                "_Mon = 1 AND [Mon] IS NULL) OR ([Mon] = @Original_Mon)) AND ((@IsNull_Mon2 = 1 A"& _ 
-                "ND [Mon2] IS NULL) OR ([Mon2] = @Original_Mon2)) AND ((@IsNull_EOS1 = 1 AND [EOS"& _ 
-                "1] IS NULL) OR ([EOS1] = @Original_EOS1)) AND ((@IsNull_EOS2 = 1 AND [EOS2] IS N"& _ 
-                "ULL) OR ([EOS2] = @Original_EOS2)) AND ((@IsNull_Baso1 = 1 AND [Baso1] IS NULL) "& _ 
-                "OR ([Baso1] = @Original_Baso1)) AND ((@IsNull_Baso2 = 1 AND [Baso2] IS NULL) OR "& _ 
-                "([Baso2] = @Original_Baso2)) AND ((@IsNull_RBC = 1 AND [RBC] IS NULL) OR ([RBC] "& _ 
-                "= @Original_RBC)) AND ((@IsNull_HGB = 1 AND [HGB] IS NULL) OR ([HGB] = @Original"& _ 
-                "_HGB)) AND ((@IsNull_HCT = 1 AND [HCT] IS NULL) OR ([HCT] = @Original_HCT)) AND "& _ 
-                "((@IsNull_MCV = 1 AND [MCV] IS NULL) OR ([MCV] = @Original_MCV)) AND ((@IsNull_M"& _ 
-                "CH = 1 AND [MCH] IS NULL) OR ([MCH] = @Original_MCH)) AND ((@IsNull_MCHC = 1 AND"& _ 
-                " [MCHC] IS NULL) OR ([MCHC] = @Original_MCHC)) AND ((@IsNull_RDWCV = 1 AND [RDWC"& _ 
-                "V] IS NULL) OR ([RDWCV] = @Original_RDWCV)) AND ((@IsNull_MPV = 1 AND [MPV] IS N"& _ 
-                "ULL) OR ([MPV] = @Original_MPV)) AND ((@IsNull_PCT = 1 AND [PCT] IS NULL) OR ([P"& _ 
-                "CT] = @Original_PCT)) AND ((@IsNull_PDW = 1 AND [PDW] IS NULL) OR ([PDW] = @Orig"& _ 
-                "inal_PDW)) AND ((@IsNull_PLT = 1 AND [PLT] IS NULL) OR ([PLT] = @Original_PLT)))"& _ 
-                ""
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Tbmiendich] WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso) A"& _ 
+                "ND ((@IsNull_Tsh = 1 AND [Tsh] IS NULL) OR ([Tsh] = @Original_Tsh)) AND ((@IsNul"& _ 
+                "l_Ft3 = 1 AND [Ft3] IS NULL) OR ([Ft3] = @Original_Ft3)) AND ((@IsNull_Ft4 = 1 A"& _ 
+                "ND [Ft4] IS NULL) OR ([Ft4] = @Original_Ft4)) AND ((@IsNull_Cea = 1 AND [Cea] IS"& _ 
+                " NULL) OR ([Cea] = @Original_Cea)) AND ((@IsNull_Ca153 = 1 AND [Ca153] IS NULL) "& _ 
+                "OR ([Ca153] = @Original_Ca153)) AND ((@IsNull_Ca125 = 1 AND [Ca125] IS NULL) OR "& _ 
+                "([Ca125] = @Original_Ca125)) AND ((@IsNull_Ca724 = 1 AND [Ca724] IS NULL) OR ([C"& _ 
+                "a724] = @Original_Ca724)) AND ((@IsNull_Psa = 1 AND [Psa] IS NULL) OR ([Psa] = @"& _ 
+                "Original_Psa)) AND ((@IsNull_Afp = 1 AND [Afp] IS NULL) OR ([Afp] = @Original_Af"& _ 
+                "p)) AND ((@IsNull_Hbsab = 1 AND [Hbsab] IS NULL) OR ([Hbsab] = @Original_Hbsab))"& _ 
+                " AND ((@IsNull_Hbeag = 1 AND [Hbeag] IS NULL) OR ([Hbeag] = @Original_Hbeag)) AN"& _ 
+                "D ((@IsNull_HBsAg = 1 AND [HBsAg] IS NULL) OR ([HBsAg] = @Original_HBsAg)) AND ("& _ 
+                "(@IsNull_Ca199 = 1 AND [Ca199] IS NULL) OR ([Ca199] = @Original_Ca199)) AND ((@I"& _ 
+                "sNull_CYFFRA = 1 AND [CYFFRA] IS NULL) OR ([CYFFRA] = @Original_CYFFRA)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_WBC", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "WBC", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_WBC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "WBC", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Gran1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Gran1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Gran2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Gran2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Lymph1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Lymph1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Lymph2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Lymph2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Mon", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Mon", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Mon2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Mon2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_EOS1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_EOS1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_EOS2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_EOS2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Baso1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Baso1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Baso2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Baso2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_RBC", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RBC", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RBC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RBC", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HGB", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HGB", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HGB", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HGB", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HCT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HCT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HCT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HCT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MCV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MCV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MCH", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCH", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MCH", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCH", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MCHC", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCHC", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MCHC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCHC", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_RDWCV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RDWCV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RDWCV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RDWCV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MPV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MPV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MPV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MPV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PCT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PCT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PCT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PCT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PDW", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDW", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PDW", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDW", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PLT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PLT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PLT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PLT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tsh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tsh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tsh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tsh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ft3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft3", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ft3", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft3", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ft4", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft4", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ft4", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft4", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Cea", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cea", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cea", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ca153", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca153", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ca153", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca153", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ca125", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca125", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ca125", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca125", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ca724", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca724", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ca724", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca724", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Psa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Psa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Psa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Psa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Afp", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Afp", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Afp", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Afp", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Hbsab", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbsab", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Hbsab", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbsab", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Hbeag", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbeag", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Hbeag", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbeag", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HBsAg", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HBsAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ca199", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca199", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ca199", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca199", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CYFFRA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CYFFRA", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CYFFRA", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CYFFRA", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbTraHuyetHoc] ([IdSolieuhoso], [WBC], [Gran1], [Gran2], [Lymp"& _ 
-                "h1], [Lymph2], [Mon], [Mon2], [EOS1], [EOS2], [Baso1], [Baso2], [RBC], [HGB], [H"& _ 
-                "CT], [MCV], [MCH], [MCHC], [RDWCV], [MPV], [PCT], [PDW], [PLT]) VALUES (@IdSolie"& _ 
-                "uhoso, @WBC, @Gran1, @Gran2, @Lymph1, @Lymph2, @Mon, @Mon2, @EOS1, @EOS2, @Baso1"& _ 
-                ", @Baso2, @RBC, @HGB, @HCT, @MCV, @MCH, @MCHC, @RDWCV, @MPV, @PCT, @PDW, @PLT);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, WBC, Gran1, Gran2, Lymph1, Lymph2, Mon, Mon2, EOS1, EOS2, "& _ 
-                "Baso1, Baso2, RBC, HGB, HCT, MCV, MCH, MCHC, RDWCV, MPV, PCT, PDW, PLT FROM tbTr"& _ 
-                "aHuyetHoc WHERE (IdSolieuhoso = @IdSolieuhoso)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Tbmiendich] ([IdSolieuhoso], [Tsh], [Ft3], [Ft4], [Cea], [Ca15"& _ 
+                "3], [Ca125], [Ca724], [Psa], [Afp], [Hbsab], [Hbeag], [HBsAg], [Ca199], [CYFFRA]"& _ 
+                ", [Ketluanmiendich], [Thamvanmiendich]) VALUES (@IdSolieuhoso, @Tsh, @Ft3, @Ft4,"& _ 
+                " @Cea, @Ca153, @Ca125, @Ca724, @Psa, @Afp, @Hbsab, @Hbeag, @HBsAg, @Ca199, @CYFF"& _ 
+                "RA, @Ketluanmiendich, @Thamvanmiendich);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, Tsh, Ft3, Ft4, Ce"& _ 
+                "a, Ca153, Ca125, Ca724, Psa, Afp, Hbsab, Hbeag, HBsAg, Ca199, CYFFRA, Ketluanmie"& _ 
+                "ndich, Thamvanmiendich FROM Tbmiendich WHERE (IdSolieuhoso = @IdSolieuhoso)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@WBC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "WBC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Gran1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Gran2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lymph1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lymph2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Mon", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Mon2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EOS1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EOS2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Baso1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Baso2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RBC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RBC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HGB", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HGB", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HCT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HCT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MCV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MCH", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCH", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MCHC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCHC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RDWCV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RDWCV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MPV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MPV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PCT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PCT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PDW", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDW", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PLT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PLT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tsh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tsh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ft3", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ft4", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft4", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cea", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ca153", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca153", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ca125", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca125", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ca724", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca724", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Psa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Psa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Afp", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Afp", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Hbsab", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbsab", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Hbeag", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbeag", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HBsAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ca199", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca199", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CYFFRA", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CYFFRA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluanmiendich", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluanmiendich", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvanmiendich", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvanmiendich", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbTraHuyetHoc] SET [IdSolieuhoso] = @IdSolieuhoso, [WBC] = @WBC, [G"& _ 
-                "ran1] = @Gran1, [Gran2] = @Gran2, [Lymph1] = @Lymph1, [Lymph2] = @Lymph2, [Mon] "& _ 
-                "= @Mon, [Mon2] = @Mon2, [EOS1] = @EOS1, [EOS2] = @EOS2, [Baso1] = @Baso1, [Baso2"& _ 
-                "] = @Baso2, [RBC] = @RBC, [HGB] = @HGB, [HCT] = @HCT, [MCV] = @MCV, [MCH] = @MCH"& _ 
-                ", [MCHC] = @MCHC, [RDWCV] = @RDWCV, [MPV] = @MPV, [PCT] = @PCT, [PDW] = @PDW, [P"& _ 
-                "LT] = @PLT WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso) AND ((@IsNull_WBC = "& _ 
-                "1 AND [WBC] IS NULL) OR ([WBC] = @Original_WBC)) AND ((@IsNull_Gran1 = 1 AND [Gr"& _ 
-                "an1] IS NULL) OR ([Gran1] = @Original_Gran1)) AND ((@IsNull_Gran2 = 1 AND [Gran2"& _ 
-                "] IS NULL) OR ([Gran2] = @Original_Gran2)) AND ((@IsNull_Lymph1 = 1 AND [Lymph1]"& _ 
-                " IS NULL) OR ([Lymph1] = @Original_Lymph1)) AND ((@IsNull_Lymph2 = 1 AND [Lymph2"& _ 
-                "] IS NULL) OR ([Lymph2] = @Original_Lymph2)) AND ((@IsNull_Mon = 1 AND [Mon] IS "& _ 
-                "NULL) OR ([Mon] = @Original_Mon)) AND ((@IsNull_Mon2 = 1 AND [Mon2] IS NULL) OR "& _ 
-                "([Mon2] = @Original_Mon2)) AND ((@IsNull_EOS1 = 1 AND [EOS1] IS NULL) OR ([EOS1]"& _ 
-                " = @Original_EOS1)) AND ((@IsNull_EOS2 = 1 AND [EOS2] IS NULL) OR ([EOS2] = @Ori"& _ 
-                "ginal_EOS2)) AND ((@IsNull_Baso1 = 1 AND [Baso1] IS NULL) OR ([Baso1] = @Origina"& _ 
-                "l_Baso1)) AND ((@IsNull_Baso2 = 1 AND [Baso2] IS NULL) OR ([Baso2] = @Original_B"& _ 
-                "aso2)) AND ((@IsNull_RBC = 1 AND [RBC] IS NULL) OR ([RBC] = @Original_RBC)) AND "& _ 
-                "((@IsNull_HGB = 1 AND [HGB] IS NULL) OR ([HGB] = @Original_HGB)) AND ((@IsNull_H"& _ 
-                "CT = 1 AND [HCT] IS NULL) OR ([HCT] = @Original_HCT)) AND ((@IsNull_MCV = 1 AND "& _ 
-                "[MCV] IS NULL) OR ([MCV] = @Original_MCV)) AND ((@IsNull_MCH = 1 AND [MCH] IS NU"& _ 
-                "LL) OR ([MCH] = @Original_MCH)) AND ((@IsNull_MCHC = 1 AND [MCHC] IS NULL) OR (["& _ 
-                "MCHC] = @Original_MCHC)) AND ((@IsNull_RDWCV = 1 AND [RDWCV] IS NULL) OR ([RDWCV"& _ 
-                "] = @Original_RDWCV)) AND ((@IsNull_MPV = 1 AND [MPV] IS NULL) OR ([MPV] = @Orig"& _ 
-                "inal_MPV)) AND ((@IsNull_PCT = 1 AND [PCT] IS NULL) OR ([PCT] = @Original_PCT)) "& _ 
-                "AND ((@IsNull_PDW = 1 AND [PDW] IS NULL) OR ([PDW] = @Original_PDW)) AND ((@IsNu"& _ 
-                "ll_PLT = 1 AND [PLT] IS NULL) OR ([PLT] = @Original_PLT)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso"& _ 
-                ", WBC, Gran1, Gran2, Lymph1, Lymph2, Mon, Mon2, EOS1, EOS2, Baso1, Baso2, RBC, H"& _ 
-                "GB, HCT, MCV, MCH, MCHC, RDWCV, MPV, PCT, PDW, PLT FROM tbTraHuyetHoc WHERE (IdS"& _ 
-                "olieuhoso = @IdSolieuhoso)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Tbmiendich] SET [IdSolieuhoso] = @IdSolieuhoso, [Tsh] = @Tsh, [Ft3]"& _ 
+                " = @Ft3, [Ft4] = @Ft4, [Cea] = @Cea, [Ca153] = @Ca153, [Ca125] = @Ca125, [Ca724]"& _ 
+                " = @Ca724, [Psa] = @Psa, [Afp] = @Afp, [Hbsab] = @Hbsab, [Hbeag] = @Hbeag, [HBsA"& _ 
+                "g] = @HBsAg, [Ca199] = @Ca199, [CYFFRA] = @CYFFRA, [Ketluanmiendich] = @Ketluanm"& _ 
+                "iendich, [Thamvanmiendich] = @Thamvanmiendich WHERE (([IdSolieuhoso] = @Original"& _ 
+                "_IdSolieuhoso) AND ((@IsNull_Tsh = 1 AND [Tsh] IS NULL) OR ([Tsh] = @Original_Ts"& _ 
+                "h)) AND ((@IsNull_Ft3 = 1 AND [Ft3] IS NULL) OR ([Ft3] = @Original_Ft3)) AND ((@"& _ 
+                "IsNull_Ft4 = 1 AND [Ft4] IS NULL) OR ([Ft4] = @Original_Ft4)) AND ((@IsNull_Cea "& _ 
+                "= 1 AND [Cea] IS NULL) OR ([Cea] = @Original_Cea)) AND ((@IsNull_Ca153 = 1 AND ["& _ 
+                "Ca153] IS NULL) OR ([Ca153] = @Original_Ca153)) AND ((@IsNull_Ca125 = 1 AND [Ca1"& _ 
+                "25] IS NULL) OR ([Ca125] = @Original_Ca125)) AND ((@IsNull_Ca724 = 1 AND [Ca724]"& _ 
+                " IS NULL) OR ([Ca724] = @Original_Ca724)) AND ((@IsNull_Psa = 1 AND [Psa] IS NUL"& _ 
+                "L) OR ([Psa] = @Original_Psa)) AND ((@IsNull_Afp = 1 AND [Afp] IS NULL) OR ([Afp"& _ 
+                "] = @Original_Afp)) AND ((@IsNull_Hbsab = 1 AND [Hbsab] IS NULL) OR ([Hbsab] = @"& _ 
+                "Original_Hbsab)) AND ((@IsNull_Hbeag = 1 AND [Hbeag] IS NULL) OR ([Hbeag] = @Ori"& _ 
+                "ginal_Hbeag)) AND ((@IsNull_HBsAg = 1 AND [HBsAg] IS NULL) OR ([HBsAg] = @Origin"& _ 
+                "al_HBsAg)) AND ((@IsNull_Ca199 = 1 AND [Ca199] IS NULL) OR ([Ca199] = @Original_"& _ 
+                "Ca199)) AND ((@IsNull_CYFFRA = 1 AND [CYFFRA] IS NULL) OR ([CYFFRA] = @Original_"& _ 
+                "CYFFRA)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, Tsh, Ft3, Ft4, Cea, Ca153, Ca125, Ca724, Psa, A"& _ 
+                "fp, Hbsab, Hbeag, HBsAg, Ca199, CYFFRA, Ketluanmiendich, Thamvanmiendich FROM Tb"& _ 
+                "miendich WHERE (IdSolieuhoso = @IdSolieuhoso)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@WBC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "WBC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Gran1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Gran2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lymph1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lymph2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Mon", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Mon2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EOS1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EOS2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Baso1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Baso2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RBC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RBC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HGB", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HGB", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HCT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HCT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MCV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MCH", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCH", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MCHC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCHC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RDWCV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RDWCV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MPV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MPV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PCT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PCT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PDW", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDW", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PLT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PLT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tsh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tsh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ft3", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ft4", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft4", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cea", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ca153", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca153", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ca125", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca125", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ca724", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca724", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Psa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Psa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Afp", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Afp", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Hbsab", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbsab", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Hbeag", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbeag", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HBsAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ca199", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca199", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CYFFRA", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CYFFRA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluanmiendich", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluanmiendich", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvanmiendich", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvanmiendich", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_WBC", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "WBC", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_WBC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "WBC", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Gran1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Gran1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Gran2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Gran2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gran2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Lymph1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Lymph1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Lymph2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Lymph2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lymph2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Mon", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Mon", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Mon2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Mon2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mon2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_EOS1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_EOS1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_EOS2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_EOS2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EOS2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Baso1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Baso1", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Baso2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Baso2", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Baso2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_RBC", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RBC", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RBC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RBC", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HGB", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HGB", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HGB", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HGB", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HCT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HCT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HCT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HCT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MCV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MCV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MCH", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCH", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MCH", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCH", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MCHC", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCHC", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MCHC", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MCHC", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_RDWCV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RDWCV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RDWCV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RDWCV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MPV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MPV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MPV", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MPV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PCT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PCT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PCT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PCT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PDW", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDW", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PDW", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDW", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PLT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PLT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PLT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PLT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tsh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tsh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tsh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tsh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ft3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft3", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ft3", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft3", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ft4", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft4", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ft4", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ft4", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Cea", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cea", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cea", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ca153", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca153", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ca153", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca153", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ca125", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca125", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ca125", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca125", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ca724", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca724", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ca724", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca724", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Psa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Psa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Psa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Psa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Afp", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Afp", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Afp", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Afp", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Hbsab", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbsab", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Hbsab", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbsab", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Hbeag", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbeag", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Hbeag", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hbeag", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HBsAg", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HBsAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ca199", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca199", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ca199", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ca199", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CYFFRA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CYFFRA", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CYFFRA", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CYFFRA", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10124,9 +12111,8 @@ Namespace KskDbDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT IdSolieuhoso, WBC, Gran1, Gran2, Lymph1, Lymph2, Mon, Mon2, EOS1, EOS2, Ba"& _ 
-                "so1, Baso2, RBC, HGB, HCT, MCV, MCH, MCHC, RDWCV, MPV, PCT, PDW, PLT FROM dbo.tb"& _ 
-                "TraHuyetHoc"
+            Me._commandCollection(0).CommandText = "SELECT IdSolieuhoso, Tsh, Ft3, Ft4, Cea, Ca153, Ca125, Ca724, Psa, Afp, Hbsab, Hb"& _ 
+                "eag, HBsAg, Ca199, CYFFRA, Ketluanmiendich, Thamvanmiendich FROM dbo.Tbmiendich"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10134,7 +12120,7 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As KskDbDataSet.tbTraHuyetHocDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As KskDbDataSet.TbmiendichDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -10147,9 +12133,9 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As KskDbDataSet.tbTraHuyetHocDataTable
+        Public Overloads Overridable Function GetData() As KskDbDataSet.TbmiendichDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As KskDbDataSet.tbTraHuyetHocDataTable = New KskDbDataSet.tbTraHuyetHocDataTable()
+            Dim dataTable As KskDbDataSet.TbmiendichDataTable = New KskDbDataSet.TbmiendichDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -10157,7 +12143,7 @@ Namespace KskDbDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As KskDbDataSet.tbTraHuyetHocDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As KskDbDataSet.TbmiendichDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -10165,7 +12151,7 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As KskDbDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "tbTraHuyetHoc")
+            Return Me.Adapter.Update(dataSet, "Tbmiendich")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10186,184 +12172,105 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete( _
-                    ByVal Original_IdSolieuhoso As Integer,  _
-                    ByVal Original_WBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Gran1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Gran2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Lymph1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Lymph2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Mon As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Mon2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_EOS1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_EOS2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Baso1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Baso2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_RBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_HGB As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_HCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCH As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCHC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_RDWCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MPV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PDW As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PLT As Global.System.Nullable(Of Boolean)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_IdSolieuhoso As Integer, ByVal Original_Tsh As String, ByVal Original_Ft3 As String, ByVal Original_Ft4 As String, ByVal Original_Cea As String, ByVal Original_Ca153 As String, ByVal Original_Ca125 As String, ByVal Original_Ca724 As String, ByVal Original_Psa As String, ByVal Original_Afp As String, ByVal Original_Hbsab As String, ByVal Original_Hbeag As String, ByVal Original_HBsAg As String, ByVal Original_Ca199 As String, ByVal Original_CYFFRA As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_IdSolieuhoso,Integer)
-            If (Original_WBC.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_WBC.Value,Boolean)
-            Else
+            If (Original_Tsh Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Gran1.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Gran1.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Tsh,String)
+            End If
+            If (Original_Ft3 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Gran2.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Gran2.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Ft3,String)
+            End If
+            If (Original_Ft4 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Lymph1.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Lymph1.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Ft4,String)
+            End If
+            If (Original_Cea Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Lymph2.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Lymph2.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Cea,String)
+            End If
+            If (Original_Ca153 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Mon.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Mon.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Ca153,String)
+            End If
+            If (Original_Ca125 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Mon2.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Mon2.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Ca125,String)
+            End If
+            If (Original_Ca724 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (Original_EOS1.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_EOS1.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Ca724,String)
+            End If
+            If (Original_Psa Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (Original_EOS2.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_EOS2.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Psa,String)
+            End If
+            If (Original_Afp Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Baso1.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Baso1.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Afp,String)
+            End If
+            If (Original_Hbsab Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Baso2.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Baso2.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Hbsab,String)
+            End If
+            If (Original_Hbeag Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
-            If (Original_RBC.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_RBC.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Hbeag,String)
+            End If
+            If (Original_HBsAg Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
-            End If
-            If (Original_HGB.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_HGB.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_HBsAg,String)
+            End If
+            If (Original_Ca199 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
-            End If
-            If (Original_HCT.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_HCT.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_Ca199,String)
+            End If
+            If (Original_CYFFRA Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MCV.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_MCV.Value,Boolean)
             Else
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MCH.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_MCH.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MCHC.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_MCHC.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
-            End If
-            If (Original_RDWCV.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_RDWCV.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MPV.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_MPV.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
-            End If
-            If (Original_PCT.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_PCT.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(40).Value = Global.System.DBNull.Value
-            End If
-            If (Original_PDW.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_PDW.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
-            End If
-            If (Original_PLT.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_PLT.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(44).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_CYFFRA,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -10386,138 +12293,102 @@ Namespace KskDbDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
         Public Overloads Overridable Function Insert( _
                     ByVal IdSolieuhoso As Integer,  _
-                    ByVal WBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Gran1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Gran2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Lymph1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Lymph2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Mon As Global.System.Nullable(Of Boolean),  _
-                    ByVal Mon2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal EOS1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal EOS2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Baso1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Baso2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal RBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal HGB As Global.System.Nullable(Of Boolean),  _
-                    ByVal HCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCH As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCHC As Global.System.Nullable(Of Boolean),  _
-                    ByVal RDWCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal MPV As Global.System.Nullable(Of Boolean),  _
-                    ByVal PCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal PDW As Global.System.Nullable(Of Boolean),  _
-                    ByVal PLT As Global.System.Nullable(Of Boolean)) As Integer
+                    ByVal Tsh As String,  _
+                    ByVal Ft3 As String,  _
+                    ByVal Ft4 As String,  _
+                    ByVal Cea As String,  _
+                    ByVal Ca153 As String,  _
+                    ByVal Ca125 As String,  _
+                    ByVal Ca724 As String,  _
+                    ByVal Psa As String,  _
+                    ByVal Afp As String,  _
+                    ByVal Hbsab As String,  _
+                    ByVal Hbeag As String,  _
+                    ByVal HBsAg As String,  _
+                    ByVal Ca199 As String,  _
+                    ByVal CYFFRA As String,  _
+                    ByVal Ketluanmiendich As String,  _
+                    ByVal Thamvanmiendich As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
-            If (WBC.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(WBC.Value,Boolean)
-            Else
+            If (Tsh Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            If (Gran1.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Gran1.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Tsh,String)
+            End If
+            If (Ft3 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (Gran2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Gran2.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Ft3,String)
+            End If
+            If (Ft4 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (Lymph1.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Lymph1.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Ft4,String)
+            End If
+            If (Cea Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Lymph2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Lymph2.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Cea,String)
+            End If
+            If (Ca153 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            If (Mon.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Mon.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Ca153,String)
+            End If
+            If (Ca125 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Mon2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Mon2.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Ca125,String)
+            End If
+            If (Ca724 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (EOS1.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(EOS1.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Ca724,String)
+            End If
+            If (Psa Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (EOS2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(EOS2.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Psa,String)
+            End If
+            If (Afp Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (Baso1.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Baso1.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Afp,String)
+            End If
+            If (Hbsab Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Baso2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Baso2.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Hbsab,String)
+            End If
+            If (Hbeag Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
-            If (RBC.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(RBC.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Hbeag,String)
+            End If
+            If (HBsAg Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (HGB.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(13).Value = CType(HGB.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(HBsAg,String)
+            End If
+            If (Ca199 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
-            If (HCT.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(HCT.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(Ca199,String)
+            End If
+            If (CYFFRA Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (MCV.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(MCV.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(CYFFRA,String)
+            End If
+            If (Ketluanmiendich Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
-            End If
-            If (MCH.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(16).Value = CType(MCH.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(Ketluanmiendich,String)
+            End If
+            If (Thamvanmiendich Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (MCHC.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(17).Value = CType(MCHC.Value,Boolean)
             Else
-                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
-            End If
-            If (RDWCV.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(18).Value = CType(RDWCV.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (MPV.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(MPV.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (PCT.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(PCT.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (PDW.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(21).Value = CType(PDW.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
-            End If
-            If (PLT.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(PLT.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(16).Value = CType(Thamvanmiendich,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -10540,316 +12411,216 @@ Namespace KskDbDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
                     ByVal IdSolieuhoso As Integer,  _
-                    ByVal WBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Gran1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Gran2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Lymph1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Lymph2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Mon As Global.System.Nullable(Of Boolean),  _
-                    ByVal Mon2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal EOS1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal EOS2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Baso1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Baso2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal RBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal HGB As Global.System.Nullable(Of Boolean),  _
-                    ByVal HCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCH As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCHC As Global.System.Nullable(Of Boolean),  _
-                    ByVal RDWCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal MPV As Global.System.Nullable(Of Boolean),  _
-                    ByVal PCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal PDW As Global.System.Nullable(Of Boolean),  _
-                    ByVal PLT As Global.System.Nullable(Of Boolean),  _
+                    ByVal Tsh As String,  _
+                    ByVal Ft3 As String,  _
+                    ByVal Ft4 As String,  _
+                    ByVal Cea As String,  _
+                    ByVal Ca153 As String,  _
+                    ByVal Ca125 As String,  _
+                    ByVal Ca724 As String,  _
+                    ByVal Psa As String,  _
+                    ByVal Afp As String,  _
+                    ByVal Hbsab As String,  _
+                    ByVal Hbeag As String,  _
+                    ByVal HBsAg As String,  _
+                    ByVal Ca199 As String,  _
+                    ByVal CYFFRA As String,  _
+                    ByVal Ketluanmiendich As String,  _
+                    ByVal Thamvanmiendich As String,  _
                     ByVal Original_IdSolieuhoso As Integer,  _
-                    ByVal Original_WBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Gran1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Gran2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Lymph1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Lymph2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Mon As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Mon2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_EOS1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_EOS2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Baso1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Baso2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_RBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_HGB As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_HCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCH As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCHC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_RDWCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MPV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PDW As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PLT As Global.System.Nullable(Of Boolean)) As Integer
+                    ByVal Original_Tsh As String,  _
+                    ByVal Original_Ft3 As String,  _
+                    ByVal Original_Ft4 As String,  _
+                    ByVal Original_Cea As String,  _
+                    ByVal Original_Ca153 As String,  _
+                    ByVal Original_Ca125 As String,  _
+                    ByVal Original_Ca724 As String,  _
+                    ByVal Original_Psa As String,  _
+                    ByVal Original_Afp As String,  _
+                    ByVal Original_Hbsab As String,  _
+                    ByVal Original_Hbeag As String,  _
+                    ByVal Original_HBsAg As String,  _
+                    ByVal Original_Ca199 As String,  _
+                    ByVal Original_CYFFRA As String) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
-            If (WBC.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(WBC.Value,Boolean)
-            Else
+            If (Tsh Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            If (Gran1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Gran1.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Tsh,String)
+            End If
+            If (Ft3 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (Gran2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Gran2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Ft3,String)
+            End If
+            If (Ft4 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (Lymph1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Lymph1.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Ft4,String)
+            End If
+            If (Cea Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Lymph2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Lymph2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Cea,String)
+            End If
+            If (Ca153 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            If (Mon.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Mon.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Ca153,String)
+            End If
+            If (Ca125 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Mon2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Mon2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Ca125,String)
+            End If
+            If (Ca724 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (EOS1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(EOS1.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Ca724,String)
+            End If
+            If (Psa Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (EOS2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(EOS2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Psa,String)
+            End If
+            If (Afp Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (Baso1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Baso1.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Afp,String)
+            End If
+            If (Hbsab Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Baso2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Baso2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Hbsab,String)
+            End If
+            If (Hbeag Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
-            If (RBC.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(RBC.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Hbeag,String)
+            End If
+            If (HBsAg Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (HGB.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(HGB.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(HBsAg,String)
+            End If
+            If (Ca199 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
-            If (HCT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(HCT.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Ca199,String)
+            End If
+            If (CYFFRA Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (MCV.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(MCV.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(CYFFRA,String)
+            End If
+            If (Ketluanmiendich Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
-            End If
-            If (MCH.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(MCH.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Ketluanmiendich,String)
+            End If
+            If (Thamvanmiendich Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (MCHC.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(MCHC.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Thamvanmiendich,String)
             End If
-            If (RDWCV.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(RDWCV.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (MPV.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(MPV.Value,Boolean)
-            Else
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_Tsh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (PCT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(PCT.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Tsh,String)
             End If
-            If (PDW.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(PDW.Value,Boolean)
-            Else
+            If (Original_Ft3 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
-            End If
-            If (PLT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(PLT.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Ft3,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_IdSolieuhoso,Integer)
-            If (Original_WBC.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_WBC.Value,Boolean)
+            If (Original_Ft4 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_Ft4,String)
+            End If
+            If (Original_Cea Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Gran1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Gran1.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Cea,String)
+            End If
+            If (Original_Ca153 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Gran2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_Gran2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Ca153,String)
+            End If
+            If (Original_Ca125 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Lymph1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_Lymph1.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_Ca125,String)
+            End If
+            If (Original_Ca724 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Lymph2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_Lymph2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_Ca724,String)
+            End If
+            If (Original_Psa Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Mon.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Mon.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_Psa,String)
+            End If
+            If (Original_Afp Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Mon2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_Mon2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Afp,String)
+            End If
+            If (Original_Hbsab Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
-            End If
-            If (Original_EOS1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_EOS1.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_Hbsab,String)
+            End If
+            If (Original_Hbeag Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(38).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
-            End If
-            If (Original_EOS2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_EOS2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_Hbeag,String)
+            End If
+            If (Original_HBsAg Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(40).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Baso1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_Baso1.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_HBsAg,String)
+            End If
+            If (Original_Ca199 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(42).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Baso2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_Baso2.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_Ca199,String)
+            End If
+            If (Original_CYFFRA Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(44).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(45).Value = Global.System.DBNull.Value
-            End If
-            If (Original_RBC.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(Original_RBC.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(47).Value = Global.System.DBNull.Value
-            End If
-            If (Original_HGB.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(Original_HGB.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(49).Value = Global.System.DBNull.Value
-            End If
-            If (Original_HCT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(Original_HCT.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(51).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MCV.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(Original_MCV.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(53).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MCH.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(Original_MCH.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(55).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MCHC.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(Original_MCHC.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(57).Value = Global.System.DBNull.Value
-            End If
-            If (Original_RDWCV.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(Original_RDWCV.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(59).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MPV.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(Original_MPV.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(61).Value = Global.System.DBNull.Value
-            End If
-            If (Original_PCT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(Original_PCT.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(63).Value = Global.System.DBNull.Value
-            End If
-            If (Original_PDW.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(Original_PDW.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(65).Value = Global.System.DBNull.Value
-            End If
-            If (Original_PLT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_PLT.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(67).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_CYFFRA,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -10871,52 +12642,38 @@ Namespace KskDbDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal WBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Gran1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Gran2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Lymph1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Lymph2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Mon As Global.System.Nullable(Of Boolean),  _
-                    ByVal Mon2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal EOS1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal EOS2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Baso1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Baso2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal RBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal HGB As Global.System.Nullable(Of Boolean),  _
-                    ByVal HCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCH As Global.System.Nullable(Of Boolean),  _
-                    ByVal MCHC As Global.System.Nullable(Of Boolean),  _
-                    ByVal RDWCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal MPV As Global.System.Nullable(Of Boolean),  _
-                    ByVal PCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal PDW As Global.System.Nullable(Of Boolean),  _
-                    ByVal PLT As Global.System.Nullable(Of Boolean),  _
+                    ByVal Tsh As String,  _
+                    ByVal Ft3 As String,  _
+                    ByVal Ft4 As String,  _
+                    ByVal Cea As String,  _
+                    ByVal Ca153 As String,  _
+                    ByVal Ca125 As String,  _
+                    ByVal Ca724 As String,  _
+                    ByVal Psa As String,  _
+                    ByVal Afp As String,  _
+                    ByVal Hbsab As String,  _
+                    ByVal Hbeag As String,  _
+                    ByVal HBsAg As String,  _
+                    ByVal Ca199 As String,  _
+                    ByVal CYFFRA As String,  _
+                    ByVal Ketluanmiendich As String,  _
+                    ByVal Thamvanmiendich As String,  _
                     ByVal Original_IdSolieuhoso As Integer,  _
-                    ByVal Original_WBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Gran1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Gran2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Lymph1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Lymph2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Mon As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Mon2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_EOS1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_EOS2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Baso1 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Baso2 As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_RBC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_HGB As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_HCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCH As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MCHC As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_RDWCV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_MPV As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PCT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PDW As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_PLT As Global.System.Nullable(Of Boolean)) As Integer
-            Return Me.Update(Original_IdSolieuhoso, WBC, Gran1, Gran2, Lymph1, Lymph2, Mon, Mon2, EOS1, EOS2, Baso1, Baso2, RBC, HGB, HCT, MCV, MCH, MCHC, RDWCV, MPV, PCT, PDW, PLT, Original_IdSolieuhoso, Original_WBC, Original_Gran1, Original_Gran2, Original_Lymph1, Original_Lymph2, Original_Mon, Original_Mon2, Original_EOS1, Original_EOS2, Original_Baso1, Original_Baso2, Original_RBC, Original_HGB, Original_HCT, Original_MCV, Original_MCH, Original_MCHC, Original_RDWCV, Original_MPV, Original_PCT, Original_PDW, Original_PLT)
+                    ByVal Original_Tsh As String,  _
+                    ByVal Original_Ft3 As String,  _
+                    ByVal Original_Ft4 As String,  _
+                    ByVal Original_Cea As String,  _
+                    ByVal Original_Ca153 As String,  _
+                    ByVal Original_Ca125 As String,  _
+                    ByVal Original_Ca724 As String,  _
+                    ByVal Original_Psa As String,  _
+                    ByVal Original_Afp As String,  _
+                    ByVal Original_Hbsab As String,  _
+                    ByVal Original_Hbeag As String,  _
+                    ByVal Original_HBsAg As String,  _
+                    ByVal Original_Ca199 As String,  _
+                    ByVal Original_CYFFRA As String) As Integer
+            Return Me.Update(Original_IdSolieuhoso, Tsh, Ft3, Ft4, Cea, Ca153, Ca125, Ca724, Psa, Afp, Hbsab, Hbeag, HBsAg, Ca199, CYFFRA, Ketluanmiendich, Thamvanmiendich, Original_IdSolieuhoso, Original_Tsh, Original_Ft3, Original_Ft4, Original_Cea, Original_Ca153, Original_Ca125, Original_Ca724, Original_Psa, Original_Afp, Original_Hbsab, Original_Hbeag, Original_HBsAg, Original_Ca199, Original_CYFFRA)
         End Function
     End Class
     
@@ -10929,7 +12686,7 @@ Namespace KskDbDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class tbTraPhanTichNuocTieuTableAdapter
+    Partial Public Class TbSoiamdaoTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -11046,448 +12803,114 @@ Namespace KskDbDataSetTableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "tbTraPhanTichNuocTieu"
+            tableMapping.DataSetTable = "TbSoiamdao"
             tableMapping.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
-            tableMapping.ColumnMappings.Add("BIL", "BIL")
-            tableMapping.ColumnMappings.Add("BLOOD", "BLOOD")
-            tableMapping.ColumnMappings.Add("GLU", "GLU")
-            tableMapping.ColumnMappings.Add("KET", "KET")
-            tableMapping.ColumnMappings.Add("LEU", "LEU")
-            tableMapping.ColumnMappings.Add("NIT", "NIT")
-            tableMapping.ColumnMappings.Add("PH", "PH")
-            tableMapping.ColumnMappings.Add("PRO", "PRO")
-            tableMapping.ColumnMappings.Add("SG", "SG")
-            tableMapping.ColumnMappings.Add("URO", "URO")
-            Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbTraPhanTichNuocTieu] ([IdSolieuhoso], [BIL], [BLOOD], [GLU],"& _ 
-                " [KET], [LEU], [NIT], [PH], [PRO], [SG], [URO]) VALUES (@IdSolieuhoso, @BIL, @BL"& _ 
-                "OOD, @GLU, @KET, @LEU, @NIT, @PH, @PRO, @SG, @URO)"
-            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BIL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BIL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BLOOD", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BLOOD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GLU", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GLU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@KET", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "KET", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LEU", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LEU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NIT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NIT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PH", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PH", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PRO", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PRO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SG", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SG", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@URO", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "URO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitConnection()
-            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = "Data Source=115.79.219.161,1589;Initial Catalog=KskDb;User ID=KS;Password=Da@123"
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
-            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT IdSolieuhoso, BIL, BLOOD, GLU, KET, LEU, NIT, PH, PRO, SG, URO FROM dbo.tb"& _ 
-                "TraPhanTichNuocTieu"
-            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As KskDbDataSet.tbTraPhanTichNuocTieuDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As KskDbDataSet.tbTraPhanTichNuocTieuDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As KskDbDataSet.tbTraPhanTichNuocTieuDataTable = New KskDbDataSet.tbTraPhanTichNuocTieuDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As KskDbDataSet.tbTraPhanTichNuocTieuDataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As KskDbDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "tbTraPhanTichNuocTieu")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IdSolieuhoso As Global.System.Nullable(Of Integer), ByVal BIL As Global.System.Nullable(Of Boolean), ByVal BLOOD As Global.System.Nullable(Of Boolean), ByVal GLU As Global.System.Nullable(Of Boolean), ByVal KET As Global.System.Nullable(Of Boolean), ByVal LEU As Global.System.Nullable(Of Boolean), ByVal NIT As Global.System.Nullable(Of Boolean), ByVal PH As Global.System.Nullable(Of Boolean), ByVal PRO As Global.System.Nullable(Of Boolean), ByVal SG As Global.System.Nullable(Of Boolean), ByVal URO As Global.System.Nullable(Of Boolean)) As Integer
-            If (IdSolieuhoso.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdSolieuhoso.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
-            End If
-            If (BIL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(BIL.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            If (BLOOD.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(BLOOD.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (GLU.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(GLU.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (KET.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(KET.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (LEU.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(LEU.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            If (NIT.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(NIT.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (PH.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(PH.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (PRO.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(PRO.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (SG.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(SG.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (URO.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(URO.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the connection and commands used to retrieve and save data.
-    '''</summary>
-    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
-     Global.System.ComponentModel.ToolboxItem(true),  _
-     Global.System.ComponentModel.DataObjectAttribute(true),  _
-     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
-     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class tbTraSinhHoaTableAdapter
-        Inherits Global.System.ComponentModel.Component
-        
-        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
-        
-        Private _connection As Global.System.Data.SqlClient.SqlConnection
-        
-        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
-        
-        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
-        
-        Private _clearBeforeFill As Boolean
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.ClearBeforeFill = true
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
-            Get
-                If (Me._adapter Is Nothing) Then
-                    Me.InitAdapter
-                End If
-                Return Me._adapter
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
-            Get
-                If (Me._connection Is Nothing) Then
-                    Me.InitConnection
-                End If
-                Return Me._connection
-            End Get
-            Set
-                Me._connection = value
-                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
-                    Me.Adapter.InsertCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
-                    Me.Adapter.DeleteCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
-                    Me.Adapter.UpdateCommand.Connection = value
-                End If
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
-                    End If
-                    i = (i + 1)
-                Loop
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
-            Get
-                Return Me._transaction
-            End Get
-            Set
-                Me._transaction = value
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    Me.CommandCollection(i).Transaction = Me._transaction
-                    i = (i + 1)
-                Loop
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
-                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
-                    Me.Adapter.InsertCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
-                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
-                End If
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
-            Get
-                If (Me._commandCollection Is Nothing) Then
-                    Me.InitCommandCollection
-                End If
-                Return Me._commandCollection
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ClearBeforeFill() As Boolean
-            Get
-                Return Me._clearBeforeFill
-            End Get
-            Set
-                Me._clearBeforeFill = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitAdapter()
-            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
-            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
-            tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "tbTraSinhHoa"
-            tableMapping.ColumnMappings.Add("Idsolieuhoso", "Idsolieuhoso")
-            tableMapping.ColumnMappings.Add("AST", "AST")
-            tableMapping.ColumnMappings.Add("ALT", "ALT")
-            tableMapping.ColumnMappings.Add("GGT", "GGT")
-            tableMapping.ColumnMappings.Add("Glucose", "Glucose")
-            tableMapping.ColumnMappings.Add("Creatine", "Creatine")
-            tableMapping.ColumnMappings.Add("Ure", "Ure")
-            tableMapping.ColumnMappings.Add("Cholesterol", "Cholesterol")
-            tableMapping.ColumnMappings.Add("Triglyceride", "Triglyceride")
-            tableMapping.ColumnMappings.Add("HDL", "HDL")
-            tableMapping.ColumnMappings.Add("LDL", "LDL")
-            tableMapping.ColumnMappings.Add("Uric", "Uric")
-            tableMapping.ColumnMappings.Add("Protein", "Protein")
+            tableMapping.ColumnMappings.Add("Tebaobieumo", "Tebaobieumo")
+            tableMapping.ColumnMappings.Add("Soituoiamdaobachcau", "Soituoiamdaobachcau")
+            tableMapping.ColumnMappings.Add("Soituoiamdaohongcau", "Soituoiamdaohongcau")
+            tableMapping.ColumnMappings.Add("Nam", "Nam")
+            tableMapping.ColumnMappings.Add("Soitonamgia", "Soitonamgia")
+            tableMapping.ColumnMappings.Add("Trichomonasvaginalis", "Trichomonasvaginalis")
+            tableMapping.ColumnMappings.Add("Tapkhuan", "Tapkhuan")
+            tableMapping.ColumnMappings.Add("Ketluansoiamdao", "Ketluansoiamdao")
+            tableMapping.ColumnMappings.Add("Thamvansoiamdao", "Thamvansoiamdao")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbTraSinhHoa] WHERE (([Idsolieuhoso] = @Original_Idsolieuhoso)"& _ 
-                " AND ((@IsNull_AST = 1 AND [AST] IS NULL) OR ([AST] = @Original_AST)) AND ((@IsN"& _ 
-                "ull_ALT = 1 AND [ALT] IS NULL) OR ([ALT] = @Original_ALT)) AND ((@IsNull_GGT = 1"& _ 
-                " AND [GGT] IS NULL) OR ([GGT] = @Original_GGT)) AND ((@IsNull_Glucose = 1 AND [G"& _ 
-                "lucose] IS NULL) OR ([Glucose] = @Original_Glucose)) AND ((@IsNull_Creatine = 1 "& _ 
-                "AND [Creatine] IS NULL) OR ([Creatine] = @Original_Creatine)) AND ((@IsNull_Ure "& _ 
-                "= 1 AND [Ure] IS NULL) OR ([Ure] = @Original_Ure)) AND ((@IsNull_Cholesterol = 1"& _ 
-                " AND [Cholesterol] IS NULL) OR ([Cholesterol] = @Original_Cholesterol)) AND ((@I"& _ 
-                "sNull_Triglyceride = 1 AND [Triglyceride] IS NULL) OR ([Triglyceride] = @Origina"& _ 
-                "l_Triglyceride)) AND ((@IsNull_HDL = 1 AND [HDL] IS NULL) OR ([HDL] = @Original_"& _ 
-                "HDL)) AND ((@IsNull_LDL = 1 AND [LDL] IS NULL) OR ([LDL] = @Original_LDL)) AND ("& _ 
-                "(@IsNull_Uric = 1 AND [Uric] IS NULL) OR ([Uric] = @Original_Uric)) AND ((@IsNul"& _ 
-                "l_Protein = 1 AND [Protein] IS NULL) OR ([Protein] = @Original_Protein)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TbSoiamdao] WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso) A"& _ 
+                "ND ((@IsNull_Tebaobieumo = 1 AND [Tebaobieumo] IS NULL) OR ([Tebaobieumo] = @Ori"& _ 
+                "ginal_Tebaobieumo)) AND ((@IsNull_Soituoiamdaobachcau = 1 AND [Soituoiamdaobachc"& _ 
+                "au] IS NULL) OR ([Soituoiamdaobachcau] = @Original_Soituoiamdaobachcau)) AND ((@"& _ 
+                "IsNull_Soituoiamdaohongcau = 1 AND [Soituoiamdaohongcau] IS NULL) OR ([Soituoiam"& _ 
+                "daohongcau] = @Original_Soituoiamdaohongcau)) AND ((@IsNull_Nam = 1 AND [Nam] IS"& _ 
+                " NULL) OR ([Nam] = @Original_Nam)) AND ((@IsNull_Soitonamgia = 1 AND [Soitonamgi"& _ 
+                "a] IS NULL) OR ([Soitonamgia] = @Original_Soitonamgia)) AND ((@IsNull_Trichomona"& _ 
+                "svaginalis = 1 AND [Trichomonasvaginalis] IS NULL) OR ([Trichomonasvaginalis] = "& _ 
+                "@Original_Trichomonasvaginalis)) AND ((@IsNull_Tapkhuan = 1 AND [Tapkhuan] IS NU"& _ 
+                "LL) OR ([Tapkhuan] = @Original_Tapkhuan)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Idsolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idsolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_AST", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AST", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AST", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AST", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ALT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ALT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ALT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ALT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_GGT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GGT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_GGT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GGT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Glucose", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Glucose", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Glucose", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Glucose", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Creatine", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Creatine", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Creatine", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Creatine", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ure", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ure", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ure", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ure", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Cholesterol", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cholesterol", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cholesterol", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cholesterol", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Triglyceride", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Triglyceride", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Triglyceride", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Triglyceride", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HDL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HDL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HDL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HDL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_LDL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LDL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_LDL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LDL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Uric", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Uric", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Uric", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Uric", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Protein", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Protein", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Protein", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Protein", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tebaobieumo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tebaobieumo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tebaobieumo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tebaobieumo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soituoiamdaobachcau", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaobachcau", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soituoiamdaobachcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaobachcau", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soituoiamdaohongcau", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaohongcau", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soituoiamdaohongcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaohongcau", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Nam", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nam", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nam", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nam", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soitonamgia", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soitonamgia", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soitonamgia", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soitonamgia", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Trichomonasvaginalis", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Trichomonasvaginalis", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Trichomonasvaginalis", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Trichomonasvaginalis", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tapkhuan", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tapkhuan", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tapkhuan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tapkhuan", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbTraSinhHoa] ([Idsolieuhoso], [AST], [ALT], [GGT], [Glucose],"& _ 
-                " [Creatine], [Ure], [Cholesterol], [Triglyceride], [HDL], [LDL], [Uric], [Protei"& _ 
-                "n]) VALUES (@Idsolieuhoso, @AST, @ALT, @GGT, @Glucose, @Creatine, @Ure, @Cholest"& _ 
-                "erol, @Triglyceride, @HDL, @LDL, @Uric, @Protein);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Idsolieuhoso, AST, AL"& _ 
-                "T, GGT, Glucose, Creatine, Ure, Cholesterol, Triglyceride, HDL, LDL, Uric, Prote"& _ 
-                "in FROM tbTraSinhHoa WHERE (Idsolieuhoso = @Idsolieuhoso)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TbSoiamdao] ([IdSolieuhoso], [Tebaobieumo], [Soituoiamdaobachc"& _ 
+                "au], [Soituoiamdaohongcau], [Nam], [Soitonamgia], [Trichomonasvaginalis], [Tapkh"& _ 
+                "uan], [Ketluansoiamdao], [Thamvansoiamdao]) VALUES (@IdSolieuhoso, @Tebaobieumo,"& _ 
+                " @Soituoiamdaobachcau, @Soituoiamdaohongcau, @Nam, @Soitonamgia, @Trichomonasvag"& _ 
+                "inalis, @Tapkhuan, @Ketluansoiamdao, @Thamvansoiamdao);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, Te"& _ 
+                "baobieumo, Soituoiamdaobachcau, Soituoiamdaohongcau, Nam, Soitonamgia, Trichomon"& _ 
+                "asvaginalis, Tapkhuan, Ketluansoiamdao, Thamvansoiamdao FROM TbSoiamdao WHERE (I"& _ 
+                "dSolieuhoso = @IdSolieuhoso)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Idsolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idsolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AST", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AST", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ALT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ALT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GGT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GGT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Glucose", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Glucose", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Creatine", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Creatine", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ure", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ure", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cholesterol", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cholesterol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Triglyceride", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Triglyceride", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HDL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HDL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LDL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LDL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Uric", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Uric", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Protein", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Protein", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tebaobieumo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tebaobieumo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soituoiamdaobachcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaobachcau", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soituoiamdaohongcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaohongcau", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nam", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nam", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soitonamgia", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soitonamgia", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Trichomonasvaginalis", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Trichomonasvaginalis", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tapkhuan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tapkhuan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluansoiamdao", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluansoiamdao", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvansoiamdao", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvansoiamdao", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbTraSinhHoa] SET [Idsolieuhoso] = @Idsolieuhoso, [AST] = @AST, [AL"& _ 
-                "T] = @ALT, [GGT] = @GGT, [Glucose] = @Glucose, [Creatine] = @Creatine, [Ure] = @"& _ 
-                "Ure, [Cholesterol] = @Cholesterol, [Triglyceride] = @Triglyceride, [HDL] = @HDL,"& _ 
-                " [LDL] = @LDL, [Uric] = @Uric, [Protein] = @Protein WHERE (([Idsolieuhoso] = @Or"& _ 
-                "iginal_Idsolieuhoso) AND ((@IsNull_AST = 1 AND [AST] IS NULL) OR ([AST] = @Origi"& _ 
-                "nal_AST)) AND ((@IsNull_ALT = 1 AND [ALT] IS NULL) OR ([ALT] = @Original_ALT)) A"& _ 
-                "ND ((@IsNull_GGT = 1 AND [GGT] IS NULL) OR ([GGT] = @Original_GGT)) AND ((@IsNul"& _ 
-                "l_Glucose = 1 AND [Glucose] IS NULL) OR ([Glucose] = @Original_Glucose)) AND ((@"& _ 
-                "IsNull_Creatine = 1 AND [Creatine] IS NULL) OR ([Creatine] = @Original_Creatine)"& _ 
-                ") AND ((@IsNull_Ure = 1 AND [Ure] IS NULL) OR ([Ure] = @Original_Ure)) AND ((@Is"& _ 
-                "Null_Cholesterol = 1 AND [Cholesterol] IS NULL) OR ([Cholesterol] = @Original_Ch"& _ 
-                "olesterol)) AND ((@IsNull_Triglyceride = 1 AND [Triglyceride] IS NULL) OR ([Trig"& _ 
-                "lyceride] = @Original_Triglyceride)) AND ((@IsNull_HDL = 1 AND [HDL] IS NULL) OR"& _ 
-                " ([HDL] = @Original_HDL)) AND ((@IsNull_LDL = 1 AND [LDL] IS NULL) OR ([LDL] = @"& _ 
-                "Original_LDL)) AND ((@IsNull_Uric = 1 AND [Uric] IS NULL) OR ([Uric] = @Original"& _ 
-                "_Uric)) AND ((@IsNull_Protein = 1 AND [Protein] IS NULL) OR ([Protein] = @Origin"& _ 
-                "al_Protein)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Idsolieuhoso, AST, ALT, GGT, Glucose, Creatine, Ure, Chol"& _ 
-                "esterol, Triglyceride, HDL, LDL, Uric, Protein FROM tbTraSinhHoa WHERE (Idsolieu"& _ 
-                "hoso = @Idsolieuhoso)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[TbSoiamdao] SET [IdSolieuhoso] = @IdSolieuhoso, [Tebaobieumo] = @Te"& _ 
+                "baobieumo, [Soituoiamdaobachcau] = @Soituoiamdaobachcau, [Soituoiamdaohongcau] ="& _ 
+                " @Soituoiamdaohongcau, [Nam] = @Nam, [Soitonamgia] = @Soitonamgia, [Trichomonasv"& _ 
+                "aginalis] = @Trichomonasvaginalis, [Tapkhuan] = @Tapkhuan, [Ketluansoiamdao] = @"& _ 
+                "Ketluansoiamdao, [Thamvansoiamdao] = @Thamvansoiamdao WHERE (([IdSolieuhoso] = @"& _ 
+                "Original_IdSolieuhoso) AND ((@IsNull_Tebaobieumo = 1 AND [Tebaobieumo] IS NULL) "& _ 
+                "OR ([Tebaobieumo] = @Original_Tebaobieumo)) AND ((@IsNull_Soituoiamdaobachcau = "& _ 
+                "1 AND [Soituoiamdaobachcau] IS NULL) OR ([Soituoiamdaobachcau] = @Original_Soitu"& _ 
+                "oiamdaobachcau)) AND ((@IsNull_Soituoiamdaohongcau = 1 AND [Soituoiamdaohongcau]"& _ 
+                " IS NULL) OR ([Soituoiamdaohongcau] = @Original_Soituoiamdaohongcau)) AND ((@IsN"& _ 
+                "ull_Nam = 1 AND [Nam] IS NULL) OR ([Nam] = @Original_Nam)) AND ((@IsNull_Soitona"& _ 
+                "mgia = 1 AND [Soitonamgia] IS NULL) OR ([Soitonamgia] = @Original_Soitonamgia)) "& _ 
+                "AND ((@IsNull_Trichomonasvaginalis = 1 AND [Trichomonasvaginalis] IS NULL) OR (["& _ 
+                "Trichomonasvaginalis] = @Original_Trichomonasvaginalis)) AND ((@IsNull_Tapkhuan "& _ 
+                "= 1 AND [Tapkhuan] IS NULL) OR ([Tapkhuan] = @Original_Tapkhuan)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSo"& _ 
+                "lieuhoso, Tebaobieumo, Soituoiamdaobachcau, Soituoiamdaohongcau, Nam, Soitonamgi"& _ 
+                "a, Trichomonasvaginalis, Tapkhuan, Ketluansoiamdao, Thamvansoiamdao FROM TbSoiam"& _ 
+                "dao WHERE (IdSolieuhoso = @IdSolieuhoso)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Idsolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idsolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AST", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AST", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ALT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ALT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GGT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GGT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Glucose", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Glucose", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Creatine", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Creatine", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ure", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ure", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cholesterol", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cholesterol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Triglyceride", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Triglyceride", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HDL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HDL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LDL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LDL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Uric", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Uric", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Protein", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Protein", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Idsolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idsolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_AST", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AST", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AST", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AST", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ALT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ALT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ALT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ALT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_GGT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GGT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_GGT", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GGT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Glucose", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Glucose", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Glucose", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Glucose", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Creatine", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Creatine", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Creatine", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Creatine", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ure", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ure", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ure", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ure", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Cholesterol", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cholesterol", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cholesterol", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cholesterol", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Triglyceride", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Triglyceride", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Triglyceride", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Triglyceride", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HDL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HDL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HDL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HDL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_LDL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LDL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_LDL", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LDL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Uric", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Uric", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Uric", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Uric", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Protein", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Protein", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Protein", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Protein", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tebaobieumo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tebaobieumo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soituoiamdaobachcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaobachcau", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soituoiamdaohongcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaohongcau", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nam", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nam", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soitonamgia", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soitonamgia", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Trichomonasvaginalis", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Trichomonasvaginalis", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tapkhuan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tapkhuan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluansoiamdao", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluansoiamdao", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvansoiamdao", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvansoiamdao", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tebaobieumo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tebaobieumo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tebaobieumo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tebaobieumo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soituoiamdaobachcau", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaobachcau", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soituoiamdaobachcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaobachcau", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soituoiamdaohongcau", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaohongcau", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soituoiamdaohongcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiamdaohongcau", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Nam", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nam", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nam", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nam", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soitonamgia", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soitonamgia", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soitonamgia", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soitonamgia", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Trichomonasvaginalis", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Trichomonasvaginalis", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Trichomonasvaginalis", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Trichomonasvaginalis", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tapkhuan", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tapkhuan", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tapkhuan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tapkhuan", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11503,8 +12926,9 @@ Namespace KskDbDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Idsolieuhoso, AST, ALT, GGT, Glucose, Creatine, Ure, Cholesterol, Triglyce"& _ 
-                "ride, HDL, LDL, Uric, Protein FROM dbo.tbTraSinhHoa"
+            Me._commandCollection(0).CommandText = "SELECT IdSolieuhoso, Tebaobieumo, Soituoiamdaobachcau, Soituoiamdaohongcau, Nam, "& _ 
+                "Soitonamgia, Trichomonasvaginalis, Tapkhuan, Ketluansoiamdao, Thamvansoiamdao FR"& _ 
+                "OM dbo.TbSoiamdao"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -11512,7 +12936,7 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As KskDbDataSet.tbTraSinhHoaDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As KskDbDataSet.TbSoiamdaoDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -11525,9 +12949,9 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As KskDbDataSet.tbTraSinhHoaDataTable
+        Public Overloads Overridable Function GetData() As KskDbDataSet.TbSoiamdaoDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As KskDbDataSet.tbTraSinhHoaDataTable = New KskDbDataSet.tbTraSinhHoaDataTable()
+            Dim dataTable As KskDbDataSet.TbSoiamdaoDataTable = New KskDbDataSet.TbSoiamdaoDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -11535,7 +12959,7 @@ Namespace KskDbDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As KskDbDataSet.tbTraSinhHoaDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As KskDbDataSet.TbSoiamdaoDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -11543,7 +12967,7 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As KskDbDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "tbTraSinhHoa")
+            Return Me.Adapter.Update(dataSet, "TbSoiamdao")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11564,91 +12988,56 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Idsolieuhoso As Integer, ByVal Original_AST As Global.System.Nullable(Of Boolean), ByVal Original_ALT As Global.System.Nullable(Of Boolean), ByVal Original_GGT As Global.System.Nullable(Of Boolean), ByVal Original_Glucose As Global.System.Nullable(Of Boolean), ByVal Original_Creatine As Global.System.Nullable(Of Boolean), ByVal Original_Ure As Global.System.Nullable(Of Boolean), ByVal Original_Cholesterol As Global.System.Nullable(Of Boolean), ByVal Original_Triglyceride As Global.System.Nullable(Of Boolean), ByVal Original_HDL As Global.System.Nullable(Of Boolean), ByVal Original_LDL As Global.System.Nullable(Of Boolean), ByVal Original_Uric As Global.System.Nullable(Of Boolean), ByVal Original_Protein As Global.System.Nullable(Of Boolean)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Idsolieuhoso,Integer)
-            If (Original_AST.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_AST.Value,Boolean)
-            Else
+        Public Overloads Overridable Function Delete(ByVal Original_IdSolieuhoso As Integer, ByVal Original_Tebaobieumo As String, ByVal Original_Soituoiamdaobachcau As String, ByVal Original_Soituoiamdaohongcau As String, ByVal Original_Nam As String, ByVal Original_Soitonamgia As String, ByVal Original_Trichomonasvaginalis As String, ByVal Original_Tapkhuan As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_Tebaobieumo Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (Original_ALT.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_ALT.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Tebaobieumo,String)
+            End If
+            If (Original_Soituoiamdaobachcau Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Original_GGT.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_GGT.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Soituoiamdaobachcau,String)
+            End If
+            If (Original_Soituoiamdaohongcau Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Glucose.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Glucose.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Soituoiamdaohongcau,String)
+            End If
+            If (Original_Nam Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Creatine.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Creatine.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Nam,String)
+            End If
+            If (Original_Soitonamgia Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Ure.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Ure.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Soitonamgia,String)
+            End If
+            If (Original_Trichomonasvaginalis Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Cholesterol.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Cholesterol.Value,Boolean)
             Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Trichomonasvaginalis,String)
+            End If
+            If (Original_Tapkhuan Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Triglyceride.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Triglyceride.Value,Boolean)
             Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (Original_HDL.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_HDL.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (Original_LDL.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_LDL.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Uric.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Uric.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Protein.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_Protein.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Tapkhuan,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -11669,67 +13058,52 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Idsolieuhoso As Integer, ByVal AST As Global.System.Nullable(Of Boolean), ByVal ALT As Global.System.Nullable(Of Boolean), ByVal GGT As Global.System.Nullable(Of Boolean), ByVal Glucose As Global.System.Nullable(Of Boolean), ByVal Creatine As Global.System.Nullable(Of Boolean), ByVal Ure As Global.System.Nullable(Of Boolean), ByVal Cholesterol As Global.System.Nullable(Of Boolean), ByVal Triglyceride As Global.System.Nullable(Of Boolean), ByVal HDL As Global.System.Nullable(Of Boolean), ByVal LDL As Global.System.Nullable(Of Boolean), ByVal Uric As Global.System.Nullable(Of Boolean), ByVal Protein As Global.System.Nullable(Of Boolean)) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(Idsolieuhoso,Integer)
-            If (AST.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(AST.Value,Boolean)
-            Else
+        Public Overloads Overridable Function Insert(ByVal IdSolieuhoso As Integer, ByVal Tebaobieumo As String, ByVal Soituoiamdaobachcau As String, ByVal Soituoiamdaohongcau As String, ByVal Nam As String, ByVal Soitonamgia As String, ByVal Trichomonasvaginalis As String, ByVal Tapkhuan As String, ByVal Ketluansoiamdao As String, ByVal Thamvansoiamdao As String) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
+            If (Tebaobieumo Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            If (ALT.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(ALT.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Tebaobieumo,String)
+            End If
+            If (Soituoiamdaobachcau Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (GGT.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(GGT.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Soituoiamdaobachcau,String)
+            End If
+            If (Soituoiamdaohongcau Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (Glucose.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Glucose.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Soituoiamdaohongcau,String)
+            End If
+            If (Nam Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Creatine.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Creatine.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Nam,String)
+            End If
+            If (Soitonamgia Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            If (Ure.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Ure.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Soitonamgia,String)
+            End If
+            If (Trichomonasvaginalis Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Cholesterol.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Cholesterol.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Trichomonasvaginalis,String)
+            End If
+            If (Tapkhuan Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (Triglyceride.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Triglyceride.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Tapkhuan,String)
+            End If
+            If (Ketluansoiamdao Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (HDL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(HDL.Value,Boolean)
             Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Ketluansoiamdao,String)
+            End If
+            If (Thamvansoiamdao Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (LDL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(LDL.Value,Boolean)
             Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Uric.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Uric.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
-            If (Protein.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(Protein.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Thamvansoiamdao,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -11751,177 +13125,119 @@ Namespace KskDbDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal Idsolieuhoso As Integer,  _
-                    ByVal AST As Global.System.Nullable(Of Boolean),  _
-                    ByVal ALT As Global.System.Nullable(Of Boolean),  _
-                    ByVal GGT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Glucose As Global.System.Nullable(Of Boolean),  _
-                    ByVal Creatine As Global.System.Nullable(Of Boolean),  _
-                    ByVal Ure As Global.System.Nullable(Of Boolean),  _
-                    ByVal Cholesterol As Global.System.Nullable(Of Boolean),  _
-                    ByVal Triglyceride As Global.System.Nullable(Of Boolean),  _
-                    ByVal HDL As Global.System.Nullable(Of Boolean),  _
-                    ByVal LDL As Global.System.Nullable(Of Boolean),  _
-                    ByVal Uric As Global.System.Nullable(Of Boolean),  _
-                    ByVal Protein As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Idsolieuhoso As Integer,  _
-                    ByVal Original_AST As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_ALT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_GGT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Glucose As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Creatine As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Ure As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Cholesterol As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Triglyceride As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_HDL As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_LDL As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Uric As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Protein As Global.System.Nullable(Of Boolean)) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Idsolieuhoso,Integer)
-            If (AST.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(AST.Value,Boolean)
-            Else
+                    ByVal IdSolieuhoso As Integer,  _
+                    ByVal Tebaobieumo As String,  _
+                    ByVal Soituoiamdaobachcau As String,  _
+                    ByVal Soituoiamdaohongcau As String,  _
+                    ByVal Nam As String,  _
+                    ByVal Soitonamgia As String,  _
+                    ByVal Trichomonasvaginalis As String,  _
+                    ByVal Tapkhuan As String,  _
+                    ByVal Ketluansoiamdao As String,  _
+                    ByVal Thamvansoiamdao As String,  _
+                    ByVal Original_IdSolieuhoso As Integer,  _
+                    ByVal Original_Tebaobieumo As String,  _
+                    ByVal Original_Soituoiamdaobachcau As String,  _
+                    ByVal Original_Soituoiamdaohongcau As String,  _
+                    ByVal Original_Nam As String,  _
+                    ByVal Original_Soitonamgia As String,  _
+                    ByVal Original_Trichomonasvaginalis As String,  _
+                    ByVal Original_Tapkhuan As String) As Integer
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
+            If (Tebaobieumo Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            If (ALT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(ALT.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Tebaobieumo,String)
+            End If
+            If (Soituoiamdaobachcau Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (GGT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(GGT.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Soituoiamdaobachcau,String)
+            End If
+            If (Soituoiamdaohongcau Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (Glucose.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Glucose.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Soituoiamdaohongcau,String)
+            End If
+            If (Nam Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Creatine.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Creatine.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Nam,String)
+            End If
+            If (Soitonamgia Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            If (Ure.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Ure.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Soitonamgia,String)
+            End If
+            If (Trichomonasvaginalis Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Cholesterol.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Cholesterol.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Trichomonasvaginalis,String)
+            End If
+            If (Tapkhuan Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (Triglyceride.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Triglyceride.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Tapkhuan,String)
+            End If
+            If (Ketluansoiamdao Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (HDL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(HDL.Value,Boolean)
             Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Ketluansoiamdao,String)
+            End If
+            If (Thamvansoiamdao Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (LDL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(LDL.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Thamvansoiamdao,String)
             End If
-            If (Uric.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Uric.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
-            If (Protein.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Protein.Value,Boolean)
-            Else
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_Tebaobieumo Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Idsolieuhoso,Integer)
-            If (Original_AST.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_AST.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Tebaobieumo,String)
             End If
-            If (Original_ALT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_ALT.Value,Boolean)
+            If (Original_Soituoiamdaobachcau Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Soituoiamdaobachcau,String)
             End If
-            If (Original_GGT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_GGT.Value,Boolean)
+            If (Original_Soituoiamdaohongcau Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Soituoiamdaohongcau,String)
             End If
-            If (Original_Glucose.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Glucose.Value,Boolean)
+            If (Original_Nam Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Nam,String)
             End If
-            If (Original_Creatine.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_Creatine.Value,Boolean)
+            If (Original_Soitonamgia Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Soitonamgia,String)
             End If
-            If (Original_Ure.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Ure.Value,Boolean)
+            If (Original_Trichomonasvaginalis Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Trichomonasvaginalis,String)
             End If
-            If (Original_Cholesterol.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Cholesterol.Value,Boolean)
+            If (Original_Tapkhuan Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Triglyceride.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_Triglyceride.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
-            End If
-            If (Original_HDL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_HDL.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (Original_LDL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_LDL.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Uric.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Uric.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Protein.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_Protein.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Tapkhuan,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -11943,32 +13259,2813 @@ Namespace KskDbDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal AST As Global.System.Nullable(Of Boolean),  _
-                    ByVal ALT As Global.System.Nullable(Of Boolean),  _
-                    ByVal GGT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Glucose As Global.System.Nullable(Of Boolean),  _
-                    ByVal Creatine As Global.System.Nullable(Of Boolean),  _
-                    ByVal Ure As Global.System.Nullable(Of Boolean),  _
-                    ByVal Cholesterol As Global.System.Nullable(Of Boolean),  _
-                    ByVal Triglyceride As Global.System.Nullable(Of Boolean),  _
-                    ByVal HDL As Global.System.Nullable(Of Boolean),  _
-                    ByVal LDL As Global.System.Nullable(Of Boolean),  _
-                    ByVal Uric As Global.System.Nullable(Of Boolean),  _
-                    ByVal Protein As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Idsolieuhoso As Integer,  _
-                    ByVal Original_AST As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_ALT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_GGT As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Glucose As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Creatine As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Ure As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Cholesterol As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Triglyceride As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_HDL As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_LDL As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Uric As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Protein As Global.System.Nullable(Of Boolean)) As Integer
-            Return Me.Update(Original_Idsolieuhoso, AST, ALT, GGT, Glucose, Creatine, Ure, Cholesterol, Triglyceride, HDL, LDL, Uric, Protein, Original_Idsolieuhoso, Original_AST, Original_ALT, Original_GGT, Original_Glucose, Original_Creatine, Original_Ure, Original_Cholesterol, Original_Triglyceride, Original_HDL, Original_LDL, Original_Uric, Original_Protein)
+                    ByVal Tebaobieumo As String,  _
+                    ByVal Soituoiamdaobachcau As String,  _
+                    ByVal Soituoiamdaohongcau As String,  _
+                    ByVal Nam As String,  _
+                    ByVal Soitonamgia As String,  _
+                    ByVal Trichomonasvaginalis As String,  _
+                    ByVal Tapkhuan As String,  _
+                    ByVal Ketluansoiamdao As String,  _
+                    ByVal Thamvansoiamdao As String,  _
+                    ByVal Original_IdSolieuhoso As Integer,  _
+                    ByVal Original_Tebaobieumo As String,  _
+                    ByVal Original_Soituoiamdaobachcau As String,  _
+                    ByVal Original_Soituoiamdaohongcau As String,  _
+                    ByVal Original_Nam As String,  _
+                    ByVal Original_Soitonamgia As String,  _
+                    ByVal Original_Trichomonasvaginalis As String,  _
+                    ByVal Original_Tapkhuan As String) As Integer
+            Return Me.Update(Original_IdSolieuhoso, Tebaobieumo, Soituoiamdaobachcau, Soituoiamdaohongcau, Nam, Soitonamgia, Trichomonasvaginalis, Tapkhuan, Ketluansoiamdao, Thamvansoiamdao, Original_IdSolieuhoso, Original_Tebaobieumo, Original_Soituoiamdaobachcau, Original_Soituoiamdaohongcau, Original_Nam, Original_Soitonamgia, Original_Trichomonasvaginalis, Original_Tapkhuan)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class TbSoiphanTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "TbSoiphan"
+            tableMapping.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+            tableMapping.ColumnMappings.Add("Kstduongruot", "Kstduongruot")
+            tableMapping.ColumnMappings.Add("Soituoiphanbachcau", "Soituoiphanbachcau")
+            tableMapping.ColumnMappings.Add("Soituoiphanhongcau", "Soituoiphanhongcau")
+            tableMapping.ColumnMappings.Add("Ketquasoiphan", "Ketquasoiphan")
+            tableMapping.ColumnMappings.Add("Thamvansoiphan", "Thamvansoiphan")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TbSoiphan] WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso) AN"& _ 
+                "D ((@IsNull_Kstduongruot = 1 AND [Kstduongruot] IS NULL) OR ([Kstduongruot] = @O"& _ 
+                "riginal_Kstduongruot)) AND ((@IsNull_Soituoiphanbachcau = 1 AND [Soituoiphanbach"& _ 
+                "cau] IS NULL) OR ([Soituoiphanbachcau] = @Original_Soituoiphanbachcau)) AND ((@I"& _ 
+                "sNull_Soituoiphanhongcau = 1 AND [Soituoiphanhongcau] IS NULL) OR ([Soituoiphanh"& _ 
+                "ongcau] = @Original_Soituoiphanhongcau)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Kstduongruot", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Kstduongruot", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Kstduongruot", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Kstduongruot", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soituoiphanbachcau", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanbachcau", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soituoiphanbachcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanbachcau", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soituoiphanhongcau", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanhongcau", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soituoiphanhongcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanhongcau", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TbSoiphan] ([IdSolieuhoso], [Kstduongruot], [Soituoiphanbachca"& _ 
+                "u], [Soituoiphanhongcau], [Ketquasoiphan], [Thamvansoiphan]) VALUES (@IdSolieuho"& _ 
+                "so, @Kstduongruot, @Soituoiphanbachcau, @Soituoiphanhongcau, @Ketquasoiphan, @Th"& _ 
+                "amvansoiphan);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, Kstduongruot, Soituoiphanbachcau, Soituoiph"& _ 
+                "anhongcau, Ketquasoiphan, Thamvansoiphan FROM TbSoiphan WHERE (IdSolieuhoso = @I"& _ 
+                "dSolieuhoso)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Kstduongruot", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Kstduongruot", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soituoiphanbachcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanbachcau", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soituoiphanhongcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanhongcau", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketquasoiphan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketquasoiphan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvansoiphan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvansoiphan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[TbSoiphan] SET [IdSolieuhoso] = @IdSolieuhoso, [Kstduongruot] = @Ks"& _ 
+                "tduongruot, [Soituoiphanbachcau] = @Soituoiphanbachcau, [Soituoiphanhongcau] = @"& _ 
+                "Soituoiphanhongcau, [Ketquasoiphan] = @Ketquasoiphan, [Thamvansoiphan] = @Thamva"& _ 
+                "nsoiphan WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso) AND ((@IsNull_Kstduong"& _ 
+                "ruot = 1 AND [Kstduongruot] IS NULL) OR ([Kstduongruot] = @Original_Kstduongruot"& _ 
+                ")) AND ((@IsNull_Soituoiphanbachcau = 1 AND [Soituoiphanbachcau] IS NULL) OR ([S"& _ 
+                "oituoiphanbachcau] = @Original_Soituoiphanbachcau)) AND ((@IsNull_Soituoiphanhon"& _ 
+                "gcau = 1 AND [Soituoiphanhongcau] IS NULL) OR ([Soituoiphanhongcau] = @Original_"& _ 
+                "Soituoiphanhongcau)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, Kstduongruot, Soituoiphanbachcau, S"& _ 
+                "oituoiphanhongcau, Ketquasoiphan, Thamvansoiphan FROM TbSoiphan WHERE (IdSolieuh"& _ 
+                "oso = @IdSolieuhoso)"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Kstduongruot", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Kstduongruot", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soituoiphanbachcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanbachcau", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soituoiphanhongcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanhongcau", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketquasoiphan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketquasoiphan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvansoiphan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvansoiphan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Kstduongruot", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Kstduongruot", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Kstduongruot", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Kstduongruot", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soituoiphanbachcau", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanbachcau", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soituoiphanbachcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanbachcau", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soituoiphanhongcau", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanhongcau", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soituoiphanhongcau", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soituoiphanhongcau", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = "Data Source=115.79.219.161,1589;Initial Catalog=KskDb;User ID=KS;Password=Da@123"
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT IdSolieuhoso, Kstduongruot, Soituoiphanbachcau, Soituoiphanhongcau, Ketqua"& _ 
+                "soiphan, Thamvansoiphan FROM dbo.TbSoiphan"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As KskDbDataSet.TbSoiphanDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As KskDbDataSet.TbSoiphanDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As KskDbDataSet.TbSoiphanDataTable = New KskDbDataSet.TbSoiphanDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As KskDbDataSet.TbSoiphanDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As KskDbDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "TbSoiphan")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_IdSolieuhoso As Integer, ByVal Original_Kstduongruot As String, ByVal Original_Soituoiphanbachcau As String, ByVal Original_Soituoiphanhongcau As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_Kstduongruot Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Kstduongruot,String)
+            End If
+            If (Original_Soituoiphanbachcau Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Soituoiphanbachcau,String)
+            End If
+            If (Original_Soituoiphanhongcau Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Soituoiphanhongcau,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal IdSolieuhoso As Integer, ByVal Kstduongruot As String, ByVal Soituoiphanbachcau As String, ByVal Soituoiphanhongcau As String, ByVal Ketquasoiphan As String, ByVal Thamvansoiphan As String) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
+            If (Kstduongruot Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Kstduongruot,String)
+            End If
+            If (Soituoiphanbachcau Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Soituoiphanbachcau,String)
+            End If
+            If (Soituoiphanhongcau Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Soituoiphanhongcau,String)
+            End If
+            If (Ketquasoiphan Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Ketquasoiphan,String)
+            End If
+            If (Thamvansoiphan Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Thamvansoiphan,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal IdSolieuhoso As Integer, ByVal Kstduongruot As String, ByVal Soituoiphanbachcau As String, ByVal Soituoiphanhongcau As String, ByVal Ketquasoiphan As String, ByVal Thamvansoiphan As String, ByVal Original_IdSolieuhoso As Integer, ByVal Original_Kstduongruot As String, ByVal Original_Soituoiphanbachcau As String, ByVal Original_Soituoiphanhongcau As String) As Integer
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
+            If (Kstduongruot Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Kstduongruot,String)
+            End If
+            If (Soituoiphanbachcau Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Soituoiphanbachcau,String)
+            End If
+            If (Soituoiphanhongcau Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Soituoiphanhongcau,String)
+            End If
+            If (Ketquasoiphan Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Ketquasoiphan,String)
+            End If
+            If (Thamvansoiphan Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Thamvansoiphan,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_Kstduongruot Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Kstduongruot,String)
+            End If
+            If (Original_Soituoiphanbachcau Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Soituoiphanbachcau,String)
+            End If
+            If (Original_Soituoiphanhongcau Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Soituoiphanhongcau,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal Kstduongruot As String, ByVal Soituoiphanbachcau As String, ByVal Soituoiphanhongcau As String, ByVal Ketquasoiphan As String, ByVal Thamvansoiphan As String, ByVal Original_IdSolieuhoso As Integer, ByVal Original_Kstduongruot As String, ByVal Original_Soituoiphanbachcau As String, ByVal Original_Soituoiphanhongcau As String) As Integer
+            Return Me.Update(Original_IdSolieuhoso, Kstduongruot, Soituoiphanbachcau, Soituoiphanhongcau, Ketquasoiphan, Thamvansoiphan, Original_IdSolieuhoso, Original_Kstduongruot, Original_Soituoiphanbachcau, Original_Soituoiphanhongcau)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class TbTestnhanhTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "TbTestnhanh"
+            tableMapping.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+            tableMapping.ColumnMappings.Add("HBsAg", "HBsAg")
+            tableMapping.ColumnMappings.Add("HBsAb", "HBsAb")
+            tableMapping.ColumnMappings.Add("AntiHCV", "AntiHCV")
+            tableMapping.ColumnMappings.Add("HAVIGM", "HAVIGM")
+            tableMapping.ColumnMappings.Add("HEVIGM", "HEVIGM")
+            tableMapping.ColumnMappings.Add("HpylorAb", "HpylorAb")
+            tableMapping.ColumnMappings.Add("Syphyllis", "Syphyllis")
+            tableMapping.ColumnMappings.Add("HIV", "HIV")
+            tableMapping.ColumnMappings.Add("HbeAg", "HbeAg")
+            tableMapping.ColumnMappings.Add("Abophienda", "Abophienda")
+            tableMapping.ColumnMappings.Add("Rhphienda", "Rhphienda")
+            tableMapping.ColumnMappings.Add("Ketluantestnhanh", "Ketluantestnhanh")
+            tableMapping.ColumnMappings.Add("Thamvantestnhanh", "Thamvantestnhanh")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TbTestnhanh] WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso) "& _ 
+                "AND ((@IsNull_HBsAg = 1 AND [HBsAg] IS NULL) OR ([HBsAg] = @Original_HBsAg)) AND"& _ 
+                " ((@IsNull_HBsAb = 1 AND [HBsAb] IS NULL) OR ([HBsAb] = @Original_HBsAb)) AND (("& _ 
+                "@IsNull_AntiHCV = 1 AND [AntiHCV] IS NULL) OR ([AntiHCV] = @Original_AntiHCV)) A"& _ 
+                "ND ((@IsNull_HAVIGM = 1 AND [HAVIGM] IS NULL) OR ([HAVIGM] = @Original_HAVIGM)) "& _ 
+                "AND ((@IsNull_HEVIGM = 1 AND [HEVIGM] IS NULL) OR ([HEVIGM] = @Original_HEVIGM))"& _ 
+                " AND ((@IsNull_HpylorAb = 1 AND [HpylorAb] IS NULL) OR ([HpylorAb] = @Original_H"& _ 
+                "pylorAb)) AND ((@IsNull_Syphyllis = 1 AND [Syphyllis] IS NULL) OR ([Syphyllis] ="& _ 
+                " @Original_Syphyllis)) AND ((@IsNull_HIV = 1 AND [HIV] IS NULL) OR ([HIV] = @Ori"& _ 
+                "ginal_HIV)) AND ((@IsNull_HbeAg = 1 AND [HbeAg] IS NULL) OR ([HbeAg] = @Original"& _ 
+                "_HbeAg)) AND ((@IsNull_Abophienda = 1 AND [Abophienda] IS NULL) OR ([Abophienda]"& _ 
+                " = @Original_Abophienda)) AND ((@IsNull_Rhphienda = 1 AND [Rhphienda] IS NULL) O"& _ 
+                "R ([Rhphienda] = @Original_Rhphienda)) AND ((@IsNull_Ketluantestnhanh = 1 AND [K"& _ 
+                "etluantestnhanh] IS NULL) OR ([Ketluantestnhanh] = @Original_Ketluantestnhanh)) "& _ 
+                "AND ((@IsNull_Thamvantestnhanh = 1 AND [Thamvantestnhanh] IS NULL) OR ([Thamvant"& _ 
+                "estnhanh] = @Original_Thamvantestnhanh)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HBsAg", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HBsAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HBsAb", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAb", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HBsAb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAb", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_AntiHCV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AntiHCV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AntiHCV", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AntiHCV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HAVIGM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HAVIGM", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HAVIGM", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HAVIGM", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HEVIGM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HEVIGM", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HEVIGM", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HEVIGM", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HpylorAb", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HpylorAb", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HpylorAb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HpylorAb", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Syphyllis", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Syphyllis", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Syphyllis", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Syphyllis", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HIV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HIV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HIV", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HIV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HbeAg", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HbeAg", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HbeAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HbeAg", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Abophienda", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Abophienda", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Abophienda", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Abophienda", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Rhphienda", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rhphienda", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Rhphienda", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rhphienda", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ketluantestnhanh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluantestnhanh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ketluantestnhanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluantestnhanh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Thamvantestnhanh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantestnhanh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Thamvantestnhanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantestnhanh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TbTestnhanh] ([IdSolieuhoso], [HBsAg], [HBsAb], [AntiHCV], [HA"& _ 
+                "VIGM], [HEVIGM], [HpylorAb], [Syphyllis], [HIV], [HbeAg], [Abophienda], [Rhphien"& _ 
+                "da], [Ketluantestnhanh], [Thamvantestnhanh]) VALUES (@IdSolieuhoso, @HBsAg, @HBs"& _ 
+                "Ab, @AntiHCV, @HAVIGM, @HEVIGM, @HpylorAb, @Syphyllis, @HIV, @HbeAg, @Abophienda"& _ 
+                ", @Rhphienda, @Ketluantestnhanh, @Thamvantestnhanh);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, HBsAg"& _ 
+                ", HBsAb, AntiHCV, HAVIGM, HEVIGM, HpylorAb, Syphyllis, HIV, HbeAg, Abophienda, R"& _ 
+                "hphienda, Ketluantestnhanh, Thamvantestnhanh FROM TbTestnhanh WHERE (IdSolieuhos"& _ 
+                "o = @IdSolieuhoso)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HBsAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HBsAb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAb", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AntiHCV", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AntiHCV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HAVIGM", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HAVIGM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HEVIGM", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HEVIGM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HpylorAb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HpylorAb", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Syphyllis", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Syphyllis", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HIV", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HIV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HbeAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HbeAg", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Abophienda", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Abophienda", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Rhphienda", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rhphienda", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluantestnhanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluantestnhanh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvantestnhanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantestnhanh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[TbTestnhanh] SET [IdSolieuhoso] = @IdSolieuhoso, [HBsAg] = @HBsAg, "& _ 
+                "[HBsAb] = @HBsAb, [AntiHCV] = @AntiHCV, [HAVIGM] = @HAVIGM, [HEVIGM] = @HEVIGM, "& _ 
+                "[HpylorAb] = @HpylorAb, [Syphyllis] = @Syphyllis, [HIV] = @HIV, [HbeAg] = @HbeAg"& _ 
+                ", [Abophienda] = @Abophienda, [Rhphienda] = @Rhphienda, [Ketluantestnhanh] = @Ke"& _ 
+                "tluantestnhanh, [Thamvantestnhanh] = @Thamvantestnhanh WHERE (([IdSolieuhoso] = "& _ 
+                "@Original_IdSolieuhoso) AND ((@IsNull_HBsAg = 1 AND [HBsAg] IS NULL) OR ([HBsAg]"& _ 
+                " = @Original_HBsAg)) AND ((@IsNull_HBsAb = 1 AND [HBsAb] IS NULL) OR ([HBsAb] = "& _ 
+                "@Original_HBsAb)) AND ((@IsNull_AntiHCV = 1 AND [AntiHCV] IS NULL) OR ([AntiHCV]"& _ 
+                " = @Original_AntiHCV)) AND ((@IsNull_HAVIGM = 1 AND [HAVIGM] IS NULL) OR ([HAVIG"& _ 
+                "M] = @Original_HAVIGM)) AND ((@IsNull_HEVIGM = 1 AND [HEVIGM] IS NULL) OR ([HEVI"& _ 
+                "GM] = @Original_HEVIGM)) AND ((@IsNull_HpylorAb = 1 AND [HpylorAb] IS NULL) OR ("& _ 
+                "[HpylorAb] = @Original_HpylorAb)) AND ((@IsNull_Syphyllis = 1 AND [Syphyllis] IS"& _ 
+                " NULL) OR ([Syphyllis] = @Original_Syphyllis)) AND ((@IsNull_HIV = 1 AND [HIV] I"& _ 
+                "S NULL) OR ([HIV] = @Original_HIV)) AND ((@IsNull_HbeAg = 1 AND [HbeAg] IS NULL)"& _ 
+                " OR ([HbeAg] = @Original_HbeAg)) AND ((@IsNull_Abophienda = 1 AND [Abophienda] I"& _ 
+                "S NULL) OR ([Abophienda] = @Original_Abophienda)) AND ((@IsNull_Rhphienda = 1 AN"& _ 
+                "D [Rhphienda] IS NULL) OR ([Rhphienda] = @Original_Rhphienda)) AND ((@IsNull_Ket"& _ 
+                "luantestnhanh = 1 AND [Ketluantestnhanh] IS NULL) OR ([Ketluantestnhanh] = @Orig"& _ 
+                "inal_Ketluantestnhanh)) AND ((@IsNull_Thamvantestnhanh = 1 AND [Thamvantestnhanh"& _ 
+                "] IS NULL) OR ([Thamvantestnhanh] = @Original_Thamvantestnhanh)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSol"& _ 
+                "ieuhoso, HBsAg, HBsAb, AntiHCV, HAVIGM, HEVIGM, HpylorAb, Syphyllis, HIV, HbeAg,"& _ 
+                " Abophienda, Rhphienda, Ketluantestnhanh, Thamvantestnhanh FROM TbTestnhanh WHER"& _ 
+                "E (IdSolieuhoso = @IdSolieuhoso)"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HBsAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HBsAb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAb", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AntiHCV", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AntiHCV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HAVIGM", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HAVIGM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HEVIGM", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HEVIGM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HpylorAb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HpylorAb", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Syphyllis", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Syphyllis", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HIV", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HIV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HbeAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HbeAg", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Abophienda", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Abophienda", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Rhphienda", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rhphienda", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluantestnhanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluantestnhanh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvantestnhanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantestnhanh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HBsAg", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HBsAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAg", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HBsAb", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAb", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HBsAb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HBsAb", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_AntiHCV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AntiHCV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AntiHCV", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AntiHCV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HAVIGM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HAVIGM", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HAVIGM", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HAVIGM", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HEVIGM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HEVIGM", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HEVIGM", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HEVIGM", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HpylorAb", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HpylorAb", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HpylorAb", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HpylorAb", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Syphyllis", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Syphyllis", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Syphyllis", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Syphyllis", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HIV", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HIV", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HIV", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HIV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HbeAg", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HbeAg", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HbeAg", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HbeAg", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Abophienda", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Abophienda", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Abophienda", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Abophienda", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Rhphienda", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rhphienda", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Rhphienda", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rhphienda", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ketluantestnhanh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluantestnhanh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ketluantestnhanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluantestnhanh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Thamvantestnhanh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantestnhanh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Thamvantestnhanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantestnhanh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = "Data Source=115.79.219.161,1589;Initial Catalog=KskDb;User ID=KS;Password=Da@123"
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT IdSolieuhoso, HBsAg, HBsAb, AntiHCV, HAVIGM, HEVIGM, HpylorAb, Syphyllis, "& _ 
+                "HIV, HbeAg, Abophienda, Rhphienda, Ketluantestnhanh, Thamvantestnhanh FROM dbo.T"& _ 
+                "bTestnhanh"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As KskDbDataSet.TbTestnhanhDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As KskDbDataSet.TbTestnhanhDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As KskDbDataSet.TbTestnhanhDataTable = New KskDbDataSet.TbTestnhanhDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As KskDbDataSet.TbTestnhanhDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As KskDbDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "TbTestnhanh")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_IdSolieuhoso As Integer, ByVal Original_HBsAg As String, ByVal Original_HBsAb As String, ByVal Original_AntiHCV As String, ByVal Original_HAVIGM As String, ByVal Original_HEVIGM As String, ByVal Original_HpylorAb As String, ByVal Original_Syphyllis As String, ByVal Original_HIV As String, ByVal Original_HbeAg As String, ByVal Original_Abophienda As String, ByVal Original_Rhphienda As String, ByVal Original_Ketluantestnhanh As String, ByVal Original_Thamvantestnhanh As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_HBsAg Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_HBsAg,String)
+            End If
+            If (Original_HBsAb Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_HBsAb,String)
+            End If
+            If (Original_AntiHCV Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_AntiHCV,String)
+            End If
+            If (Original_HAVIGM Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_HAVIGM,String)
+            End If
+            If (Original_HEVIGM Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_HEVIGM,String)
+            End If
+            If (Original_HpylorAb Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_HpylorAb,String)
+            End If
+            If (Original_Syphyllis Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Syphyllis,String)
+            End If
+            If (Original_HIV Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_HIV,String)
+            End If
+            If (Original_HbeAg Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_HbeAg,String)
+            End If
+            If (Original_Abophienda Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Abophienda,String)
+            End If
+            If (Original_Rhphienda Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Rhphienda,String)
+            End If
+            If (Original_Ketluantestnhanh Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_Ketluantestnhanh,String)
+            End If
+            If (Original_Thamvantestnhanh Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_Thamvantestnhanh,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal IdSolieuhoso As Integer, ByVal HBsAg As String, ByVal HBsAb As String, ByVal AntiHCV As String, ByVal HAVIGM As String, ByVal HEVIGM As String, ByVal HpylorAb As String, ByVal Syphyllis As String, ByVal HIV As String, ByVal HbeAg As String, ByVal Abophienda As String, ByVal Rhphienda As String, ByVal Ketluantestnhanh As String, ByVal Thamvantestnhanh As String) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
+            If (HBsAg Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(HBsAg,String)
+            End If
+            If (HBsAb Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(HBsAb,String)
+            End If
+            If (AntiHCV Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(AntiHCV,String)
+            End If
+            If (HAVIGM Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(HAVIGM,String)
+            End If
+            If (HEVIGM Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(HEVIGM,String)
+            End If
+            If (HpylorAb Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(HpylorAb,String)
+            End If
+            If (Syphyllis Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Syphyllis,String)
+            End If
+            If (HIV Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(HIV,String)
+            End If
+            If (HbeAg Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(HbeAg,String)
+            End If
+            If (Abophienda Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Abophienda,String)
+            End If
+            If (Rhphienda Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Rhphienda,String)
+            End If
+            If (Ketluantestnhanh Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(Ketluantestnhanh,String)
+            End If
+            If (Thamvantestnhanh Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(Thamvantestnhanh,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal IdSolieuhoso As Integer,  _
+                    ByVal HBsAg As String,  _
+                    ByVal HBsAb As String,  _
+                    ByVal AntiHCV As String,  _
+                    ByVal HAVIGM As String,  _
+                    ByVal HEVIGM As String,  _
+                    ByVal HpylorAb As String,  _
+                    ByVal Syphyllis As String,  _
+                    ByVal HIV As String,  _
+                    ByVal HbeAg As String,  _
+                    ByVal Abophienda As String,  _
+                    ByVal Rhphienda As String,  _
+                    ByVal Ketluantestnhanh As String,  _
+                    ByVal Thamvantestnhanh As String,  _
+                    ByVal Original_IdSolieuhoso As Integer,  _
+                    ByVal Original_HBsAg As String,  _
+                    ByVal Original_HBsAb As String,  _
+                    ByVal Original_AntiHCV As String,  _
+                    ByVal Original_HAVIGM As String,  _
+                    ByVal Original_HEVIGM As String,  _
+                    ByVal Original_HpylorAb As String,  _
+                    ByVal Original_Syphyllis As String,  _
+                    ByVal Original_HIV As String,  _
+                    ByVal Original_HbeAg As String,  _
+                    ByVal Original_Abophienda As String,  _
+                    ByVal Original_Rhphienda As String,  _
+                    ByVal Original_Ketluantestnhanh As String,  _
+                    ByVal Original_Thamvantestnhanh As String) As Integer
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
+            If (HBsAg Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(HBsAg,String)
+            End If
+            If (HBsAb Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(HBsAb,String)
+            End If
+            If (AntiHCV Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(AntiHCV,String)
+            End If
+            If (HAVIGM Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(HAVIGM,String)
+            End If
+            If (HEVIGM Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(HEVIGM,String)
+            End If
+            If (HpylorAb Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(HpylorAb,String)
+            End If
+            If (Syphyllis Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Syphyllis,String)
+            End If
+            If (HIV Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(HIV,String)
+            End If
+            If (HbeAg Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(HbeAg,String)
+            End If
+            If (Abophienda Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Abophienda,String)
+            End If
+            If (Rhphienda Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Rhphienda,String)
+            End If
+            If (Ketluantestnhanh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Ketluantestnhanh,String)
+            End If
+            If (Thamvantestnhanh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Thamvantestnhanh,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_HBsAg Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_HBsAg,String)
+            End If
+            If (Original_HBsAb Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_HBsAb,String)
+            End If
+            If (Original_AntiHCV Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_AntiHCV,String)
+            End If
+            If (Original_HAVIGM Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_HAVIGM,String)
+            End If
+            If (Original_HEVIGM Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_HEVIGM,String)
+            End If
+            If (Original_HpylorAb Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_HpylorAb,String)
+            End If
+            If (Original_Syphyllis Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Syphyllis,String)
+            End If
+            If (Original_HIV Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_HIV,String)
+            End If
+            If (Original_HbeAg Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_HbeAg,String)
+            End If
+            If (Original_Abophienda Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_Abophienda,String)
+            End If
+            If (Original_Rhphienda Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_Rhphienda,String)
+            End If
+            If (Original_Ketluantestnhanh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_Ketluantestnhanh,String)
+            End If
+            If (Original_Thamvantestnhanh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_Thamvantestnhanh,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal HBsAg As String,  _
+                    ByVal HBsAb As String,  _
+                    ByVal AntiHCV As String,  _
+                    ByVal HAVIGM As String,  _
+                    ByVal HEVIGM As String,  _
+                    ByVal HpylorAb As String,  _
+                    ByVal Syphyllis As String,  _
+                    ByVal HIV As String,  _
+                    ByVal HbeAg As String,  _
+                    ByVal Abophienda As String,  _
+                    ByVal Rhphienda As String,  _
+                    ByVal Ketluantestnhanh As String,  _
+                    ByVal Thamvantestnhanh As String,  _
+                    ByVal Original_IdSolieuhoso As Integer,  _
+                    ByVal Original_HBsAg As String,  _
+                    ByVal Original_HBsAb As String,  _
+                    ByVal Original_AntiHCV As String,  _
+                    ByVal Original_HAVIGM As String,  _
+                    ByVal Original_HEVIGM As String,  _
+                    ByVal Original_HpylorAb As String,  _
+                    ByVal Original_Syphyllis As String,  _
+                    ByVal Original_HIV As String,  _
+                    ByVal Original_HbeAg As String,  _
+                    ByVal Original_Abophienda As String,  _
+                    ByVal Original_Rhphienda As String,  _
+                    ByVal Original_Ketluantestnhanh As String,  _
+                    ByVal Original_Thamvantestnhanh As String) As Integer
+            Return Me.Update(Original_IdSolieuhoso, HBsAg, HBsAb, AntiHCV, HAVIGM, HEVIGM, HpylorAb, Syphyllis, HIV, HbeAg, Abophienda, Rhphienda, Ketluantestnhanh, Thamvantestnhanh, Original_IdSolieuhoso, Original_HBsAg, Original_HBsAb, Original_AntiHCV, Original_HAVIGM, Original_HEVIGM, Original_HpylorAb, Original_Syphyllis, Original_HIV, Original_HbeAg, Original_Abophienda, Original_Rhphienda, Original_Ketluantestnhanh, Original_Thamvantestnhanh)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class tbTongQuatTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "tbTongQuat"
+            tableMapping.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+            tableMapping.ColumnMappings.Add("Chieucao", "Chieucao")
+            tableMapping.ColumnMappings.Add("Cannang", "Cannang")
+            tableMapping.ColumnMappings.Add("BMI", "BMI")
+            tableMapping.ColumnMappings.Add("Huyetap", "Huyetap")
+            tableMapping.ColumnMappings.Add("Theluc", "Theluc")
+            tableMapping.ColumnMappings.Add("Tuanhoan", "Tuanhoan")
+            tableMapping.ColumnMappings.Add("Hohap", "Hohap")
+            tableMapping.ColumnMappings.Add("Tieuhoa", "Tieuhoa")
+            tableMapping.ColumnMappings.Add("Thantietnieu", "Thantietnieu")
+            tableMapping.ColumnMappings.Add("Noitiet", "Noitiet")
+            tableMapping.ColumnMappings.Add("Coxuongkhop", "Coxuongkhop")
+            tableMapping.ColumnMappings.Add("Thankinh", "Thankinh")
+            tableMapping.ColumnMappings.Add("Tamthan", "Tamthan")
+            tableMapping.ColumnMappings.Add("Ngoaikhoa", "Ngoaikhoa")
+            tableMapping.ColumnMappings.Add("Mat", "Mat")
+            tableMapping.ColumnMappings.Add("Taimuihong", "Taimuihong")
+            tableMapping.ColumnMappings.Add("Ranghammat", "Ranghammat")
+            tableMapping.ColumnMappings.Add("Dalieu", "Dalieu")
+            tableMapping.ColumnMappings.Add("Sanphukhoa", "Sanphukhoa")
+            tableMapping.ColumnMappings.Add("Sieuambung", "Sieuambung")
+            tableMapping.ColumnMappings.Add("Sieuamtuyengiap", "Sieuamtuyengiap")
+            tableMapping.ColumnMappings.Add("Sieuamtuyenvu", "Sieuamtuyenvu")
+            tableMapping.ColumnMappings.Add("Sieuammachcanh", "Sieuammachcanh")
+            tableMapping.ColumnMappings.Add("Soicotucung", "Soicotucung")
+            tableMapping.ColumnMappings.Add("Sieuamtim", "Sieuamtim")
+            tableMapping.ColumnMappings.Add("Xquangphoi", "Xquangphoi")
+            tableMapping.ColumnMappings.Add("XquangCstl", "XquangCstl")
+            tableMapping.ColumnMappings.Add("Dientim", "Dientim")
+            tableMapping.ColumnMappings.Add("Doloangxuong", "Doloangxuong")
+            tableMapping.ColumnMappings.Add("Ketluantongquat", "Ketluantongquat")
+            tableMapping.ColumnMappings.Add("Thamvantongquat", "Thamvantongquat")
+            tableMapping.ColumnMappings.Add("Ketluanrang", "Ketluanrang")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbTongQuat] WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso) A"& _ 
+                "ND ((@IsNull_Chieucao = 1 AND [Chieucao] IS NULL) OR ([Chieucao] = @Original_Chi"& _ 
+                "eucao)) AND ((@IsNull_Cannang = 1 AND [Cannang] IS NULL) OR ([Cannang] = @Origin"& _ 
+                "al_Cannang)) AND ((@IsNull_BMI = 1 AND [BMI] IS NULL) OR ([BMI] = @Original_BMI)"& _ 
+                ") AND ((@IsNull_Huyetap = 1 AND [Huyetap] IS NULL) OR ([Huyetap] = @Original_Huy"& _ 
+                "etap)) AND ((@IsNull_Theluc = 1 AND [Theluc] IS NULL) OR ([Theluc] = @Original_T"& _ 
+                "heluc)) AND ((@IsNull_Tuanhoan = 1 AND [Tuanhoan] IS NULL) OR ([Tuanhoan] = @Ori"& _ 
+                "ginal_Tuanhoan)) AND ((@IsNull_Hohap = 1 AND [Hohap] IS NULL) OR ([Hohap] = @Ori"& _ 
+                "ginal_Hohap)) AND ((@IsNull_Tieuhoa = 1 AND [Tieuhoa] IS NULL) OR ([Tieuhoa] = @"& _ 
+                "Original_Tieuhoa)) AND ((@IsNull_Thantietnieu = 1 AND [Thantietnieu] IS NULL) OR"& _ 
+                " ([Thantietnieu] = @Original_Thantietnieu)) AND ((@IsNull_Noitiet = 1 AND [Noiti"& _ 
+                "et] IS NULL) OR ([Noitiet] = @Original_Noitiet)) AND ((@IsNull_Coxuongkhop = 1 A"& _ 
+                "ND [Coxuongkhop] IS NULL) OR ([Coxuongkhop] = @Original_Coxuongkhop)) AND ((@IsN"& _ 
+                "ull_Thankinh = 1 AND [Thankinh] IS NULL) OR ([Thankinh] = @Original_Thankinh)) A"& _ 
+                "ND ((@IsNull_Tamthan = 1 AND [Tamthan] IS NULL) OR ([Tamthan] = @Original_Tamtha"& _ 
+                "n)) AND ((@IsNull_Ngoaikhoa = 1 AND [Ngoaikhoa] IS NULL) OR ([Ngoaikhoa] = @Orig"& _ 
+                "inal_Ngoaikhoa)) AND ((@IsNull_Mat = 1 AND [Mat] IS NULL) OR ([Mat] = @Original_"& _ 
+                "Mat)) AND ((@IsNull_Taimuihong = 1 AND [Taimuihong] IS NULL) OR ([Taimuihong] = "& _ 
+                "@Original_Taimuihong)) AND ((@IsNull_Ranghammat = 1 AND [Ranghammat] IS NULL) OR"& _ 
+                " ([Ranghammat] = @Original_Ranghammat)) AND ((@IsNull_Dalieu = 1 AND [Dalieu] IS"& _ 
+                " NULL) OR ([Dalieu] = @Original_Dalieu)) AND ((@IsNull_Sanphukhoa = 1 AND [Sanph"& _ 
+                "ukhoa] IS NULL) OR ([Sanphukhoa] = @Original_Sanphukhoa)) AND ((@IsNull_Sieuambu"& _ 
+                "ng = 1 AND [Sieuambung] IS NULL) OR ([Sieuambung] = @Original_Sieuambung)) AND ("& _ 
+                "(@IsNull_Sieuamtuyengiap = 1 AND [Sieuamtuyengiap] IS NULL) OR ([Sieuamtuyengiap"& _ 
+                "] = @Original_Sieuamtuyengiap)) AND ((@IsNull_Sieuamtuyenvu = 1 AND [Sieuamtuyen"& _ 
+                "vu] IS NULL) OR ([Sieuamtuyenvu] = @Original_Sieuamtuyenvu)) AND ((@IsNull_Sieua"& _ 
+                "mmachcanh = 1 AND [Sieuammachcanh] IS NULL) OR ([Sieuammachcanh] = @Original_Sie"& _ 
+                "uammachcanh)) AND ((@IsNull_Soicotucung = 1 AND [Soicotucung] IS NULL) OR ([Soic"& _ 
+                "otucung] = @Original_Soicotucung)) AND ((@IsNull_Sieuamtim = 1 AND [Sieuamtim] I"& _ 
+                "S NULL) OR ([Sieuamtim] = @Original_Sieuamtim)) AND ((@IsNull_Xquangphoi = 1 AND"& _ 
+                " [Xquangphoi] IS NULL) OR ([Xquangphoi] = @Original_Xquangphoi)) AND ((@IsNull_X"& _ 
+                "quangCstl = 1 AND [XquangCstl] IS NULL) OR ([XquangCstl] = @Original_XquangCstl)"& _ 
+                ") AND ((@IsNull_Dientim = 1 AND [Dientim] IS NULL) OR ([Dientim] = @Original_Die"& _ 
+                "ntim)) AND ((@IsNull_Doloangxuong = 1 AND [Doloangxuong] IS NULL) OR ([Doloangxu"& _ 
+                "ong] = @Original_Doloangxuong)) AND ((@IsNull_Thamvantongquat = 1 AND [Thamvanto"& _ 
+                "ngquat] IS NULL) OR ([Thamvantongquat] = @Original_Thamvantongquat)) AND ((@IsNu"& _ 
+                "ll_Ketluanrang = 1 AND [Ketluanrang] IS NULL) OR ([Ketluanrang] = @Original_Ketl"& _ 
+                "uanrang)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Chieucao", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Chieucao", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Chieucao", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Chieucao", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Cannang", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cannang", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cannang", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cannang", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BMI", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BMI", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BMI", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BMI", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Huyetap", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Huyetap", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Huyetap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Huyetap", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Theluc", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Theluc", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Theluc", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Theluc", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tuanhoan", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tuanhoan", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tuanhoan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tuanhoan", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Hohap", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hohap", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Hohap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hohap", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tieuhoa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tieuhoa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tieuhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tieuhoa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Thantietnieu", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thantietnieu", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Thantietnieu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thantietnieu", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Noitiet", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Noitiet", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Noitiet", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Noitiet", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Coxuongkhop", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Coxuongkhop", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Coxuongkhop", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Coxuongkhop", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Thankinh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thankinh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Thankinh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thankinh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tamthan", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tamthan", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tamthan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tamthan", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ngoaikhoa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ngoaikhoa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ngoaikhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ngoaikhoa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Mat", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mat", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Mat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Taimuihong", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Taimuihong", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Taimuihong", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Taimuihong", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ranghammat", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ranghammat", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ranghammat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ranghammat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Dalieu", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dalieu", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Dalieu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dalieu", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sanphukhoa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sanphukhoa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sanphukhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sanphukhoa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuambung", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuambung", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuambung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuambung", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuamtuyengiap", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyengiap", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuamtuyengiap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyengiap", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuamtuyenvu", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyenvu", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuamtuyenvu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyenvu", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuammachcanh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuammachcanh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuammachcanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuammachcanh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soicotucung", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soicotucung", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soicotucung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soicotucung", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuamtim", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtim", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuamtim", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtim", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Xquangphoi", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Xquangphoi", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Xquangphoi", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Xquangphoi", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_XquangCstl", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "XquangCstl", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_XquangCstl", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "XquangCstl", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Dientim", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dientim", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Dientim", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dientim", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Doloangxuong", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Doloangxuong", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Doloangxuong", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Doloangxuong", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Thamvantongquat", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantongquat", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Thamvantongquat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantongquat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ketluanrang", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluanrang", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ketluanrang", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluanrang", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbTongQuat] ([IdSolieuhoso], [Chieucao], [Cannang], [BMI], [Hu"& _ 
+                "yetap], [Theluc], [Tuanhoan], [Hohap], [Tieuhoa], [Thantietnieu], [Noitiet], [Co"& _ 
+                "xuongkhop], [Thankinh], [Tamthan], [Ngoaikhoa], [Mat], [Taimuihong], [Ranghammat"& _ 
+                "], [Dalieu], [Sanphukhoa], [Sieuambung], [Sieuamtuyengiap], [Sieuamtuyenvu], [Si"& _ 
+                "euammachcanh], [Soicotucung], [Sieuamtim], [Xquangphoi], [XquangCstl], [Dientim]"& _ 
+                ", [Doloangxuong], [Ketluantongquat], [Thamvantongquat], [Ketluanrang]) VALUES (@"& _ 
+                "IdSolieuhoso, @Chieucao, @Cannang, @BMI, @Huyetap, @Theluc, @Tuanhoan, @Hohap, @"& _ 
+                "Tieuhoa, @Thantietnieu, @Noitiet, @Coxuongkhop, @Thankinh, @Tamthan, @Ngoaikhoa,"& _ 
+                " @Mat, @Taimuihong, @Ranghammat, @Dalieu, @Sanphukhoa, @Sieuambung, @Sieuamtuyen"& _ 
+                "giap, @Sieuamtuyenvu, @Sieuammachcanh, @Soicotucung, @Sieuamtim, @Xquangphoi, @X"& _ 
+                "quangCstl, @Dientim, @Doloangxuong, @Ketluantongquat, @Thamvantongquat, @Ketluan"& _ 
+                "rang);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, Chieucao, Cannang, BMI, Huyetap, Theluc, Tuanhoan, "& _ 
+                "Hohap, Tieuhoa, Thantietnieu, Noitiet, Coxuongkhop, Thankinh, Tamthan, Ngoaikhoa"& _ 
+                ", Mat, Taimuihong, Ranghammat, Dalieu, Sanphukhoa, Sieuambung, Sieuamtuyengiap, "& _ 
+                "Sieuamtuyenvu, Sieuammachcanh, Soicotucung, Sieuamtim, Xquangphoi, XquangCstl, D"& _ 
+                "ientim, Doloangxuong, Ketluantongquat, Thamvantongquat, Ketluanrang FROM tbTongQ"& _ 
+                "uat WHERE (IdSolieuhoso = @IdSolieuhoso)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Chieucao", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Chieucao", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cannang", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cannang", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BMI", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BMI", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Huyetap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Huyetap", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Theluc", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Theluc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tuanhoan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tuanhoan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Hohap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hohap", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tieuhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tieuhoa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thantietnieu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thantietnieu", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Noitiet", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Noitiet", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Coxuongkhop", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Coxuongkhop", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thankinh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thankinh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tamthan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tamthan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ngoaikhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ngoaikhoa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Mat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Taimuihong", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Taimuihong", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ranghammat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ranghammat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Dalieu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dalieu", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sanphukhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sanphukhoa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuambung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuambung", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuamtuyengiap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyengiap", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuamtuyenvu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyenvu", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuammachcanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuammachcanh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soicotucung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soicotucung", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuamtim", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtim", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Xquangphoi", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Xquangphoi", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@XquangCstl", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "XquangCstl", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Dientim", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dientim", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Doloangxuong", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Doloangxuong", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluantongquat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluantongquat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvantongquat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantongquat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluanrang", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluanrang", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbTongQuat] SET [IdSolieuhoso] = @IdSolieuhoso, [Chieucao] = @Chieu"& _ 
+                "cao, [Cannang] = @Cannang, [BMI] = @BMI, [Huyetap] = @Huyetap, [Theluc] = @Thelu"& _ 
+                "c, [Tuanhoan] = @Tuanhoan, [Hohap] = @Hohap, [Tieuhoa] = @Tieuhoa, [Thantietnieu"& _ 
+                "] = @Thantietnieu, [Noitiet] = @Noitiet, [Coxuongkhop] = @Coxuongkhop, [Thankinh"& _ 
+                "] = @Thankinh, [Tamthan] = @Tamthan, [Ngoaikhoa] = @Ngoaikhoa, [Mat] = @Mat, [Ta"& _ 
+                "imuihong] = @Taimuihong, [Ranghammat] = @Ranghammat, [Dalieu] = @Dalieu, [Sanphu"& _ 
+                "khoa] = @Sanphukhoa, [Sieuambung] = @Sieuambung, [Sieuamtuyengiap] = @Sieuamtuye"& _ 
+                "ngiap, [Sieuamtuyenvu] = @Sieuamtuyenvu, [Sieuammachcanh] = @Sieuammachcanh, [So"& _ 
+                "icotucung] = @Soicotucung, [Sieuamtim] = @Sieuamtim, [Xquangphoi] = @Xquangphoi,"& _ 
+                " [XquangCstl] = @XquangCstl, [Dientim] = @Dientim, [Doloangxuong] = @Doloangxuon"& _ 
+                "g, [Ketluantongquat] = @Ketluantongquat, [Thamvantongquat] = @Thamvantongquat, ["& _ 
+                "Ketluanrang] = @Ketluanrang WHERE (([IdSolieuhoso] = @Original_IdSolieuhoso) AND"& _ 
+                " ((@IsNull_Chieucao = 1 AND [Chieucao] IS NULL) OR ([Chieucao] = @Original_Chieu"& _ 
+                "cao)) AND ((@IsNull_Cannang = 1 AND [Cannang] IS NULL) OR ([Cannang] = @Original"& _ 
+                "_Cannang)) AND ((@IsNull_BMI = 1 AND [BMI] IS NULL) OR ([BMI] = @Original_BMI)) "& _ 
+                "AND ((@IsNull_Huyetap = 1 AND [Huyetap] IS NULL) OR ([Huyetap] = @Original_Huyet"& _ 
+                "ap)) AND ((@IsNull_Theluc = 1 AND [Theluc] IS NULL) OR ([Theluc] = @Original_The"& _ 
+                "luc)) AND ((@IsNull_Tuanhoan = 1 AND [Tuanhoan] IS NULL) OR ([Tuanhoan] = @Origi"& _ 
+                "nal_Tuanhoan)) AND ((@IsNull_Hohap = 1 AND [Hohap] IS NULL) OR ([Hohap] = @Origi"& _ 
+                "nal_Hohap)) AND ((@IsNull_Tieuhoa = 1 AND [Tieuhoa] IS NULL) OR ([Tieuhoa] = @Or"& _ 
+                "iginal_Tieuhoa)) AND ((@IsNull_Thantietnieu = 1 AND [Thantietnieu] IS NULL) OR ("& _ 
+                "[Thantietnieu] = @Original_Thantietnieu)) AND ((@IsNull_Noitiet = 1 AND [Noitiet"& _ 
+                "] IS NULL) OR ([Noitiet] = @Original_Noitiet)) AND ((@IsNull_Coxuongkhop = 1 AND"& _ 
+                " [Coxuongkhop] IS NULL) OR ([Coxuongkhop] = @Original_Coxuongkhop)) AND ((@IsNul"& _ 
+                "l_Thankinh = 1 AND [Thankinh] IS NULL) OR ([Thankinh] = @Original_Thankinh)) AND"& _ 
+                " ((@IsNull_Tamthan = 1 AND [Tamthan] IS NULL) OR ([Tamthan] = @Original_Tamthan)"& _ 
+                ") AND ((@IsNull_Ngoaikhoa = 1 AND [Ngoaikhoa] IS NULL) OR ([Ngoaikhoa] = @Origin"& _ 
+                "al_Ngoaikhoa)) AND ((@IsNull_Mat = 1 AND [Mat] IS NULL) OR ([Mat] = @Original_Ma"& _ 
+                "t)) AND ((@IsNull_Taimuihong = 1 AND [Taimuihong] IS NULL) OR ([Taimuihong] = @O"& _ 
+                "riginal_Taimuihong)) AND ((@IsNull_Ranghammat = 1 AND [Ranghammat] IS NULL) OR ("& _ 
+                "[Ranghammat] = @Original_Ranghammat)) AND ((@IsNull_Dalieu = 1 AND [Dalieu] IS N"& _ 
+                "ULL) OR ([Dalieu] = @Original_Dalieu)) AND ((@IsNull_Sanphukhoa = 1 AND [Sanphuk"& _ 
+                "hoa] IS NULL) OR ([Sanphukhoa] = @Original_Sanphukhoa)) AND ((@IsNull_Sieuambung"& _ 
+                " = 1 AND [Sieuambung] IS NULL) OR ([Sieuambung] = @Original_Sieuambung)) AND ((@"& _ 
+                "IsNull_Sieuamtuyengiap = 1 AND [Sieuamtuyengiap] IS NULL) OR ([Sieuamtuyengiap] "& _ 
+                "= @Original_Sieuamtuyengiap)) AND ((@IsNull_Sieuamtuyenvu = 1 AND [Sieuamtuyenvu"& _ 
+                "] IS NULL) OR ([Sieuamtuyenvu] = @Original_Sieuamtuyenvu)) AND ((@IsNull_Sieuamm"& _ 
+                "achcanh = 1 AND [Sieuammachcanh] IS NULL) OR ([Sieuammachcanh] = @Original_Sieua"& _ 
+                "mmachcanh)) AND ((@IsNull_Soicotucung = 1 AND [Soicotucung] IS NULL) OR ([Soicot"& _ 
+                "ucung] = @Original_Soicotucung)) AND ((@IsNull_Sieuamtim = 1 AND [Sieuamtim] IS "& _ 
+                "NULL) OR ([Sieuamtim] = @Original_Sieuamtim)) AND ((@IsNull_Xquangphoi = 1 AND ["& _ 
+                "Xquangphoi] IS NULL) OR ([Xquangphoi] = @Original_Xquangphoi)) AND ((@IsNull_Xqu"& _ 
+                "angCstl = 1 AND [XquangCstl] IS NULL) OR ([XquangCstl] = @Original_XquangCstl)) "& _ 
+                "AND ((@IsNull_Dientim = 1 AND [Dientim] IS NULL) OR ([Dientim] = @Original_Dient"& _ 
+                "im)) AND ((@IsNull_Doloangxuong = 1 AND [Doloangxuong] IS NULL) OR ([Doloangxuon"& _ 
+                "g] = @Original_Doloangxuong)) AND ((@IsNull_Thamvantongquat = 1 AND [Thamvantong"& _ 
+                "quat] IS NULL) OR ([Thamvantongquat] = @Original_Thamvantongquat)) AND ((@IsNull"& _ 
+                "_Ketluanrang = 1 AND [Ketluanrang] IS NULL) OR ([Ketluanrang] = @Original_Ketlua"& _ 
+                "nrang)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdSolieuhoso, Chieucao, Cannang, BMI, Huyetap, Theluc, Tuanhoa"& _ 
+                "n, Hohap, Tieuhoa, Thantietnieu, Noitiet, Coxuongkhop, Thankinh, Tamthan, Ngoaik"& _ 
+                "hoa, Mat, Taimuihong, Ranghammat, Dalieu, Sanphukhoa, Sieuambung, Sieuamtuyengia"& _ 
+                "p, Sieuamtuyenvu, Sieuammachcanh, Soicotucung, Sieuamtim, Xquangphoi, XquangCstl"& _ 
+                ", Dientim, Doloangxuong, Ketluantongquat, Thamvantongquat, Ketluanrang FROM tbTo"& _ 
+                "ngQuat WHERE (IdSolieuhoso = @IdSolieuhoso)"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Chieucao", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Chieucao", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cannang", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cannang", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BMI", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BMI", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Huyetap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Huyetap", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Theluc", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Theluc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tuanhoan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tuanhoan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Hohap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hohap", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tieuhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tieuhoa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thantietnieu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thantietnieu", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Noitiet", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Noitiet", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Coxuongkhop", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Coxuongkhop", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thankinh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thankinh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tamthan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tamthan", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ngoaikhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ngoaikhoa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Mat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Taimuihong", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Taimuihong", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ranghammat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ranghammat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Dalieu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dalieu", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sanphukhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sanphukhoa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuambung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuambung", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuamtuyengiap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyengiap", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuamtuyenvu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyenvu", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuammachcanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuammachcanh", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Soicotucung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soicotucung", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sieuamtim", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtim", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Xquangphoi", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Xquangphoi", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@XquangCstl", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "XquangCstl", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Dientim", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dientim", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Doloangxuong", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Doloangxuong", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluantongquat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluantongquat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Thamvantongquat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantongquat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ketluanrang", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluanrang", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IdSolieuhoso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IdSolieuhoso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Chieucao", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Chieucao", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Chieucao", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Chieucao", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Cannang", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cannang", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cannang", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cannang", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BMI", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BMI", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BMI", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BMI", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Huyetap", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Huyetap", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Huyetap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Huyetap", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Theluc", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Theluc", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Theluc", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Theluc", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tuanhoan", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tuanhoan", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tuanhoan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tuanhoan", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Hohap", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hohap", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Hohap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hohap", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tieuhoa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tieuhoa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tieuhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tieuhoa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Thantietnieu", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thantietnieu", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Thantietnieu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thantietnieu", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Noitiet", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Noitiet", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Noitiet", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Noitiet", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Coxuongkhop", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Coxuongkhop", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Coxuongkhop", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Coxuongkhop", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Thankinh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thankinh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Thankinh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thankinh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Tamthan", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tamthan", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Tamthan", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tamthan", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ngoaikhoa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ngoaikhoa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ngoaikhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ngoaikhoa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Mat", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mat", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Mat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Mat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Taimuihong", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Taimuihong", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Taimuihong", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Taimuihong", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ranghammat", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ranghammat", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ranghammat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ranghammat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Dalieu", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dalieu", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Dalieu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dalieu", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sanphukhoa", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sanphukhoa", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sanphukhoa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sanphukhoa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuambung", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuambung", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuambung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuambung", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuamtuyengiap", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyengiap", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuamtuyengiap", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyengiap", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuamtuyenvu", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyenvu", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuamtuyenvu", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtuyenvu", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuammachcanh", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuammachcanh", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuammachcanh", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuammachcanh", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Soicotucung", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soicotucung", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Soicotucung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Soicotucung", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sieuamtim", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtim", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sieuamtim", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sieuamtim", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Xquangphoi", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Xquangphoi", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Xquangphoi", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Xquangphoi", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_XquangCstl", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "XquangCstl", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_XquangCstl", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "XquangCstl", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Dientim", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dientim", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Dientim", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Dientim", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Doloangxuong", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Doloangxuong", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Doloangxuong", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Doloangxuong", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Thamvantongquat", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantongquat", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Thamvantongquat", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Thamvantongquat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ketluanrang", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluanrang", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ketluanrang", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ketluanrang", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = "Data Source=115.79.219.161,1589;Initial Catalog=KskDb;User ID=KS;Password=Da@123"
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT IdSolieuhoso, Chieucao, Cannang, BMI, Huyetap, Theluc, Tuanhoan, Hohap, Ti"& _ 
+                "euhoa, Thantietnieu, Noitiet, Coxuongkhop, Thankinh, Tamthan, Ngoaikhoa, Mat, Ta"& _ 
+                "imuihong, Ranghammat, Dalieu, Sanphukhoa, Sieuambung, Sieuamtuyengiap, Sieuamtuy"& _ 
+                "envu, Sieuammachcanh, Soicotucung, Sieuamtim, Xquangphoi, XquangCstl, Dientim, D"& _ 
+                "oloangxuong, Ketluantongquat, Thamvantongquat, Ketluanrang FROM dbo.tbTongQuat"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As KskDbDataSet.tbTongQuatDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As KskDbDataSet.tbTongQuatDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As KskDbDataSet.tbTongQuatDataTable = New KskDbDataSet.tbTongQuatDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As KskDbDataSet.tbTongQuatDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As KskDbDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "tbTongQuat")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete( _
+                    ByVal Original_IdSolieuhoso As Integer,  _
+                    ByVal Original_Chieucao As String,  _
+                    ByVal Original_Cannang As String,  _
+                    ByVal Original_BMI As String,  _
+                    ByVal Original_Huyetap As String,  _
+                    ByVal Original_Theluc As String,  _
+                    ByVal Original_Tuanhoan As String,  _
+                    ByVal Original_Hohap As String,  _
+                    ByVal Original_Tieuhoa As String,  _
+                    ByVal Original_Thantietnieu As String,  _
+                    ByVal Original_Noitiet As String,  _
+                    ByVal Original_Coxuongkhop As String,  _
+                    ByVal Original_Thankinh As String,  _
+                    ByVal Original_Tamthan As String,  _
+                    ByVal Original_Ngoaikhoa As String,  _
+                    ByVal Original_Mat As String,  _
+                    ByVal Original_Taimuihong As String,  _
+                    ByVal Original_Ranghammat As String,  _
+                    ByVal Original_Dalieu As String,  _
+                    ByVal Original_Sanphukhoa As String,  _
+                    ByVal Original_Sieuambung As String,  _
+                    ByVal Original_Sieuamtuyengiap As String,  _
+                    ByVal Original_Sieuamtuyenvu As String,  _
+                    ByVal Original_Sieuammachcanh As String,  _
+                    ByVal Original_Soicotucung As String,  _
+                    ByVal Original_Sieuamtim As String,  _
+                    ByVal Original_Xquangphoi As String,  _
+                    ByVal Original_XquangCstl As String,  _
+                    ByVal Original_Dientim As String,  _
+                    ByVal Original_Doloangxuong As String,  _
+                    ByVal Original_Thamvantongquat As String,  _
+                    ByVal Original_Ketluanrang As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_Chieucao Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Chieucao,String)
+            End If
+            If (Original_Cannang Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Cannang,String)
+            End If
+            If (Original_BMI Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_BMI,String)
+            End If
+            If (Original_Huyetap Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Huyetap,String)
+            End If
+            If (Original_Theluc Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Theluc,String)
+            End If
+            If (Original_Tuanhoan Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Tuanhoan,String)
+            End If
+            If (Original_Hohap Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Hohap,String)
+            End If
+            If (Original_Tieuhoa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Tieuhoa,String)
+            End If
+            If (Original_Thantietnieu Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Thantietnieu,String)
+            End If
+            If (Original_Noitiet Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Noitiet,String)
+            End If
+            If (Original_Coxuongkhop Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Coxuongkhop,String)
+            End If
+            If (Original_Thankinh Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_Thankinh,String)
+            End If
+            If (Original_Tamthan Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_Tamthan,String)
+            End If
+            If (Original_Ngoaikhoa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_Ngoaikhoa,String)
+            End If
+            If (Original_Mat Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_Mat,String)
+            End If
+            If (Original_Taimuihong Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_Taimuihong,String)
+            End If
+            If (Original_Ranghammat Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_Ranghammat,String)
+            End If
+            If (Original_Dalieu Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_Dalieu,String)
+            End If
+            If (Original_Sanphukhoa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_Sanphukhoa,String)
+            End If
+            If (Original_Sieuambung Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_Sieuambung,String)
+            End If
+            If (Original_Sieuamtuyengiap Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_Sieuamtuyengiap,String)
+            End If
+            If (Original_Sieuamtuyenvu Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_Sieuamtuyenvu,String)
+            End If
+            If (Original_Sieuammachcanh Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(Original_Sieuammachcanh,String)
+            End If
+            If (Original_Soicotucung Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_Soicotucung,String)
+            End If
+            If (Original_Sieuamtim Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(49).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(50).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(49).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(50).Value = CType(Original_Sieuamtim,String)
+            End If
+            If (Original_Xquangphoi Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(51).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(52).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(51).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(52).Value = CType(Original_Xquangphoi,String)
+            End If
+            If (Original_XquangCstl Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(53).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(54).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(53).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(54).Value = CType(Original_XquangCstl,String)
+            End If
+            If (Original_Dientim Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(55).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(56).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(55).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(56).Value = CType(Original_Dientim,String)
+            End If
+            If (Original_Doloangxuong Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(57).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(58).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(57).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(58).Value = CType(Original_Doloangxuong,String)
+            End If
+            If (Original_Thamvantongquat Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(59).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(60).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(59).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(60).Value = CType(Original_Thamvantongquat,String)
+            End If
+            If (Original_Ketluanrang Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(61).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(62).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(61).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(62).Value = CType(Original_Ketluanrang,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert( _
+                    ByVal IdSolieuhoso As Integer,  _
+                    ByVal Chieucao As String,  _
+                    ByVal Cannang As String,  _
+                    ByVal BMI As String,  _
+                    ByVal Huyetap As String,  _
+                    ByVal Theluc As String,  _
+                    ByVal Tuanhoan As String,  _
+                    ByVal Hohap As String,  _
+                    ByVal Tieuhoa As String,  _
+                    ByVal Thantietnieu As String,  _
+                    ByVal Noitiet As String,  _
+                    ByVal Coxuongkhop As String,  _
+                    ByVal Thankinh As String,  _
+                    ByVal Tamthan As String,  _
+                    ByVal Ngoaikhoa As String,  _
+                    ByVal Mat As String,  _
+                    ByVal Taimuihong As String,  _
+                    ByVal Ranghammat As String,  _
+                    ByVal Dalieu As String,  _
+                    ByVal Sanphukhoa As String,  _
+                    ByVal Sieuambung As String,  _
+                    ByVal Sieuamtuyengiap As String,  _
+                    ByVal Sieuamtuyenvu As String,  _
+                    ByVal Sieuammachcanh As String,  _
+                    ByVal Soicotucung As String,  _
+                    ByVal Sieuamtim As String,  _
+                    ByVal Xquangphoi As String,  _
+                    ByVal XquangCstl As String,  _
+                    ByVal Dientim As String,  _
+                    ByVal Doloangxuong As String,  _
+                    ByVal Ketluantongquat As String,  _
+                    ByVal Thamvantongquat As String,  _
+                    ByVal Ketluanrang As String) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
+            If (Chieucao Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Chieucao,String)
+            End If
+            If (Cannang Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Cannang,String)
+            End If
+            If (BMI Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(BMI,String)
+            End If
+            If (Huyetap Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Huyetap,String)
+            End If
+            If (Theluc Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Theluc,String)
+            End If
+            If (Tuanhoan Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Tuanhoan,String)
+            End If
+            If (Hohap Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Hohap,String)
+            End If
+            If (Tieuhoa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Tieuhoa,String)
+            End If
+            If (Thantietnieu Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Thantietnieu,String)
+            End If
+            If (Noitiet Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Noitiet,String)
+            End If
+            If (Coxuongkhop Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Coxuongkhop,String)
+            End If
+            If (Thankinh Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(Thankinh,String)
+            End If
+            If (Tamthan Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(Tamthan,String)
+            End If
+            If (Ngoaikhoa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(Ngoaikhoa,String)
+            End If
+            If (Mat Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(Mat,String)
+            End If
+            If (Taimuihong Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(16).Value = CType(Taimuihong,String)
+            End If
+            If (Ranghammat Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(Ranghammat,String)
+            End If
+            If (Dalieu Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(Dalieu,String)
+            End If
+            If (Sanphukhoa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(Sanphukhoa,String)
+            End If
+            If (Sieuambung Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(Sieuambung,String)
+            End If
+            If (Sieuamtuyengiap Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(21).Value = CType(Sieuamtuyengiap,String)
+            End If
+            If (Sieuamtuyenvu Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(Sieuamtuyenvu,String)
+            End If
+            If (Sieuammachcanh Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(Sieuammachcanh,String)
+            End If
+            If (Soicotucung Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(Soicotucung,String)
+            End If
+            If (Sieuamtim Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(Sieuamtim,String)
+            End If
+            If (Xquangphoi Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(26).Value = CType(Xquangphoi,String)
+            End If
+            If (XquangCstl Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(27).Value = CType(XquangCstl,String)
+            End If
+            If (Dientim Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(28).Value = CType(Dientim,String)
+            End If
+            If (Doloangxuong Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(Doloangxuong,String)
+            End If
+            If (Ketluantongquat Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(30).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(30).Value = CType(Ketluantongquat,String)
+            End If
+            If (Thamvantongquat Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(31).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(31).Value = CType(Thamvantongquat,String)
+            End If
+            If (Ketluanrang Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(32).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(32).Value = CType(Ketluanrang,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal IdSolieuhoso As Integer,  _
+                    ByVal Chieucao As String,  _
+                    ByVal Cannang As String,  _
+                    ByVal BMI As String,  _
+                    ByVal Huyetap As String,  _
+                    ByVal Theluc As String,  _
+                    ByVal Tuanhoan As String,  _
+                    ByVal Hohap As String,  _
+                    ByVal Tieuhoa As String,  _
+                    ByVal Thantietnieu As String,  _
+                    ByVal Noitiet As String,  _
+                    ByVal Coxuongkhop As String,  _
+                    ByVal Thankinh As String,  _
+                    ByVal Tamthan As String,  _
+                    ByVal Ngoaikhoa As String,  _
+                    ByVal Mat As String,  _
+                    ByVal Taimuihong As String,  _
+                    ByVal Ranghammat As String,  _
+                    ByVal Dalieu As String,  _
+                    ByVal Sanphukhoa As String,  _
+                    ByVal Sieuambung As String,  _
+                    ByVal Sieuamtuyengiap As String,  _
+                    ByVal Sieuamtuyenvu As String,  _
+                    ByVal Sieuammachcanh As String,  _
+                    ByVal Soicotucung As String,  _
+                    ByVal Sieuamtim As String,  _
+                    ByVal Xquangphoi As String,  _
+                    ByVal XquangCstl As String,  _
+                    ByVal Dientim As String,  _
+                    ByVal Doloangxuong As String,  _
+                    ByVal Ketluantongquat As String,  _
+                    ByVal Thamvantongquat As String,  _
+                    ByVal Ketluanrang As String,  _
+                    ByVal Original_IdSolieuhoso As Integer,  _
+                    ByVal Original_Chieucao As String,  _
+                    ByVal Original_Cannang As String,  _
+                    ByVal Original_BMI As String,  _
+                    ByVal Original_Huyetap As String,  _
+                    ByVal Original_Theluc As String,  _
+                    ByVal Original_Tuanhoan As String,  _
+                    ByVal Original_Hohap As String,  _
+                    ByVal Original_Tieuhoa As String,  _
+                    ByVal Original_Thantietnieu As String,  _
+                    ByVal Original_Noitiet As String,  _
+                    ByVal Original_Coxuongkhop As String,  _
+                    ByVal Original_Thankinh As String,  _
+                    ByVal Original_Tamthan As String,  _
+                    ByVal Original_Ngoaikhoa As String,  _
+                    ByVal Original_Mat As String,  _
+                    ByVal Original_Taimuihong As String,  _
+                    ByVal Original_Ranghammat As String,  _
+                    ByVal Original_Dalieu As String,  _
+                    ByVal Original_Sanphukhoa As String,  _
+                    ByVal Original_Sieuambung As String,  _
+                    ByVal Original_Sieuamtuyengiap As String,  _
+                    ByVal Original_Sieuamtuyenvu As String,  _
+                    ByVal Original_Sieuammachcanh As String,  _
+                    ByVal Original_Soicotucung As String,  _
+                    ByVal Original_Sieuamtim As String,  _
+                    ByVal Original_Xquangphoi As String,  _
+                    ByVal Original_XquangCstl As String,  _
+                    ByVal Original_Dientim As String,  _
+                    ByVal Original_Doloangxuong As String,  _
+                    ByVal Original_Thamvantongquat As String,  _
+                    ByVal Original_Ketluanrang As String) As Integer
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdSolieuhoso,Integer)
+            If (Chieucao Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Chieucao,String)
+            End If
+            If (Cannang Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Cannang,String)
+            End If
+            If (BMI Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(BMI,String)
+            End If
+            If (Huyetap Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Huyetap,String)
+            End If
+            If (Theluc Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Theluc,String)
+            End If
+            If (Tuanhoan Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Tuanhoan,String)
+            End If
+            If (Hohap Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Hohap,String)
+            End If
+            If (Tieuhoa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Tieuhoa,String)
+            End If
+            If (Thantietnieu Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Thantietnieu,String)
+            End If
+            If (Noitiet Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Noitiet,String)
+            End If
+            If (Coxuongkhop Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Coxuongkhop,String)
+            End If
+            If (Thankinh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Thankinh,String)
+            End If
+            If (Tamthan Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Tamthan,String)
+            End If
+            If (Ngoaikhoa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Ngoaikhoa,String)
+            End If
+            If (Mat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Mat,String)
+            End If
+            If (Taimuihong Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Taimuihong,String)
+            End If
+            If (Ranghammat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Ranghammat,String)
+            End If
+            If (Dalieu Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Dalieu,String)
+            End If
+            If (Sanphukhoa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Sanphukhoa,String)
+            End If
+            If (Sieuambung Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Sieuambung,String)
+            End If
+            If (Sieuamtuyengiap Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Sieuamtuyengiap,String)
+            End If
+            If (Sieuamtuyenvu Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Sieuamtuyenvu,String)
+            End If
+            If (Sieuammachcanh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Sieuammachcanh,String)
+            End If
+            If (Soicotucung Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Soicotucung,String)
+            End If
+            If (Sieuamtim Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Sieuamtim,String)
+            End If
+            If (Xquangphoi Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Xquangphoi,String)
+            End If
+            If (XquangCstl Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(XquangCstl,String)
+            End If
+            If (Dientim Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Dientim,String)
+            End If
+            If (Doloangxuong Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Doloangxuong,String)
+            End If
+            If (Ketluantongquat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Ketluantongquat,String)
+            End If
+            If (Thamvantongquat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Thamvantongquat,String)
+            End If
+            If (Ketluanrang Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Ketluanrang,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_IdSolieuhoso,Integer)
+            If (Original_Chieucao Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Chieucao,String)
+            End If
+            If (Original_Cannang Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_Cannang,String)
+            End If
+            If (Original_BMI Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_BMI,String)
+            End If
+            If (Original_Huyetap Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_Huyetap,String)
+            End If
+            If (Original_Theluc Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_Theluc,String)
+            End If
+            If (Original_Tuanhoan Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(45).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_Tuanhoan,String)
+            End If
+            If (Original_Hohap Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(47).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(Original_Hohap,String)
+            End If
+            If (Original_Tieuhoa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(49).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(Original_Tieuhoa,String)
+            End If
+            If (Original_Thantietnieu Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(51).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(Original_Thantietnieu,String)
+            End If
+            If (Original_Noitiet Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(53).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(Original_Noitiet,String)
+            End If
+            If (Original_Coxuongkhop Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(55).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(Original_Coxuongkhop,String)
+            End If
+            If (Original_Thankinh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(57).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(Original_Thankinh,String)
+            End If
+            If (Original_Tamthan Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(59).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(Original_Tamthan,String)
+            End If
+            If (Original_Ngoaikhoa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(61).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(Original_Ngoaikhoa,String)
+            End If
+            If (Original_Mat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(63).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(Original_Mat,String)
+            End If
+            If (Original_Taimuihong Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(65).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(Original_Taimuihong,String)
+            End If
+            If (Original_Ranghammat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(67).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_Ranghammat,String)
+            End If
+            If (Original_Dalieu Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(69).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_Dalieu,String)
+            End If
+            If (Original_Sanphukhoa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(71).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(Original_Sanphukhoa,String)
+            End If
+            If (Original_Sieuambung Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(73).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(Original_Sieuambung,String)
+            End If
+            If (Original_Sieuamtuyengiap Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(75).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(Original_Sieuamtuyengiap,String)
+            End If
+            If (Original_Sieuamtuyenvu Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(77).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(Original_Sieuamtuyenvu,String)
+            End If
+            If (Original_Sieuammachcanh Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(79).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(Original_Sieuammachcanh,String)
+            End If
+            If (Original_Soicotucung Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(81).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(Original_Soicotucung,String)
+            End If
+            If (Original_Sieuamtim Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(83).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(Original_Sieuamtim,String)
+            End If
+            If (Original_Xquangphoi Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(85).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(Original_Xquangphoi,String)
+            End If
+            If (Original_XquangCstl Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(87).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(Original_XquangCstl,String)
+            End If
+            If (Original_Dientim Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(89).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(Original_Dientim,String)
+            End If
+            If (Original_Doloangxuong Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(91).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(Original_Doloangxuong,String)
+            End If
+            If (Original_Thamvantongquat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_Thamvantongquat,String)
+            End If
+            If (Original_Ketluanrang Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(95).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(Original_Ketluanrang,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal Chieucao As String,  _
+                    ByVal Cannang As String,  _
+                    ByVal BMI As String,  _
+                    ByVal Huyetap As String,  _
+                    ByVal Theluc As String,  _
+                    ByVal Tuanhoan As String,  _
+                    ByVal Hohap As String,  _
+                    ByVal Tieuhoa As String,  _
+                    ByVal Thantietnieu As String,  _
+                    ByVal Noitiet As String,  _
+                    ByVal Coxuongkhop As String,  _
+                    ByVal Thankinh As String,  _
+                    ByVal Tamthan As String,  _
+                    ByVal Ngoaikhoa As String,  _
+                    ByVal Mat As String,  _
+                    ByVal Taimuihong As String,  _
+                    ByVal Ranghammat As String,  _
+                    ByVal Dalieu As String,  _
+                    ByVal Sanphukhoa As String,  _
+                    ByVal Sieuambung As String,  _
+                    ByVal Sieuamtuyengiap As String,  _
+                    ByVal Sieuamtuyenvu As String,  _
+                    ByVal Sieuammachcanh As String,  _
+                    ByVal Soicotucung As String,  _
+                    ByVal Sieuamtim As String,  _
+                    ByVal Xquangphoi As String,  _
+                    ByVal XquangCstl As String,  _
+                    ByVal Dientim As String,  _
+                    ByVal Doloangxuong As String,  _
+                    ByVal Ketluantongquat As String,  _
+                    ByVal Thamvantongquat As String,  _
+                    ByVal Ketluanrang As String,  _
+                    ByVal Original_IdSolieuhoso As Integer,  _
+                    ByVal Original_Chieucao As String,  _
+                    ByVal Original_Cannang As String,  _
+                    ByVal Original_BMI As String,  _
+                    ByVal Original_Huyetap As String,  _
+                    ByVal Original_Theluc As String,  _
+                    ByVal Original_Tuanhoan As String,  _
+                    ByVal Original_Hohap As String,  _
+                    ByVal Original_Tieuhoa As String,  _
+                    ByVal Original_Thantietnieu As String,  _
+                    ByVal Original_Noitiet As String,  _
+                    ByVal Original_Coxuongkhop As String,  _
+                    ByVal Original_Thankinh As String,  _
+                    ByVal Original_Tamthan As String,  _
+                    ByVal Original_Ngoaikhoa As String,  _
+                    ByVal Original_Mat As String,  _
+                    ByVal Original_Taimuihong As String,  _
+                    ByVal Original_Ranghammat As String,  _
+                    ByVal Original_Dalieu As String,  _
+                    ByVal Original_Sanphukhoa As String,  _
+                    ByVal Original_Sieuambung As String,  _
+                    ByVal Original_Sieuamtuyengiap As String,  _
+                    ByVal Original_Sieuamtuyenvu As String,  _
+                    ByVal Original_Sieuammachcanh As String,  _
+                    ByVal Original_Soicotucung As String,  _
+                    ByVal Original_Sieuamtim As String,  _
+                    ByVal Original_Xquangphoi As String,  _
+                    ByVal Original_XquangCstl As String,  _
+                    ByVal Original_Dientim As String,  _
+                    ByVal Original_Doloangxuong As String,  _
+                    ByVal Original_Thamvantongquat As String,  _
+                    ByVal Original_Ketluanrang As String) As Integer
+            Return Me.Update(Original_IdSolieuhoso, Chieucao, Cannang, BMI, Huyetap, Theluc, Tuanhoan, Hohap, Tieuhoa, Thantietnieu, Noitiet, Coxuongkhop, Thankinh, Tamthan, Ngoaikhoa, Mat, Taimuihong, Ranghammat, Dalieu, Sanphukhoa, Sieuambung, Sieuamtuyengiap, Sieuamtuyenvu, Sieuammachcanh, Soicotucung, Sieuamtim, Xquangphoi, XquangCstl, Dientim, Doloangxuong, Ketluantongquat, Thamvantongquat, Ketluanrang, Original_IdSolieuhoso, Original_Chieucao, Original_Cannang, Original_BMI, Original_Huyetap, Original_Theluc, Original_Tuanhoan, Original_Hohap, Original_Tieuhoa, Original_Thantietnieu, Original_Noitiet, Original_Coxuongkhop, Original_Thankinh, Original_Tamthan, Original_Ngoaikhoa, Original_Mat, Original_Taimuihong, Original_Ranghammat, Original_Dalieu, Original_Sanphukhoa, Original_Sieuambung, Original_Sieuamtuyengiap, Original_Sieuamtuyenvu, Original_Sieuammachcanh, Original_Soicotucung, Original_Sieuamtim, Original_Xquangphoi, Original_XquangCstl, Original_Dientim, Original_Doloangxuong, Original_Thamvantongquat, Original_Ketluanrang)
         End Function
     End Class
     
@@ -11995,11 +16092,15 @@ Namespace KskDbDataSetTableAdapters
         
         Private _tbSinhHoaTableAdapter As tbSinhHoaTableAdapter
         
-        Private _tbTraHuyetHocTableAdapter As tbTraHuyetHocTableAdapter
+        Private _tbmiendichTableAdapter As TbmiendichTableAdapter
         
-        Private _tbTraPhanTichNuocTieuTableAdapter As tbTraPhanTichNuocTieuTableAdapter
+        Private _tbSoiamdaoTableAdapter As TbSoiamdaoTableAdapter
         
-        Private _tbTraSinhHoaTableAdapter As tbTraSinhHoaTableAdapter
+        Private _tbSoiphanTableAdapter As TbSoiphanTableAdapter
+        
+        Private _tbTestnhanhTableAdapter As TbTestnhanhTableAdapter
+        
+        Private _tbTongQuatTableAdapter As tbTongQuatTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -12091,12 +16192,12 @@ Namespace KskDbDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property tbTraHuyetHocTableAdapter() As tbTraHuyetHocTableAdapter
+        Public Property TbmiendichTableAdapter() As TbmiendichTableAdapter
             Get
-                Return Me._tbTraHuyetHocTableAdapter
+                Return Me._tbmiendichTableAdapter
             End Get
             Set
-                Me._tbTraHuyetHocTableAdapter = value
+                Me._tbmiendichTableAdapter = value
             End Set
         End Property
         
@@ -12105,12 +16206,12 @@ Namespace KskDbDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property tbTraPhanTichNuocTieuTableAdapter() As tbTraPhanTichNuocTieuTableAdapter
+        Public Property TbSoiamdaoTableAdapter() As TbSoiamdaoTableAdapter
             Get
-                Return Me._tbTraPhanTichNuocTieuTableAdapter
+                Return Me._tbSoiamdaoTableAdapter
             End Get
             Set
-                Me._tbTraPhanTichNuocTieuTableAdapter = value
+                Me._tbSoiamdaoTableAdapter = value
             End Set
         End Property
         
@@ -12119,12 +16220,40 @@ Namespace KskDbDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property tbTraSinhHoaTableAdapter() As tbTraSinhHoaTableAdapter
+        Public Property TbSoiphanTableAdapter() As TbSoiphanTableAdapter
             Get
-                Return Me._tbTraSinhHoaTableAdapter
+                Return Me._tbSoiphanTableAdapter
             End Get
             Set
-                Me._tbTraSinhHoaTableAdapter = value
+                Me._tbSoiphanTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property TbTestnhanhTableAdapter() As TbTestnhanhTableAdapter
+            Get
+                Return Me._tbTestnhanhTableAdapter
+            End Get
+            Set
+                Me._tbTestnhanhTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property tbTongQuatTableAdapter() As tbTongQuatTableAdapter
+            Get
+                Return Me._tbTongQuatTableAdapter
+            End Get
+            Set
+                Me._tbTongQuatTableAdapter = value
             End Set
         End Property
         
@@ -12167,17 +16296,25 @@ Namespace KskDbDataSetTableAdapters
                             AndAlso (Not (Me._tbSinhHoaTableAdapter.Connection) Is Nothing)) Then
                     Return Me._tbSinhHoaTableAdapter.Connection
                 End If
-                If ((Not (Me._tbTraHuyetHocTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._tbTraHuyetHocTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._tbTraHuyetHocTableAdapter.Connection
+                If ((Not (Me._tbmiendichTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tbmiendichTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tbmiendichTableAdapter.Connection
                 End If
-                If ((Not (Me._tbTraPhanTichNuocTieuTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._tbTraPhanTichNuocTieuTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._tbTraPhanTichNuocTieuTableAdapter.Connection
+                If ((Not (Me._tbSoiamdaoTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tbSoiamdaoTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tbSoiamdaoTableAdapter.Connection
                 End If
-                If ((Not (Me._tbTraSinhHoaTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._tbTraSinhHoaTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._tbTraSinhHoaTableAdapter.Connection
+                If ((Not (Me._tbSoiphanTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tbSoiphanTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tbSoiphanTableAdapter.Connection
+                End If
+                If ((Not (Me._tbTestnhanhTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tbTestnhanhTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tbTestnhanhTableAdapter.Connection
+                End If
+                If ((Not (Me._tbTongQuatTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tbTongQuatTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tbTongQuatTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -12207,13 +16344,19 @@ Namespace KskDbDataSetTableAdapters
                 If (Not (Me._tbSinhHoaTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._tbTraHuyetHocTableAdapter) Is Nothing) Then
+                If (Not (Me._tbmiendichTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._tbTraPhanTichNuocTieuTableAdapter) Is Nothing) Then
+                If (Not (Me._tbSoiamdaoTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._tbTraSinhHoaTableAdapter) Is Nothing) Then
+                If (Not (Me._tbSoiphanTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._tbTestnhanhTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._tbTongQuatTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -12272,30 +16415,48 @@ Namespace KskDbDataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._tbTraHuyetHocTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbTraHuyetHoc.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._tbmiendichTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Tbmiendich.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._tbTraHuyetHocTableAdapter.Update(updatedRows))
+                    result = (result + Me._tbmiendichTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._tbTraPhanTichNuocTieuTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbTraPhanTichNuocTieu.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._tbSoiamdaoTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.TbSoiamdao.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._tbTraPhanTichNuocTieuTableAdapter.Update(updatedRows))
+                    result = (result + Me._tbSoiamdaoTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._tbTraSinhHoaTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbTraSinhHoa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._tbSoiphanTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.TbSoiphan.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._tbTraSinhHoaTableAdapter.Update(updatedRows))
+                    result = (result + Me._tbSoiphanTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._tbTestnhanhTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.TbTestnhanh.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._tbTestnhanhTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._tbTongQuatTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbTongQuat.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._tbTongQuatTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -12349,27 +16510,43 @@ Namespace KskDbDataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._tbTraHuyetHocTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbTraHuyetHoc.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._tbmiendichTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Tbmiendich.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._tbTraHuyetHocTableAdapter.Update(addedRows))
+                    result = (result + Me._tbmiendichTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._tbTraPhanTichNuocTieuTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbTraPhanTichNuocTieu.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._tbSoiamdaoTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.TbSoiamdao.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._tbTraPhanTichNuocTieuTableAdapter.Update(addedRows))
+                    result = (result + Me._tbSoiamdaoTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._tbTraSinhHoaTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbTraSinhHoa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._tbSoiphanTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.TbSoiphan.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._tbTraSinhHoaTableAdapter.Update(addedRows))
+                    result = (result + Me._tbSoiphanTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._tbTestnhanhTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.TbTestnhanh.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._tbTestnhanhTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._tbTongQuatTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbTongQuat.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._tbTongQuatTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -12383,27 +16560,43 @@ Namespace KskDbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As KskDbDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._tbTraSinhHoaTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbTraSinhHoa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._tbTongQuatTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbTongQuat.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._tbTraSinhHoaTableAdapter.Update(deletedRows))
+                    result = (result + Me._tbTongQuatTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._tbTraPhanTichNuocTieuTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbTraPhanTichNuocTieu.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._tbTestnhanhTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.TbTestnhanh.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._tbTraPhanTichNuocTieuTableAdapter.Update(deletedRows))
+                    result = (result + Me._tbTestnhanhTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._tbTraHuyetHocTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbTraHuyetHoc.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._tbSoiphanTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.TbSoiphan.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._tbTraHuyetHocTableAdapter.Update(deletedRows))
+                    result = (result + Me._tbSoiphanTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._tbSoiamdaoTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.TbSoiamdao.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._tbSoiamdaoTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._tbmiendichTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Tbmiendich.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._tbmiendichTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -12513,18 +16706,28 @@ Namespace KskDbDataSetTableAdapters
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
-            If ((Not (Me._tbTraHuyetHocTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._tbTraHuyetHocTableAdapter.Connection) = false)) Then
+            If ((Not (Me._tbmiendichTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tbmiendichTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
-            If ((Not (Me._tbTraPhanTichNuocTieuTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._tbTraPhanTichNuocTieuTableAdapter.Connection) = false)) Then
+            If ((Not (Me._tbSoiamdaoTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tbSoiamdaoTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
-            If ((Not (Me._tbTraSinhHoaTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._tbTraSinhHoaTableAdapter.Connection) = false)) Then
+            If ((Not (Me._tbSoiphanTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tbSoiphanTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
+            If ((Not (Me._tbTestnhanhTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tbTestnhanhTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
+            If ((Not (Me._tbTongQuatTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tbTongQuatTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -12605,31 +16808,49 @@ Namespace KskDbDataSetTableAdapters
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._tbSinhHoaTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._tbTraHuyetHocTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._tbTraHuyetHocTableAdapter, Me._tbTraHuyetHocTableAdapter.Connection)
-                    Me._tbTraHuyetHocTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._tbTraHuyetHocTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._tbTraHuyetHocTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._tbTraHuyetHocTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbTraHuyetHocTableAdapter.Adapter)
+                If (Not (Me._tbmiendichTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tbmiendichTableAdapter, Me._tbmiendichTableAdapter.Connection)
+                    Me._tbmiendichTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbmiendichTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._tbmiendichTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tbmiendichTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbmiendichTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._tbTraPhanTichNuocTieuTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._tbTraPhanTichNuocTieuTableAdapter, Me._tbTraPhanTichNuocTieuTableAdapter.Connection)
-                    Me._tbTraPhanTichNuocTieuTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._tbTraPhanTichNuocTieuTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._tbTraPhanTichNuocTieuTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._tbTraPhanTichNuocTieuTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbTraPhanTichNuocTieuTableAdapter.Adapter)
+                If (Not (Me._tbSoiamdaoTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tbSoiamdaoTableAdapter, Me._tbSoiamdaoTableAdapter.Connection)
+                    Me._tbSoiamdaoTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbSoiamdaoTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._tbSoiamdaoTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tbSoiamdaoTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbSoiamdaoTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._tbTraSinhHoaTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._tbTraSinhHoaTableAdapter, Me._tbTraSinhHoaTableAdapter.Connection)
-                    Me._tbTraSinhHoaTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._tbTraSinhHoaTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._tbTraSinhHoaTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._tbTraSinhHoaTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbTraSinhHoaTableAdapter.Adapter)
+                If (Not (Me._tbSoiphanTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tbSoiphanTableAdapter, Me._tbSoiphanTableAdapter.Connection)
+                    Me._tbSoiphanTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbSoiphanTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._tbSoiphanTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tbSoiphanTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbSoiphanTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._tbTestnhanhTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tbTestnhanhTableAdapter, Me._tbTestnhanhTableAdapter.Connection)
+                    Me._tbTestnhanhTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbTestnhanhTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._tbTestnhanhTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tbTestnhanhTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbTestnhanhTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._tbTongQuatTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tbTongQuatTableAdapter, Me._tbTongQuatTableAdapter.Connection)
+                    Me._tbTongQuatTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbTongQuatTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._tbTongQuatTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tbTongQuatTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbTongQuatTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -12712,17 +16933,25 @@ Namespace KskDbDataSetTableAdapters
                     Me._tbSinhHoaTableAdapter.Connection = CType(revertConnections(Me._tbSinhHoaTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._tbSinhHoaTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._tbTraHuyetHocTableAdapter) Is Nothing) Then
-                    Me._tbTraHuyetHocTableAdapter.Connection = CType(revertConnections(Me._tbTraHuyetHocTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._tbTraHuyetHocTableAdapter.Transaction = Nothing
+                If (Not (Me._tbmiendichTableAdapter) Is Nothing) Then
+                    Me._tbmiendichTableAdapter.Connection = CType(revertConnections(Me._tbmiendichTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbmiendichTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._tbTraPhanTichNuocTieuTableAdapter) Is Nothing) Then
-                    Me._tbTraPhanTichNuocTieuTableAdapter.Connection = CType(revertConnections(Me._tbTraPhanTichNuocTieuTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._tbTraPhanTichNuocTieuTableAdapter.Transaction = Nothing
+                If (Not (Me._tbSoiamdaoTableAdapter) Is Nothing) Then
+                    Me._tbSoiamdaoTableAdapter.Connection = CType(revertConnections(Me._tbSoiamdaoTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbSoiamdaoTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._tbTraSinhHoaTableAdapter) Is Nothing) Then
-                    Me._tbTraSinhHoaTableAdapter.Connection = CType(revertConnections(Me._tbTraSinhHoaTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._tbTraSinhHoaTableAdapter.Transaction = Nothing
+                If (Not (Me._tbSoiphanTableAdapter) Is Nothing) Then
+                    Me._tbSoiphanTableAdapter.Connection = CType(revertConnections(Me._tbSoiphanTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbSoiphanTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._tbTestnhanhTableAdapter) Is Nothing) Then
+                    Me._tbTestnhanhTableAdapter.Connection = CType(revertConnections(Me._tbTestnhanhTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbTestnhanhTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._tbTongQuatTableAdapter) Is Nothing) Then
+                    Me._tbTongQuatTableAdapter.Connection = CType(revertConnections(Me._tbTongQuatTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._tbTongQuatTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

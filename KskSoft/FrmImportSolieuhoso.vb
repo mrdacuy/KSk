@@ -238,6 +238,27 @@ Public Class frmImportSolieuhoso
                                 bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
                                 bulkCopy.WriteToServer(insertedIdsTable)
                             End Using
+                            Using bulkCopy As New SqlBulkCopy(cnn)
+                                bulkCopy.DestinationTableName = "tbSoiphan"
+                                bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+                                bulkCopy.WriteToServer(insertedIdsTable)
+                            End Using
+                            Using bulkCopy As New SqlBulkCopy(cnn)
+                                bulkCopy.DestinationTableName = "tbSoiamdao"
+                                bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+                                bulkCopy.WriteToServer(insertedIdsTable)
+                            End Using
+                            Using bulkCopy As New SqlBulkCopy(cnn)
+                                bulkCopy.DestinationTableName = "tbTestnhanh"
+                                bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+                                bulkCopy.WriteToServer(insertedIdsTable)
+                            End Using
+                            Using bulkCopy As New SqlBulkCopy(cnn)
+                                bulkCopy.DestinationTableName = "tbMiendich"
+                                bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+                                bulkCopy.WriteToServer(insertedIdsTable)
+                            End Using
+
                         End Using
                         Me.Dispose()
                     Else

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmTraSinhHoa
+Partial Class FrmSoiphan
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
@@ -20,34 +20,25 @@ Partial Class frmTraSinhHoa
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTraSinhHoa))
-        Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
-        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.NIdSolieuhoso = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NMacode = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NHoten = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NNamsinh = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NGioitinh = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NManhanvien = New DevExpress.XtraGrid.Columns.GridColumn()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSoiphan))
         Me.NBophan = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.NCongty = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.NNgaykham = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NAST = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NALT = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NGGT = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NGlucose = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NCreatine = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NUre = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NCholesterol = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NTriglyceride = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NHDL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NLDL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NUric = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NProtein = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NHbA1c = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NAlbumin = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NKetluansinhhoa = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NThamvansinhhoa = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NKstduongruot = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NSoituoiphanbachcau = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NSoituoiphanhongcau = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NKetluan = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NThamvan = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.PopupMenu1 = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.BntTaodulieu = New DevExpress.XtraBars.BarButtonItem()
+        Me.BntXoadulieu = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
+        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.NManhanvien = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NGioitinh = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemCheckEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
@@ -62,16 +53,14 @@ Partial Class frmTraSinhHoa
         Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.DenNgay = New DevExpress.XtraEditors.DateEdit()
         Me.TuNgay = New DevExpress.XtraEditors.DateEdit()
-        Me.PopupMenu1 = New DevExpress.XtraBars.PopupMenu(Me.components)
-        Me.BntXoadulieu = New DevExpress.XtraBars.BarButtonItem()
-        Me.BntTaodulieu = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
-        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
+        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.NIdSolieuhoso = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NMacode = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NHoten = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NNamsinh = New DevExpress.XtraGrid.Columns.GridColumn()
+        CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemCheckEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -84,88 +73,9 @@ Partial Class frmTraSinhHoa
         CType(Me.DenNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TuNgay.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TuNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'GridControl2
-        '
-        Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl2.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GridControl2.Location = New System.Drawing.Point(0, 0)
-        Me.GridControl2.MainView = Me.GridView2
-        Me.GridControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit2})
-        Me.GridControl2.Size = New System.Drawing.Size(1153, 428)
-        Me.GridControl2.TabIndex = 8
-        Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
-        '
-        'GridView2
-        '
-        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NIdSolieuhoso, Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.NBophan, Me.NCongty, Me.NNgaykham, Me.NAST, Me.NALT, Me.NGGT, Me.NGlucose, Me.NCreatine, Me.NUre, Me.NCholesterol, Me.NTriglyceride, Me.NHDL, Me.NLDL, Me.NUric, Me.NProtein, Me.NHbA1c, Me.NAlbumin, Me.NKetluansinhhoa, Me.NThamvansinhhoa})
-        Me.GridView2.DetailHeight = 431
-        Me.GridView2.GridControl = Me.GridControl2
-        Me.GridView2.Name = "GridView2"
-        Me.GridView2.OptionsBehavior.Editable = False
-        Me.GridView2.OptionsSelection.MultiSelect = True
-        Me.GridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect
-        Me.GridView2.OptionsView.ShowGroupPanel = False
-        '
-        'NIdSolieuhoso
-        '
-        Me.NIdSolieuhoso.Caption = "Id"
-        Me.NIdSolieuhoso.FieldName = "IdSolieuhoso"
-        Me.NIdSolieuhoso.MinWidth = 23
-        Me.NIdSolieuhoso.Name = "NIdSolieuhoso"
-        Me.NIdSolieuhoso.Visible = True
-        Me.NIdSolieuhoso.VisibleIndex = 0
-        Me.NIdSolieuhoso.Width = 51
-        '
-        'NMacode
-        '
-        Me.NMacode.Caption = "MÃ ID"
-        Me.NMacode.FieldName = "Macode"
-        Me.NMacode.Name = "NMacode"
-        Me.NMacode.Visible = True
-        Me.NMacode.VisibleIndex = 1
-        Me.NMacode.Width = 51
-        '
-        'NHoten
-        '
-        Me.NHoten.Caption = "HỌ TÊN"
-        Me.NHoten.FieldName = "Hoten"
-        Me.NHoten.Name = "NHoten"
-        Me.NHoten.Visible = True
-        Me.NHoten.VisibleIndex = 3
-        Me.NHoten.Width = 148
-        '
-        'NNamsinh
-        '
-        Me.NNamsinh.Caption = "NĂM SINH"
-        Me.NNamsinh.FieldName = "Namsinh"
-        Me.NNamsinh.Name = "NNamsinh"
-        Me.NNamsinh.Visible = True
-        Me.NNamsinh.VisibleIndex = 4
-        Me.NNamsinh.Width = 79
-        '
-        'NGioitinh
-        '
-        Me.NGioitinh.Caption = "GIỚI TÍNH"
-        Me.NGioitinh.FieldName = "Gioitinh"
-        Me.NGioitinh.Name = "NGioitinh"
-        Me.NGioitinh.Visible = True
-        Me.NGioitinh.VisibleIndex = 5
-        Me.NGioitinh.Width = 83
-        '
-        'NManhanvien
-        '
-        Me.NManhanvien.Caption = "MNV"
-        Me.NManhanvien.FieldName = "Manhanvien"
-        Me.NManhanvien.Name = "NManhanvien"
-        Me.NManhanvien.Visible = True
-        Me.NManhanvien.VisibleIndex = 6
-        Me.NManhanvien.Width = 70
         '
         'NBophan
         '
@@ -173,7 +83,7 @@ Partial Class frmTraSinhHoa
         Me.NBophan.FieldName = "Bophan"
         Me.NBophan.Name = "NBophan"
         Me.NBophan.Visible = True
-        Me.NBophan.VisibleIndex = 7
+        Me.NBophan.VisibleIndex = 5
         Me.NBophan.Width = 108
         '
         'NCongty
@@ -181,8 +91,6 @@ Partial Class frmTraSinhHoa
         Me.NCongty.Caption = "CÔNG TY"
         Me.NCongty.FieldName = "Congty"
         Me.NCongty.Name = "NCongty"
-        Me.NCongty.Visible = True
-        Me.NCongty.VisibleIndex = 2
         Me.NCongty.Width = 60
         '
         'NNgaykham
@@ -191,161 +99,134 @@ Partial Class frmTraSinhHoa
         Me.NNgaykham.FieldName = "Ngay"
         Me.NNgaykham.Name = "NNgaykham"
         Me.NNgaykham.Visible = True
-        Me.NNgaykham.VisibleIndex = 24
+        Me.NNgaykham.VisibleIndex = 11
         Me.NNgaykham.Width = 74
         '
-        'NAST
+        'NKstduongruot
         '
-        Me.NAST.Caption = "AST "
-        Me.NAST.FieldName = "AST"
-        Me.NAST.MinWidth = 23
-        Me.NAST.Name = "NAST"
-        Me.NAST.Visible = True
-        Me.NAST.VisibleIndex = 8
-        Me.NAST.Width = 41
+        Me.NKstduongruot.Caption = "KST ĐƯỜNG RUỘT"
+        Me.NKstduongruot.FieldName = "Kstduongruot"
+        Me.NKstduongruot.MinWidth = 23
+        Me.NKstduongruot.Name = "NKstduongruot"
+        Me.NKstduongruot.Visible = True
+        Me.NKstduongruot.VisibleIndex = 6
+        Me.NKstduongruot.Width = 41
         '
-        'NALT
+        'NSoituoiphanbachcau
         '
-        Me.NALT.Caption = "ALT "
-        Me.NALT.FieldName = "ALT"
-        Me.NALT.MinWidth = 23
-        Me.NALT.Name = "NALT"
-        Me.NALT.Visible = True
-        Me.NALT.VisibleIndex = 9
-        Me.NALT.Width = 41
+        Me.NSoituoiphanbachcau.Caption = "BẠCH CẦU"
+        Me.NSoituoiphanbachcau.FieldName = "Soituoiphanbachcau"
+        Me.NSoituoiphanbachcau.MinWidth = 23
+        Me.NSoituoiphanbachcau.Name = "NSoituoiphanbachcau"
+        Me.NSoituoiphanbachcau.Visible = True
+        Me.NSoituoiphanbachcau.VisibleIndex = 7
+        Me.NSoituoiphanbachcau.Width = 41
         '
-        'NGGT
+        'NSoituoiphanhongcau
         '
-        Me.NGGT.Caption = "GGT "
-        Me.NGGT.FieldName = "GGT"
-        Me.NGGT.MinWidth = 23
-        Me.NGGT.Name = "NGGT"
-        Me.NGGT.Visible = True
-        Me.NGGT.VisibleIndex = 10
-        Me.NGGT.Width = 41
+        Me.NSoituoiphanhongcau.Caption = "HỒNG CẦU"
+        Me.NSoituoiphanhongcau.FieldName = "Soituoiphanhongcau"
+        Me.NSoituoiphanhongcau.MinWidth = 23
+        Me.NSoituoiphanhongcau.Name = "NSoituoiphanhongcau"
+        Me.NSoituoiphanhongcau.Visible = True
+        Me.NSoituoiphanhongcau.VisibleIndex = 8
+        Me.NSoituoiphanhongcau.Width = 41
         '
-        'NGlucose
+        'NKetluan
         '
-        Me.NGlucose.Caption = "Glucose "
-        Me.NGlucose.FieldName = "Glucose"
-        Me.NGlucose.MinWidth = 23
-        Me.NGlucose.Name = "NGlucose"
-        Me.NGlucose.Visible = True
-        Me.NGlucose.VisibleIndex = 11
-        Me.NGlucose.Width = 61
+        Me.NKetluan.Caption = "KẾT LUẬN"
+        Me.NKetluan.FieldName = "Ketquasoiphan"
+        Me.NKetluan.Name = "NKetluan"
+        Me.NKetluan.Visible = True
+        Me.NKetluan.VisibleIndex = 9
         '
-        'NCreatine
+        'NThamvan
         '
-        Me.NCreatine.Caption = "Creatine "
-        Me.NCreatine.FieldName = "Creatine"
-        Me.NCreatine.MinWidth = 23
-        Me.NCreatine.Name = "NCreatine"
-        Me.NCreatine.Visible = True
-        Me.NCreatine.VisibleIndex = 12
-        Me.NCreatine.Width = 58
+        Me.NThamvan.Caption = "THAM VẤN"
+        Me.NThamvan.FieldName = "Thamvansoiphan"
+        Me.NThamvan.Name = "NThamvan"
+        Me.NThamvan.Visible = True
+        Me.NThamvan.VisibleIndex = 10
         '
-        'NUre
+        'PopupMenu1
         '
-        Me.NUre.Caption = "Ure "
-        Me.NUre.FieldName = "Ure"
-        Me.NUre.MinWidth = 23
-        Me.NUre.Name = "NUre"
-        Me.NUre.Visible = True
-        Me.NUre.VisibleIndex = 13
-        Me.NUre.Width = 41
+        Me.PopupMenu1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BntTaodulieu), New DevExpress.XtraBars.LinkPersistInfo(Me.BntXoadulieu)})
+        Me.PopupMenu1.Manager = Me.BarManager1
+        Me.PopupMenu1.Name = "PopupMenu1"
         '
-        'NCholesterol
+        'BntTaodulieu
         '
-        Me.NCholesterol.Caption = "Cholesterol "
-        Me.NCholesterol.FieldName = "Cholesterol"
-        Me.NCholesterol.MinWidth = 23
-        Me.NCholesterol.Name = "NCholesterol"
-        Me.NCholesterol.Visible = True
-        Me.NCholesterol.VisibleIndex = 14
-        Me.NCholesterol.Width = 65
+        Me.BntTaodulieu.Caption = "Tạo dữ liệu"
+        Me.BntTaodulieu.Id = 0
+        Me.BntTaodulieu.ImageOptions.SvgImage = CType(resources.GetObject("BntTaodulieu.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BntTaodulieu.Name = "BntTaodulieu"
         '
-        'NTriglyceride
+        'BntXoadulieu
         '
-        Me.NTriglyceride.Caption = "Triglyceride"
-        Me.NTriglyceride.FieldName = "Triglyceride"
-        Me.NTriglyceride.MinWidth = 23
-        Me.NTriglyceride.Name = "NTriglyceride"
-        Me.NTriglyceride.Visible = True
-        Me.NTriglyceride.VisibleIndex = 15
-        Me.NTriglyceride.Width = 41
+        Me.BntXoadulieu.Caption = "Xóa dữ liệu"
+        Me.BntXoadulieu.Id = 1
+        Me.BntXoadulieu.ImageOptions.SvgImage = CType(resources.GetObject("BntXoadulieu.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BntXoadulieu.Name = "BntXoadulieu"
         '
-        'NHDL
+        'BarManager1
         '
-        Me.NHDL.Caption = "HDL "
-        Me.NHDL.FieldName = "HDL"
-        Me.NHDL.MinWidth = 23
-        Me.NHDL.Name = "NHDL"
-        Me.NHDL.Visible = True
-        Me.NHDL.VisibleIndex = 16
-        Me.NHDL.Width = 41
+        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
+        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
+        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
+        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
+        Me.BarManager1.Form = Me
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BntTaodulieu, Me.BntXoadulieu})
+        Me.BarManager1.MaxItemId = 2
         '
-        'NLDL
+        'barDockControlTop
         '
-        Me.NLDL.Caption = "LDL "
-        Me.NLDL.FieldName = "LDL"
-        Me.NLDL.MinWidth = 23
-        Me.NLDL.Name = "NLDL"
-        Me.NLDL.Visible = True
-        Me.NLDL.VisibleIndex = 17
-        Me.NLDL.Width = 41
+        Me.barDockControlTop.CausesValidation = False
+        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
+        Me.barDockControlTop.Size = New System.Drawing.Size(1148, 0)
         '
-        'NUric
+        'barDockControlBottom
         '
-        Me.NUric.Caption = "Uric"
-        Me.NUric.FieldName = "Uric"
-        Me.NUric.MinWidth = 23
-        Me.NUric.Name = "NUric"
-        Me.NUric.Visible = True
-        Me.NUric.VisibleIndex = 18
-        Me.NUric.Width = 41
+        Me.barDockControlBottom.CausesValidation = False
+        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 570)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1148, 0)
         '
-        'NProtein
+        'barDockControlLeft
         '
-        Me.NProtein.Caption = "Protein "
-        Me.NProtein.FieldName = "Protein"
-        Me.NProtein.MinWidth = 23
-        Me.NProtein.Name = "NProtein"
-        Me.NProtein.Visible = True
-        Me.NProtein.VisibleIndex = 19
-        Me.NProtein.Width = 41
+        Me.barDockControlLeft.CausesValidation = False
+        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 570)
         '
-        'NHbA1c
+        'barDockControlRight
         '
-        Me.NHbA1c.Caption = "HbA1c"
-        Me.NHbA1c.FieldName = "HbA1c"
-        Me.NHbA1c.Name = "NHbA1c"
-        Me.NHbA1c.Visible = True
-        Me.NHbA1c.VisibleIndex = 20
-        Me.NHbA1c.Width = 41
+        Me.barDockControlRight.CausesValidation = False
+        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.barDockControlRight.Location = New System.Drawing.Point(1148, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 570)
         '
-        'NAlbumin
+        'NManhanvien
         '
-        Me.NAlbumin.Caption = "Albumin"
-        Me.NAlbumin.FieldName = "Albumin"
-        Me.NAlbumin.Name = "NAlbumin"
-        Me.NAlbumin.Visible = True
-        Me.NAlbumin.VisibleIndex = 21
+        Me.NManhanvien.Caption = "MNV"
+        Me.NManhanvien.FieldName = "Manhanvien"
+        Me.NManhanvien.Name = "NManhanvien"
+        Me.NManhanvien.Visible = True
+        Me.NManhanvien.VisibleIndex = 4
+        Me.NManhanvien.Width = 70
         '
-        'NKetluansinhhoa
+        'NGioitinh
         '
-        Me.NKetluansinhhoa.Caption = "KẾT LUẬN"
-        Me.NKetluansinhhoa.FieldName = "Ketluansinhhoa"
-        Me.NKetluansinhhoa.Name = "NKetluansinhhoa"
-        Me.NKetluansinhhoa.Visible = True
-        Me.NKetluansinhhoa.VisibleIndex = 22
-        '
-        'NThamvansinhhoa
-        '
-        Me.NThamvansinhhoa.Caption = "THAM VẤN"
-        Me.NThamvansinhhoa.FieldName = "Thamvansinhhoa"
-        Me.NThamvansinhhoa.Name = "NThamvansinhhoa"
-        Me.NThamvansinhhoa.Visible = True
-        Me.NThamvansinhhoa.VisibleIndex = 23
+        Me.NGioitinh.Caption = "GIỚI TÍNH"
+        Me.NGioitinh.FieldName = "Gioitinh"
+        Me.NGioitinh.Name = "NGioitinh"
+        Me.NGioitinh.Visible = True
+        Me.NGioitinh.VisibleIndex = 3
+        Me.NGioitinh.Width = 83
         '
         'RepositoryItemCheckEdit2
         '
@@ -378,9 +259,9 @@ Partial Class frmTraSinhHoa
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.GridControl2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1153, 521)
-        Me.SplitContainer1.SplitterDistance = 89
-        Me.SplitContainer1.TabIndex = 9
+        Me.SplitContainer1.Size = New System.Drawing.Size(1148, 570)
+        Me.SplitContainer1.SplitterDistance = 86
+        Me.SplitContainer1.TabIndex = 11
         '
         'SimpleButton4
         '
@@ -518,83 +399,79 @@ Partial Class frmTraSinhHoa
         Me.TuNgay.Size = New System.Drawing.Size(149, 22)
         Me.TuNgay.TabIndex = 39
         '
-        'PopupMenu1
+        'GridControl2
         '
-        Me.PopupMenu1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BntTaodulieu), New DevExpress.XtraBars.LinkPersistInfo(Me.BntXoadulieu)})
-        Me.PopupMenu1.Manager = Me.BarManager1
-        Me.PopupMenu1.Name = "PopupMenu1"
+        Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridControl2.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GridControl2.Location = New System.Drawing.Point(0, 0)
+        Me.GridControl2.MainView = Me.GridView2
+        Me.GridControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GridControl2.Name = "GridControl2"
+        Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit2})
+        Me.GridControl2.Size = New System.Drawing.Size(1148, 480)
+        Me.GridControl2.TabIndex = 8
+        Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
-        'BntXoadulieu
+        'GridView2
         '
-        Me.BntXoadulieu.Caption = "Xóa dữ liệu"
-        Me.BntXoadulieu.Id = 0
-        Me.BntXoadulieu.ImageOptions.SvgImage = CType(resources.GetObject("BntXoadulieu.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.BntXoadulieu.Name = "BntXoadulieu"
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NIdSolieuhoso, Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.NBophan, Me.NCongty, Me.NNgaykham, Me.NKstduongruot, Me.NSoituoiphanbachcau, Me.NSoituoiphanhongcau, Me.NKetluan, Me.NThamvan})
+        Me.GridView2.DetailHeight = 431
+        Me.GridView2.GridControl = Me.GridControl2
+        Me.GridView2.Name = "GridView2"
+        Me.GridView2.OptionsBehavior.Editable = False
+        Me.GridView2.OptionsSelection.MultiSelect = True
+        Me.GridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect
+        Me.GridView2.OptionsView.ShowGroupPanel = False
         '
-        'BntTaodulieu
+        'NIdSolieuhoso
         '
-        Me.BntTaodulieu.Caption = "Tạo dữ liệu"
-        Me.BntTaodulieu.Id = 1
-        Me.BntTaodulieu.ImageOptions.SvgImage = CType(resources.GetObject("BntTaodulieu.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.BntTaodulieu.Name = "BntTaodulieu"
+        Me.NIdSolieuhoso.Caption = "Id"
+        Me.NIdSolieuhoso.FieldName = "IdSolieuhoso"
+        Me.NIdSolieuhoso.MinWidth = 23
+        Me.NIdSolieuhoso.Name = "NIdSolieuhoso"
+        Me.NIdSolieuhoso.Width = 51
         '
-        'BarManager1
+        'NMacode
         '
-        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
-        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
-        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
-        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
-        Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BntXoadulieu, Me.BntTaodulieu})
-        Me.BarManager1.MaxItemId = 2
+        Me.NMacode.Caption = "MÃ ID"
+        Me.NMacode.FieldName = "Macode"
+        Me.NMacode.Name = "NMacode"
+        Me.NMacode.Visible = True
+        Me.NMacode.VisibleIndex = 0
+        Me.NMacode.Width = 51
         '
-        'barDockControlTop
+        'NHoten
         '
-        Me.barDockControlTop.CausesValidation = False
-        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(1153, 0)
+        Me.NHoten.Caption = "HỌ TÊN"
+        Me.NHoten.FieldName = "Hoten"
+        Me.NHoten.Name = "NHoten"
+        Me.NHoten.Visible = True
+        Me.NHoten.VisibleIndex = 1
+        Me.NHoten.Width = 148
         '
-        'barDockControlBottom
+        'NNamsinh
         '
-        Me.barDockControlBottom.CausesValidation = False
-        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 521)
-        Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1153, 0)
+        Me.NNamsinh.Caption = "NĂM SINH"
+        Me.NNamsinh.FieldName = "Namsinh"
+        Me.NNamsinh.Name = "NNamsinh"
+        Me.NNamsinh.Visible = True
+        Me.NNamsinh.VisibleIndex = 2
+        Me.NNamsinh.Width = 79
         '
-        'barDockControlLeft
-        '
-        Me.barDockControlLeft.CausesValidation = False
-        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 521)
-        '
-        'barDockControlRight
-        '
-        Me.barDockControlRight.CausesValidation = False
-        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1153, 0)
-        Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 521)
-        '
-        'frmTraSinhHoa
+        'FrmSoiphan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1153, 521)
+        Me.ClientSize = New System.Drawing.Size(1148, 570)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "frmTraSinhHoa"
-        Me.Text = "frmTraSinhHoa"
-        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "FrmSoiphan"
+        Me.Text = "Soi Phân"
+        CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemCheckEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
@@ -608,38 +485,12 @@ Partial Class frmTraSinhHoa
         CType(Me.DenNgay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TuNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TuNgay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents GridControl2 As DevExpress.XtraGrid.GridControl
-    Friend WithEvents GridView2 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents NIdSolieuhoso As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NAST As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NALT As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NGGT As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NGlucose As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NCreatine As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NUre As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NCholesterol As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NTriglyceride As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NHDL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NLDL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NUric As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NProtein As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents RepositoryItemCheckEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
-    Friend WithEvents NMacode As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NHoten As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NNamsinh As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NGioitinh As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NManhanvien As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NBophan As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NCongty As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NNgaykham As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NHbA1c As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
@@ -653,15 +504,29 @@ Partial Class frmTraSinhHoa
     Friend WithEvents SearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents DenNgay As DevExpress.XtraEditors.DateEdit
     Friend WithEvents TuNgay As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents GridControl2 As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView2 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents NIdSolieuhoso As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NMacode As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NHoten As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NNamsinh As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NGioitinh As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NManhanvien As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBophan As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NCongty As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NNgaykham As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NKstduongruot As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NSoituoiphanbachcau As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NSoituoiphanhongcau As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NKetluan As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NThamvan As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositoryItemCheckEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
     Friend WithEvents PopupMenu1 As DevExpress.XtraBars.PopupMenu
-    Friend WithEvents BntXoadulieu As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BntTaodulieu As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BntXoadulieu As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarManager1 As DevExpress.XtraBars.BarManager
     Friend WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
-    Friend WithEvents NAlbumin As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NKetluansinhhoa As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NThamvansinhhoa As DevExpress.XtraGrid.Columns.GridColumn
 End Class

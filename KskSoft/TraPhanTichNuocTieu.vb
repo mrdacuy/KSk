@@ -7,7 +7,7 @@ Imports DevExpress.XtraGrid.Views.Grid
 
 Public Class TraPhanTichNuocTieu
     Dim Dt1 As New DataSet
-    Dim Da1 As New DataTable
+    Dim rnd As New Random()
     Dim Cmd1 As New SqlDataAdapter
 
     Dim Dt As New DataSet()
@@ -230,7 +230,7 @@ Public Class TraPhanTichNuocTieu
         Return randomNumber
     End Function
 
-    Dim rnd As New Random()
+
     Function RandomNumber(x As Long, y As Long) As Double
 
         Dim randomValue As Double = Math.Round(rnd.Next(1000 * x, 1000 * y) / 1000, 4)

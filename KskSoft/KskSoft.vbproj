@@ -208,6 +208,12 @@
     <Compile Include="FrmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmMienDich.Designer.vb">
+      <DependentUpon>FrmMienDich.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMienDich.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPhatSO.Designer.vb">
       <DependentUpon>frmPhatSO.vb</DependentUpon>
     </Compile>
@@ -218,6 +224,18 @@
       <DependentUpon>frmShowDataXN.vb</DependentUpon>
     </Compile>
     <Compile Include="frmShowDataXN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSoidichamdao.Designer.vb">
+      <DependentUpon>FrmSoidichamdao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSoidichamdao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSoiphan.Designer.vb">
+      <DependentUpon>FrmSoiphan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSoiphan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTem4.Designer.vb">
@@ -231,6 +249,12 @@
     </Compile>
     <Compile Include="frmtest.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmTestnhanh.Designer.vb">
+      <DependentUpon>FrmTestnhanh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTestnhanh.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmThaoTac.Designer.vb">
       <DependentUpon>frmThaoTac.vb</DependentUpon>
@@ -387,17 +411,29 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMienDich.resx">
+      <DependentUpon>FrmMienDich.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPhatSO.resx">
       <DependentUpon>frmPhatSO.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowDataXN.resx">
       <DependentUpon>frmShowDataXN.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSoidichamdao.resx">
+      <DependentUpon>FrmSoidichamdao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSoiphan.resx">
+      <DependentUpon>FrmSoiphan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTem4.resx">
       <DependentUpon>FrmTem4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtest.resx">
       <DependentUpon>frmtest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTestnhanh.resx">
+      <DependentUpon>FrmTestnhanh.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThaoTac.resx">
       <DependentUpon>frmThaoTac.vb</DependentUpon>

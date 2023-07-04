@@ -416,3 +416,7 @@ C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\bin\Debug\ArtisanCode.SimpleAesEncr
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrXemtruoc.resources
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.RpHuyetHoc.resources
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmTongQuat.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmMienDich.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmSoiphan.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmTestnhanh.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmSoidichamdao.resources
