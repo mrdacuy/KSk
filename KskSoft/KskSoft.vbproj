@@ -160,6 +160,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBenhXetNghiem.Designer.vb">
+      <DependentUpon>FrmBenhXetNghiem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBenhXetNghiem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmChinh.Designer.vb">
       <DependentUpon>FrmChinh.vb</DependentUpon>
     </Compile>
@@ -363,6 +369,12 @@
     <Compile Include="RpNhan.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RpNuocTieu.Designer.vb">
+      <DependentUpon>RpNuocTieu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RpNuocTieu.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rpTem.Designer.vb">
       <DependentUpon>rpTem.vb</DependentUpon>
     </Compile>
@@ -379,6 +391,12 @@
     <Compile Include="RpTem4.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RpXN.Designer.vb">
+      <DependentUpon>RpXN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RpXN.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TraPhanTichNuocTieu.Designer.vb">
       <DependentUpon>TraPhanTichNuocTieu.vb</DependentUpon>
     </Compile>
@@ -387,6 +405,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmBenhXetNghiem.resx">
+      <DependentUpon>FrmBenhXetNghiem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmChinh.resx">
       <DependentUpon>FrmChinh.vb</DependentUpon>
     </EmbeddedResource>
@@ -484,6 +505,9 @@
     <EmbeddedResource Include="RpNhan.resx">
       <DependentUpon>RpNhan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RpNuocTieu.resx">
+      <DependentUpon>RpNuocTieu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rpTem.resx">
       <DependentUpon>rpTem.vb</DependentUpon>
     </EmbeddedResource>
@@ -492,6 +516,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RpTem4.resx">
       <DependentUpon>RpTem4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RpXN.resx">
+      <DependentUpon>RpXN.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TraPhanTichNuocTieu.resx">
       <DependentUpon>TraPhanTichNuocTieu.vb</DependentUpon>

@@ -26,10 +26,13 @@ Partial Class FrmMain
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlElement2 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator10 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement3 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator11 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement4 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator13 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement5 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlSeparator2 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlSeparator12 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.mUCcONGTY = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.BtnThemCongTy = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator1 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
@@ -44,16 +47,17 @@ Partial Class FrmMain
         Me.AccordionControlSeparator6 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement11 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator7 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlElement12 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator8 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlElement13 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator9 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlElement14 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlElement15 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator14 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.FluentDesignFormControl1 = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl()
         Me.lbltieude = New DevExpress.XtraBars.BarStaticItem()
-        Me.AccordionControlElement12 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlElement13 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlSeparator8 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlSeparator9 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlSeparator10 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlSeparator11 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlSeparator12 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlSeparator13 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlElement16 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator2 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,7 +85,7 @@ Partial Class FrmMain
         Me.AccordionControl1.Appearance.Item.Normal.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AccordionControl1.Appearance.Item.Normal.Options.UseFont = True
         Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement1, Me.AccordionControlSeparator2, Me.mUCcONGTY, Me.AccordionControlElement6})
+        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement1, Me.mUCcONGTY, Me.AccordionControlElement6, Me.AccordionControlElement14})
         Me.AccordionControl1.Location = New System.Drawing.Point(0, 30)
         Me.AccordionControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.AccordionControl1.Name = "AccordionControl1"
@@ -104,12 +108,20 @@ Partial Class FrmMain
         Me.AccordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement2.Text = "THU NHẬN HỒ SƠ"
         '
+        'AccordionControlSeparator10
+        '
+        Me.AccordionControlSeparator10.Name = "AccordionControlSeparator10"
+        '
         'AccordionControlElement3
         '
         Me.AccordionControlElement3.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.AccordionControlElement3.Name = "AccordionControlElement3"
         Me.AccordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement3.Text = "IN GIẤY KSK"
+        '
+        'AccordionControlSeparator11
+        '
+        Me.AccordionControlSeparator11.Name = "AccordionControlSeparator11"
         '
         'AccordionControlElement4
         '
@@ -118,6 +130,10 @@ Partial Class FrmMain
         Me.AccordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement4.Text = "IN BARCODE TEM 3"
         '
+        'AccordionControlSeparator13
+        '
+        Me.AccordionControlSeparator13.Name = "AccordionControlSeparator13"
+        '
         'AccordionControlElement5
         '
         Me.AccordionControlElement5.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement5.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
@@ -125,14 +141,13 @@ Partial Class FrmMain
         Me.AccordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement5.Text = "IN BARCODE TEM 4"
         '
-        'AccordionControlSeparator2
+        'AccordionControlSeparator12
         '
-        Me.AccordionControlSeparator2.Name = "AccordionControlSeparator2"
+        Me.AccordionControlSeparator12.Name = "AccordionControlSeparator12"
         '
         'mUCcONGTY
         '
         Me.mUCcONGTY.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.BtnThemCongTy, Me.AccordionControlSeparator1})
-        Me.mUCcONGTY.HeaderTemplate.AddRange(New DevExpress.XtraBars.Navigation.HeaderElementInfo() {New DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image), New DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl), New DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons), New DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)})
         Me.mUCcONGTY.ImageOptions.SvgImage = CType(resources.GetObject("mUCcONGTY.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.mUCcONGTY.Name = "mUCcONGTY"
         Me.mUCcONGTY.Text = "DANH MỤC CÔNG TY"
@@ -150,7 +165,7 @@ Partial Class FrmMain
         '
         'AccordionControlElement6
         '
-        Me.AccordionControlElement6.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement7, Me.AccordionControlSeparator3, Me.AccordionControlElement8, Me.AccordionControlSeparator5, Me.AccordionControlElement9, Me.AccordionControlSeparator4, Me.AccordionControlElement10, Me.AccordionControlSeparator6, Me.AccordionControlElement11, Me.AccordionControlSeparator7, Me.AccordionControlElement12, Me.AccordionControlSeparator8, Me.AccordionControlElement13, Me.AccordionControlSeparator9})
+        Me.AccordionControlElement6.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement7, Me.AccordionControlSeparator3, Me.AccordionControlElement8, Me.AccordionControlSeparator5, Me.AccordionControlElement9, Me.AccordionControlSeparator4, Me.AccordionControlElement10, Me.AccordionControlSeparator6, Me.AccordionControlElement11, Me.AccordionControlSeparator7, Me.AccordionControlElement12, Me.AccordionControlSeparator8, Me.AccordionControlElement13, Me.AccordionControlSeparator9, Me.AccordionControlElement16, Me.AccordionControlSeparator2})
         Me.AccordionControlElement6.Expanded = True
         Me.AccordionControlElement6.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement6.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.AccordionControlElement6.Name = "AccordionControlElement6"
@@ -211,6 +226,46 @@ Partial Class FrmMain
         '
         Me.AccordionControlSeparator7.Name = "AccordionControlSeparator7"
         '
+        'AccordionControlElement12
+        '
+        Me.AccordionControlElement12.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement12.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement12.Name = "AccordionControlElement12"
+        Me.AccordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement12.Text = "SOI PHÂN"
+        '
+        'AccordionControlSeparator8
+        '
+        Me.AccordionControlSeparator8.Name = "AccordionControlSeparator8"
+        '
+        'AccordionControlElement13
+        '
+        Me.AccordionControlElement13.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement13.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement13.Name = "AccordionControlElement13"
+        Me.AccordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement13.Text = "SOI DỊCH ÂM ĐẠO"
+        '
+        'AccordionControlSeparator9
+        '
+        Me.AccordionControlSeparator9.Name = "AccordionControlSeparator9"
+        '
+        'AccordionControlElement14
+        '
+        Me.AccordionControlElement14.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement15, Me.AccordionControlSeparator14})
+        Me.AccordionControlElement14.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement14.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.AccordionControlElement14.Name = "AccordionControlElement14"
+        Me.AccordionControlElement14.Text = "TỔNG QUÁT"
+        '
+        'AccordionControlElement15
+        '
+        Me.AccordionControlElement15.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement15.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlElement15.Name = "AccordionControlElement15"
+        Me.AccordionControlElement15.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement15.Text = "Khám tổng quát"
+        '
+        'AccordionControlSeparator14
+        '
+        Me.AccordionControlSeparator14.Name = "AccordionControlSeparator14"
+        '
         'FluentDesignFormControl1
         '
         Me.FluentDesignFormControl1.FluentDesignForm = Me
@@ -230,43 +285,16 @@ Partial Class FrmMain
         Me.lbltieude.Name = "lbltieude"
         Me.lbltieude.TextAlignment = System.Drawing.StringAlignment.Center
         '
-        'AccordionControlElement12
+        'AccordionControlElement16
         '
-        Me.AccordionControlElement12.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement12.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.AccordionControlElement12.Name = "AccordionControlElement12"
-        Me.AccordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AccordionControlElement12.Text = "SOI PHÂN"
+        Me.AccordionControlElement16.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement16.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlElement16.Name = "AccordionControlElement16"
+        Me.AccordionControlElement16.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement16.Text = "LỌC BỆNH"
         '
-        'AccordionControlElement13
+        'AccordionControlSeparator2
         '
-        Me.AccordionControlElement13.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElement13.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.AccordionControlElement13.Name = "AccordionControlElement13"
-        Me.AccordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AccordionControlElement13.Text = "SOI DỊCH ÂM ĐẠO"
-        '
-        'AccordionControlSeparator8
-        '
-        Me.AccordionControlSeparator8.Name = "AccordionControlSeparator8"
-        '
-        'AccordionControlSeparator9
-        '
-        Me.AccordionControlSeparator9.Name = "AccordionControlSeparator9"
-        '
-        'AccordionControlSeparator10
-        '
-        Me.AccordionControlSeparator10.Name = "AccordionControlSeparator10"
-        '
-        'AccordionControlSeparator11
-        '
-        Me.AccordionControlSeparator11.Name = "AccordionControlSeparator11"
-        '
-        'AccordionControlSeparator12
-        '
-        Me.AccordionControlSeparator12.Name = "AccordionControlSeparator12"
-        '
-        'AccordionControlSeparator13
-        '
-        Me.AccordionControlSeparator13.Name = "AccordionControlSeparator13"
+        Me.AccordionControlSeparator2.Name = "AccordionControlSeparator2"
         '
         'FrmMain
         '
@@ -299,7 +327,6 @@ Partial Class FrmMain
     Friend WithEvents mUCcONGTY As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents BtnThemCongTy As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlElement5 As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlSeparator2 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlSeparator1 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlElement6 As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlElement7 As DevExpress.XtraBars.Navigation.AccordionControlElement
@@ -320,4 +347,9 @@ Partial Class FrmMain
     Friend WithEvents AccordionControlSeparator8 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlElement13 As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator9 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlElement14 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlElement15 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator14 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlElement16 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator2 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
 End Class

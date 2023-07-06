@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmTraSinhHoa
+Partial Class FrmBenhXetNghiem
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
@@ -20,34 +20,7 @@ Partial Class frmTraSinhHoa
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTraSinhHoa))
-        Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
-        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.NIdSolieuhoso = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NMacode = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NHoten = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NNamsinh = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NGioitinh = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NManhanvien = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NBophan = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NCongty = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NNgaykham = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NAST = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NALT = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NGGT = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NGlucose = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NCreatine = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NUre = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NCholesterol = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NTriglyceride = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NHDL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NLDL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NUric = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NProtein = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NHbA1c = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NAlbumin = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NKetluansinhhoa = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NThamvansinhhoa = New DevExpress.XtraGrid.Columns.GridColumn()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBenhXetNghiem))
         Me.RepositoryItemCheckEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
@@ -62,6 +35,27 @@ Partial Class frmTraSinhHoa
         Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.DenNgay = New DevExpress.XtraEditors.DateEdit()
         Me.TuNgay = New DevExpress.XtraEditors.DateEdit()
+        Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
+        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.NIdSolieuhoso = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NMacode = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NHoten = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NNamsinh = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NGioitinh = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NManhanvien = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBophan = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NCongty = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NNgaykham = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NNGlucose = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBenhMomau = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBenhChucnanggan = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBenhAciduric = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBenhHBA1C = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBenhHBeAg = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBenhCyfra211 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBenhLiquid = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NBenhHBsAg = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NLDL = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PopupMenu1 = New DevExpress.XtraBars.PopupMenu(Me.components)
         Me.BntTaodulieu = New DevExpress.XtraBars.BarButtonItem()
         Me.BntXoadulieu = New DevExpress.XtraBars.BarButtonItem()
@@ -71,8 +65,6 @@ Partial Class frmTraSinhHoa
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.TbHuyetHocTableAdapter = New KskSoft.KskDbDataSetTableAdapters.tbHuyetHocTableAdapter()
-        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemCheckEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -85,267 +77,11 @@ Partial Class frmTraSinhHoa
         CType(Me.DenNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TuNgay.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TuNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'GridControl2
-        '
-        Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl2.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GridControl2.Location = New System.Drawing.Point(0, 0)
-        Me.GridControl2.MainView = Me.GridView2
-        Me.GridControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit2})
-        Me.GridControl2.Size = New System.Drawing.Size(1153, 428)
-        Me.GridControl2.TabIndex = 8
-        Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
-        '
-        'GridView2
-        '
-        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NIdSolieuhoso, Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.NBophan, Me.NCongty, Me.NNgaykham, Me.NAST, Me.NALT, Me.NGGT, Me.NGlucose, Me.NCreatine, Me.NUre, Me.NCholesterol, Me.NTriglyceride, Me.NHDL, Me.NLDL, Me.NUric, Me.NProtein, Me.NHbA1c, Me.NAlbumin, Me.NKetluansinhhoa, Me.NThamvansinhhoa})
-        Me.GridView2.DetailHeight = 431
-        Me.GridView2.GridControl = Me.GridControl2
-        Me.GridView2.Name = "GridView2"
-        Me.GridView2.OptionsSelection.MultiSelect = True
-        Me.GridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect
-        Me.GridView2.OptionsView.ShowGroupPanel = False
-        '
-        'NIdSolieuhoso
-        '
-        Me.NIdSolieuhoso.Caption = "Id"
-        Me.NIdSolieuhoso.FieldName = "IdSolieuhoso"
-        Me.NIdSolieuhoso.MinWidth = 23
-        Me.NIdSolieuhoso.Name = "NIdSolieuhoso"
-        Me.NIdSolieuhoso.Visible = True
-        Me.NIdSolieuhoso.VisibleIndex = 0
-        Me.NIdSolieuhoso.Width = 51
-        '
-        'NMacode
-        '
-        Me.NMacode.Caption = "MÃ ID"
-        Me.NMacode.FieldName = "Macode"
-        Me.NMacode.Name = "NMacode"
-        Me.NMacode.Visible = True
-        Me.NMacode.VisibleIndex = 1
-        Me.NMacode.Width = 51
-        '
-        'NHoten
-        '
-        Me.NHoten.Caption = "HỌ TÊN"
-        Me.NHoten.FieldName = "Hoten"
-        Me.NHoten.Name = "NHoten"
-        Me.NHoten.Visible = True
-        Me.NHoten.VisibleIndex = 3
-        Me.NHoten.Width = 148
-        '
-        'NNamsinh
-        '
-        Me.NNamsinh.Caption = "NĂM SINH"
-        Me.NNamsinh.FieldName = "Namsinh"
-        Me.NNamsinh.Name = "NNamsinh"
-        Me.NNamsinh.Visible = True
-        Me.NNamsinh.VisibleIndex = 4
-        Me.NNamsinh.Width = 79
-        '
-        'NGioitinh
-        '
-        Me.NGioitinh.Caption = "GIỚI TÍNH"
-        Me.NGioitinh.FieldName = "Gioitinh"
-        Me.NGioitinh.Name = "NGioitinh"
-        Me.NGioitinh.Visible = True
-        Me.NGioitinh.VisibleIndex = 5
-        Me.NGioitinh.Width = 83
-        '
-        'NManhanvien
-        '
-        Me.NManhanvien.Caption = "MNV"
-        Me.NManhanvien.FieldName = "Manhanvien"
-        Me.NManhanvien.Name = "NManhanvien"
-        Me.NManhanvien.Visible = True
-        Me.NManhanvien.VisibleIndex = 6
-        Me.NManhanvien.Width = 70
-        '
-        'NBophan
-        '
-        Me.NBophan.Caption = "BỘ PHẬN"
-        Me.NBophan.FieldName = "Bophan"
-        Me.NBophan.Name = "NBophan"
-        Me.NBophan.Visible = True
-        Me.NBophan.VisibleIndex = 7
-        Me.NBophan.Width = 108
-        '
-        'NCongty
-        '
-        Me.NCongty.Caption = "CÔNG TY"
-        Me.NCongty.FieldName = "Congty"
-        Me.NCongty.Name = "NCongty"
-        Me.NCongty.Visible = True
-        Me.NCongty.VisibleIndex = 2
-        Me.NCongty.Width = 60
-        '
-        'NNgaykham
-        '
-        Me.NNgaykham.Caption = "NGÀY KHÁM"
-        Me.NNgaykham.FieldName = "Ngay"
-        Me.NNgaykham.Name = "NNgaykham"
-        Me.NNgaykham.Visible = True
-        Me.NNgaykham.VisibleIndex = 24
-        Me.NNgaykham.Width = 74
-        '
-        'NAST
-        '
-        Me.NAST.Caption = "AST "
-        Me.NAST.FieldName = "AST"
-        Me.NAST.MinWidth = 23
-        Me.NAST.Name = "NAST"
-        Me.NAST.Visible = True
-        Me.NAST.VisibleIndex = 8
-        Me.NAST.Width = 41
-        '
-        'NALT
-        '
-        Me.NALT.Caption = "ALT "
-        Me.NALT.FieldName = "ALT"
-        Me.NALT.MinWidth = 23
-        Me.NALT.Name = "NALT"
-        Me.NALT.Visible = True
-        Me.NALT.VisibleIndex = 9
-        Me.NALT.Width = 41
-        '
-        'NGGT
-        '
-        Me.NGGT.Caption = "GGT "
-        Me.NGGT.FieldName = "GGT"
-        Me.NGGT.MinWidth = 23
-        Me.NGGT.Name = "NGGT"
-        Me.NGGT.Visible = True
-        Me.NGGT.VisibleIndex = 10
-        Me.NGGT.Width = 41
-        '
-        'NGlucose
-        '
-        Me.NGlucose.Caption = "Glucose "
-        Me.NGlucose.FieldName = "Glucose"
-        Me.NGlucose.MinWidth = 23
-        Me.NGlucose.Name = "NGlucose"
-        Me.NGlucose.Visible = True
-        Me.NGlucose.VisibleIndex = 11
-        Me.NGlucose.Width = 61
-        '
-        'NCreatine
-        '
-        Me.NCreatine.Caption = "Creatine "
-        Me.NCreatine.FieldName = "Creatine"
-        Me.NCreatine.MinWidth = 23
-        Me.NCreatine.Name = "NCreatine"
-        Me.NCreatine.Visible = True
-        Me.NCreatine.VisibleIndex = 12
-        Me.NCreatine.Width = 58
-        '
-        'NUre
-        '
-        Me.NUre.Caption = "Ure "
-        Me.NUre.FieldName = "Ure"
-        Me.NUre.MinWidth = 23
-        Me.NUre.Name = "NUre"
-        Me.NUre.Visible = True
-        Me.NUre.VisibleIndex = 13
-        Me.NUre.Width = 41
-        '
-        'NCholesterol
-        '
-        Me.NCholesterol.Caption = "Cholesterol "
-        Me.NCholesterol.FieldName = "Cholesterol"
-        Me.NCholesterol.MinWidth = 23
-        Me.NCholesterol.Name = "NCholesterol"
-        Me.NCholesterol.Visible = True
-        Me.NCholesterol.VisibleIndex = 14
-        Me.NCholesterol.Width = 65
-        '
-        'NTriglyceride
-        '
-        Me.NTriglyceride.Caption = "Triglyceride"
-        Me.NTriglyceride.FieldName = "Triglyceride"
-        Me.NTriglyceride.MinWidth = 23
-        Me.NTriglyceride.Name = "NTriglyceride"
-        Me.NTriglyceride.Visible = True
-        Me.NTriglyceride.VisibleIndex = 15
-        Me.NTriglyceride.Width = 41
-        '
-        'NHDL
-        '
-        Me.NHDL.Caption = "HDL "
-        Me.NHDL.FieldName = "HDL"
-        Me.NHDL.MinWidth = 23
-        Me.NHDL.Name = "NHDL"
-        Me.NHDL.Visible = True
-        Me.NHDL.VisibleIndex = 16
-        Me.NHDL.Width = 41
-        '
-        'NLDL
-        '
-        Me.NLDL.Caption = "LDL "
-        Me.NLDL.FieldName = "LDL"
-        Me.NLDL.MinWidth = 23
-        Me.NLDL.Name = "NLDL"
-        Me.NLDL.Visible = True
-        Me.NLDL.VisibleIndex = 17
-        Me.NLDL.Width = 41
-        '
-        'NUric
-        '
-        Me.NUric.Caption = "Uric"
-        Me.NUric.FieldName = "Uric"
-        Me.NUric.MinWidth = 23
-        Me.NUric.Name = "NUric"
-        Me.NUric.Visible = True
-        Me.NUric.VisibleIndex = 18
-        Me.NUric.Width = 41
-        '
-        'NProtein
-        '
-        Me.NProtein.Caption = "Protein "
-        Me.NProtein.FieldName = "Protein"
-        Me.NProtein.MinWidth = 23
-        Me.NProtein.Name = "NProtein"
-        Me.NProtein.Visible = True
-        Me.NProtein.VisibleIndex = 19
-        Me.NProtein.Width = 41
-        '
-        'NHbA1c
-        '
-        Me.NHbA1c.Caption = "HbA1c"
-        Me.NHbA1c.FieldName = "HbA1c"
-        Me.NHbA1c.Name = "NHbA1c"
-        Me.NHbA1c.Visible = True
-        Me.NHbA1c.VisibleIndex = 20
-        Me.NHbA1c.Width = 41
-        '
-        'NAlbumin
-        '
-        Me.NAlbumin.Caption = "Albumin"
-        Me.NAlbumin.FieldName = "Albumin"
-        Me.NAlbumin.Name = "NAlbumin"
-        Me.NAlbumin.Visible = True
-        Me.NAlbumin.VisibleIndex = 21
-        '
-        'NKetluansinhhoa
-        '
-        Me.NKetluansinhhoa.Caption = "KẾT LUẬN"
-        Me.NKetluansinhhoa.FieldName = "Ketluansinhhoa"
-        Me.NKetluansinhhoa.Name = "NKetluansinhhoa"
-        Me.NKetluansinhhoa.Visible = True
-        Me.NKetluansinhhoa.VisibleIndex = 22
-        '
-        'NThamvansinhhoa
-        '
-        Me.NThamvansinhhoa.Caption = "THAM VẤN"
-        Me.NThamvansinhhoa.FieldName = "Thamvansinhhoa"
-        Me.NThamvansinhhoa.Name = "NThamvansinhhoa"
-        Me.NThamvansinhhoa.Visible = True
-        Me.NThamvansinhhoa.VisibleIndex = 23
         '
         'RepositoryItemCheckEdit2
         '
@@ -378,16 +114,16 @@ Partial Class frmTraSinhHoa
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.GridControl2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1153, 521)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1143, 579)
         Me.SplitContainer1.SplitterDistance = 89
-        Me.SplitContainer1.TabIndex = 9
+        Me.SplitContainer1.TabIndex = 10
         '
         'SimpleButton4
         '
         Me.SimpleButton4.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton4.Appearance.Options.UseFont = True
         Me.SimpleButton4.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton4.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton4.Location = New System.Drawing.Point(822, 9)
+        Me.SimpleButton4.Location = New System.Drawing.Point(711, 8)
         Me.SimpleButton4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton4.Name = "SimpleButton4"
         Me.SimpleButton4.Size = New System.Drawing.Size(115, 32)
@@ -399,12 +135,12 @@ Partial Class frmTraSinhHoa
         Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton3.Appearance.Options.UseFont = True
         Me.SimpleButton3.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton3.Location = New System.Drawing.Point(711, 9)
+        Me.SimpleButton3.Location = New System.Drawing.Point(832, 9)
         Me.SimpleButton3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(105, 32)
+        Me.SimpleButton3.Size = New System.Drawing.Size(125, 67)
         Me.SimpleButton3.TabIndex = 48
-        Me.SimpleButton3.Text = "In phiếu"
+        Me.SimpleButton3.Text = "LỌC BỆNH"
         '
         'LabelControl4
         '
@@ -458,7 +194,7 @@ Partial Class frmTraSinhHoa
         Me.SimpleButton2.Location = New System.Drawing.Point(711, 44)
         Me.SimpleButton2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(105, 32)
+        Me.SimpleButton2.Size = New System.Drawing.Size(115, 32)
         Me.SimpleButton2.TabIndex = 43
         Me.SimpleButton2.Text = "Tìm kiếm"
         '
@@ -518,6 +254,204 @@ Partial Class frmTraSinhHoa
         Me.TuNgay.Size = New System.Drawing.Size(149, 22)
         Me.TuNgay.TabIndex = 39
         '
+        'GridControl2
+        '
+        Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridControl2.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GridControl2.Location = New System.Drawing.Point(0, 0)
+        Me.GridControl2.MainView = Me.GridView2
+        Me.GridControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GridControl2.Name = "GridControl2"
+        Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit2})
+        Me.GridControl2.Size = New System.Drawing.Size(1143, 486)
+        Me.GridControl2.TabIndex = 8
+        Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
+        '
+        'GridView2
+        '
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.NIdSolieuhoso, Me.NMacode, Me.NHoten, Me.NNamsinh, Me.NGioitinh, Me.NManhanvien, Me.NBophan, Me.NCongty, Me.NNgaykham, Me.NNGlucose, Me.NBenhMomau, Me.NBenhChucnanggan, Me.NBenhAciduric, Me.NBenhHBA1C, Me.NBenhHBeAg, Me.NBenhCyfra211, Me.NBenhLiquid, Me.NBenhHBsAg, Me.NLDL})
+        Me.GridView2.DetailHeight = 431
+        Me.GridView2.GridControl = Me.GridControl2
+        Me.GridView2.Name = "GridView2"
+        Me.GridView2.OptionsSelection.MultiSelect = True
+        Me.GridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect
+        Me.GridView2.OptionsView.ColumnAutoWidth = False
+        Me.GridView2.OptionsView.ShowGroupPanel = False
+        '
+        'NIdSolieuhoso
+        '
+        Me.NIdSolieuhoso.Caption = "Id"
+        Me.NIdSolieuhoso.FieldName = "IdSolieuhoso"
+        Me.NIdSolieuhoso.MinWidth = 23
+        Me.NIdSolieuhoso.Name = "NIdSolieuhoso"
+        Me.NIdSolieuhoso.Width = 51
+        '
+        'NMacode
+        '
+        Me.NMacode.Caption = "MÃ ID"
+        Me.NMacode.FieldName = "Macode"
+        Me.NMacode.Name = "NMacode"
+        Me.NMacode.Visible = True
+        Me.NMacode.VisibleIndex = 0
+        Me.NMacode.Width = 51
+        '
+        'NHoten
+        '
+        Me.NHoten.Caption = "HỌ TÊN"
+        Me.NHoten.FieldName = "Hoten"
+        Me.NHoten.Name = "NHoten"
+        Me.NHoten.Visible = True
+        Me.NHoten.VisibleIndex = 1
+        Me.NHoten.Width = 148
+        '
+        'NNamsinh
+        '
+        Me.NNamsinh.Caption = "NĂM SINH"
+        Me.NNamsinh.FieldName = "Namsinh"
+        Me.NNamsinh.Name = "NNamsinh"
+        Me.NNamsinh.Visible = True
+        Me.NNamsinh.VisibleIndex = 2
+        Me.NNamsinh.Width = 79
+        '
+        'NGioitinh
+        '
+        Me.NGioitinh.Caption = "GIỚI TÍNH"
+        Me.NGioitinh.FieldName = "Gioitinh"
+        Me.NGioitinh.Name = "NGioitinh"
+        Me.NGioitinh.Visible = True
+        Me.NGioitinh.VisibleIndex = 3
+        Me.NGioitinh.Width = 83
+        '
+        'NManhanvien
+        '
+        Me.NManhanvien.Caption = "MNV"
+        Me.NManhanvien.FieldName = "Manhanvien"
+        Me.NManhanvien.Name = "NManhanvien"
+        Me.NManhanvien.Width = 70
+        '
+        'NBophan
+        '
+        Me.NBophan.Caption = "BỘ PHẬN"
+        Me.NBophan.FieldName = "Bophan"
+        Me.NBophan.Name = "NBophan"
+        Me.NBophan.Width = 108
+        '
+        'NCongty
+        '
+        Me.NCongty.Caption = "CÔNG TY"
+        Me.NCongty.FieldName = "Congty"
+        Me.NCongty.Name = "NCongty"
+        Me.NCongty.Width = 60
+        '
+        'NNgaykham
+        '
+        Me.NNgaykham.Caption = "NGÀY KHÁM"
+        Me.NNgaykham.FieldName = "Ngay"
+        Me.NNgaykham.Name = "NNgaykham"
+        Me.NNgaykham.Visible = True
+        Me.NNgaykham.VisibleIndex = 14
+        Me.NNgaykham.Width = 74
+        '
+        'NNGlucose
+        '
+        Me.NNGlucose.Caption = "Bệnh Glucose"
+        Me.NNGlucose.FieldName = "BenhGlucose"
+        Me.NNGlucose.MinWidth = 23
+        Me.NNGlucose.Name = "NNGlucose"
+        Me.NNGlucose.Visible = True
+        Me.NNGlucose.VisibleIndex = 4
+        Me.NNGlucose.Width = 109
+        '
+        'NBenhMomau
+        '
+        Me.NBenhMomau.Caption = "Bệnh mỡ máu"
+        Me.NBenhMomau.FieldName = "BenhMomau"
+        Me.NBenhMomau.MinWidth = 23
+        Me.NBenhMomau.Name = "NBenhMomau"
+        Me.NBenhMomau.Visible = True
+        Me.NBenhMomau.VisibleIndex = 5
+        Me.NBenhMomau.Width = 127
+        '
+        'NBenhChucnanggan
+        '
+        Me.NBenhChucnanggan.Caption = "Chức năng gan"
+        Me.NBenhChucnanggan.FieldName = "BenhChucnanggan"
+        Me.NBenhChucnanggan.MinWidth = 23
+        Me.NBenhChucnanggan.Name = "NBenhChucnanggan"
+        Me.NBenhChucnanggan.Visible = True
+        Me.NBenhChucnanggan.VisibleIndex = 6
+        Me.NBenhChucnanggan.Width = 122
+        '
+        'NBenhAciduric
+        '
+        Me.NBenhAciduric.Caption = "Bệnh Aciduric"
+        Me.NBenhAciduric.FieldName = "BenhAciduric"
+        Me.NBenhAciduric.MinWidth = 23
+        Me.NBenhAciduric.Name = "NBenhAciduric"
+        Me.NBenhAciduric.Visible = True
+        Me.NBenhAciduric.VisibleIndex = 7
+        Me.NBenhAciduric.Width = 133
+        '
+        'NBenhHBA1C
+        '
+        Me.NBenhHBA1C.Caption = "Bệnh HBA1C"
+        Me.NBenhHBA1C.FieldName = "BenhHBA1C"
+        Me.NBenhHBA1C.MinWidth = 23
+        Me.NBenhHBA1C.Name = "NBenhHBA1C"
+        Me.NBenhHBA1C.Visible = True
+        Me.NBenhHBA1C.VisibleIndex = 8
+        Me.NBenhHBA1C.Width = 120
+        '
+        'NBenhHBeAg
+        '
+        Me.NBenhHBeAg.Caption = "Bệnh HBeAg"
+        Me.NBenhHBeAg.FieldName = "BenhHBeAg"
+        Me.NBenhHBeAg.MinWidth = 23
+        Me.NBenhHBeAg.Name = "NBenhHBeAg"
+        Me.NBenhHBeAg.Visible = True
+        Me.NBenhHBeAg.VisibleIndex = 9
+        Me.NBenhHBeAg.Width = 113
+        '
+        'NBenhCyfra211
+        '
+        Me.NBenhCyfra211.Caption = "Bệnh Cyfra21.1"
+        Me.NBenhCyfra211.FieldName = "BenhCyfra211"
+        Me.NBenhCyfra211.MinWidth = 23
+        Me.NBenhCyfra211.Name = "NBenhCyfra211"
+        Me.NBenhCyfra211.Visible = True
+        Me.NBenhCyfra211.VisibleIndex = 10
+        Me.NBenhCyfra211.Width = 149
+        '
+        'NBenhLiquid
+        '
+        Me.NBenhLiquid.Caption = "Bệnh Liquid"
+        Me.NBenhLiquid.FieldName = "BenhLiquid"
+        Me.NBenhLiquid.MinWidth = 23
+        Me.NBenhLiquid.Name = "NBenhLiquid"
+        Me.NBenhLiquid.Visible = True
+        Me.NBenhLiquid.VisibleIndex = 11
+        Me.NBenhLiquid.Width = 121
+        '
+        'NBenhHBsAg
+        '
+        Me.NBenhHBsAg.Caption = "Bệnh HBsAg"
+        Me.NBenhHBsAg.FieldName = "BenhHBsAg"
+        Me.NBenhHBsAg.MinWidth = 23
+        Me.NBenhHBsAg.Name = "NBenhHBsAg"
+        Me.NBenhHBsAg.Visible = True
+        Me.NBenhHBsAg.VisibleIndex = 12
+        Me.NBenhHBsAg.Width = 125
+        '
+        'NLDL
+        '
+        Me.NLDL.Caption = "Bệnh 10"
+        Me.NLDL.FieldName = "Benh10"
+        Me.NLDL.MinWidth = 23
+        Me.NLDL.Name = "NLDL"
+        Me.NLDL.Visible = True
+        Me.NLDL.VisibleIndex = 13
+        Me.NLDL.Width = 137
+        '
         'PopupMenu1
         '
         Me.PopupMenu1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BntTaodulieu), New DevExpress.XtraBars.LinkPersistInfo(Me.BntXoadulieu)})
@@ -554,15 +488,15 @@ Partial Class frmTraSinhHoa
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(1153, 0)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1143, 0)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 521)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 579)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1153, 0)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1143, 0)
         '
         'barDockControlLeft
         '
@@ -570,35 +504,32 @@ Partial Class frmTraSinhHoa
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 521)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 579)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1153, 0)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1143, 0)
         Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 521)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 579)
         '
         'TbHuyetHocTableAdapter
         '
         Me.TbHuyetHocTableAdapter.ClearBeforeFill = True
         '
-        'frmTraSinhHoa
+        'FrmBenhXetNghiem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1153, 521)
+        Me.ClientSize = New System.Drawing.Size(1143, 579)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "frmTraSinhHoa"
-        Me.Text = "frmTraSinhHoa"
-        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "FrmBenhXetNghiem"
+        Me.Text = "FrmBenhXetNghiem"
         CType(Me.RepositoryItemCheckEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
@@ -612,6 +543,8 @@ Partial Class frmTraSinhHoa
         CType(Me.DenNgay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TuNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TuNgay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -619,31 +552,7 @@ Partial Class frmTraSinhHoa
 
     End Sub
 
-    Friend WithEvents GridControl2 As DevExpress.XtraGrid.GridControl
-    Friend WithEvents GridView2 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents NIdSolieuhoso As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NAST As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NALT As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NGGT As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NGlucose As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NCreatine As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NUre As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NCholesterol As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NTriglyceride As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NHDL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NLDL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NUric As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NProtein As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents RepositoryItemCheckEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
-    Friend WithEvents NMacode As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NHoten As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NNamsinh As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NGioitinh As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NManhanvien As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NBophan As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NCongty As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NNgaykham As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NHbA1c As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
@@ -657,16 +566,34 @@ Partial Class frmTraSinhHoa
     Friend WithEvents SearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents DenNgay As DevExpress.XtraEditors.DateEdit
     Friend WithEvents TuNgay As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents GridControl2 As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView2 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents NIdSolieuhoso As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NMacode As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NHoten As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NNamsinh As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NGioitinh As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NManhanvien As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBophan As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NCongty As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NNgaykham As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NNGlucose As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBenhMomau As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBenhChucnanggan As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBenhAciduric As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBenhHBA1C As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBenhHBeAg As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBenhCyfra211 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBenhLiquid As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NBenhHBsAg As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NLDL As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents PopupMenu1 As DevExpress.XtraBars.PopupMenu
-    Friend WithEvents BntXoadulieu As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BntTaodulieu As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BntXoadulieu As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarManager1 As DevExpress.XtraBars.BarManager
     Friend WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
-    Friend WithEvents NAlbumin As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NKetluansinhhoa As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents NThamvansinhhoa As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents TbHuyetHocTableAdapter As KskDbDataSetTableAdapters.tbHuyetHocTableAdapter
 End Class

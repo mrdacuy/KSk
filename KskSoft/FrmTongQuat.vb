@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports DevExpress.XtraEditors
+Imports DevExpress.XtraGrid
 Imports DevExpress.XtraGrid.Columns
 Imports DevExpress.XtraGrid.Views.Base
 Imports DevExpress.XtraGrid.Views.Grid
@@ -32,7 +33,7 @@ Public Class FrmTongQuat
                       "WHERE solieuhoso.Ngay >= CONVERT(DATETIME, '" & TuNgayValue & "', 112) " &
                       "AND solieuhoso.Ngay <= CONVERT(DATETIME, '" & DenngayValue & "', 112) " &
                       "AND solieuhoso.Congty = " & idCongty & " " &
-                      "AND (solieuhoso.Macode = '" & txtTimkiem.Text & "' OR solieuhoso.Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR solieuhoso.Manhanvien = '" & txtTimkiem.Text.Trim & "') AND solieuhoso.Thuso = N'Đã thu sổ' " &
+                      "AND (solieuhoso.Macode = '" & txtTimkiem.Text & "' OR solieuhoso.Hoten LIKE N'%" & txtTimkiem.Text.Trim & "%' OR solieuhoso.Manhanvien = '" & txtTimkiem.Text.Trim & "') " &
                       "ORDER BY CASE WHEN ISNUMERIC(solieuhoso.Macode) = 1 THEN CAST(solieuhoso.Macode AS INT) ELSE 999999 END, solieuhoso.Macode"
 
         Dim Cmd As New SqlDataAdapter(query, cnn)
@@ -273,56 +274,29 @@ Public Class FrmTongQuat
                     GridView1.SetRowCellValue(e.RowHandle, "Theluc", "Béo phì độ 3")
                 End If
             End If
-            If e.Column.FieldName = "Ranghammat" Then
-                Dim ranghammatValue As String = GridView1.GetRowCellValue(e.RowHandle, "Ranghammat").ToString()
+        ElseIf e.Column.FieldName <> "IndicatorWidth" AndAlso Not IsExcludedColumn(e.Column.FieldName) Then
+            Dim ketLuanTongQuat As String = ""
 
-                If Not String.IsNullOrEmpty(ranghammatValue) Then
-                    Dim containsChuoi As Boolean = ranghammatValue.ToLower().Contains("sâu")
-                    Dim snPercentage As Double = 0
+            For Each column As GridColumn In GridView1.Columns
+                Dim columnName As String = column.FieldName
 
-                    If Not containsChuoi Then
-                        If ranghammatValue.ToLower().Contains("sn :") Then
-                            Dim snValue As String = ranghammatValue.ToLower().Replace("sn :", "").Replace("%", "").Trim()
+                If columnName <> "IndicatorWidth" AndAlso Not IsExcludedColumn(columnName) Then
+                    Dim cellValue As Object = GridView1.GetRowCellValue(e.RowHandle, columnName)
+                    If cellValue IsNot DBNull.Value AndAlso cellValue IsNot Nothing AndAlso cellValue.ToString() <> "" AndAlso cellValue.ToString() <> "Bình thường" Then
+                        'ketLuanTongQuat &= cellValue.ToString() & vbCrLf
 
-                            If Double.TryParse(snValue, snPercentage) Then
-                                If snPercentage < 95 Then
-                                    GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "Giảm sức nhai")
-                                Else
-                                    GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "")
-                                End If
-                            End If
+                        If ketLuanTongQuat = "" Then
+                            ketLuanTongQuat = cellValue.ToString
                         Else
-                            GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "")
-                        End If
-                    Else
-                        If containsChuoi AndAlso ranghammatValue.ToLower().Contains("sn : 98%") Then
-                            GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "Sâu răng")
-                        Else
-                            GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "")
+
+                            ketLuanTongQuat = ketLuanTongQuat & vbCrLf & cellValue.ToString
                         End If
                     End If
                 End If
-            End If
+            Next
 
-
-
-        ElseIf e.Column.FieldName <> "IndicatorWidth" AndAlso Not IsExcludedColumn(e.Column.FieldName) Then
-                Dim ketLuanTongQuat As String = ""
-
-                For Each column As GridColumn In GridView1.Columns
-                    Dim columnName As String = column.FieldName
-
-                    If columnName <> "IndicatorWidth" AndAlso Not IsExcludedColumn(columnName) Then
-                        Dim cellValue As Object = GridView1.GetRowCellValue(e.RowHandle, columnName)
-                        If cellValue IsNot DBNull.Value AndAlso cellValue IsNot Nothing AndAlso cellValue.ToString() <> "" AndAlso cellValue.ToString() <> "Bình thường" Then
-                            ketLuanTongQuat &= cellValue.ToString() & vbCrLf
-                        End If
-                    End If
-                Next
-
-                GridView1.SetRowCellValue(e.RowHandle, "Ketluantongquat", ketLuanTongQuat)
-
-            End If
+            GridView1.SetRowCellValue(e.RowHandle, "Ketluantongquat", ketLuanTongQuat)
+        End If
         Add_Data()
     End Sub
 
@@ -340,26 +314,146 @@ Public Class FrmTongQuat
     End Sub
 
 
-    'Private Sub GridView1_RowUpdated(sender As Object, e As RowObjectEventArgs) Handles GridView1.RowUpdated
-    '    Dim rowIndex As Integer = GridView1.FocusedRowHandle
+    Structure KetLuanInfo
+        Public Count As Integer
+        Public HoTen As String
+    End Structure
 
-    '    Dim ketLuanTongQuat As String = ""
-    '    For Each column As GridColumn In GridView1.Columns
-    '        Dim columnName As String = column.FieldName
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
 
-    '        If columnName <> "Ketluantongquat" AndAlso columnName <> "IdSolieuhoso" AndAlso columnName <> "Chieucao" AndAlso columnName <> "Cannang" AndAlso columnName <> "BMI" AndAlso columnName <> "Thamvantongquat" AndAlso columnName <> "Hoten" AndAlso columnName <> "Namsinh" AndAlso columnName <> "Gioitinh" AndAlso columnName <> "Manhanvien" AndAlso columnName <> "Bophan" AndAlso columnName <> "Ngay" Then
-    '            Dim cellValue As Object = GridView1.GetRowCellValue(rowIndex, column)
+        For rowIndex As Integer = GridView1.RowCount - 1 To 0 Step -1
+            Dim hasData As Boolean = False
+            For Each column As GridColumn In GridView1.Columns
+                Dim fieldName As String = column.FieldName
+                If Ancot(fieldName) Then
+                    Continue For ' Bỏ qua các cột loại trừ
+                End If
+                Dim cellValue As Object = GridView1.GetRowCellValue(rowIndex, column)
+                If Not IsDBNull(cellValue) Then
+                    'bt, benh,""
+                    If cellValue <> "" Then
+                        'bt,benh
+                        hasData = True
+                        Exit For
+                    End If
+                Else
+                    'o nay dang rong
+                End If
 
-    '            If cellValue IsNot DBNull.Value AndAlso cellValue IsNot Nothing AndAlso cellValue.ToString() <> "" AndAlso cellValue.ToString() <> "Bình thường" Then
-    '                ketLuanTongQuat &= cellValue.ToString()
-    '            End If
-    '        End If
-    '    Next
+            Next
+            If Not hasData Then
+                GridView1.DeleteRow(rowIndex)
 
-    '    GridView1.SetRowCellValue(rowIndex, "Ketluantongquat", ketLuanTongQuat)
-    'End Sub
+            End If
+        Next
 
+        ' Ẩn các cột không có dữ liệu
+        For Each column As GridColumn In GridView1.Columns
+            Dim hasData As Boolean = False
+            Dim fieldName As String = column.FieldName
+            If Ancot(fieldName) Then
+                Continue For ' Bỏ qua các cột loại trừ
+            End If
+            Dim columnHasData As Boolean = False
+            For rowIndex As Integer = 0 To GridView1.RowCount - 1
+                Dim cellValue As Object = GridView1.GetRowCellValue(rowIndex, column)
+                If Not IsDBNull(cellValue) Then
+                    'bt, benh,""
+                    If cellValue <> "" Then
+                        'bt,benh
+                        hasData = True
+                        Exit For
+                    End If
+                Else
+                    'o nay dang rong
+                End If
+            Next
+            column.Visible = hasData
+        Next
+    End Sub
+
+    Private Function Ancot(fieldName As String) As Boolean
+        Dim excludedColumns As String() = {"IdSolieuhoso", "Hoten", "Namsinh", "Gioitinh", "Manhanvien", "Bophan", "Ngay", "Macode", "Congty"}
+        Return excludedColumns.Contains(fieldName)
+    End Function
 End Class
+'Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+'    Dim ketLuanColumnName As String = "Ketluantongquat" ' Tên cột kết luận trong GridView
+'    Dim hoTenColumnName As String = "Hoten" ' Tên cột Hoten trong GridView
+'    Dim ketLuanCount As New Dictionary(Of String, KetLuanInfo)()
+
+'    ' Lấy dữ liệu gốc từ nguồn dữ liệu của GridView (DataView)
+'    Dim dataSource As DataView = CType(GridView1.DataSource, DataView)
+
+'    ' Chuyển đổi DataView thành DataTable
+
+
+'    ' Chuyển đổi DataView thành DataTable
+'    Dim dataTable As DataTable = dataSource.ToTable()
+
+'    ' Đếm số lần xuất hiện của từng giá trị trong cột kết luận và lấy giá trị tương ứng từ cột Hoten
+'    For i As Integer = 0 To GridView1.RowCount - 1
+'        Dim values As String = GridView1.GetRowCellValue(i, ketLuanColumnName).ToString()
+
+'        ' Tách các giá trị trong cột kết luận dựa trên vbCrLf (xuống dòng)
+'        ' Chuỗi các ký tự không hiển thị
+'        Dim nonVisibleChars As Char() = {ControlChars.Cr, ControlChars.Lf, vbNullChar, ControlChars.Back}
+
+'        ' Loại bỏ các ký tự không hiển thị khỏi chuỗi
+'        For Each nonVisibleChar As Char In nonVisibleChars
+'            values = values.Replace(nonVisibleChar, "")
+'        Next
+
+'        ' Tách các giá trị trong cột kết luận dựa trên vbCrLf (xuống dòng) và loại bỏ các giá trị rỗng
+'        Dim valueArray As String() = values.Split(New String() {vbCrLf}, StringSplitOptions.RemoveEmptyEntries)
+
+
+'        ' Tách các giá trị trong cột kết luận dựa trên vbCrLf (xuống dòng) và loại bỏ các giá trị rỗng
+
+
+'        ' Lấy giá trị từ cột Hoten tương ứng với dòng hiện tại
+'        Dim hoTen As String = dataTable.Rows(i)(hoTenColumnName).ToString()
+
+'        ' Đếm số lần xuất hiện của mỗi giá trị duy nhất và lưu giá trị Hoten tương ứng
+'        For Each value As String In valueArray
+'            value = value.Trim() ' Loại bỏ khoảng trắng thừa
+'            If Not String.IsNullOrEmpty(value) Then ' Kiểm tra giá trị không rỗng
+'                If ketLuanCount.ContainsKey(value) Then
+'                    Dim info As KetLuanInfo = ketLuanCount(value)
+'                    info.Count += 1
+'                Else
+'                    Dim info As New KetLuanInfo()
+'                    info.Count = 1
+'                    info.HoTen = hoTen
+'                    ketLuanCount.Add(value, info)
+'                End If
+'            End If
+'        Next
+'    Next
+'    For Each pair As KeyValuePair(Of String, KetLuanInfo) In ketLuanCount
+'        MsgBox("Giá trị Ketluantongquat: " & pair.Key & ", Số lần xuất hiện: " & pair.Value.Count.ToString() & ", Giá trị Hoten: " & pair.Value.HoTen)
+'    Next
+'End Sub
+
+'Private Sub GridView1_RowUpdated(sender As Object, e As RowObjectEventArgs) Handles GridView1.RowUpdated
+'    Dim rowIndex As Integer = GridView1.FocusedRowHandle
+
+'    Dim ketLuanTongQuat As String = ""
+'    For Each column As GridColumn In GridView1.Columns
+'        Dim columnName As String = column.FieldName
+
+'        If columnName <> "Ketluantongquat" AndAlso columnName <> "IdSolieuhoso" AndAlso columnName <> "Chieucao" AndAlso columnName <> "Cannang" AndAlso columnName <> "BMI" AndAlso columnName <> "Thamvantongquat" AndAlso columnName <> "Hoten" AndAlso columnName <> "Namsinh" AndAlso columnName <> "Gioitinh" AndAlso columnName <> "Manhanvien" AndAlso columnName <> "Bophan" AndAlso columnName <> "Ngay" Then
+'            Dim cellValue As Object = GridView1.GetRowCellValue(rowIndex, column)
+
+'            If cellValue IsNot DBNull.Value AndAlso cellValue IsNot Nothing AndAlso cellValue.ToString() <> "" AndAlso cellValue.ToString() <> "Bình thường" Then
+'                ketLuanTongQuat &= cellValue.ToString()
+'            End If
+'        End If
+'    Next
+
+'    GridView1.SetRowCellValue(rowIndex, "Ketluantongquat", ketLuanTongQuat)
+'End Sub
+
 'If e.Column.FieldName = "Chieucao" Then
 '    ' Lấy giá trị từ cột 1
 '    Dim value As String = GridView1.GetRowCellValue(e.RowHandle, "Chieucao").ToString()
@@ -433,4 +527,38 @@ End Class
 '        ' Cập nhật giá trị cột "Ketluantongquat"
 '        GridView1.SetRowCellValue(rowIndex, "Ketluantongquat", ketLuanTongQuat)
 '    End If
+'End If
+
+'ket luan rang
+
+
+'If e.Column.FieldName = "Ranghammat" Then
+'Dim ranghammatValue As String = GridView1.GetRowCellValue(e.RowHandle, "Ranghammat").ToString()
+
+'If Not String.IsNullOrEmpty(ranghammatValue) Then
+'Dim containsChuoi As Boolean = ranghammatValue.ToLower().Contains("sâu")
+'Dim snPercentage As Double = 0
+
+'If Not containsChuoi Then
+'If ranghammatValue.ToLower().Contains("sn :") Then
+'Dim snValue As String = ranghammatValue.ToLower().Replace("sn :", "").Replace("%", "").Trim()
+
+'If Double.TryParse(snValue, snPercentage) Then
+'If snPercentage < 95 Then
+'GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "Giảm sức nhai")
+'Else
+'GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "")
+'End If
+'End If
+'Else
+'GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "")
+'End If
+'Else
+'If containsChuoi AndAlso ranghammatValue.ToLower().Contains("sn : 98%") Then
+'GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "Sâu răng")
+'Else
+'GridView1.SetRowCellValue(e.RowHandle, "Ketluanrang", "")
+'End If
+'End If
+'End If
 'End If

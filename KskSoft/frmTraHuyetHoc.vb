@@ -355,29 +355,7 @@ Public Class frmTraHuyetHoc
     End Sub
 
     Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
-        'Dim cmd As New SqlDataAdapter
 
-
-        'Dim selectedRowHandles As Integer() = GridView1.GetSelectedRows()
-        'Dim totalRows As Integer = selectedRowHandles.Length
-        'Dim ids As String = String.Join(",", selectedRowHandles.Select(Function(rowHandle) GridView1.GetDataRow(rowHandle)("IdSolieuhoso")))
-
-        'cmd = New SqlDataAdapter("SELECT solieuhoso.Macode, solieuhoso.Congty, CONVERT(DATETIME, solieuhoso.Ngay, 103) As Ngay, solieuhoso.Hoten, solieuhoso.Namsinh, solieuhoso.Gioitinh, solieuhoso.Manhanvien, solieuhoso.Bophan, " &
-        '              "Tbhuyethoc.WBC, Tbhuyethoc.Gran1, Tbhuyethoc.Gran2, Tbhuyethoc.Lymph1, Tbhuyethoc.Lymph2, Tbhuyethoc.Mon, Tbhuyethoc.Mon2, " &
-        '              "Tbhuyethoc.EOS1, Tbhuyethoc.EOS2, Tbhuyethoc.Baso1, Tbhuyethoc.Baso2, Tbhuyethoc.RBC, Tbhuyethoc.HGB, Tbhuyethoc.HCT, " &
-        '              "Tbhuyethoc.MCV, Tbhuyethoc.MCH, Tbhuyethoc.MCHC, Tbhuyethoc.RDWCV, Tbhuyethoc.MPV, Tbhuyethoc.PCT, Tbhuyethoc.PDW, Tbhuyethoc.PLT, Tbhuyethoc.IdSolieuhoso " &
-        '              "FROM solieuhoso " &
-        '              "JOIN Tbhuyethoc ON solieuhoso.Id = Tbhuyethoc.IdSolieuhoso WHERE Tbhuyethoc.IdSolieuhoso IN (" & ids & ")", cnn)
-        'Dim da As New DataSet
-        'Dim f As New RpNuocTieu
-        'da.Clear()
-        'cmd.Fill(da,"tbHuyethoc")
-        'f.DataSource = da
-        ''
-        'f.RequestParameters = False
-        'FrXemtruoc.DocumentViewer1.DocumentSource = f
-        'f.CreateDocument()
-        'FrXemtruoc.Show()
         Dim cmd As New SqlDataAdapter
 
         Dim selectedRowHandles As Integer() = GridView1.GetSelectedRows()
@@ -490,7 +468,7 @@ Public Class frmTraHuyetHoc
             Dim hasData As Boolean = False
             For Each column As GridColumn In GridView1.Columns
                 Dim fieldName As String = column.FieldName
-                If IsExcludedColumn(fieldName) Then
+                If Ancot(fieldName) Then
                     Continue For ' Bỏ qua các cột loại trừ
                 End If
                 Dim cellValue As Object = GridView1.GetRowCellValue(rowIndex, column)
@@ -507,7 +485,7 @@ Public Class frmTraHuyetHoc
         ' Ẩn các cột không có dữ liệu
         For Each column As GridColumn In GridView1.Columns
             Dim fieldName As String = column.FieldName
-            If IsExcludedColumn(fieldName) Then
+            If Ancot(fieldName) Then
                 Continue For ' Bỏ qua các cột loại trừ
             End If
             Dim columnHasData As Boolean = False
@@ -522,7 +500,7 @@ Public Class frmTraHuyetHoc
         Next
     End Sub
 
-    Private Function IsExcludedColumn(fieldName As String) As Boolean
+    Private Function Ancot(fieldName As String) As Boolean
         Dim excludedColumns As String() = {"IdSolieuhoso", "Hoten", "Namsinh", "Gioitinh", "Manhanvien", "Bophan", "Ngay", "Macode", "Congty"}
         Return excludedColumns.Contains(fieldName)
     End Function

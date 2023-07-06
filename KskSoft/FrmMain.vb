@@ -72,4 +72,12 @@
     Private Sub AccordionControlElement13_Click(sender As Object, e As EventArgs) Handles AccordionControlElement13.Click
         FrmSoidichamdao.ShowDialog()
     End Sub
+
+    Private Sub AccordionControlElement15_Click(sender As Object, e As EventArgs) Handles AccordionControlElement15.Click
+        FrmTongQuat.ShowDialog()
+    End Sub
+
+    Private Sub AccordionControlElement16_Click(sender As Object, e As EventArgs) Handles AccordionControlElement16.Click
+        FrmBenhXetNghiem.ShowDialog()
+    End Sub
 End Class

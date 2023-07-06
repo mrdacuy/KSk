@@ -420,3 +420,6 @@ C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmMienDich.resou
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmSoiphan.resources
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmTestnhanh.resources
 C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmSoidichamdao.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.RpNuocTieu.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.RpXN.resources
+C:\Users\PC-NDU\Documents\GitHub\KSk\KskSoft\obj\Debug\KskSoft.FrmBenhXetNghiem.resources

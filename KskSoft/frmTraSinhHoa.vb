@@ -100,6 +100,8 @@ Public Class frmTraSinhHoa
     End Sub
 
     Private Sub frmTraSinhHoa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
         Dim firstDayOfMonth As New DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)
         TuNgay.EditValue = firstDayOfMonth
         DenNgay.EditValue = Today
@@ -262,5 +264,117 @@ Public Class frmTraSinhHoa
 
     End Sub
 
+    Private Sub GridView2_CellValueChanged(sender As Object, e As CellValueChangedEventArgs) Handles GridView2.CellValueChanged
+        Add_Data()
+    End Sub
 
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+
+
+    End Sub
+
+
+    'Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+    '    KetquaGluco()
+    '    '    KetquaUric()
+    'End Sub
+    Sub KetquaGluco(minValue As Decimal, maxValue As Decimal, benh As String)
+        ''Dim selectQuery As String = "SELECT * FROM tbSinhhoa WHERE CAST(Glucose AS DECIMAL) > @minValue AND CAST(Glucose AS DECIMAL) < @maxValue"
+        ''Dim selectCommand As New SqlCommand(selectQuery, cnn)
+        ''selectCommand.Parameters.AddWithValue("@minValue", minValue)
+        ''selectCommand.Parameters.AddWithValue("@maxValue", maxValue)
+
+        ''Dim reader As SqlDataReader = selectCommand.ExecuteReader()
+        ''Dim idSolieuhosoList As New List(Of String)()
+        ''While reader.Read()
+        ''    Dim idSolieuhoso As String = reader("IdSolieuhoso").ToString()
+        ''    idSolieuhosoList.Add(idSolieuhoso)
+        ''End While
+        ''reader.Close()
+
+        ''Using bulkCopy As New SqlBulkCopy(cnn)
+        ''    bulkCopy.DestinationTableName = "TbBenhSinhHoa"
+        ''    bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+        ''    bulkCopy.ColumnMappings.Add("Benh1", "Benh1")
+
+        ''    Dim dataTable As New DataTable()
+        ''    dataTable.Columns.Add("IdSolieuhoso", GetType(String))
+        ''    dataTable.Columns.Add("Benh1", GetType(String))
+
+        ''    For Each idSolieuhoso As String In idSolieuhosoList
+        ''        Dim row As DataRow = dataTable.NewRow()
+        ''        row("IdSolieuhoso") = idSolieuhoso
+        ''        row("Benh1") = benh
+        ''        dataTable.Rows.Add(row)
+        ''    Next
+
+        ''    bulkCopy.WriteToServer(dataTable)
+        ''End Using
+
+
+        ''' Sử dụng hàm ProcessDataByGlucoseRange để xử lý dữ liệu
+        ''Ket_noi()
+
+        ''KetquaGluco(0, 7, "Tăng đường huyết")
+        ''KetquaGluco(5, 6, "Giảm đường huyết")
+
+        ''Dong_Ket_noi()
+
+    End Sub
 End Class
+
+
+'Ket_noi()
+'Dim selectQuery As String = "SELECT * FROM tbSinhhoa  WHERE CAST(Glucose AS DECIMAL) < 5 and CAST(Glucose AS DECIMAL) >4 "
+'Dim selectCommand As New SqlCommand(selectQuery, cnn)
+'Dim reader As SqlDataReader = selectCommand.ExecuteReader()
+'Dim idSolieuhosoList As New List(Of String)()
+'While reader.Read()
+'    Dim idSolieuhoso As String = reader("IdSolieuhoso").ToString()
+'    idSolieuhosoList.Add(idSolieuhoso)
+'End While
+'reader.Close()
+'Using bulkCopy As New SqlBulkCopy(cnn)
+'    bulkCopy.DestinationTableName = "TbBenhSinhHoa"
+'    bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+'    bulkCopy.ColumnMappings.Add("Benh1", "Benh1")
+
+'    Dim dataTable As New DataTable()
+'    dataTable.Columns.Add("IdSolieuhoso", GetType(String))
+'    dataTable.Columns.Add("Benh1", GetType(String))
+
+'    For Each idSolieuhoso As String In idSolieuhosoList
+'        Dim row As DataRow = dataTable.NewRow()
+'        row("IdSolieuhoso") = idSolieuhoso
+'        row("Benh1") = "Tăng đường huyết"
+'        dataTable.Rows.Add(row)
+'    Next
+'    bulkCopy.WriteToServer(dataTable)
+'End Using
+'selectQuery = "SELECT * FROM tbSinhhoa  WHERE CAST(Glucose AS DECIMAL) < 4  "
+'selectCommand = New SqlCommand(selectQuery, cnn)
+'reader = selectCommand.ExecuteReader()
+'idSolieuhosoList = New List(Of String)()
+'While reader.Read()
+'    Dim idSolieuhoso As String = reader("IdSolieuhoso").ToString()
+'    idSolieuhosoList.Add(idSolieuhoso)
+'End While
+'reader.Close()
+'Using bulkCopy As New SqlBulkCopy(cnn)
+'    bulkCopy.DestinationTableName = "TbBenhSinhHoa"
+'    bulkCopy.ColumnMappings.Add("IdSolieuhoso", "IdSolieuhoso")
+'    bulkCopy.ColumnMappings.Add("Benh1", "Benh1")
+
+'    Dim dataTable As New DataTable()
+'    dataTable.Columns.Add("IdSolieuhoso", GetType(String))
+'    dataTable.Columns.Add("Benh1", GetType(String))
+
+'    For Each idSolieuhoso As String In idSolieuhosoList
+'        Dim row As DataRow = dataTable.NewRow()
+'        row("IdSolieuhoso") = idSolieuhoso
+'        row("Benh1") = "Giảm đường huyết"
+'        dataTable.Rows.Add(row)
+'    Next
+'    bulkCopy.WriteToServer(dataTable)
+'End Using
+'Dong_Ket_noi()
