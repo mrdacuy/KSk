@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports DevExpress.XtraBars
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraGrid
 Imports DevExpress.XtraGrid.Columns
@@ -101,6 +102,13 @@ Public Class FrmTongQuat
         ' MsgBox("Xong")
         'LoadData()
     End Sub
+    Private Sub GridView1_PopupMenuShowing(sender As Object, e As DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs) Handles GridView1.PopupMenuShowing
+        If e.HitInfo.InRow Then
+            Dim view As GridView = TryCast(sender, GridView)
+            view.FocusedRowHandle = e.HitInfo.RowHandle
+            PopupMenu1.ShowPopup(Control.MousePosition)
+        End If
+    End Sub
     Private Function CreateDataTable(ByVal rowHandles As Integer()) As DataTable
         Dim dataTable As New DataTable()
         dataTable.Columns.Add("IdSolieuhoso", GetType(Integer))
@@ -186,7 +194,32 @@ Public Class FrmTongQuat
     Private Sub Taodata()
         Dim selectedCells As GridCell() = GridView1.GetSelectedCells()
 
-        ' Tạo một đối tượng Random duy nhất
+        Dim randomGenerator As New Random()
+
+        For Each cell As GridCell In selectedCells
+            Dim dataRow As DataRow = GridView1.GetDataRow(cell.RowHandle)
+            Dim columnName As String = cell.Column.FieldName
+
+            If columnName = "Chieucao" Then
+                dataRow(columnName) = ""
+            ElseIf columnName = "Cannang" Then
+                dataRow(columnName) = ""
+            ElseIf columnName = "Sanphukhoa" Then
+                dataRow(columnName) = ""
+            ElseIf columnName = "Huyetap" Then
+                dataRow(columnName) = ""
+            ElseIf columnName = "BMI" Then
+                dataRow(columnName) = ""
+            Else
+                dataRow(columnName) = "Bình thường"
+            End If
+        Next
+
+        GridControl1.RefreshDataSource()
+    End Sub
+    Private Sub Xoadata()
+        Dim selectedCells As GridCell() = GridView1.GetSelectedCells()
+
         Dim randomGenerator As New Random()
 
         For Each cell As GridCell In selectedCells
@@ -202,16 +235,13 @@ Public Class FrmTongQuat
             ElseIf columnName = "BMI" Then
                 dataRow(columnName) = ""
             Else
-                dataRow(columnName) = "Bình thường"
+                dataRow(columnName) = ""
             End If
         Next
 
         GridControl1.RefreshDataSource()
     End Sub
 
-    Private Sub BarButtonItem2_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem2.ItemClick
-        Taodata()
-    End Sub
 
     Private Sub GridView1_CellValueChanged(sender As Object, e As CellValueChangedEventArgs) Handles GridView1.CellValueChanged
         If e.Column.FieldName = "Chieucao" OrElse e.Column.FieldName = "Cannang" Then
@@ -275,6 +305,7 @@ Public Class FrmTongQuat
                 End If
             End If
         ElseIf e.Column.FieldName <> "IndicatorWidth" AndAlso Not IsExcludedColumn(e.Column.FieldName) Then
+
             Dim ketLuanTongQuat As String = ""
 
             For Each column As GridColumn In GridView1.Columns
@@ -301,7 +332,7 @@ Public Class FrmTongQuat
     End Sub
 
     Private Function IsExcludedColumn(fieldName As String) As Boolean
-        Dim excludedColumns As String() = {"Ketluantongquat", "IdSolieuhoso", "Chieucao", "Cannang", "Huyetap", "BMI", "Hoten", "Namsinh", "Gioitinh", "Manhanvien", "Bophan", "Ngay", "Macode", "Congty"}
+        Dim excludedColumns As String() = {"Ketluantongquat", "IdSolieuhoso", "Chieucao", "Cannang", "Ranwghammat", "Sanphukhoa", "Huyetap", "BMI", "Hoten", "Namsinh", "Gioitinh", "Manhanvien", "Bophan", "Ngay", "Macode", "Congty"}
         Return excludedColumns.Contains(fieldName)
     End Function
     Private Sub GridView1_CustomDrawRowIndicator(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs) Handles GridView1.CustomDrawRowIndicator
@@ -310,8 +341,16 @@ Public Class FrmTongQuat
 
     End Sub
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
+        For Each column As GridColumn In GridView1.Columns
+            If Not Hiencot(column.FieldName) Then
+                column.Visible = True
+
+            End If
+        Next
         LoadData()
     End Sub
+
+
 
 
     Structure KetLuanInfo
@@ -320,6 +359,7 @@ Public Class FrmTongQuat
     End Structure
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        LoadData()
 
         For rowIndex As Integer = GridView1.RowCount - 1 To 0 Step -1
             Dim hasData As Boolean = False
@@ -371,11 +411,32 @@ Public Class FrmTongQuat
             column.Visible = hasData
         Next
     End Sub
-
-    Private Function Ancot(fieldName As String) As Boolean
-        Dim excludedColumns As String() = {"IdSolieuhoso", "Hoten", "Namsinh", "Gioitinh", "Manhanvien", "Bophan", "Ngay", "Macode", "Congty"}
+    Private Function Hiencot(fieldName As String) As Boolean
+        Dim excludedColumns As String() = {"IdSolieuhoso", "Hoten", "Namsinh", "Gioitinh", "Manhanvien", "Bophan", "Ngay", "Macode", "Congty", "Chieucao", "Cannang", "BMI", "Thamvantongquat", "IdSolieuhoso", "Congty", "Ketluanrang"}
         Return excludedColumns.Contains(fieldName)
     End Function
+    Private Function Ancot(fieldName As String) As Boolean
+        Dim excludedColumns As String() = {"IdSolieuhoso", "Hoten", "Namsinh", "Gioitinh", "Manhanvien", "Bophan", "Ngay", "Macode", "Congty", "Chieucao", "Cannang", "BMI", "IdSolieuhoso", "Congty", "Ketluanrang"}
+        Return excludedColumns.Contains(fieldName)
+    End Function
+
+    Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
+
+    End Sub
+
+    Private Sub BntTaodulieu_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BntTaodulieu.ItemClick
+        Taodata()
+        Add_Data()
+    End Sub
+
+    Private Sub BntXoadulieu_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BntXoadulieu.ItemClick
+        Xoadata()
+        Add_Data()
+    End Sub
+
+    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
+
+    End Sub
 End Class
 'Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
 '    Dim ketLuanColumnName As String = "Ketluantongquat" ' Tên cột kết luận trong GridView

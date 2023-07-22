@@ -46,7 +46,9 @@
     End Sub
 
     Private Sub AccordionControlElement7_Click(sender As Object, e As EventArgs) Handles AccordionControlElement7.Click
-        frmTraHuyetHoc.ShowDialog()
+        Dim Frm As New frmTraHuyetHoc
+
+        Frm.ShowDialog()
     End Sub
 
     Private Sub AccordionControlElement8_Click(sender As Object, e As EventArgs) Handles AccordionControlElement8.Click
@@ -74,10 +76,21 @@
     End Sub
 
     Private Sub AccordionControlElement15_Click(sender As Object, e As EventArgs) Handles AccordionControlElement15.Click
-        FrmTongQuat.ShowDialog()
+        Dim frm As New FrmTongQuat
+        frm.ShowDialog()
     End Sub
 
     Private Sub AccordionControlElement16_Click(sender As Object, e As EventArgs) Handles AccordionControlElement16.Click
         FrmBenhXetNghiem.ShowDialog()
+    End Sub
+
+    Private Sub AccordionControlElement17_Click(sender As Object, e As EventArgs) Handles AccordionControlElement17.Click
+        Dim Frm As New Frmcheck
+        Frm.ShowDialog()
+    End Sub
+
+    Private Sub AccordionControlElement18_Click(sender As Object, e As EventArgs) Handles AccordionControlElement18.Click
+        Dim Frm As New FrmCayphan
+        Frm.ShowDialog()
     End Sub
 End Class

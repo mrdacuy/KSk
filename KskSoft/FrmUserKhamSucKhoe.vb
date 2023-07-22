@@ -200,35 +200,6 @@ Public Class FrmUserKhamSucKhoe
     End Sub
 
     Private Sub SimpleButton6_Click(sender As Object, e As EventArgs) Handles SimpleButton6.Click
-        'Ket_noi()
-        'Dim selectedRowHandles As Integer() = gvSolieuhoso.GetSelectedRows()
-
-        'Dim totalRows As Integer = selectedRowHandles.Length
-        'If totalRows = 0 Then
-        '    XtraMessageBox.Show("Vui lòng chọn dòng cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        '    Exit Sub
-        'End If
-        'If XtraMessageBox.Show("Bạn chắc chắn muốn phát sổ ca ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
-        '    Exit Sub
-
-        'Else
-
-        '    For Each rowHandle As Integer In selectedRowHandles
-        '        Dim dataRow As DataRow = gvSolieuhoso.GetDataRow(rowHandle)
-
-        '        Dim Cmd As New SqlCommand("Delete from solieuhoso where Id= " & dataRow("Id") & "", cnn)
-        '        Dim Cmd1 As New SqlCommand("Delete from tbPhanTichNuocTieu where Idsolieuhoso= " & dataRow("Id") & "", cnn)
-        '        Dim Cmd2 As New SqlCommand("Delete from tbSinhHoa where Idsolieuhoso= " & dataRow("Id") & "", cnn)
-        '        Dim Cmd3 As New SqlCommand("Delete from tbHuyetHoc where Idsolieuhoso= " & dataRow("Id") & "", cnn)
-        '        Dim Cmd4 As New SqlCommand("Delete from tbTraHuyetHoc where Idsolieuhoso= " & dataRow("Id") & "", cnn)
-        '        Dim Cmd5 As New SqlCommand("Delete from tbTraPhanTichNuocTieu where Idsolieuhoso= " & dataRow("Id") & "", cnn)
-
-        '        Cmd.ExecuteNonQuery()
-        '    Next
-        'End If
-        'Dong_Ket_noi()
-        'LoadData()
-
 
         Ket_noi()
 
@@ -265,6 +236,12 @@ Public Class FrmUserKhamSucKhoe
             Dim deleteCmd8 As New SqlCommand("DELETE FROM tbSoiphan WHERE Idsolieuhoso IN (" & ids & ")", cnn)
             deleteCmd8.ExecuteNonQuery()
             Dim deleteCmd9 As New SqlCommand("DELETE FROM tbSoiamdao WHERE Idsolieuhoso IN (" & ids & ")", cnn)
+            deleteCmd9.ExecuteNonQuery()
+            Dim deleteCmd10 As New SqlCommand("DELETE FROM Tbcheck WHERE Idsolieuhoso IN (" & ids & ")", cnn)
+
+            deleteCmd9.ExecuteNonQuery()
+            Dim deleteCmd11 As New SqlCommand("DELETE FROM TbCayphan WHERE Idsolieuhoso IN (" & ids & ")", cnn)
+
             deleteCmd9.ExecuteNonQuery()
 
         End If

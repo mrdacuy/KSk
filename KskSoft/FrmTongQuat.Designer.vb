@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmTongQuat
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,7 +17,7 @@ Partial Class FrmTongQuat
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTongQuat))
@@ -74,6 +74,8 @@ Partial Class FrmTongQuat
         Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.BntTaodulieu = New DevExpress.XtraBars.BarButtonItem()
+        Me.BntXoadulieu = New DevExpress.XtraBars.BarButtonItem()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
@@ -88,8 +90,7 @@ Partial Class FrmTongQuat
         Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.DenNgay = New DevExpress.XtraEditors.DateEdit()
         Me.TuNgay = New DevExpress.XtraEditors.DateEdit()
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
+        Me.PopupMenu1 = New DevExpress.XtraBars.PopupMenu(Me.components)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,12 +107,7 @@ Partial Class FrmTongQuat
         CType(Me.DenNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TuNgay.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TuNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer2.Panel1.SuspendLayout()
-        Me.SplitContainer2.Panel2.SuspendLayout()
-        Me.SplitContainer2.SuspendLayout()
-        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer3.SuspendLayout()
+        CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridControl1
@@ -123,7 +119,7 @@ Partial Class FrmTongQuat
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit1, Me.RepositoryItemMemoEdit1})
-        Me.GridControl1.Size = New System.Drawing.Size(1151, 349)
+        Me.GridControl1.Size = New System.Drawing.Size(1151, 438)
         Me.GridControl1.TabIndex = 1
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -470,9 +466,11 @@ Partial Class FrmTongQuat
         Me.NKetluantongquat.Caption = "KẾT LUẬN"
         Me.NKetluantongquat.ColumnEdit = Me.RepositoryItemMemoEdit1
         Me.NKetluantongquat.FieldName = "Ketluantongquat"
+        Me.NKetluantongquat.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right
         Me.NKetluantongquat.Name = "NKetluantongquat"
+        Me.NKetluantongquat.OptionsColumn.AllowEdit = False
         Me.NKetluantongquat.Visible = True
-        Me.NKetluantongquat.VisibleIndex = 32
+        Me.NKetluantongquat.VisibleIndex = 33
         '
         'RepositoryItemMemoEdit1
         '
@@ -482,17 +480,17 @@ Partial Class FrmTongQuat
         '
         Me.nKetluanrang.Caption = "Kết luận răng"
         Me.nKetluanrang.FieldName = "Ketluanrang"
+        Me.nKetluanrang.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right
         Me.nKetluanrang.Name = "nKetluanrang"
-        Me.nKetluanrang.Visible = True
-        Me.nKetluanrang.VisibleIndex = 34
         '
         'NThamvantongquat
         '
-        Me.NThamvantongquat.Caption = "THAM VẤN"
+        Me.NThamvantongquat.Caption = "Kết luận 2"
         Me.NThamvantongquat.FieldName = "Thamvantongquat"
+        Me.NThamvantongquat.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right
         Me.NThamvantongquat.Name = "NThamvantongquat"
         Me.NThamvantongquat.Visible = True
-        Me.NThamvantongquat.VisibleIndex = 33
+        Me.NThamvantongquat.VisibleIndex = 32
         '
         'NNgay
         '
@@ -514,9 +512,9 @@ Partial Class FrmTongQuat
         Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
         Me.BarManager1.DockControls.Add(Me.barDockControlRight)
         Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarButtonItem1, Me.BarButtonItem2})
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarButtonItem1, Me.BarButtonItem2, Me.BntTaodulieu, Me.BntXoadulieu})
         Me.BarManager1.MainMenu = Me.Bar2
-        Me.BarManager1.MaxItemId = 2
+        Me.BarManager1.MaxItemId = 4
         '
         'Bar2
         '
@@ -573,6 +571,20 @@ Partial Class FrmTongQuat
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 530)
         '
+        'BntTaodulieu
+        '
+        Me.BntTaodulieu.Caption = "Tạo dữ liệu"
+        Me.BntTaodulieu.Id = 2
+        Me.BntTaodulieu.ImageOptions.SvgImage = CType(resources.GetObject("BntTaodulieu.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BntTaodulieu.Name = "BntTaodulieu"
+        '
+        'BntXoadulieu
+        '
+        Me.BntXoadulieu.Caption = "Xóa dữ liệu"
+        Me.BntXoadulieu.Id = 3
+        Me.BntXoadulieu.ImageOptions.SvgImage = CType(resources.GetObject("BntXoadulieu.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BntXoadulieu.Name = "BntXoadulieu"
+        '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -599,7 +611,7 @@ Partial Class FrmTongQuat
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.GridControl1)
         Me.SplitContainer1.Size = New System.Drawing.Size(1151, 530)
         Me.SplitContainer1.SplitterDistance = 88
         Me.SplitContainer1.TabIndex = 6
@@ -609,7 +621,7 @@ Partial Class FrmTongQuat
         Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton1.Appearance.Options.UseFont = True
         Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton1.Location = New System.Drawing.Point(832, 44)
+        Me.SimpleButton1.Location = New System.Drawing.Point(711, 44)
         Me.SimpleButton1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(105, 32)
@@ -621,10 +633,10 @@ Partial Class FrmTongQuat
         Me.SimpleButton4.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton4.Appearance.Options.UseFont = True
         Me.SimpleButton4.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton4.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton4.Location = New System.Drawing.Point(711, 10)
+        Me.SimpleButton4.Location = New System.Drawing.Point(822, 44)
         Me.SimpleButton4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(115, 32)
+        Me.SimpleButton4.Size = New System.Drawing.Size(129, 32)
         Me.SimpleButton4.TabIndex = 60
         Me.SimpleButton4.Text = "Xuất Excel"
         '
@@ -633,7 +645,7 @@ Partial Class FrmTongQuat
         Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton3.Appearance.Options.UseFont = True
         Me.SimpleButton3.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton3.Location = New System.Drawing.Point(832, 10)
+        Me.SimpleButton3.Location = New System.Drawing.Point(711, 10)
         Me.SimpleButton3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton3.Name = "SimpleButton3"
         Me.SimpleButton3.Size = New System.Drawing.Size(105, 32)
@@ -688,13 +700,13 @@ Partial Class FrmTongQuat
         '
         Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton2.Appearance.Options.UseFont = True
-        Me.SimpleButton2.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton2.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton2.Location = New System.Drawing.Point(711, 45)
+        Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton2.Location = New System.Drawing.Point(822, 8)
         Me.SimpleButton2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(115, 32)
+        Me.SimpleButton2.Size = New System.Drawing.Size(129, 32)
         Me.SimpleButton2.TabIndex = 54
-        Me.SimpleButton2.Text = "Tìm kiếm"
+        Me.SimpleButton2.Text = "Thêm dữ liệu"
         '
         'txtTimkiem
         '
@@ -752,34 +764,11 @@ Partial Class FrmTongQuat
         Me.TuNgay.Size = New System.Drawing.Size(149, 22)
         Me.TuNgay.TabIndex = 50
         '
-        'SplitContainer2
+        'PopupMenu1
         '
-        Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
-        Me.SplitContainer2.IsSplitterFixed = True
-        Me.SplitContainer2.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer2.Name = "SplitContainer2"
-        Me.SplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer2.Panel1
-        '
-        Me.SplitContainer2.Panel1.Controls.Add(Me.GridControl1)
-        '
-        'SplitContainer2.Panel2
-        '
-        Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer3)
-        Me.SplitContainer2.Size = New System.Drawing.Size(1151, 438)
-        Me.SplitContainer2.SplitterDistance = 349
-        Me.SplitContainer2.TabIndex = 0
-        '
-        'SplitContainer3
-        '
-        Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer3.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer3.Name = "SplitContainer3"
-        Me.SplitContainer3.Size = New System.Drawing.Size(1151, 85)
-        Me.SplitContainer3.SplitterDistance = 383
-        Me.SplitContainer3.TabIndex = 0
+        Me.PopupMenu1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BntTaodulieu), New DevExpress.XtraBars.LinkPersistInfo(Me.BntXoadulieu)})
+        Me.PopupMenu1.Manager = Me.BarManager1
+        Me.PopupMenu1.Name = "PopupMenu1"
         '
         'FrmTongQuat
         '
@@ -792,7 +781,9 @@ Partial Class FrmTongQuat
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
         Me.Name = "FrmTongQuat"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmTongQuat"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -810,12 +801,7 @@ Partial Class FrmTongQuat
         CType(Me.DenNgay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TuNgay.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TuNgay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer2.Panel1.ResumeLayout(False)
-        Me.SplitContainer2.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer2.ResumeLayout(False)
-        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer3.ResumeLayout(False)
+        CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -888,6 +874,7 @@ Partial Class FrmTongQuat
     Friend WithEvents RepositoryItemMemoEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit
     Friend WithEvents nKetluanrang As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SplitContainer2 As SplitContainer
-    Friend WithEvents SplitContainer3 As SplitContainer
+    Friend WithEvents BntTaodulieu As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BntXoadulieu As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents PopupMenu1 As DevExpress.XtraBars.PopupMenu
 End Class

@@ -82,6 +82,21 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:KskSoft.KskDbDataSet.tbBenhXetNghiemDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.TbCayphanDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.TbCheckDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:KskSoft.KskDbDataSet.SoLieuCongTyRow">
 <summary>
 Represents strongly named DataRow class.
@@ -128,6 +143,21 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:KskSoft.KskDbDataSet.tbTongQuatRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.tbBenhXetNghiemRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.TbCayphanRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.TbCheckRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -182,6 +212,21 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:KskSoft.KskDbDataSet.tbBenhXetNghiemRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.TbCayphanRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSet.TbCheckRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:KskSoft.KskDbDataSetTableAdapters.SoLieuCongTyTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -228,6 +273,21 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:KskSoft.KskDbDataSetTableAdapters.tbTongQuatTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.tbBenhXetNghiemTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.TbCayphanTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KskSoft.KskDbDataSetTableAdapters.TbCheckTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
